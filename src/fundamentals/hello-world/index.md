@@ -1,5 +1,5 @@
 title: Hello World
-subtitle: Your First Java Program
+subtitle: Your First C# Program
 theme: league
 
 % TODO update screenshots for Windows UI
