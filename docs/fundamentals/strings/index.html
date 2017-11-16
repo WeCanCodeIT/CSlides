@@ -1,0 +1,373 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Strings - TODO: need better title</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Strings</h1>
+					<h3 style="text-align: center">TODO: need better title</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h2 id="strings-are-things">Strings are Things</h2>
+
+<p>Mostly, we’ve dealt with primitives so far.</p>
+
+<p><code>String</code> and <code>Scanner</code> are <em>classes</em> from which we create <em>objects</em>. Object Oriented Programming (OOP) allows us to create <em>abstractions</em> to simplify the problem we’re solving.</p>
+
+<p>This is something we do all the time in spoken language-we refer to that collection of material and thread and (hopefully) style that you’re wearing as a “shirt”. We don’t describe its manufacture unless we’re tailors.</p>
+
+<p>In a similar vein, a <code>String</code> represents a sequence of primitive <code>char</code>s. It allows us to call methods (send it messages) to manipulate that sequence of <code>char</code>s and create new <code>String</code>s.</p>
+
+<p>Today, we’ll show you some of the ways that you can do that.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="nothing-to-do-with-cats">Nothing to do with cats</h2>
+
+<p>When we use the operator <code>+</code> with <code>String</code>s, we call this <em>concatenation</em>. It’s not adding them as we would add numbers, but it’s appending one <code>String</code> to another, resulting in a longer <code>String</code>. Java knows how to turn primitives into Strings, so it does that for us behind the scenes, saving us a bit of work. What would this display?</p>
+
+<pre><code>int numberOfSuits = 4;
+System.out.println("I have " + numberOfSuits + " suits.");
+</code></pre>
+
+<p><img src="./resources/purrsuit.jpg" alt="Purrsuit of Happiness" /></p>
+
+<p><em>Courtesy of <a href="http://www.brainlesstales.com">Brainless Tales</a></em></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="strings-are-objects">Strings are Objects</h2>
+
+<p>When we deal with primitives, we compare them using the equals (<code>==</code>) operator:</p>
+
+<pre><code class="language-java">int numberOfMaids = 7;
+int numberOfMops = 7;
+
+if(numberOfMaids == numberOfMops) {
+  System.out.println("They might get it clear in half a year.");
+}
+</code></pre>
+
+<p>When we compare <em>objects</em> (like <code>String</code>s), we use the <code>equals</code> method:</p>
+
+<pre><code class="language-java">String shoeDescription = "Their shoes were clean and neat";
+
+if(shoeDescription.equals("Their shoes were clean and neat")) {
+  System.out.println("This is odd, because, you know,");
+  System.out.println("They hadn't any feet.");
+}
+</code></pre>
+
+<p>Inspiration courtesy of Lewis Carroll’s <em>The Walrus and The Carpenter</em>. (The oddness about the shoes in question lies in them belonging to “Oysters”.)</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="just-in-case">Just in Case</h1>
+
+<p>Methods we call on Strings create and <em>return</em> new Strings rather than changing the original String. Strings in Java are <em>immutable</em>. A common need is to convert a String to all uppercase or all lowercase:</p>
+
+<pre><code class="language-java">String myGreeting = "Hello";
+System.out.println(myGreeting.toUpperCase()); // prints "HELLO"
+System.out.println(myGreeting.toLowerCase()); // prints "hello"
+System.out.println(myGreeting); // prints "Hello"
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="sensitivity-training">Sensitivity Training</h2>
+
+<p>We often use one of these methods to normalize user input. If we’re asking for a color and call the <code>toLowerCase()</code> method on the user’s response before comparing it to “red”, the user can type “RED”, “Red”, or “red” and it won’t matter.</p>
+
+<pre><code class="language-java">Scanner input = new Scanner(System.in);
+
+System.out.println("Enter a color, please.")
+String response = input.nextLine();
+
+if(response.toLowerCase().equals("red")) {
+  System.out.println("Roses can be red. Also, lilies.");
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="length">Length</h2>
+
+<p>A String’s <code>length()</code> method will tell us how many characters it contains.</p>
+
+<pre><code class="language-java">String palindrome = "A dog, a panic, in a pagoda";
+int palindromeLength = palindrome.length();
+System.out.println(palindrome + " has " + palindromeLength
+	+ " characters.");
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="escape">Escape!</h2>
+
+<p>Sometimes we need special characters in Strings. The obvious example is a quotation mark. Quotation marks are what open and close Strings, so how would we include a quotation mark in a String? We do something called <em>escaping</em>. We refer to the backslash (<code>\</code>) we use as an <em>escape character</em>.</p>
+
+<pre><code class="language-java">System.out.println("Phil said, \"You've got red on you\".");
+</code></pre>
+
+<p>We can also use escaping to insert special characters like newlines (<code>\n</code>) and tabs (<code>\t</code>):</p>
+
+<pre><code class="language-java">System.out.println("This is the first line.\nSecond line");
+System.out.println("\tThis line is indented.");
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="other-useful-methods">Other Useful Methods</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>method</th>
+      <th>description</th>
+      <th>example</th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>trim</code></td>
+      <td>trims the whitespace from the beginning and end of a <code>String</code>; useful for cleaning up user input</td>
+      <td><code>" bar  ".trim()</code></td>
+      <td><code>"bar"</code></td>
+    </tr>
+    <tr>
+      <td><code>charAt</code></td>
+      <td>returns the <code>char</code> at the specified (zero-based) index</td>
+      <td><code>"bar".charAt(2)</code></td>
+      <td><code>'r'</code></td>
+    </tr>
+    <tr>
+      <td><code>equalsIgnoreCase</code></td>
+      <td>an alternative to using <code>toLowerCase()</code> or <code>toUpperCase()</code> for comparisons; compares this <code>String</code> to another, ignoring case</td>
+      <td><code>"bar".equalsIgnoreCase("BaR")</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>indexOf</code></td>
+      <td>returns the index of the first occurence of a substring in this <code>String</code></td>
+      <td><code>"foo bar baz".indexOf("bar")</code></td>
+      <td><code>4</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="moar-useful-methods">Moar Useful Methods</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>method</th>
+      <th>description</th>
+      <th>example</th>
+      <th>result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>contains</code></td>
+      <td>indicates whether this <code>String</code> contains a substring</td>
+      <td><code>"foobarbaz".contains("ba")</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>startsWith</code></td>
+      <td>indicates whether this <code>String</code> starts with another</td>
+      <td><code>"foo".startsWith("f")</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>endsWith</code></td>
+      <td>indicates whether this <code>String</code> ends with another</td>
+      <td><code>"baz".endsWith("az")</code></td>
+      <td><code>true</code></td>
+    </tr>
+    <tr>
+      <td><code>substring</code></td>
+      <td>returns a substring starting at the specified index, optionally including an end index</td>
+      <td><code>"hello".substring(1)</code><br /><code>"hello".substring(1, 4)</code></td>
+      <td><code>"ello"</code><br /><code>"ell"</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="examine-the-string-class">Examine the String Class</h2>
+
+<p>Let’s explore how we can use our IDE to examine the String class and discover other methods we may use. We will also find things that perplex us.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-do-it">Let’s do it!</h2>
+
+<ul>
+  <li>Use the <code>toLowerCase()</code> method with some of your previous exercises to ignore case while looking at the user’s response.</li>
+  <li>Ask the user for her first name and last name. Use the <code>length()</code> method to tell her which is longer.</li>
+  <li>Ask the user for her first name and last name, then print her full name, including the necessary space between first and last name.</li>
+  <li>Ask the user to answer your riddle. Use the appropriate method to examine the answer, ignoring case. (<em>You</em> supply the riddle. Finding one is half the fun.)</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-do-it-moar">Let’s do it moar!</h2>
+
+<ul>
+  <li>Ask the user for two Strings. Check and see if the two Strings are equal to each other. If they are, inform the the user that the Strings are equal; otherwise, inform the user that the Strings are not equal.
+    <ul>
+      <li>Change your code so that it ignores case in the comparison.</li>
+    </ul>
+  </li>
+  <li>Ask the user to create a password. Then have the user enter the password again to verify there were no typing errors. Display a message if the user properly or improperly matched their password entries.</li>
+  <li>Ask the user to create a user name. Make sure the user name is at least 8 characters in length and that the user name contains the word “code” somewhere regardless of case. Greet the user by their user name if it is properly entered, otherwise ask the user to try again.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="can-haz-moar">Can Haz Moar?</h2>
+
+<p>Try the <a href="http://codingbat.com/java/String-1">String-1</a> problems at <a href="http://codingbat.com/java">CodingBat</a>!</p>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

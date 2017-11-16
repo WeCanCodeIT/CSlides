@@ -1,0 +1,318 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Reading Input from the Console - •••</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Reading Input from the Console</h1>
+					<h3 style="text-align: center">•••</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h2 id="javautilscanner">java.util.Scanner</h2>
+
+<p>We can create a <code>Scanner</code> object to read input from the console (represented by <code>System.in</code>):</p>
+
+<pre><code class="language-java">package org.wecancodeit.fundamentals;
+
+import java.util.Scanner;
+
+public class NamePromptApp {
+
+	public static void main(String[] args) {
+		
+		Scanner input = new Scanner(System.in);
+
+		System.out.println("What is your name?");
+		String name = input.nextLine();
+		System.out.println("Hello, " + name);
+		
+		input.close();
+	}
+	
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-run-it">Let’s run it!</h2>
+
+<p>If I type <em>Ford Prefect</em>, then this is what I will see in my console:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">What is your name?
+<span class="console-input">Ford Prefect</span>
+Hello, Ford Prefect
+</code></pre>
+
+<style>
+:root {
+	--console-input-color: #36c87d
+}
+
+.console-input {
+	color: var(--console-input-color);
+}
+</style>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="lets-break-it-down">Let’s Break It Down</h1>
+
+<p>Rather than a <em>primitive</em> like an <code>int</code> or a <code>boolean</code>, our <code>Scanner</code> is an <em>object</em>. (<code>String</code>s are objects, too.) <code>Scanner</code> is a <em>class</em> representing our <code>input</code> variable’s type.</p>
+
+<pre><code class="language-bash hljs" data-noescape=""><mark>Scanner</mark> input = new Scanner(System.in);</code></pre>
+
+<p>Remember, primitive types are in all lowercase, while class names are <code>CapitalizedCamelCase</code>:</p>
+
+<pre><code class="language-bash hljs" data-noescape=""><mark>S</mark>canner input = new <mark>S</mark>canner(System.in);</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="creating-the-scanner">Creating the scanner</h2>
+
+<p>We use the <code>new</code> operator to create an object. The other operators we’ve seen have used one (<code>+</code>, <code>-</code>, <code>=</code>) or more (<code>++</code>, <code>!=</code>) symbols, but <code>new</code> is a legit operator, too:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">Scanner input = <mark>new</mark> Scanner(System.in);</code></pre>
+
+<p>It is followed by a special method called a <code>constructor</code>. The job of a constructor is to construct an object. A constructor’s name is the same as the name of the type of thing it’s constructing:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">Scanner input = new <mark>Scanner</mark>(System.in);</code></pre>
+
+<p>This constructor accepts <code>System.in</code> as a <em>parameter</em> in order to “scan” input from the console. <code>System.in</code> is the complement of <code>System.out</code>, representing console input:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">Scanner input = new Scanner(<mark>System.in</mark>);</code></pre>
+
+<p>More on classes, objects, and constructors later.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="dat-message-do">Dat Message Do</h2>
+
+<p>Think of methods as messages we send to objects. We have been using the <code>main</code> method:</p>
+
+<pre><code class="language-java">public static void main(String[] args) {
+	// your code here
+}
+</code></pre>
+
+<p><code>main</code> is the message that the <strong>J</strong>ava <strong>V</strong>irtual <strong>M</strong>achine (JVM) sends to our application’s class to tell it to do something. You may hear a class containing a <code>main</code> method called a “main class”.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="can-ya-do-something-for-me">Can Ya Do Something For Me?</h2>
+
+<p>We call the <code>nextLine</code> method when we want to ask our <code>Scanner</code> for the next line of user input. This is like saying, “Hey input! Can ya give me the next line?”:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">String name = input.<mark>nextLine()</mark>;</code></pre>
+
+<p>See that dot lurking in there? It’s an operator, too. Whimsically, we refer to it as the <em>dot operator</em>:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">String name = input<mark>.</mark>nextLine();</code></pre>
+
+<p>We use the dot operator to send messages to objects. Ponder <code>System.out.println("my message");</code>. What’s happening there?</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="call-me">Call Me</h2>
+
+<p>If we look at the Scanner class, we can find out what that <code>nextLine()</code> method looks like. The part of the method before the opening curly bracket (<code>{</code>) is called its <em>signature</em>. The signature of the <code>nextLine()</code> method is:</p>
+
+<pre><code class="language-java">public String nextLine()
+</code></pre>
+
+<div class="fragment">
+<p>If it wasn't <code>public</code>, we wouldn't be able to see it, so we wouldn't be able to send that message:</p>
+<pre><code class="language-bash hljs" data-noescape=""><mark>public</mark> String nextLine()</code></pre>
+</div>
+
+<div class="fragment">
+<p><code>String</code> indicates the method's <em>return type</em>. This is how it responds when we talk to it. When we call <code>nextLine()</code>, its response is a <code>String</code>:</p>
+<pre><code class="language-bash hljs" data-noescape="">public <mark>String</mark> nextLine()</code></pre>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="other-methods">Other Methods</h2>
+
+<p><code>Scanner</code> offers us other methods, as well. (Its capabilities are far beyond our simple needs.) We have been using <code>nextLine()</code>, which reads an entire line of input. (Until you hit &lt;Enter&gt;.)</p>
+
+<p>Used as we’re using it, <code>Scanner</code> breaks up input by blank spaces and line breaks. Its other methods don’t read entire lines. They read up to the first space or line break.</p>
+
+<p>Here are some of those you may find useful:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>method</th>
+      <th>what it does</th>
+      <th>return type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>nextLine()</td>
+      <td>reads the next <code>String</code> from the input until the line break</td>
+      <td><code>String</code></td>
+    </tr>
+    <tr>
+      <td>nextInt()</td>
+      <td>reads the next <code>int</code> from the input until the <em>next space or</em> line break</td>
+      <td><code>int</code></td>
+    </tr>
+    <tr>
+      <td>nextDouble()</td>
+      <td>reads the next <code>double</code> from the input until the <em>next space or</em> line break</td>
+      <td><code>double</code></td>
+    </tr>
+    <tr>
+      <td>next()</td>
+      <td>reads the next <code>String</code> from the input until the <em>next space or</em> line break</td>
+      <td><code>String</code></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="demo">Demo</h2>
+
+<p>If we do this:</p>
+
+<pre><code class="language-java">Scanner input = new Scanner(System.in);
+
+System.out.println("Enter street address:");
+
+int houseNumber = input.nextInt();
+String street = input.next();
+
+System.out.println("house number is " + houseNumber);
+System.out.println("street is " + street);
+</code></pre>
+
+<p>Then we can do this:</p>
+
+<pre><code class="language-bash hljs" data-noescape="">Enter street address:
+<span class="console-input">43 Brown St</span>
+house number is 43
+street is Brown</code></pre>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

@@ -1,0 +1,371 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Hello World - Your First Java Program</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Hello World</h1>
+					<h3 style="text-align: center">Your First Java Program</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h1 id="project-setup">Project Setup</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-launch-eclipse">Let’s Launch Eclipse</h2>
+
+<div float="right"><img src="./resources/eclipse-426x100.png" class="logo" /></div>
+
+<p>Eclipse is our <strong>I</strong>ntegrated <strong>D</strong>evelopment <strong>E</strong>nvironment (<strong>IDE</strong>). IDEs integrate common development tasks with our editor.</p>
+
+<p>Accept the default for workspace. (More on that later.)</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="create-a-java-project">Create a Java Project</h2>
+
+<div class="sidebar">
+	<img alt="New Java Project" src="./resources/new-java-project.png" />
+	<p><em>(Yours will look a bit different.)</em></p>
+</div>
+
+<p>• From the <em>File</em> Menu, select <em>New &gt; Java Project</em>.</p>
+
+<p>• Specify a <em>Project name</em> of <em>hello-world</em> as in the screenshot.</p>
+
+<p>• Click the <em>Finish</em> button.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="create-a-java-class">Create a Java Class</h2>
+
+<div class="sidebar">
+	<img alt="New Java Class" src="./resources/new-java-class.png" />
+</div>
+
+<p>• Select the newly created <code>hello-world</code> project in <em>Package Explorer</em> (if it isn’t already).</p>
+
+<p>• From the <em>File</em> Menu, select <em>New &gt; Class</em>.</p>
+
+<p>• Specify a <em>Name</em> of <em>HelloWorld</em>. Don’t worry about the warning you receive about using the default package. We’re just keeping it simple for now.</p>
+
+<p><em>Note: Case here is important. Java classes start with a capital letter and use <code>camelCase</code>, capitalizing the first letter of each additional word.</em></p>
+
+<p>• Check the box for <em>public static main void(String[] args)</em>.</p>
+
+<p>• Click the <em>Finish</em> button.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="now-youve-got-class">Now You’ve Got Class!</h2>
+
+<p>You should see code similar to the following in your editor:</p>
+
+<pre><code class="language-java">public class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="lets-break-it-down">Let’s Break It Down</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="java-classes">Java Classes</h2>
+
+<p>All Java code is found inside a <em>class</em>. This class is called <code>HelloWorld</code>.</p>
+
+<pre><code class="language-java" data-noescape="">public <mark>class HelloWorld</mark> {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="java-methods">Java Methods</h2>
+
+<p>Think of <em>Methods</em> as the messages that we send in Java. All Java applications start with a <code>main</code> method.</p>
+
+<pre><code class="language-java" data-noescape="">public class HelloWorld {
+
+	<mark>public static void main(String[] args)</mark> {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="curly-brackets">Curly Brackets</h2>
+
+<p>Curly brackets (<code>{</code> and <code>}</code>) indicate code blocks in Java. An opening curly bracket (<code>{</code>) must <strong>always, always, always</strong> have a corresponding closing curly bracket (<code>}</code>).</p>
+
+<h3 id="this-applies-to-classes">This applies to classes…</h3>
+
+<pre><code class="language-java" data-noescape="">public class HelloWorld <mark>{</mark>
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+<mark>}</mark>
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<h3 id="-as-well-as-methods">… as well as methods.</h3>
+
+<pre><code class="language-java" data-noescape="">public class HelloWorld {
+
+	public static void main(String[] args) <mark>{</mark>
+		// TODO Auto-generated method stub
+
+	<mark>}</mark>
+
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="comments">Comments</h2>
+
+<p>We can add comments to our code to explain it. They don’t <em>do</em> anything.</p>
+
+<p>Here, Eclipse has created a <code>TODO</code> comment for us to remind us that we need to do something-namely, write some code inside the method! We’ll do that next.</p>
+
+<pre><code class="language-java" data-noescape="">public class HelloWorld {
+
+	public static void main(String[] args) {
+		<mark>// TODO Auto-generated method stub</mark>
+
+	}
+
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="hello-world">Hello World!</h1>
+
+<p>A common first program for people to write in a language is a program that says “Hello, World!” That’s just what we’ll do. Change your code to look like the following:</p>
+
+<pre><code class="language-java" data-noescape="">public class HelloWorld {
+
+	public static void main(String[] args) {
+		System.out.println("Hello, World!");
+	}
+
+}
+</code></pre>
+
+<p><code>println</code> is short for “print line”. <code>System.out</code> represents our console/terminal/command line. Here we are sending a <code>println</code> message to <code>System.out</code> with the content <code>"Hello, World!"</code></p>
+
+<p>Let’s run it, and see what happens!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="a-simple-greeting">A Simple Greeting</h2>
+
+<p>Right click inside your editor (the pane where you’ve been modifying the code), then select <em>Run As &gt; Java Application</em>. Your program will run, and your <em>Console</em> <em>view</em> should display something like the following:</p>
+
+<pre><code class="language-bash">Hello, World!
+</code></pre>
+<p>Climactic, eh?</p>
+
+<p>You’ve written your first Java program. Congratulations!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Java is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
+
+<pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
+
+<p>We can also do this with other Strings:</p>
+
+<pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="other-data-types">Other Data Types</h2>
+
+<p>We can also display numbers and more complex expressions.</p>
+
+<pre><code class="language-java" data-noescape="">System.out.println(42);
+System.out.println(1.23);
+System.out.println(2 + 3);</code></pre>
+
+<p>Try a few of your own! We’ll talk about other data types and expressions in days to come.</p>
+
+<style type="text/css">
+.reveal section img.logo {
+	border: none;
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 1rem;
+}
+.reveal ol, .reveal dl, .reveal ul {
+	margin: 0 0 1rem 2rem;
+}
+</style>
+
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

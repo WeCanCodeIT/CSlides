@@ -1,0 +1,536 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>HTML - The Structure of the Internet</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">HTML</h1>
+					<h3 style="text-align: center">The Structure of the Internet</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h1 id="what-is-html">What is HTML?</h1>
+
+<p>HTML (Hyper Text Markup Language) is the first of three languages we use to create the front-end (also known as the client-side) of the web. Each of the three languages that we use (HTML, CSS, and JavaScript) have a specific job to do and it is important to keep these concerns separate. HTML’s job is to structure and organize your content.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="standard-html-document">Standard HTML Document</h2>
+
+<p>HTML is marked up with tags. There are common tags that you will see in each HTML document. A basic HTML document looks like this:</p>
+
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>Tags to note are:</p>
+<ul>
+  <li><code>&lt;!DOCTYPE html&gt;</code></li>
+  <li><code>&lt;html&gt;</code></li>
+  <li><code>&lt;head&gt;</code></li>
+  <li><code>&lt;body&gt;</code></li>
+</ul>
+
+<p>You’ll notice these each have a closing tag (i.e. <code>&lt;/body&gt;</code>). Let’s look at these in more detail.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="doctype">DOCTYPE</h2>
+
+<pre><code class="language-html" data-noescape="">
+<mark>&lt;!DOCTYPE html&gt;</mark>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>The DOCTYPE tag tells your browser that this document is HTML. With that declaration, your browser knows to interpret this as HTML and display it as such.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="html-tag">HTML Tag</h2>
+
+<pre><code class="language-html" data-noescape="">
+&lt;!DOCTYPE html&gt;
+<mark>&lt;html lang="en"&gt;</mark>
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+<mark>&lt;/html&gt;</mark>
+</code></pre>
+
+<p>The <code>&lt;html&gt;</code> tag houses all of your other tags. All of your content needs to be inside of them.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="head-tag">Head Tag</h2>
+
+<pre><code class="language-html" data-noescape="">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+<mark>&lt;head&gt;</mark>
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Document&lt;/title&gt;
+<mark>&lt;/head&gt;</mark>
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<p>The <code>&lt;head&gt;</code> tag houses meta data for each of your pages. This content gives information to your browser about the page and content on the page. This is also where CSS and JS files can be attached to your page.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="body-tag">Body Tag</h2>
+
+<pre><code class="language-html" data-noescape="">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"&gt;
+
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+<mark>&lt;body&gt;</mark>
+
+<mark>&lt;/body&gt;</mark>
+&lt;/html&gt;
+</code></pre>
+
+<p>The <code>&lt;body&gt;</code> tag houses all of the content that your user will see/interact with.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="box-model">Box Model</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="the-box-model-in-html">The Box Model in HTML</h2>
+
+<p>HTML tags and the content they house are called elements.</p>
+
+<p><code>&lt;p&gt;This is an element&lt;/p&gt;</code></p>
+
+<p>These elements can be thought of as boxes. We will often house elements inside of each other. This can be for organization or just as a method of containing elements.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="more-boxes">More boxes</h2>
+
+<p>Each HTML element in the body has a structure that looks like this:</p>
+
+<p><img src="./resources/boxmodel-image.png" alt="box model image" /></p>
+
+<ul>
+  <li>At the center is the content inside of your element. (i.e. <code>&lt;p&gt;This is the content&lt;/p&gt;</code>).</li>
+  <li>Just outside of that we have the padding. Padding adds space between your content and the inside of your element.</li>
+  <li>The next layer is the border. The border outlines your element. Borders don’t have a value by default.</li>
+  <li>The final layer is the margin. The margin is similar to padding but this creates space outside of your element.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="display-values">Display Values</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="inline-vs-block">Inline vs. Block</h2>
+
+<p>There are two basic display values, inline and block. All HTML elements have one of these values by default.</p>
+
+<p>Block level elements can be thought of like building blocks. These elements will have the width of your viewport and will stack one on top of the other based on where they are in the code.</p>
+
+<p>Inline elements will only take up as much space as their content requires. Think paragraphs, anchors, or spans.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="common-tags">Common Tags</h2>
+
+<p>Common tags you’ll use in HTML5:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt; ...</code></td>
+      <td>For headings</td>
+    </tr>
+    <tr>
+      <td><code>&lt;p&gt;</code></td>
+      <td>For blocks of text</td>
+    </tr>
+    <tr>
+      <td><code>&lt;ul&gt;, &lt;ol&gt;</code></td>
+      <td>Used to make lists</td>
+    </tr>
+    <tr>
+      <td><code>&lt;section&gt;</code></td>
+      <td>Used to organize related elements</td>
+    </tr>
+    <tr>
+      <td><code>&lt;article&gt;</code></td>
+      <td>Similar to section. Usually specifically for actual articles</td>
+    </tr>
+    <tr>
+      <td><code>&lt;a&gt;</code></td>
+      <td>Used to make links</td>
+    </tr>
+    <tr>
+      <td><code>&lt;img&gt;</code></td>
+      <td>Used to include images in your code</td>
+    </tr>
+    <tr>
+      <td><code>&lt;title&gt;</code></td>
+      <td>Used to declare the title of your page</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="deprecated-tags">Deprecated Tags</h2>
+
+<p>Tags you may encounter but shouldn’t use anymore due to separation of concerns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>&lt;b&gt;</code></td>
+      <td>Used to make things bold</td>
+    </tr>
+    <tr>
+      <td><code>&lt;i&gt;</code></td>
+      <td>Used to make things italic</td>
+    </tr>
+    <tr>
+      <td><code>&lt;center&gt;</code></td>
+      <td>Used to center elements</td>
+    </tr>
+    <tr>
+      <td><code>&lt;font&gt;</code></td>
+      <td>Used to change the font of a group of elements</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="element-attributes">Element Attributes</h2>
+
+<p>There are attributes that you can include on your elements that will affect the way they behave. Some attributes are required to make an element function. These include:</p>
+
+<ul>
+  <li>href (hypertext reference) - Used to give anchor tags a location to link to</li>
+  <li>type - Used usually on input elements to describe what type of input they should accept</li>
+  <li>src (source) - Used in script tags and img tags. These house the location of the resource</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="custom-attributes">Custom Attributes</h2>
+
+<p>In HTML5, we have the ability to create custom attributes. These can be very useful for identifying items and selecting them.</p>
+
+<p>Custom attributes need to be prefixed with ‘data’ in order to be recognized properly.</p>
+
+<p>i.e. To add a key attribute to an element:</p>
+<pre><code class="language-html">    &lt;ul&gt;
+        &lt;li data-key="item1"&gt;Item 1&lt;/li&gt;
+        &lt;li data-key="item2"&gt;Item 2&lt;/li&gt;
+        &lt;li data-key="item3"&gt;Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre>
+
+<p>This is very common in new JavaScript frameworks.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="div-and-span-tags">DIV and SPAN tags</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="divs">Divs</h2>
+
+<p>Div tags are a useful tool in HTML. A <code>&lt;div&gt;&lt;/div&gt;</code> tag is a generic block level element. They are used mostly for organizational purposes in HTML code. If you have a block of information that exists as a group, you may choose to group it in a div to keep it organized and identify it as one unit:</p>
+
+<pre><code class="language-html">&lt;div class="my-info"&gt;&lt;!-- more on classes shortly --&gt;
+    &lt;h2&gt;My Name&lt;/h2&gt;
+    &lt;h3&gt;My Title&lt;/h3&gt;
+    &lt;p&gt;10/13/2017&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="spans">Spans</h2>
+
+<p>Similar to divs, spans are a generic element in html as well. The difference being that they are generic inline level elements. These can be used for highlighting individual text in a paragraph or list item:</p>
+
+<pre><code class="language-html">&lt;p&gt;""You miss &lt;span&gt;100 percent&lt;/span&gt; of the shots you never take."
+- Wayne Gretzky" - Michael Scott&lt;/p&gt;
+</code></pre>
+
+<p>Span tags are used mostly to add emphasis or apply specific CSS styles.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="ids-and-classes">IDs and Classes</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="ids">IDs</h2>
+
+<p>IDs in HTML are used as unique identifiers for your elements. You can apply them to specific elements but, no two elements should have the same identifier. You can think of them as similar to the key value in a map.</p>
+
+<pre><code class="language-html">&lt;h1 id="page-title"&gt;My Title&lt;/h1&gt;
+</code></pre>
+
+<p>This is helpful when selecting specific elements in CSS and JS. You can also use them for their specific location in a page. For example, if you give an anchor tag an existing ID as a value, when you click the link, it will take you to the location of the element with that ID on the page.</p>
+
+<pre><code class="language-html">&lt;a href="#page-title"&gt;Go back to where 'My Title' is located on the page.&lt;/a&gt;
+</code></pre>
+
+<p>This can be useful for saving scrolling on mobile devices.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="classes">Classes</h2>
+
+<p>Classes in HTML are similar to IDs. They identify an element in your code. The difference between IDs and classes is that classes are not unique. You may give multiple elements the same class and you can give one element multiple classes. For example:</p>
+
+<pre><code class="language-html">&lt;p class="blue-text yellow-background medium-font-size red-border"&gt;My super long paragraph&lt;/p&gt;
+</code></pre>
+
+<p>or:</p>
+
+<pre><code class="language-html">&lt;li class="item item-1"&gt;Apple&lt;/li&gt;
+&lt;li class="item item-2"&gt;Orange&lt;/li&gt;
+&lt;li class="item item-3"&gt;Banana&lt;/li&gt;
+&lt;li class="item item-4"&gt;Spaghetti&lt;/li&gt;
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="now-you-do-it">Now you do it</h2>
+
+<p>Navigate to <a href="https://github.com/donhamiltoniii/semantic-markup">the exercise</a> on Github and follow the instructions in the repository to complete the project.</p>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

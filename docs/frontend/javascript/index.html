@@ -1,0 +1,839 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>JavaScript - Like Java but better!</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">JavaScript</h1>
+					<h3 style="text-align: center">Like Java but better!</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h2 id="what-is-javascript">What is JavaScript?</h2>
+
+<p>JavaScript is a dynamic, weakly typed, prototype-based programming language. But JavaScript is mostly used on the frontend or client side of web applications. Though now, JavaScript is able to be used as a full stack tool for developing robust web applications thanks to Node.js. We will only be going through using JavaScript on the frontend to add interactivity with our end user.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="how-to-include-js">How to include JS</h2>
+
+<p>We can include JavaScript in our page very similarly to how we include CSS. Like CSS there are 3 options (and two of them are not advised).</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="inline">Inline</h2>
+
+<p>We can include JavaScript right inside of our HTML elements. (Your separation-of-concerns-sense should be tingling right now):</p>
+
+<pre><code class="language-html">&lt;h1 onclick="this.style.color = `pink`;"&gt;My Title&lt;/h1&gt;
+</code></pre>
+
+<p>Which gives you:</p>
+
+<p><img src="./resources/inline-js.gif" alt="Inline JavaScript" style="width: 30%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="inside-script-tags">Inside Script Tags</h2>
+
+<p>You can also write JavaScript directly inside your HTML by enclosing it in <code>&lt;script&gt;</code> tags. Like this:</p>
+
+<pre><code class="language-HTML">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;JS Example&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1 onclick="this.style.color = `pink`"&gt;My Title&lt;/h1&gt;
+        &lt;h2&gt;My Subheading&lt;/h2&gt;
+        &lt;script type="text/JavaScript"&gt;
+            document.getElementsByTagName('h2')[0].onclick = function() {
+                this.getElementsByTagName('h2')[0].style.fontSize = `30px`;
+            };
+        &lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Which yields:</p>
+
+<p><img src="./resources/script-tag-js.gif" alt="Inline JavaScript" style="margin: 0 auto; width: 70%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="linking-an-external-js-file-do-this-one">Linking an External JS File (Do this one!)</h2>
+
+<p>Finally, similar to CSS, you can link JS code from an external file. This is ideal because it keeps your code organized and concerns separated. You connect the file to your HTML with the <code>&lt;script&gt;</code> tag like so:</p>
+
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;script src="./js/app.js"&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="language-JavaScript">// app.js
+document.getElementsByTagName('h3')[0].onclick = function() {
+    this.style.backgroundColor = `orange`;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Which gives you:</p>
+
+<p><img src="./resources/attached-js-file.gif" alt="Inline JavaScript" style="margin: 0 auto; width: 100%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="boxes">Boxes</h2>
+
+<p>JavaScript allows you to send and receive messages from your user in a number of ways. The first ones we’re going to talk about are boxes. There are three types of boxes:</p>
+
+<ul>
+  <li>alert</li>
+  <li>confirm</li>
+  <li>prompt</li>
+</ul>
+
+<p>Let’s explore them in more detail.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="alert">Alert</h2>
+
+<p>Alert boxes allow you to send a message that your user can read when an action is performed. By adding a button we can see how this works:</p>
+
+<pre><code class="language-html">&lt;button type="button" name="button" id="alert"&gt;Alert Box&lt;/button&gt;    
+</code></pre>
+
+<p>And inside of our JS file:</p>
+
+<pre><code class="language-JavaScript">var alertButton = document.getElementById('alert');
+alertButton.onclick = function() {
+    alert('Here is our alert box')
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Which then performs like this:</p>
+
+<p><img src="./resources/alert-box.gif" alt="alert-box" style="margin: 0 auto; width: 100%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="confirm">Confirm</h2>
+
+<p>Confirm boxes actually return a boolean value to you. This way you can interact with your user and get some kind of feedback from them. When your user clicks ok in the confirm box, you get a true value. When they click cancel, you get a false value:</p>
+
+<pre><code class="language-html">&lt;button type="button" name="button" id="confirm"&gt;Confirm Box&lt;/button&gt;
+&lt;output name="result" id="confirmResponse"&gt;&lt;/output&gt;
+</code></pre>
+
+<p>And inside of our JS file:</p>
+
+<pre><code class="language-JavaScript">var confirmButton = document.getElementById('confirm');
+confirmButton.onclick = function() {
+    var userResponse = confirm('Here is our confirm box');
+    var displayContainer = document.getElementById('confirmResponse');
+    var displayMessage = '';
+    if (userResponse) {
+        displayMessage += 'You like bananas! Did you know they\'re a berry?'
+    } else {
+        displayMessage += 'You don\'t like bananas because you\'re wrong.'
+    }
+    displayContainer.innerText = displayMessage;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Which then performs like this:</p>
+
+<p><img src="./resources/confirm-box.gif" alt="confirm-box" style="margin: 0 auto; width: 100%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="prompt">Prompt</h2>
+
+<p>Prompt works very similar to to confirm. It accepts input from your user as well. This time the value is a string. So you can get specific information from your user and use it however you want.</p>
+
+<pre><code class="language-html">&lt;button type="button" name="button" id="prompt"&gt;Prompt Box&lt;/button&gt;
+&lt;output name="result" id="promptResponse"&gt;&lt;/output&gt;
+</code></pre>
+
+<p>And inside of our JS file:</p>
+
+<pre><code class="language-JavaScript">var promptButton = document.getElementById('prompt');
+promptButton.onclick = function() {
+    var userResponse = prompt('What is your name?');
+    var displayContainer = document.getElementById('promptResponse');
+    displayContainer.innerText = 'Hey, ' + userResponse;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Let’s see what it does when we give it a value and what we get when we hit cancel:</p>
+
+<p><img src="./resources/prompt-box.gif" alt="prompt-box" style="margin: 0 auto; width: 100%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="printing-to-the-console">Printing to the console</h2>
+
+<p>We can print to our console with JS the same way we can with Java. The only thing that’s different is the command to execute this behavior.</p>
+
+<p>In JS that command is <code>console.log()</code>. There is also <code>console.error()</code> and <code>console.dir</code>. They are for more specific tasks but have generally the same behavior. Let’s see them in action:</p>
+
+<p><img src="./resources/console-commands.gif" alt="console-commands" style="margin: 0 auto; width: 70%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="variables">Variables</h2>
+
+<p>We have variables in JS just like we have in Java. Since JS isn’t statically typed, we don’t have to expressly tell JS what type of variable we have. This is a cool feature but it can also get you into trouble. For example, if you’re trying to do some sort of math operation an accidentally pass a boolean value instead of a number, you’ll get unexpected functionality. Variables are declared in JS using the <code>var</code> keyword, like so:</p>
+
+<pre><code class="language-JavaScript">var myNumber = 42;
+var myString = 'Hello world'
+var myFunction = function() {
+    // I do stuff
+}
+</code></pre>
+
+<p>With these variables declared, you can now use them inside your code. These are more useful than literals because you can reference them as many times as you want without having to explicitly define them again.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="concatenation">Concatenation</h2>
+
+<p>Concatenating is the same here as well (notice how similarly programming languages behave?). In fact, we use the same concatenation operator in JS as in Java:</p>
+
+<pre><code class="language-javascript">var myName = 'Instructor'
+
+console.log('Hey, ' + myName + '! How\'s it going?')
+</code></pre>
+
+<p>This would print out <code>Hey, Instructor! How's it going?</code> to the console.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="comparison-operators">Comparison operators</h2>
+
+<p>More of the same here. JS has the same comparison operators as Java. It adds two new ones though and that’s what we’re going to focus on.</p>
+
+<ul>
+  <li><code>==</code></li>
+  <li><code>!=</code></li>
+  <li><code>&gt;</code></li>
+  <li><code>&lt;</code></li>
+  <li><code>&gt;=</code></li>
+  <li><code>&lt;=</code></li>
+  <li><code>===</code></li>
+  <li><code>!==</code></li>
+</ul>
+
+<p>These last two have more specificity than <code>==</code> and <code>!=</code>. With the less specific operators, if two objects have similar values, they are considered equal. Similarly, the more specific versions will compare the types and values i.e.</p>
+
+<pre><code class="language-javascript">5 == '5' // true
+5 === '5' // flase
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="logical-and-mathematical-operators">Logical and Mathematical operators</h2>
+
+<p>These are the same as Java.</p>
+
+<h3 id="logical">Logical</h3>
+<ul>
+  <li><code>&amp;&amp;</code></li>
+  <li><code>||</code></li>
+  <li><code>!</code></li>
+</ul>
+
+<h3 id="mathematical">Mathematical</h3>
+<ul>
+  <li><code>+</code></li>
+  <li><code>-</code></li>
+  <li><code>/</code></li>
+  <li><code>*</code></li>
+  <li><code>%</code></li>
+  <li><code>++</code></li>
+  <li><code>--</code></li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="commenting">Commenting</h2>
+
+<p>You can comment things out in JS also. You can use <code>//</code> for inline commenting and <code>/*  */</code> for commenting blocks of code.</p>
+
+<pre><code class="language-javascript">var name = 'Instructor' // This is a name
+
+/*
+Here is a bunch
+of stuff that I
+want to comment
+out because it
+isn't actually
+relevant to our
+code.
+*/
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="arrays">Arrays</h1>
+
+<p>Arrays in JS are way more useful than the arrays we’re used to. They’re mutable, which means you can alter them. There are two ways to declare an Array:</p>
+
+<pre><code class="language-javascript">var myFavoriteFruits = ['bananas', 'oranges', 'papaya', 'mango', 'pineapple'];
+var myEmptyArray = new Array(5);
+</code></pre>
+
+<p>When we print these to the console we get:</p>
+
+<p><img src="./resources/arrays.png" alt="arrays" style="margin: 0 auto; width: 100%;" /></p>
+
+<p>Similar to what we’re used to, these arrays are also zero-based and have a built in length property.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="push-and-pop">Push and Pop</h2>
+
+<p>We can add and remove items to the end of our arrays using the <code>.push()</code> and <code>.pop()</code> methods.</p>
+
+<pre><code class="language-JavaScript">// This removes 'pineapple' from the
+// array and stores it in the variable
+// pineapple.
+var pineapple = myFavoriteFruits.pop();
+
+// This adds the value 'watermelon'
+// to the end of our array.
+// ['bananas', 'oranges', 'papaya', 'mango', 'watermelon']
+myFavoriteFruits.push('watermelon');
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="splice">Splice</h2>
+
+<p>The splice method allows you to remove any number of items from your array at any given location. Splice accepts two parameters <code>.splice(index, number of items to remove)</code>. So for example:</p>
+
+<pre><code class="language-javascript">// Current value of myFavoriteFruits
+// ['bananas', 'oranges', 'papaya', 'mango', 'watermelon']
+//
+// This will store the array ['papaya', 'mango']
+var myMostFavorite = myFavoriteFruits.splice(2, 2);
+
+// It also makes our array have the value of
+// ['bananas', 'oranges', 'watermelon']
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="shift-and-unshift">Shift and Unshift</h2>
+
+<p>Now you’re wondering, if I can add and remove to the end of my array, what if I want to add to the front? We use the methods <code>.shift()</code> and <code>.unshift()</code>.</p>
+
+<pre><code class="language-javascript">// Makes our array have the value of
+// ['blueberries', 'bananas', 'oranges', 'watermelon']
+myFavoriteFruits.unshift('blueberries');
+
+// This variable gets passed the value 'blueberries'
+var kingOfBerries = myFavoriteFruits.shift();
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="assigning-values">Assigning Values</h2>
+
+<p>There are a few different ways to add values to our array. We can declare our array with values already inside:</p>
+
+<pre><code class="language-JavaScript">// This array has five values. Notice how
+// we can mix value types in JS arrays
+var numbers = [1.0, 2, 'three', 4, 'five'];
+</code></pre>
+
+<p>We can also give values to specific indices in arrays:</p>
+
+<pre><code class="language-JavaScript">var names = new Array(3);
+
+// This changes the value of the second
+// item from null to 'Alan'
+names[1] = 'Alan';
+
+// This creates a key of 'Brian'
+// and gives it the value 'Brian'
+names['Brian'] = 'Brian';
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="objects">Objects</h2>
+
+<p>We have objects in JS the same as Java. They behave in a similar fashion</p>
+
+<h3 id="methods-and-properties-vs-functions-and-variables">Methods and Properties vs. Functions and Variables</h3>
+
+<p>Functions and variables are the anonymous versions of methods and properties. Once a variable is place inside of an object, it is a property of that object. The same goes for functions and methods. Let’s look at how to declare an object in JS and give it some properties and methods.</p>
+
+<pre><code class="language-javascript">var Car = {
+    color: 'green',
+    hornSound: 'BEEEEP!',
+    numOfWheels: 4,
+
+    honk: function() {
+        console.log(this.hornSound)
+    }
+};
+
+// We can also add values like this
+Car.engine = 'V8';
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="encapsulation">Encapsulation</h2>
+
+<p>We can use objects in JS to encapsulate our applications. We do this by making everything part of an object and containing all of our properties and methods inside of the object. This way we can avoid name collision inside of our global scope. This allows us to have only one global object, our application, which should be named uniquely so that no other plugins or libraries will use the same names as you.</p>
+
+<pre><code class="language-javascript">var MyApp = {
+    users: [],
+    userCount: users.length,
+
+    addAUser: function() {
+        // logic to add a user
+    }
+};
+</code></pre>
+
+<p>Now <code>MyApp</code> is the only thing that we are adding to our global scope, everything else is local to our application and can’t be accessed directly by our browser or any other JavaScript frameworks or libraries that may be in our document.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="dates-and-times">Dates and times</h2>
+
+<p>We can access current times and dates on the users machine with JavaScript. Make sure to note that times are based on the settings on the users machine so we can’t be sure that our intended time or date will display. We reference a new date object like so:</p>
+
+<pre><code class="language-javascript">var date = new Date();
+
+// This method shows the number of milliseconds
+// that have passed since 1 January 1970 00:00:00 UTC.
+date.getTime();
+
+// This value gets the current year
+date.getFullYear();
+</code></pre>
+
+<p>There are many useful methods on the date object. Read about them <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">here</a>. You can read about why we’re getting milliseconds since 1 January 1970 <a href="https://en.wikipedia.org/wiki/Unix_time">here</a>.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="intervals">Intervals</h2>
+
+<p>JavaScript has plenty of useful built-in methods for you to use. Two of the most frequently used is <code>setInterval(time in milliseconds, function to execute)</code> and <code>setTimeout(time in milliseconds, function to execute)</code>. These are used to delay operations from happening until a specified time. In the case of <code>setInterval()</code>, we are setting up intervals for operations to be executed multiple times in increments set by the developer.</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Let’s see how they work:</p>
+
+<pre><code class="language-javascript">var i = 0;
+
+// This will call setInterval() and
+// execute the anonymous function
+// that we're passing it.
+var interval = setInterval(function() {
+    i++;
+    console.log(i);
+
+    if (i === 10) {
+        clearInterval(interval);
+    }
+}, 1000);
+
+// This will log to the console
+// after 11 seconds.
+setTimeout(function() {
+    console.log('This took 11 seconds');
+}, 11000);
+</code></pre>
+
+<p>But, what is that function doing?</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="callbacks">Callbacks</h2>
+
+<p>That anonymous function that we pass to <code>setInterval</code> is called a callback. Callbacks are used to execute specific behavior with a value that has been passed to it. Let’s explore:</p>
+
+<pre><code class="language-javascript">var colors = ['red', 'green', 'blue', 'yellow'];
+var listAllColors = function(array, callbackFunction) {
+    list = '';
+    for(var i = 0; i &lt; array.length; i++) {
+        if (!(i === array.length - 1)) {
+			list += array[i] + ', ';
+		} else {
+			list += array[i];
+		}
+        list += array[i] + ', ';
+    }
+    callbackFunction(list);
+};
+listAllColors(colors, function(listOfColors) {
+    console.log(listOfColors);
+});
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>This prints the concatenated array to the console:</p>
+
+<p><img src="./resources/callbacks.png" alt="callbacks" style="width: 100%;" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="dom-manipulation">DOM Manipulation</h2>
+
+<p>Probably the biggest tool we have in JS is DOM manipulation. This is what allows you to dynamically populate your page with elements based on data being updated. Let’s look at some code to see how this works. Let’s look at referencing DOM elements first:</p>
+
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;body&gt;
+    &lt;h1 id="title"&gt;Here's my title&lt;/h1&gt;
+&lt;/body&gt;
+</code></pre>
+<pre><code class="language-javascript">// app.js
+// This tells our browser that we are
+// referencing this specific element
+// and sets it to a variable.
+var title = document.getElementById('title');
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="accessing-attributes">Accessing Attributes</h2>
+
+<p>Let’s now look at what we can do with the element we’ve grabbed:</p>
+
+<pre><code class="language-javascript">var title = document.getElementById('title');
+// This will set the text inside of our #title to a new value
+title.innerText = 'This is dynamically set text.';
+
+// But what if we want to add HTML element?
+title.innerHTML = 'This is &lt;span&gt;dynamically&lt;/span&gt; set text!';
+</code></pre>
+<p>This allows you to put actual HTML elements into you string. We can now manipulate this span with CSS!</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>We can also work with attributes on the element (i.e. things like <code>href</code> or <code>type</code>).</p>
+
+<pre><code class="language-javascript">// This gives us a variable with the value
+// of the ID attribute.
+var titleId = title.getAttribute('id');
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>We can also see if an element has an attribute and, if so, examine what its value is.</p>
+<pre><code class="language-javascript">// This returns us a boolean value
+// of false because our 'h1' element
+// doesn't have an 'href' value
+title.hasAttribute('href');
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="remove-elements">Remove Elements</h2>
+
+<p>The same way we can manipulate elements, we can remove them:</p>
+
+<pre><code class="language-javascript">// The remove method is built in to
+// javascript and deletes an element for us.
+title.remove();
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="query-selector">Query Selector</h2>
+
+<p>So we find ourselves selecting elements in a very clumsy way. There seems to be a different way to find each element in JS. Why not one way? BECAUSE THERE ARE TWO! <code>.querySelector('thing')</code> and <code>.querySelectorAll('things')</code>.</p>
+
+<pre><code class="language-javascript">// This selects the first element of
+// its kind in the document.
+document.querySelector('h1');
+
+// This selects a group of things
+// that have the parameter in common.
+document.querySelectorAll('.content');
+</code></pre>
+
+<p>This way we can select elements more dynamically.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="event-handlers">Event Handlers</h2>
+
+<p>Event handlers are the way we deal with interactivity. So, for example, you want to change the way your heading is sized when your user clicks on it, you can!</p>
+
+<pre><code class="language-javascript">var title = document.querySelector('#title');
+
+// This is going to make your 'h1' tag(s)
+// be '50px' when you click it
+title.addEventListener('click', function() {
+    title.style.fontSize = '50px';
+});
+</code></pre>
+
+<p>Now for some…</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="practice">PRACTICE!</h2>
+
+<p>Clone the example project from <a href="https://github.com/WeCanCodeIT/javascript-example-project">here</a>. ENJOY!</p>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

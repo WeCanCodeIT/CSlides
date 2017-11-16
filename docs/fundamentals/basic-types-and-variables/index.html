@@ -1,0 +1,335 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Basic Types and Variables - •••</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Basic Types and Variables</h1>
+					<h3 style="text-align: center">•••</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h2 id="its-a-value-based-proposition">It’s a Value-Based Proposition</h2>
+
+<p>We saw <em>literals</em> yesterday. In the statement:</p>
+
+<pre><code class="language-java">System.out.println("Hello, World!");
+</code></pre>
+
+<p><code>"Hello, World!"</code> is a String literal. It’s a String because it’s a sequence of characters surrounded by quotation marks. It’s a literal because it always has that value.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-not-be-literal">Let’s Not Be Literal</h2>
+
+<p>In contrast, we have <em>variables</em>. In Java, a variable’s <em>type</em> is defined, but its value can <em>vary</em> (thus the name).</p>
+
+<div class="fragment">
+<p>Instead of:</p>
+
+<pre><code class="language-java hljs">System.out.println("Hello, World!");
+</code></pre>
+</div>
+
+<div class="fragment">
+<p>I could have written…</p>
+<pre><code class="language-java hljs">String message = "Hello, World!";
+System.out.println(message);</code></pre>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="variables-are-variable">Variables are variable</h2>
+
+<p>Variables store a value, but allow us to change the value that is stored.</p>
+
+<pre><code class="language-java">String message = "I am Sam";
+System.out.println(message); // prints "I am Sam"
+
+message = "I am Spartacus";
+System.out.println(message); // prints "I am Spartacus"
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="reusing-variables">Reusing Variables</h2>
+
+<p>Notice that in the previous example, when we first used our <code>message</code> variable, we specified its type:</p>
+
+<pre><code class="language-java hljs" data-noescape=""><mark>String</mark> message = "I am Sam";
+System.out.println(message);</code></pre>
+
+<div class="fragment">
+<p>When we reassigned its value, we didn't specify a type:</p>
+<pre><code class="language-java hljs" data-noescape="">message = "I am Spartacus";
+System.out.println(message);</code></pre>
+
+That's because we had already <em>declared</em> the variable. We declare a variable only once.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="defining-variables">Defining Variables</h2>
+
+<p>When we do this:</p>
+<pre><code class="language-java">String message = "I am Sam";
+</code></pre>
+
+<div class="fragment">
+<p>We are really combining these two things:</p>
+<pre><code class="language-java hljs">String message;
+message = "I am Sam";</code></pre>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="declaring-vs-initializing-a-variable">Declaring vs Initializing a Variable</h2>
+
+<p>We declare a variable by giving it a <em>type</em> and a <em>name</em>. That’s what we did here:</p>
+
+<pre><code class="language-java">String message;
+</code></pre>
+
+<p>The variable’s <em>type</em> is <code>String</code>. Its <em>name</em> is <code>message</code>.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="initializing-a-variable">Initializing a variable</h2>
+
+<p>When we did this, we assigned a value of <code>"I am Sam"</code> to the variable. <em>Initializing</em> is only different than <em>assigning</em> a value in that we haven’t assigned a value yet:</p>
+
+<pre><code class="language-java hljs" data-noescape="">String message;
+<mark>message = "I am Sam";</mark></code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="variable-naming-conventions">Variable Naming Conventions</h1>
+
+<p>We will talk about naming conventions quite a bit. They’re important, since they reduce the <em>cognitive load</em> of people that need to look at your code. (This person might be you.)</p>
+
+<p>Apart from constants (more on that later), we use <code>camelCase</code> to name variables. The first letter should be lowercase, and the first letter of each additional word in a variable’s name should be uppercase:</p>
+
+<pre><code class="language-java">String myVariable = "my variable's value";
+</code></pre>
+
+<p>Not (all lowercase):</p>
+<pre><code class="language-java">String myvariable = "my variable's value";
+</code></pre>
+
+<p>Not (begins with a capital letter):</p>
+<pre><code class="language-java">String MyVariable = "my variable's value";
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="basic-data-types">Basic Data Types</h1>
+
+<p>Java is not a <em>pure</em> object-oriented language. That is to say that it allows for <em>primitive</em> types as well as <em>objects</em>. For now, recognize that primitive types are declared in lowercase. Real objects will have their types capitalized.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="booleans">Booleans</h2>
+
+<p>A <code>boolean</code> variable holds either the value <code>true</code> or <code>false</code>.</p>
+
+<pre><code class="language-java">boolean writingCodeIsFun = true;
+boolean rootCanalsAreFun = false; // unless you're a dentist?
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="integer-primitives">Integer Primitives</h2>
+
+<p>There are three sizes of integer (whole number) types: <code>short</code>, <code>int</code>, and <code>long</code>. They vary in their maximum and minimum values. <code>short</code>s support a smaller range of values than <code>int</code> supports. <code>int</code> supports a smaller range of values than <code>long</code> supports. We use <code>int</code>s (short for “integer”) for most practical purposes. We often see <code>long</code>s for things like database record ids since we may have a lot of records in a database.</p>
+
+<p>All of the following are valid:</p>
+
+<pre><code class="language-java">short answerInt = 42;
+int answerInt = 42;
+long answerInt = 42;
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="floating-point-primitives">Floating Point Primitives</h2>
+
+<p>Floating point (numbers with decimal fractions) types are <code>float</code> and <code>double</code>. <code>double</code> is more precise than <code>float</code>.</p>
+
+<p>Let’s try it. (Note that we append ‘f’ to the value for the float variable):</p>
+
+<pre><code class="language-java">public class FloatingPointDemo {
+
+	public static void main(String[] args) {
+		
+		double doubleValue = 2.16440330489723961032;
+		System.out.println(doubleValue);
+		
+		float floatValue = 2.16440330489723961032f;
+		System.out.println(floatValue);
+	}
+
+}
+</code></pre>
+
+<p>The values assigned to each variable are the same. Try it. What do you see?</p>
+
+<p><em>Computers aren’t as good at math as you thought, eh?</em></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="character-primitives">Character primitives</h2>
+
+<p>The <code>char</code> type holds individual characters. We define <code>char</code> literals by using single apostrophes.</p>
+
+<pre><code class="language-java">char myChar = 'a';
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="string-objects">String objects</h2>
+
+<p>Strings are proper objects. We’ll talk more about them later. We’ve seen them. We denote their values with quotation marks:</p>
+
+<pre><code class="language-java">String myDeclaration = "I can code";
+</code></pre>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

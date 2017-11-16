@@ -1,0 +1,252 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Branching - Control the flow!</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Branching</h1>
+					<h3 style="text-align: center">Control the flow!</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h1 id="branching-statements">Branching statements</h1>
+
+<p>In addition to the decision making and looping statements, we have <em>branching</em> statements. These interrupt the normal top-to-bottom execution of our code. There are three: <code>break</code>, <code>continue</code>, and <code>return</code>.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="neither-pass-go-nor-collect-200">Neither Pass Go, Nor Collect $200</h2>
+
+<p>A <code>break</code> statement exits a loop (jumps to the code after its code block) immediately. What it says is <strong>“Stop doing that! Now!”</strong></p>
+
+<p>Here is an example of (bad) code that I saw in production. How could we write this using an equivalent <code>if</code> statement?</p>
+
+<pre><code class="language-java">boolean shouldPrint = true;
+while(shouldPrint) {
+  System.out.println("I should print!");
+  break;
+}
+</code></pre>
+
+<p>We cried, then laughed a bit, and dubbed it the “while/break” statement. (No, that shouldn’t be a thing.)</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="ummm-break-it-down">Ummm… <code>break</code> it down?</h2>
+
+<p><code>break</code> statements are not that common. In fact, they’re often a symptom of poorly designed code. An example of where you might use them is if you have a progam interacting with the user, and would like to abruptly exit, perhaps because of an error conditiion.</p>
+
+<p>Remember Fortune Teller? We might have done something like this (assuming we were asking the user questions inside a loop):</p>
+
+<pre><code class="language-java">while(true) {
+  System.out.println("What is your favorite color?"); 
+  String favoriteColor = input.next();
+
+  if(favoriteColor.equals("Blue. No yel-- Auuuuuuuugh!")) {
+    System.out.println("You're just making Monty Python references.");
+    System.out.println("Get out!");
+    break;
+  }
+
+  System.out.println("Your favorite color is " + favoriteColor);
+}
+</code></pre>
+
+<p>Try it!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="continuing-with-continue">Continuing with… <code>continue</code></h2>
+
+<p>The second branching statement is <code>continue</code>. The <code>continue</code> statement is more common than the <code>break</code> statement.</p>
+
+<p>Continue skips the current iteration, jumping to the end of the loop.</p>
+
+<p>Let’s say we wanted to count from one to ten, skipping multiples of three:</p>
+
+<pre><code class="language-java">for(int count = 1; count &lt;= 10; count++) {
+  if(count % 3 == 0) { // it's a multiple of three
+    continue;
+  }
+  System.out.println("Count is " + count);
+}
+</code></pre>
+
+<p>We <em>could</em> have done this with an <code>if/else</code> statement, but using <code>continue</code> skips our <code>println</code> just fine. Which one should you use? This depends on the situation. A <code>continue</code> may make the code clearer.</p>
+
+<p>How could we have changed our condition to make this code simpler and avoided using <code>continue</code>?</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="baby-come-back">Baby, Come Back!</h2>
+
+<p>The third branching statement, <code>return</code>, isn’t specific to loops. When we write our own methods, we’ll use this to exit a method and <em>return</em> execution to the point where another method called it.</p>
+
+<p>Try this:</p>
+<pre><code class="language-java">public class EvenOrOdd {
+
+  public static void main(String[] args) {
+    System.out.println("Message for 42: " + chooseMessage(42));
+    System.out.println("Message for 23: " + chooseMessage(23));
+  }
+
+  public static String chooseMessage(int input) {
+    if(input % 2 == 0) {
+      return "Even Steven!";
+    }
+    return "You're odd!";
+  }
+}
+</code></pre>
+
+<p>Notice how using a return allows us to avoid using <code>else</code>-the method immediately <em>returns</em> (responds) and exits. More on this when we get to methods.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="nested-loops">Nested Loops</h2>
+
+<p>It is not uncommon to place one loop inside another. Imagine the second, minute, and hour hands of a clock. Once the second hand completes its circuit of the clock face, the minute hand advances. When the minute hand completes its circuit, the hour hand advances.</p>
+
+<p>Let’s do the hour and minute hand in code. We’ll increment the minute hand by five minutes each time so that we don’t fill up our console so quickly. Also, we’ll only do three hours, starting with 1:00 and ending with 2:55:</p>
+
+<pre><code class="language-java">for (int hours = 1; hours &lt; 3; hours++) {
+  for (int minutes = 0; minutes &lt; 60; minutes += 5) {
+    System.out.println("The time is " + hours + ":" + minutes);
+  }
+}
+</code></pre>
+
+<p>Now <em>that</em> is wizardy!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="making-it-pretty">Making It Pretty</h2>
+
+<p>Notice how “1:00” comes out “1:0” in the previous example? This is because we’re simply appending the value of <code>minutes</code> (<code>0</code> in this case) to the hours value. We referred to the <code>java.text.DecimalFormat</code> class when we were talking about formatting currency. We can also use it here to make our output prettier by giving it a format pattern. This is similar to how number formats in spreadsheets work:</p>
+
+<pre><code class="language-java">DecimalFormat paddedFormat = new DecimalFormat("00");
+
+for (int hours = 1; hours &lt; 3; hours++) {
+  String paddedHours = paddedFormat.format(hours);
+  for (int minutes = 0; minutes &lt; 60; minutes += 5) {
+    String paddedMinutes = paddedFormat.format(minutes);
+    String paddedTime = paddedHours + ":" + paddedMinutes;
+    System.out.println("The time is " + paddedTime);
+  }
+}
+</code></pre>
+
+<p>Here, we are creating a DecimalFormat object (we call this an <em>instance</em>), then asking it to format our hours and minutes via its <code>format</code> method.</p>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

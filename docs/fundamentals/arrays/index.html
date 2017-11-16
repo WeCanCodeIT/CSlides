@@ -1,0 +1,466 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Arrays - •••</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Arrays</h1>
+					<h3 style="text-align: center">•••</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h2 id="what-are-they">What Are They?</h2>
+
+<p>Arrays allow us to store a sequence of values of a given type. This could be items on a menu, lottery numbers, or the birds in your menagerie.</p>
+
+<p><em>Head First Java</em> likens them a sequence of cups. This is a pretty good analogy.</p>
+
+<p>Each of these “cups” in an array holds a value, which we call an <em>element</em>. We reference a specific element using its zero-based <em>index</em>.</p>
+
+<div class="cups">
+	<div><p class="row-label">Element →</p></div>
+	<div class="cup"><p>42</p></div>
+	<div class="cup"><p>86</p></div>
+	<div class="cup"><p>23</p></div>
+	<div class="cup"><p>8</p></div>
+	<div class="cup"><p>91</p></div>
+
+	<div><p class="row-label">Index →</p></div>
+	<div><p>0</p></div>
+	<div><p>1</p></div>
+	<div><p>2</p></div>
+	<div><p>3</p></div>
+	<div><p>4</p></div>
+</div>
+
+<style type="text/css">
+div.cups {
+
+	display: grid;
+	grid-template-columns: max-content repeat(5, 10rem);
+}
+
+div.cups .row-label, div.cups .cup {
+	font-weight: bolder;
+}
+
+div.cups > div {
+
+	height: 6rem;
+
+	text-align: center;
+	vertical-align: middle;
+}
+
+div.cups .row-label {
+	text-align: right;
+}
+
+div.cups .cup {
+
+	color: var(--background-color);
+
+	background: no-repeat center url(./resources/cup.png);
+	background-size: contain;
+}
+</style>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="declaring-an-array">Declaring an Array</h1>
+
+<p>We declare an array using a syntax that we won’t see elsewhere in Java. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the <code>new</code> operator in a different way.</p>
+
+<p>To create an array destined to hold the values of our cups from the previous example, we would do this:</p>
+
+<pre><code class="language-java">int[] cupValues = new int[5];
+</code></pre>
+
+<p>This creates an array of type <code>int</code> whose name is <code>cupValues</code>. It has five elements.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="assigning-values">Assigning Values</h1>
+
+<p>Remember our cups?</p>
+
+<div class="cups">
+	<div><p class="row-label">Element →</p></div>
+	<div class="cup"><p>42</p></div>
+	<div class="cup"><p>86</p></div>
+	<div class="cup"><p>23</p></div>
+	<div class="cup"><p>8</p></div>
+	<div class="cup"><p>91</p></div>
+
+	<div><p class="row-label">Index →</p></div>
+	<div><p>0</p></div>
+	<div><p>1</p></div>
+	<div><p>2</p></div>
+	<div><p>3</p></div>
+	<div><p>4</p></div>
+</div>
+
+<p>We use array indices (that’s the plural of index) to assign values to elements. This is how we’d declare our array and assign element values:</p>
+
+<pre><code>int[] cupValues = new int[5];
+cupValues[0] = 42;
+cupValues[1] = 86;
+cupValues[2] = 23;
+cupValues[3] = 8;
+cupValues[4] = 91;
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="change-can-be-painful">Change can be painful</h2>
+
+<p>Arrays are very efficient, but their size is fixed. If I wanted to change the number of cups, I’d need to create a new array, assign it to my variable, then repopulate all the values:</p>
+
+<pre><code>cupValues = new int[2];
+cupValues[0] = 42;
+cupValues[1] = 86;
+</code></pre>
+
+<p>Notice I didn’t <em>declare</em> <code>cupValues</code> again. I merely reassigned a new array to it. We will look at <code>List</code>s and <code>Collection</code>s later, types in Java that are more flexible.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="retrieving-values">Retrieving Values</h1>
+
+<p>To retrieve values, we use a syntax like we used to assign values:</p>
+
+<pre><code class="language-java">System.out.println(cupValues[0]); // prints "42"
+System.out.println(cupValues[1]); // prints "86"
+System.out.println(cupValues[2]); // prints "23"
+System.out.println(cupValues[3]); // prints "8"
+System.out.println(cupValues[4]); // prints "91"
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="how-big-is-it">How Big Is It?</h1>
+
+<p>Often, it’s important to know the size of an array. How many cups do I have?</p>
+
+<p>To do this, we use the <code>length</code> property, like so (notice that dot operator):</p>
+
+<pre><code class="language-java">int[] cupValues = new int[5];
+int numberOfCups = cupValues.length;
+System.out.println(numberOfCups); // prints "5"
+
+cupValues = new int[2];
+System.out.println(cupValues.length); // prints "2"
+</code></pre>
+
+<p>What is the value of <code>numberOfCups</code> after we run this code?</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="revenge-of-the-curly-brackets">Revenge of the Curly Brackets</h2>
+
+<p>We can also initialize an array with values. We do this using curly brackets to surround a comma-delimited list of values, like so:</p>
+
+<pre><code class="language-java">String[] giantWords = { "fee", "fie", "foe", "fum" };
+</code></pre>
+
+<p>Note that we also do not include the <em>size</em> of the array. Java figures this out based on the number of values we provide.</p>
+
+<div class="fragment sidebar"><img src="./resources/wat.jpg" alt="WAT?" /></div>
+
+<p>This creates a String array with these values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>index</th>
+      <th>value</th>
+      <th>reference</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>0</td>
+      <td>“fee”</td>
+      <td><code>giantWords[0]</code></td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>“fie”</td>
+      <td><code>giantWords[1]</code></td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>“foe”</td>
+      <td><code>giantWords[2]</code></td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>“fum”</td>
+      <td><code>giantWords[3]</code></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>… and these curly brackets aren’t defining a code block. By now, you’re probably thinking…</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="theres-more-than-one-way">There’s more than one way…</h2>
+
+<p>When we do this:</p>
+
+<pre><code class="language-java">String[] giantWords = { "fee", "fie", "foe", "fum" };
+</code></pre>
+
+<p>It is equivalent to doing this:</p>
+
+<pre><code class="language-java">String[] giantWords = new String[4];
+giantWords[0] = "fee";
+giantWords[1] = "fie";
+giantWords[2] = "foe";
+giantWords[3] = "fum";
+</code></pre>
+
+<p>We can <em>initialize</em> an array with this syntax, but we can’t use it to later assign it new values. This is because array sizes are fixed (can’t change), and Java wouldn’t be able to check when compiling our code.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-do-it-together">Let’s Do It Together</h2>
+
+<p>If we needed to create a class roster, would an array be appropriate? How would we go about it?</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="now-you-do-it">Now You Do It!</h2>
+
+<ul>
+  <li>For each of the following, create an array, assign its values, then print out those values:
+    <ul>
+      <li>The names of three people you know.</li>
+      <li>The GPAs on a 4.0 scale of five students.</li>
+    </ul>
+  </li>
+  <li>Create an array of your top four vacation spots, then print the top (first) spot and the bottom (last spot).</li>
+  <li>Create a <code>String</code> that holds your last name. Print out the number of letters in your name.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="and-then-and-then-and-then">And then and then and then…</h2>
+
+<p>There are some useful methods of <code>String</code> which <em>return</em> arrays.</p>
+
+<h3 id="splitting-strings">Splitting Strings</h3>
+
+<p><code>split</code> is one of them. It allows us to split a <code>String</code> into an array of <code>String</code>s. It accepts one argument, which is the delimiter it should use to split the <code>String</code>:</p>
+
+<pre><code class="language-java">String source = "this, that, the other";
+String[] elements = source.split(", ");
+
+System.out.println(elements[0]); // prints "this"
+System.out.println(elements[1]); // prints "that"
+System.out.println(elements[2]); // prints "the other"
+</code></pre>
+
+<p>What is the value of <code>elements.length</code>?</p>
+
+<p><em>Note: technically, the <code>split</code> method accepts a</em> regular expression, <em>pretty powerful stuff, but you can just think of it as a <code>String</code> for now.</em></p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<h3 id="looking-at-characters">Looking at characters</h3>
+
+<p>We have talked about <code>String</code>s as sequences of characters. Now we have the tools to treat them that way. <code>String</code> has a <code>toCharArray</code> method that returns an array of <code>char</code>s:</p>
+
+<pre><code class="language-java">String myName = "Sue";
+char[] letters = myName.toCharArray();
+
+System.out.println("The first letter of my name is " + letters[0]);
+</code></pre>
+
+<p>A related method is <code>indexOf</code>, which returns the first index of a character:</p>
+<pre><code class="language-java">System.out.println(myName.indexOf('S')); //prints "0"
+System.out.println("foo".indexOf('o')); //prints "1"
+</code></pre>
+
+<p>Another version of the <code>indexOf</code> method (this is called <em>overloading</em>) will accept a <code>String</code>:</p>
+<pre><code class="language-java">System.out.println("fee, fie, foe, fum".indexOf("foe")); //prints "10"
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="a-little-wonky">A Little Wonky</h2>
+
+<p>Before teaching a bootcamp, I… <em>uhhh</em>… I mean a <em>friend</em> of mine often had to look up the syntax for arrays because they’re not really like other things in Java.</p>
+
+<p>Arrays are objects, but they don’t conform to all the rules of other objects. They are special snowflakes.</p>
+
+<p>Some differences to be aware of:</p>
+
+<ul>
+  <li>We create them using the <code>new</code> operator, but we don’t use a <em>constructor</em> method like we would with other objects.</li>
+  <li>Their values can be initialized with a creative (confusing) use of curly brackets.</li>
+  <li>We can’t call methods on them (at least not directly).</li>
+  <li>We use square brackets to both declare arrays and to access element values, something we won’t see elsewhere.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="work-it">Work It</h2>
+
+<ul>
+  <li>Create an array holding the names of four of your peers sitting next to you. Print the first letter of each of their names.
+    <ul>
+      <li>Change your code (or create more code) that asks you to enter each of their names via the console.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Create a console application that asks you to enter a word and then a letter. Print out either “Yep, it’s got one of those” or “So, sorry”, depending on whether the word contains that letter.</p>
+  </li>
+  <li>Create a <code>String</code> representing a list of things that uses some delimiter (commas, dashes, etc). Split that <code>String</code> into an array of <code>String</code>s, then print one or more of these array elements.
+    <ul>
+      <li>Stretch Task: research <em>regular expressions</em>, and allow the use of either of two delimiters to split the <code>String</code>. (Either a comma <em>or</em> a dash, for example.)</li>
+    </ul>
+  </li>
+</ul>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

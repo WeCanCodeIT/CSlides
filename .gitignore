@@ -1,0 +1,10 @@
+.thumbnails/
+
+# Eclipse
+.project
+.settings/
+
+# slideshow
+slideshow-config/
+
+.DS_Store

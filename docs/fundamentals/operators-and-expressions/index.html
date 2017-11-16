@@ -1,0 +1,511 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Operators and Expressions - •••</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Operators and Expressions</h1>
+					<h3 style="text-align: center">•••</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h1 id="lesson-goals">Lesson Goals</h1>
+
+<ul>
+  <li>Learn about the different operators and their functions.</li>
+  <li>Become familiar with Java syntax.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="write-practice-statements-for-the-arithmetic-operators">Write practice statements for the arithmetic operators</h2>
+
+<p>If variable <em>a</em> holds 10 and variable <em>b</em> holds 15, then:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Description</th>
+      <th>Expression</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>+</td>
+      <td>addition</td>
+      <td>adds two operands</td>
+      <td><code>a + b</code></td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>-</td>
+      <td>subtraction</td>
+      <td>subtracts second operand from the first</td>
+      <td><code>a - b</code></td>
+      <td>-5</td>
+    </tr>
+    <tr>
+      <td>*</td>
+      <td>multiplication</td>
+      <td>multiplies the operands</td>
+      <td><code>a * b</code></td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <td>/</td>
+      <td>division</td>
+      <td>divides first operand by second operand</td>
+      <td><code>b / a</code></td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>%</td>
+      <td>modulus (remainder)</td>
+      <td>returns the remainder after integer division</td>
+      <td><code>b % a</code></td>
+      <td>5</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="write-practice-statements-for-the-incrementand-decrement-operators">Write practice statements for the increment<br />and decrement operators</h2>
+
+<p>If variable <em>a</em> holds the value 42, then:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Description</th>
+      <th>Expression</th>
+      <th>Equivalent to…</th>
+      <th><code>a</code>’s value afterwards</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>++</td>
+      <td>increment</td>
+      <td>adds one to the value its <code>int</code> operand holds</td>
+      <td><code>a++</code></td>
+      <td><code>a = a + 1</code></td>
+      <td>43</td>
+    </tr>
+    <tr>
+      <td>‐‐</td>
+      <td>decrement</td>
+      <td>subtracts one from the value its <code>int</code> operand holds</td>
+      <td><code>a--</code></td>
+      <td><code>a = a - 1</code></td>
+      <td>41</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="write-practice-statements-for-the-equality-operators">Write practice statements for the equality operators</h2>
+
+<p>If variable <em>a</em> holds 10 and variable <em>b</em> holds 15, then:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Description</th>
+      <th>Expression</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>==</td>
+      <td>equal to</td>
+      <td>evaluates to true if the two operands are equal</td>
+      <td><code>a == 10</code><br /><code>a == b</code></td>
+      <td>true<br />false</td>
+    </tr>
+    <tr>
+      <td>!=</td>
+      <td>not equal to</td>
+      <td>evaluates to true if the two operands are <em>not</em> equal</td>
+      <td><code>a != 10</code><br /><code>a != b</code></td>
+      <td>false<br />true</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="write-practice-statements-for-the-relational-operators">Write practice statements for the relational operators</h2>
+
+<p>If variable <em>a</em> holds 10 and variable <em>b</em> holds 15, then:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Description</th>
+      <th>Expression</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&gt;</td>
+      <td>greater than</td>
+      <td>evaluates to true of the first operand is greater than the second operand</td>
+      <td><code>a &gt; b</code></td>
+      <td>false</td>
+    </tr>
+    <tr>
+      <td>&gt;=</td>
+      <td>greater than or equal to</td>
+      <td>evaluates to true of the first operand is greater than <em>or equal to</em> the second operand</td>
+      <td><code>a &gt;= b</code><br /><code>a &gt;= 10</code></td>
+      <td>false<br />true</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>less than</td>
+      <td>evaluates to true of the first operand is less than the second operand</td>
+      <td><code>a &lt; b</code></td>
+      <td>true</td>
+    </tr>
+    <tr>
+      <td>&lt;=</td>
+      <td>less than or equal to</td>
+      <td>evaluates to true of the first operand is less than <em>or equal to</em> the second operand</td>
+      <td><code>a &lt;= b</code><br /><code>a &lt;= 10</code></td>
+      <td>true<br />true</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="write-practice-statements-for-the-logical-operators">Write practice statements for the logical operators</h2>
+
+<p>If variable <em>a</em> holds <code>true</code> and variable b holds <code>false</code>, then:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th>
+      <th>Operation</th>
+      <th>Description</th>
+      <th>Expression</th>
+      <th>Result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&amp;&amp;</td>
+      <td>conditional AND</td>
+      <td>evaluates to true if both operands are true;<br />otherwise, evaluates to false</td>
+      <td><code>a &amp;&amp; b</code><br /><code>a &amp;&amp; true</code></td>
+      <td>false<br />true</td>
+    </tr>
+    <tr>
+      <td>||</td>
+      <td>conditional OR</td>
+      <td>evaluates to true if either operand is true;<br />otherwise, evaluates to false</td>
+      <td><code>a || b</code><br /><code>b || false</code></td>
+      <td>true<br />false</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="translating-english-to-java">Translating English to Java</h1>
+
+<p>Let’s translate English statements into Java. First, we’ll do one together.</p>
+
+<p>Start by writing the statements as comments. Here’s an example:</p>
+
+<pre><code class="language-java">// Jessica is 23 years old.
+int jessicaAge = 23;
+
+// Sam is 47.
+int samAge = 47;
+
+// Jessica is younger than Sam.
+System.out.println(jessicaAge &lt; samAge);
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-break-it-down">Let’s break it down…</h2>
+
+<h3 id="defining-a-variable-to-hold-jessicas-age">Defining a variable to hold Jessica’s age:</h3>
+
+<p>We need to create a variable to hold the age of Jessica. What should its type be?</p>
+
+<p><code class="language-java hljs"><span class="hljs-comment">// <span class="highlight">Jessica</span> is 23 <span class="highlight">years old</span>.</span></code></p>
+
+<div class="fragment">
+<p>Since we think of ages as whole numbers, we will use an <code>int</code>:</p>
+<code class="language-java hljs"><span class="highlight"><span class="hljs-keyword ">int</span> jessicaAge</span></code>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-break-it-down-1">Let’s break it down…</h2>
+
+<h3 id="assigning-a-value-for-jessicas-age">Assigning a value for Jessica’s age:</h3>
+
+<p>The word “is” means equals. How do we represent assignment?</p>
+
+<p><code class="language-java hljs"><span class="hljs-comment">// Jessica <span class="highlight">is 23</span> years old.</span></code></p>
+
+<div class="fragment">
+<p>If Jessica "is 23", then Jessica's age = 23:</p>
+<code class="language-java hljs"><span class="hljs-keyword ">int</span> jessicaAge <span class="highlight">= <span class="hljs-number">23</span></span>;</code>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-break-it-down-2">Let’s break it down…</h2>
+
+<h3 id="comparing-jessicas-and-sams-ages">Comparing Jessica’s and Sam’s ages:</h3>
+
+<p>To say Jessica <em>is younger than</em> Sam means we are comparing their ages. Which operator would we use to compare them?</p>
+
+<p><code class="language-java hljs"><span class="hljs-comment">// Jessica <span class="highlight">is younger than</span> Sam.</span></code></p>
+
+<div class="fragment">
+<p>We use the "less than" relational operator to perform this comparison:</p>
+<code class="language-java hljs">System.out.println(jessicaAge <span class="highlight">&lt;</span> samAge);</code>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-look-at-the-syntax">Let’s look at the syntax</h2>
+
+<p>Single line comments start with <code>//</code>:</p>
+
+<p><code class="language-java hljs"><span class="hljs-comment"><span class="highlight">//</span> Jessica is 23 years old.</span><br />
+<span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span>;<br />
+<span class="hljs-comment"><span class="highlight">//</span> Sam is 47.</span><br />
+<span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span>;<br />
+<span class="hljs-comment"><span class="highlight">//</span> Jessica is younger than Sam.</span><br />
+System.out.println(jessicaAge &lt; samAge);
+</code></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-look-at-the-syntax-1">Let’s look at the syntax</h2>
+
+<p>Each statement ends with a semicolon. It acts like a period (.) in English at the end of a sentence.</p>
+
+<p><code class="language-java hljs"><span class="hljs-comment">// Jessica is 23 years old.</span><br />
+<span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span><span class="highlight">;</span><br />
+<span class="hljs-comment">// Sam is 47.</span><br />
+<span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span><span class="highlight">;</span><br />
+<span class="hljs-comment">// Jessica is younger than Sam.</span><br />
+System.out.println(jessicaAge &lt; samAge)<span class="highlight">;</span>
+</code></p>
+
+<p>The statement:</p>
+
+<pre><code class="language-java">int jessicaAge = 23;
+</code></pre>
+
+<p>reads as “Jessica’s age is 23.”</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-look-at-the-syntax-2">Let’s look at the syntax</h2>
+
+<p><code>println</code> is a <em>method</em>, so it ends with a set of opening and closing parentheses:</p>
+
+<p><code class="language-java hljs">
+System.out.println<span class="highlight">(</span>jessicaAge &lt; samAge<span class="highlight">)</span>;
+</code></p>
+
+<div class="fragment">
+<p>Inside the parentheses, we find the method <em>arguments</em>. For the <code>println</code> method, this is what we want to print. In this case, that's whether Jessica is younger than Sam:</p>
+<code class="language-java hljs">
+System.out.println(<span class="highlight">jessicaAge &lt; samAge</span>);
+</code>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="your-turn-try-translating-these-word-problems-into-java">Your turn! Try translating these word problems into Java.</h2>
+
+<ul>
+  <li>Lisa is cooking muffins. The recipe calls for 7 cups of sugar. She has already put in 2 cups. How many more cups does she need to put in?</li>
+  <li>At a restaurant, Mike and his three friends decided to divide the bill evenly. If each person paid $13 then what was the total bill?</li>
+  <li>How many packages of diapers can you buy with $40 if one package costs $8?</li>
+  <li>Last Friday Trevon had $29. Over the weekend he received some money for cleaning the attic. He now has $41. How much money did he receive?</li>
+  <li>Last week Julia ran 30 miles more than Pranav. Julia ran 47 miles. How many miles did Pranav run?</li>
+  <li>How many boxes of envelopes can you buy with $12 if one box costs $3?</li>
+  <li>After paying $5.12 for a salad, Norachai has $27.10. How much money did he have before buying the salad?</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="just-keep-coding-just-keep-coding">Just keep coding! Just keep coding!</h2>
+
+<ul>
+  <li>331 students went on a field trip. Six buses were filled and 7 students traveled in cars. How many students were in each bus?</li>
+  <li>Aliyah had $24 to spend on seven pencils. After buying them she had $10. How much did each pencil cost?</li>
+  <li>The sum of three consecutive numbers is 72. What is the smallest of these numbers?</li>
+  <li>The sum of three consecutive even numbers is 48. What is the smallest of these numbers?</li>
+  <li>Maria has boxes. She buys seven more. A week later, half of her boxes are destroyed in a fire, leaving her with 22 boxes. With how many did she start?</li>
+</ul>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

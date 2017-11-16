@@ -1,0 +1,702 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CSS Grid - Finally! Rows and columns in CSS!</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">CSS Grid</h1>
+					<h3 style="text-align: center">Finally! Rows and columns in CSS!</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h2 id="css-layouts">CSS Layouts</h2>
+
+<p>CSS Layouts before Grid and Flexbox were, in all honesty, a nightmare. That’s because until recently, CSS wasn’t really equipped to handle content layout.</p>
+
+<p>We had to use all manners of tricks, overrides, or just flat-out violation of separation of concerns to get our web pages laid out properly. This included having to include <code>&lt;div&gt;</code> tags in our code that were unnecessary and using percentage based measurements to make columns. (Queue mad scientist laughter)</p>
+
+<p>No longer my friends!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="css-grid-vs-flexbox">CSS Grid vs. Flexbox</h2>
+
+<p>So there are two new layout tools available to us is CSS. We use CSS Grid for two-dimensional page design. Flexbox is used for one-dimensional placement of objects inside of individual containers.</p>
+
+<p>We are going to go through Grid now.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="grid">Grid</h2>
+
+<p>The first thing you need to start using grid is a grid container. We accomplish that with <code>display: grid;</code> on the containing element:</p>
+
+<pre><code class="language-html">&lt;!-- index.html --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Grid Example&lt;/title&gt;
+        &lt;link rel="stylesheet" href="../css/style.css"&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class="container"&gt;
+            &lt;!-- All of your code goes here --&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+
+<pre><code class="language-css">/*style.css*/
+.container {
+    display: grid;
+}
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="grid-items">Grid Items</h2>
+
+<p>Grid items are any children of your grid container.</p>
+
+<pre><code class="language-html">&lt;div class="container"&gt;
+        &lt;section class="grid-item grid-item-1"&gt;1&lt;/section&gt;
+        &lt;section class="grid-item grid-item-2"&gt;2&lt;/section&gt;
+        &lt;section class="grid-item grid-item-3"&gt;3&lt;/section&gt;
+        &lt;section class="grid-item grid-item-4"&gt;4&lt;/section&gt;
+        &lt;section class="grid-item grid-item-5"&gt;5&lt;/section&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>This gives you a result that looks like this:</p>
+
+<p><img src="./resources/initial-grid-setting.png" alt="Default distribution" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="container">Container</h2>
+
+<p>One of the first things to notice that needs to be handled is the way our content goes from one edge of the page to the other. There aren’t a lot of websites out there that use a layout like this. So here is a common container setting that will limit the size of your content and make it look a little neater:</p>
+
+<pre><code class="language-css">.container {
+    display: grid;
+    margin: 2rem auto 2rem auto;
+    width: 1000px;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Let’s step through what’s happening here.</p>
+
+<p><img src="./resources/container-with-contraints.png" alt="Container with constraints" /></p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>This line of code is saying that we want our container to have a width of 1000px. Since our viewport is larger than 1000px, our container will be slimmer and have some space between itself and the edges of the window.</p>
+
+<pre><code class="language-css" data-noescape="">
+.container {
+    display: grid;
+    margin: 2rem auto 2rem auto;
+    <mark>width: 1000px;</mark>
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>This line of code is saying that we want to have <code>2rem</code> units of space on the top and bottom of our container. The <code>auto</code> keyword is telling our browser to take what ever space is left on the sides and distribute it evenly effectively centering our container.</p>
+
+<pre><code class="language-css" data-noescape="">
+.container {
+    display: grid;
+    <mark>margin: 2rem auto 2rem auto;</mark>
+    width: 1000px;
+}
+</code></pre>
+
+<p>Notice the repetition? There is a short hand when both top/bottom AND right/left share the same values. This code can be re written as follows: <code>2rem auto</code>. It will be written this way in following slides. Ok, back to actual grid syntax.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="grid-columns">Grid Columns</h2>
+
+<p>So as you can see, grid layout on its own does nothing for your content. This is because by default your grid is set to have only one column and one row. So this essentially leaves your content looking like it’s still displayed as block level elements. Let’s add another column:</p>
+
+<pre><code class="language-css">.container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    margin: 2rem auto;
+    width: 1000px;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Now we have two columns set to 500px each effectively making a 2 column grid. The more values you put into <code>grid-template-columns</code>, the more columns you will create.</p>
+
+<p><img src="./resources/two-column-fixed-width-grid.png" alt="Two columns" /></p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>We can now add items to our grid and they will fall in place the same way! (Just add 3 more items that look the same as the first 5 with updated numbers. Don’t forget classes!)</p>
+
+<p><img src="./resources/two-column-fixed-width-grid-with-more-items.png" alt="More items" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="grid-rows">Grid Rows</h2>
+
+<p>Great! Now we can make columns, and we can make as many as we want! Now what about rows? Well rows don’t work very differently. Let’s make 4 rows and make them grow, and then shrink in size, like this:</p>
+
+<pre><code class="language-css">.container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px 200px 200px 100px;
+    margin: 2rem auto;
+    width: 1000px;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>This gives us a grid that now should look something like this:</p>
+
+<p><img src="./resources/modified-row-sizes.png" alt="Two column, four row grid" /></p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Same as columns, you will have as many rows as you declare. So, if you remove the last value, the row will take up only as much space as the content requires.</p>
+
+<pre><code class="language-css">.container {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px 200px 200px;
+    margin: 2rem auto;
+    width: 1000px;
+}
+</code></pre>
+<p>This gives you:</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Three rows with declared heights and one that will auto-size based on content.</p>
+
+<p><img src="./resources/missing-row-declaration.png" alt="Missing row declaration" /></p>
+
+<p>But let’s put that back.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="gutters">Gutters</h2>
+
+<p>So, last big concern with how our grid is looking. Spacebetweenthegridcells. See what I mean? Our content sort of runs together the way it is currently. So, let’s look into putting some separation between all that content.</p>
+
+<p>We have <code>grid-column-gap</code> and <code>grid-row-gap</code> but, as I’m sure you might guess by now, there is a way to combine the two and that’s what we’re going to use.</p>
+<pre><code class="language-css" data-noescape="">
+.container {
+    display: grid;
+    /*The first value handles row gap, the second col gap*/
+    <mark>grid-gap: 15px 20px;</mark>
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 100px 200px 200px 100px;
+    margin: 2rem auto;
+    width: 1000px;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Notice that we now have some comfortable space between all of our grid cells.</p>
+
+<p><img src="./resources/grid-with-gutters.png" alt="Grid with gutters" /></p>
+
+<p>Uh oh. Now we have our right column overflowing out of our container! There must be some way to prevent such a catastrophe. I guess we’ll just have to find out after…</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="practice">Practice!</h2>
+
+<p>Time to take a little while to put what you just learned into practice.</p>
+
+<p>Navigate to <a href="https://github.com/donhamiltoniii/css-grid-static-practice">the practice exercise</a> in your browser and follow the instructions to get started.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="flexible-grids">Flexible Grids</h1>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="fr-unit">fr Unit</h2>
+
+<p>So we last left off with a grid that looks pretty good. We had nice organized content in two columns with four sized rows, nicely centered in our page. Then, we added gutters which fixed the problem of condensed content but created a whole new problem, OVERFLOWING COLUMNS!</p>
+
+<p>This is no good. This is no good at all. So it looks like we need something like a dynamic column measurement. Some way to say we want two columns that should be equal and not be affected by the size of our gutters.</p>
+
+<p>If the title didn’t give it away, it’s the <code>fr</code> (fraction) unit. This unit does exactly that. Let’s see it in action.</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p><code>fr</code> is used the same way we were using our <code>px</code> measurements in our earlier example. So, let’s change the code to use this new unit instead.</p>
+
+<pre><code class="language-css">.container {
+    display: grid;
+    grid-gap: 15px 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 200px 200px 100px;
+    margin: 2rem auto;
+    width: 1000px;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>You’ll notice that we now have a grid that looks very much like what we were going for the first time. The columns obviously aren’t exactly <code>500px</code> wide but that’s ok.</p>
+
+<p><img src="./resources/grid-with-fr-units.png" alt="Grid with 'fr' units" /></p>
+
+<p>I’m not a fan of that repetition though. Let’s take care of that with…</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="repeat">repeat()</h2>
+
+<p>Oh CSS functions, how I love thee. The repeat function takes two arguments, first, the number of columns (or rows) you want, and what value you want them to have. Let’s change our code in TWO places to use this new function.</p>
+
+<pre><code class="language-css" data-noescape="">
+.container {
+display: grid;
+grid-gap: 15px 20px;
+grid-template-columns: <mark>repeat(2, 1fr)</mark>;
+grid-template-rows: 100px <mark>repeat(2, 200px)</mark> 100px;
+margin: 2rem auto;
+width: 1000px;
+}
+</code></pre>
+
+<p>Notice that you are able to use this function inline with other size declarations no problem.</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p><img src="./resources/mind-blown.gif" alt="mind blown" style="width: 600px;" /></p>
+
+<div class="fragment">
+    <p>Yea. I did.</p>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="other-noteable-values">Other Noteable Values</h2>
+
+<p>You can use ANY measurement unit you have at your disposal as column/row values. Some to be especially aware of are:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Unit</th>
+      <th>Function</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>%</code></td>
+      <td>Percentage units will take up whatever percentage you declare of the containing element</td>
+    </tr>
+    <tr>
+      <td><code>em/rem</code></td>
+      <td><code>em/rem</code> will do the same as you’re used to. Fixed but much more flexible than <code>px</code></td>
+    </tr>
+    <tr>
+      <td><code>auto</code></td>
+      <td>This unit is a big one. Auto will take up any remaining space in a fixed container. if the container isn’t fixed, it will push elements to the edge of the viewport and take up all space in between.</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="container-revisited">Container revisited</h2>
+
+<p>So our columns are behaving flexibly now but our container still has a fixed width. I’m not ok with that and you shouldn’t be either. Let’s make some changes to make it a little less rigid.</p>
+
+<pre><code class="language-css">.container {
+    display: grid;
+    grid-gap: 15px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(2, 200px) 100px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    width: 90%;
+}
+</code></pre>
+
+<p>Again, let’s dive a little deeper:</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>So, what used to be <code>width</code> is now <code>max-width</code>.</p>
+
+<pre><code class="language-css" data-noescape="">
+.container {
+    display: grid;
+    grid-gap: 15px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(2, 200px) 100px;
+    margin: 2rem auto;
+    <mark>max-width: 1000px;</mark>
+    width: 90%;
+}
+</code></pre>
+
+<p>This style rule is saying the container can be any width in pixels up to <code>1000px</code>. Once it hits <code>1000px</code>, it stops.</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>And now our <code>width</code> is set to <code>90%</code></p>
+
+<pre><code class="language-css" data-noescape="">
+.container {
+    display: grid;
+    grid-gap: 15px 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px repeat(2, 200px) 100px;
+    margin: 2rem auto;
+    max-width: 1000px;
+    <mark>width: 90%;</mark>
+}
+</code></pre>
+
+<p>Since <code>max-width</code> is a flexible rule <code>width</code> takes precedence until the condition for <code>max-width</code> is met. So when our viewport is slimmer than <code>1000px</code>, the width of our container is <code>90%</code>.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="spanning-columns-and-rows">Spanning Columns and Rows</h2>
+
+<p>So now you have this great grid set up and all of your content is looking GREAT (<strong>without using a framework</strong>). But maybe you want one of your elements to take up a whole row or maybe two cells in a column or maybe both! Ahhh! Grid has lost its efficiency!</p>
+
+<div class="fragment">
+    <img src="./resources/wrong.jpg" alt="Wrong" />
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>We can use the commands on individual items to achieve this functionality. For example, if we wanted to have the first item span both columns in our grid:</p>
+
+<pre><code class="language-css">.grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: 3; /* What? Why 3? There's only 2 columns.
+    Don't worry, we'll get there*/
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Which will give us the following result:</p>
+
+<p><img src="./resources/item-one-spans-two-columns.png" alt="Item one spans two columns" /></p>
+
+<p>But let’s get back to that three</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="grid-lines">Grid lines</h2>
+
+<p><code>grid-column-start</code> and <code>grid-column-end</code> are referring to what are known as grid lines.</p>
+
+<div style="text-align: auto;">
+<img style="height: 400px; width: 400px; auto; margin-right: 200px;" src="./resources/grid-column-line.png" alt="grid column line" />
+<img style="height: 400px; width: 400px;" src="./resources/grid-row-line.png" alt="grid row line" />
+</div>
+
+<p>There are both four column and four row lines in the grids above. The left image shows the third column line while the right image shows the third row line. This is what we’re referencing when in <code>grid-column-start</code> and <code>grid-column-end</code></p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>What if, for some reason, you didn’t know how many columns you have? How would you reference the last grid line?</p>
+
+<p>Well grid is pretty resourceful that way. You can use negative numbers to reference grid lines in reverse order so the last grid line is -1, the second to last is -2, third to last -3, etc.</p>
+
+<p>So we can always reference the last grid line with -1. So the following does the same as our current code:</p>
+<pre><code class="language-css">.grid-item-1 {
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>But, what if we just wanted our item to span two columns no matter how many columns there are? There’s a solution for that too. For that we use a shorthand that combines the two rules into one. The first parameter applies a value to <code>grid-column-start</code>, the second to <code>grid-column-end</code></p>
+
+<pre><code class="language-css">.grid-item-1 {
+    grid-column: 1 / span 2;
+}
+</code></pre>
+<p>Let’s see the result by adding a third column.</p>
+<pre><code class="language-css">/* inside of the .container rules */
+grid-template-columns: repeat(3, 1fr);
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Here’s what we get from that:</p>
+
+<p><img src="./resources/add-a-third-column.png" alt="grid with item 1 spanning 2 columns and an extra column" /></p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="handling-content">Handling content</h2>
+
+<p>I would suggest only explicitly sizing either your columns or your rows unless you have a very specific reason to do otherwise. Usually I would only put values on columns and let your content size the rows for you. We’ll look at how to handle your content inside of a grid cell another time. For now, it’s time for more…</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="practice-1">Practice!</h2>
+
+<p>From your command line, change branches to <code>css-grid-dynamic-practice</code> and look at the new example image. Make yours look the same using the new techniques we’ve learned. If you finish early, check out <a href="https://gridbyexample.com/">Grid By Example</a> for an even more in-depth look at CSS Grid. Also, If you’d like to check out the code for the grid used in this example, feel free to clone from <a href="https://github.com/donhamiltoniii/css-grid-slide-example">here</a>.</p>
+
+<h3 id="other-resources">Other Resources</h3>
+<ul>
+  <li><a href="https://mozilladevelopers.github.io/playground/">Intro to CSS Grid Layout</a></li>
+  <li><a href="https://gridbyexample.com/">Grid by Example</a></li>
+  <li><a href="https://hacks.mozilla.org/2017/10/an-introduction-to-css-grid-layout-part-1/">An Introduction to CSS Grid Layout: Part 1</a></li>
+  <li><a href="https://css-tricks.com/snippets/css/complete-guide-grid/">A Complete Guide to Grid</a></li>
+</ul>
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
