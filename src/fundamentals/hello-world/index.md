@@ -14,22 +14,29 @@ Visual Studio is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). I
 
 Accept the default for workspace. (More on that later.)
 
-## Create a Java Project
+## Create a C# Project
 
 % TODO <em> below should probably be a caption class
 
 <div class="sidebar">
-	<img alt="New Java Project" src="./resources/new-java-project.png" />
-	<p><em>(Yours will look a bit different.)</em></p>
+	<img alt="Navigate to new project" src="./resources/Hello1.png" />
 </div>
 
 % fake list, since lists don't 'float' properly
 
-• From the *File* Menu, select *New > Java Project*.
+• From the *File* Menu, select *New > Project*.
 
-• Specify a *Project name* of *hello-world* as in the screenshot.
+## Create a C# Project Continued
 
-• Click the *Finish* button.
+<div class="sidebar">
+	<img alt="Select console application" src="./resources/Hello1.png" />
+</div>
+
+• Select *Conole Application* from the *New Project* Window.
+
+• Specify a *Project name* of *Hello-World* as in the screenshot.
+
+• Click the *Ok* button.
 
 ## Create a Java Class
 
