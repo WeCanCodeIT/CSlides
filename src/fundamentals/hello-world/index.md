@@ -8,7 +8,7 @@ theme: league
 
 ## Let's Launch Visual Studio
 
-<div float="right"><img src="./resources/eclipse-426x100.png" class="logo" /></div>
+<div float="right"><img src="./resources/visualstudio426x100.png" class="logo" /></div>
 
 Visual Studio is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). IDEs integrate common development tasks with our editor.
 
