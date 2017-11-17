@@ -6,11 +6,11 @@ theme: league
 
 # Project Setup
 
-## Let's Launch Eclipse
+## Let's Launch Visual Studio
 
 <div float="right"><img src="./resources/eclipse-426x100.png" class="logo" /></div>
 
-Eclipse is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). IDEs integrate common development tasks with our editor.
+Visual Studio is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). IDEs integrate common development tasks with our editor.
 
 Accept the default for workspace. (More on that later.)
 
