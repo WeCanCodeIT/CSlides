@@ -29,7 +29,7 @@ Accept the default for workspace. (More on that later.)
 ## Create a C# Project Continued
 
 <div class="sidebar">
-	<img alt="Select console application" src="./resources/Hello1.png" />
+	<img alt="Select console application" src="./resources/hello2.png" />
 </div>
 
 • Select *Conole Application* from the *New Project* Window.
@@ -38,42 +38,16 @@ Accept the default for workspace. (More on that later.)
 
 • Click the *Ok* button.
 
-## Create a Java Class
-
+## Now You've Got Class!
 <div class="sidebar">
-	<img alt="New Java Class" src="./resources/new-java-class.png" />
+	<img alt="Select console application" src="./resources/hello3.png" />
 </div>
 
-• Select the newly created `hello-world` project in *Package Explorer* (if it isn't already).
-
-• From the *File* Menu, select *New > Class*.
-
-• Specify a *Name* of *HelloWorld*. Don't worry about the warning you receive about using the default package. We're just keeping it simple for now. 
-
-*Note: Case here is important. Java classes start with a capital letter and use `camelCase`, capitalizing the first letter of each additional word.*
-
-• Check the box for *public static main void(String[] args)*.
-
-• Click the *Finish* button.
-
-## Now You've Got Class!
-
-You should see code similar to the following in your editor:
-
-```java
-public class HelloWorld {
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-
-}
-```
+• You should see code similar to the following in your editor:
 
 # Let's Break It Down
 
-## Java Classes
+## C# Classes
 
 All Java code is found inside a *class*. This class is called `HelloWorld`.
 
