@@ -100,7 +100,7 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 
 	}
 }
-</code></pre>
+
 
 !SLIDE
 
@@ -114,7 +114,7 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 	<mark>}</mark>
 
 }
-</code></pre>
+
 
 ## Comments
 
