@@ -47,12 +47,12 @@ Accept the default for workspace. (More on that later.)
 
 # Let's Break It Down
 
-## C# NameSpace and Classes
+## C# namespace and Classes
 
-All C# code is found inside a *class* which is defined in a *NameSpace*. This NameSpace is called `HelloWorld`, and the class is called Program.
+All C# code is found inside a *class* which is defined in a *namespace*. This namespace is called `HelloWorld`, and the class is called Program.
 
 
-<pre><code class="language-C#" data-noescape>nameSpace <mark>HelloWorld</mark>  
+<pre><code class="language-C#" data-noescape>namespace <mark>HelloWorld</mark>  
 {
 	<mark>class Program</mark>
 	{
@@ -63,37 +63,43 @@ All C# code is found inside a *class* which is defined in a *NameSpace*. This Na
 	}
 }
 </code></pre>
-## Java Methods
 
-Think of *Methods* as the messages that we send in Java. All Java applications start with a `main` method.
+## C# Methods
+
+Think of *Methods* as the messages that we send in C#. All C# applications start with a `main` method. We will discuss C# methods in more detail later in the course.
 
 
-<pre><code class="language-java" data-noescape>public class HelloWorld {
-
-	<mark>public static void main(String[] args)</mark> {
-		// TODO Auto-generated method stub
+<pre><code class="language-C#" data-noescape>namespace HelloWorld 
+{
+	class Program
+	{
+		<mark>public static void main(String[] args)<mark/> 
+		{
+		}
 
 	}
-
 }
-
+</code></pre>
 
 ## Curly Brackets
 
-Curly brackets (`{` and `}`) indicate code blocks in Java. An opening curly bracket (`{`) must **always, always, always** have a corresponding closing curly bracket (`}`).
+Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your coding journey, you will find them essential to your trouble shooting efforts. An opening curly bracket (`{`) must **always, always, always** have a corresponding closing curly bracket (`}`). Did we say "ALWAYS"?
 
 ### This applies to classes…
 
 % 'data-noescape' attribute tells it to ignore our <mark> tags
 
-<pre><code class="language-java" data-noescape>public class HelloWorld <mark>{</mark>
+<pre><code class="language-C#" data-noescape>namespace HelloWorld 
+<mark>{<mark/> *This opening curly braces signifies the opening of the namespace*
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	class Program
+	{
+		public static void main(String[] args) 
+		{
+		}
 
 	}
-
-<mark>}</mark>
+}
 </code></pre>
 
 !SLIDE
