@@ -155,7 +155,7 @@ Here, I have created a comment to remind me that I need to do something—namely
 
 As you can see we used to '//' to denote a command. We can use '//' to comment out single lines. We can also use '/*' to start commenting multiple lines of code, and end with '*/'.
 Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.
-<pre><code class="language-java" data-noescape>public class HelloWorld {
+<pre><code class="language-C#" data-noescape>public class HelloWorld {
 
 	public static void main(String[] args) {
 		<mark>//</mark> add code for future development
