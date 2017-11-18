@@ -84,12 +84,12 @@ Think of *Methods* as the messages that we send in C#. All C# applications start
 
 Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your coding journey, you will find them essential to your trouble shooting efforts. An opening curly bracket (`{`) must **always, always, always** have a corresponding closing curly bracket (`}`). Did we say "ALWAYS"?
 
-### This applies to classes…
+## This applies to classes…
 
 % 'data-noescape' attribute tells it to ignore our <mark> tags
 
 <pre><code class="language-C#" data-noescape>namespace HelloWorld 
-<mark>{</mark> *This opening curly braces signifies the opening of the namespace*
+<mark>{</mark> *This opening curly brace signifies the opening of the namespace*
 
 	class Program
 	{
@@ -98,7 +98,7 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 		}
 
 	}
-}
+<mark>}</mark> *This closing clurly brace signifie the closing of the namespace*
 
 
 !SLIDE
