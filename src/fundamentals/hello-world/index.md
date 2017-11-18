@@ -52,9 +52,9 @@ Accept the default for workspace. (More on that later.)
 All C# code is found inside a *class* which is defined in a *NameSpace*. This NameSpace is called `HelloWorld`, and the class is called Program.
 
 
-<pre><code class="language-C#" data-noescape>nameSpace <mark>HelloWorld</mark> <mark>Program</mark> 
+<pre><code class="language-C#" data-noescape>nameSpace <mark>HelloWorld</mark>  
 {
-	class Program
+	<mark>class Program</mark>
 	{
 		public static void main(String[] args) 
 		{
