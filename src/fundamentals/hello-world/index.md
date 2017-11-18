@@ -158,10 +158,10 @@ Finally we can also highlight the code we want to comment and use the following 
 <pre><code class="language-java" data-noescape>public class HelloWorld {
 
 	public static void main(String[] args) {
-		<mark>// add code for future development
-		/*
+		<mark>//</mark> add code for future development
+		<mark>/*</mark>
 		add code for futuer development
-		*/</mark>
+		<mark>*/</mark>
 	}
 
 }
@@ -183,10 +183,11 @@ A common first program for people to write in a language is a program that says 
 </code></pre>
 
 ## Thumbs Up
+
+`Console.WriteLine()` is a C# method that instructs our program to send the contents contained in the *()* to the console contained in our Visual Studio IDE. In our case the two words 'Hello World!' will appear in your console.
 <div class="sidebar">
 	<img alt="Program example" src="./resources/hello4.png" />
 </div>
-`Console.WriteLine()` is a C# method that instructs our program to send the contents contained in the *()* to the console contained in our Visual Studio IDE. In our case the two words 'Hello World!' will appear in your console.
 Here is what your program should look like.
 
 Let's run it, and see what happens!
