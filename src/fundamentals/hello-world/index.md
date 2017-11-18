@@ -181,6 +181,8 @@ A common first program for people to write in a language is a program that says 
 
 }
 </code></pre>
+
+## Thumbs Up
 <div class="sidebar">
 	<img alt="Program example" src="./resources/hello4.png" />
 </div>
