@@ -68,12 +68,11 @@ All C# code is found inside a *class* which is defined in a *namespace*. This na
 
 Think of *Methods* as the messages that we send in C#. All C# applications start with a `main` method. We will discuss C# methods in more detail later in the course.
 
-
 <pre><code class="language-C#" data-noescape>namespace HelloWorld 
 {
 	class Program
 	{
-		<mark>public static void main(String[] args)<mark/> 
+		<mark>public static void main(String[] args)</mark> 
 		{
 		}
 
@@ -90,7 +89,7 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 % 'data-noescape' attribute tells it to ignore our <mark> tags
 
 <pre><code class="language-C#" data-noescape>namespace HelloWorld 
-<mark>{<mark/> *This opening curly braces signifies the opening of the namespace*
+<mark>{</mark> *This opening curly braces signifies the opening of the namespace*
 
 	class Program
 	{
