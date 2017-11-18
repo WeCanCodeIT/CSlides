@@ -84,7 +84,7 @@ Think of *Methods* as the messages that we send in C#. All C# applications start
 
 Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your coding journey, you will find them essential to your trouble shooting efforts. An opening curly bracket (`{`) must **always, always, always** have a corresponding closing curly bracket (`}`). Did we say "ALWAYS"?
 
-## This applies to classes…
+## This applies to a namespace.
 
 % 'data-noescape' attribute tells it to ignore our <mark> tags
 
@@ -100,32 +100,68 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 	}
 <mark>}</mark> *This closing clurly brace signifie the closing of the namespace*
 
+</code></pre>
 
-!SLIDE
+## … as well as Classes.
 
-### … as well as methods.
+<pre><code class="language-C#" data-noescape>namespace HelloWorld 
+{
 
-<pre><code class="language-java" data-noescape>public class HelloWorld {
+	class Program
+	<mark>{</mark> *This opening curly brace signifies the opening of the class Program*
 
-	public static void main(String[] args) <mark>{</mark>
-		// TODO Auto-generated method stub
+		public static void main(String[] args) 
+		{
+		}
 
-	<mark>}</mark>
-
+<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
 }
 
+</code></pre>
 
+## … and finally Methods.
+
+<pre><code class="language-C#" data-noescape>namespace HelloWorld 
+{
+
+	class Program
+	{
+		public static void main(String[] args) 
+	<mark>{</mark> *This opening curly brace signifies the opening of the main method*
+
+	<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
+
+	}
+}
+
+</code></pre>
 ## Comments
 
-We can add comments to our code to explain it. They don't *do* anything.
+We can add comments to our code to explain it. Comments are very important as they not only help us remember what function our code is performing, comments can also help team members, code testers, and future developers to understand, test and make changes to your application. They don't *do* anything.
 
-Here, Eclipse has created a `TODO` comment for us to remind us that we need to do something—namely, write some code inside the method! We'll do that next.
+Here, I have created a comment to remind me that I need to do something—namely, write some code inside the method! We'll do that next.
 
 <pre><code class="language-java" data-noescape>public class HelloWorld {
 
 	public static void main(String[] args) {
-		<mark>// TODO Auto-generated method stub</mark>
+		<mark>// add code for future development</mark>
 
+	}
+
+}
+</code></pre>
+
+## ...Types of Comments
+
+As you can see we used to '//' to denote a command. We can use '//' to comment out single lines. We can also use '/*' to start commenting multiple lines of code, and end with '*/'.
+Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.
+<pre><code class="language-java" data-noescape>public class HelloWorld {
+
+	public static void main(String[] args) {
+		<mark>// add code for future development</mark>
+		<mark>/*
+		add code for futuer development
+		*/</mark>
 	}
 
 }
@@ -135,16 +171,18 @@ Here, Eclipse has created a `TODO` comment for us to remind us that we need to d
 
 A common first program for people to write in a language is a program that says "Hello, World!" That's just what we'll do. Change your code to look like the following:
 
-<pre><code class="language-java" data-noescape>public class HelloWorld {
+<pre><code class="language-C#" data-noescape>class Program {
 
 	public static void main(String[] args) {
-		System.out.println("Hello, World!");
+		
+		<mark>Console.WriteLine("Hello World!")</mark>
+
 	}
 
 }
 </code></pre>
 
-`println` is short for "print line". `System.out` represents our console/terminal/command line. Here we are sending a `println` message to `System.out` with the content `"Hello, World!"`
+`Console.WriteLine()` is a C# method that instructs our program to send the contents contained in the *()* to the console contained in our Visual Studio IDE. In our case the two words 'Hello World!' will appear in your console.
 
 Let's run it, and see what happens!
 

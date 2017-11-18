@@ -187,7 +187,7 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="this-applies-to-classes">This applies to classes…</h2>
+<h2 id="this-applies-to-a-namespace">This applies to a namespace.</h2>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
 <mark>{</mark> *This opening curly brace signifies the opening of the namespace*
@@ -201,95 +201,169 @@
 	}
 <mark>}</mark> *This closing clurly brace signifie the closing of the namespace*
 
-
+</code></pre>
 
 
 
         </section>
         
         <section>
-          <!-- _S9SLIDE_  -->
+          <!-- _S9SLIDE_ -->
+<h2 id="-as-well-as-classes">… as well as Classes.</h2>
 
+<pre><code class="language-C#" data-noescape="">namespace HelloWorld 
+{
 
+	class Program
+	<mark>{</mark> *This opening curly brace signifies the opening of the class Program*
 
-### … as well as methods.
+		public static void main(String[] args) 
+		{
+		}
 
-<pre><code class="language-java" data-noescape="">public class HelloWorld {
-
-	public static void main(String[] args) <mark>{</mark>
-		// TODO Auto-generated method stub
-
-	<mark>}</mark>
-
+<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
 }
 
+</code></pre>
 
-## Comments
 
-We can add comments to our code to explain it. They don't *do* anything.
 
-Here, Eclipse has created a `TODO` comment for us to remind us that we need to do something-namely, write some code inside the method! We'll do that next.
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="-and-finally-methods">… and finally Methods.</h2>
+
+<pre><code class="language-C#" data-noescape="">namespace HelloWorld 
+{
+
+	class Program
+	{
+		public static void main(String[] args) 
+	<mark>{</mark> *This opening curly brace signifies the opening of the main method*
+
+	<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
+
+	}
+}
+
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="comments">Comments</h2>
+
+<p>We can add comments to our code to explain it. Comments are very important as they not only help us remember what function our code is performing, comments can also help team members, code testers, and future developers to understand, test and make changes to your application. They don’t <em>do</em> anything.</p>
+
+<p>Here, I have created a comment to remind me that I need to do something-namely, write some code inside the method! We’ll do that next.</p>
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
 	public static void main(String[] args) {
-		<mark>// TODO Auto-generated method stub</mark>
+		<mark>// add code for future development</mark>
 
 	}
 
 }
 </code></pre>
 
-# Hello World!
 
-A common first program for people to write in a language is a program that says "Hello, World!" That's just what we'll do. Change your code to look like the following:
 
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="types-of-comments">…Types of Comments</h2>
+
+<p>As you can see we used to ‘//’ to denote a command. We can use ‘//’ to comment out single lines. We can also use ‘/<em>’ to start commenting multiple lines of code, and end with ‘</em>/’.
+Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.</p>
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
 	public static void main(String[] args) {
-		System.out.println("Hello, World!");
+		<mark>// add code for future development</mark>
+		<mark>/*
+		add code for futuer development
+		*/</mark>
 	}
 
 }
 </code></pre>
 
-`println` is short for "print line". `System.out` represents our console/terminal/command line. Here we are sending a `println` message to `System.out` with the content `"Hello, World!"`
 
-Let's run it, and see what happens!
 
-## A Simple Greeting
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="hello-world">Hello World!</h1>
 
-Right click inside your editor (the pane where you've been modifying the code), then select *Run As &gt; Java Application*. Your program will run, and your *Console* *view* should display something like the following:
+<p>A common first program for people to write in a language is a program that says “Hello, World!” That’s just what we’ll do. Change your code to look like the following:</p>
 
-```bash
-Hello, World!
-```
-Climactic, eh?
+<pre><code class="language-C#" data-noescape="">class Program {
 
-You've written your first Java program. Congratulations!
+	public static void main(String[] args) {
+		
+		<mark>Console.WriteLine("Hello World!")</mark>
 
-## Next Steps
+	}
 
-Java is a *strongly-typed* language. The type of `"Hello, World!"` is `String`, which is denoted by the double quotation marks:
+}
+</code></pre>
+
+<p><code>Console.WriteLine()</code> is a C# method that instructs our program to send the contents contained in the <em>()</em> to the console contained in our Visual Studio IDE. In our case the two words ‘Hello World!’ will appear in your console.</p>
+
+<p>Let’s run it, and see what happens!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="a-simple-greeting">A Simple Greeting</h2>
+
+<p>Right click inside your editor (the pane where you’ve been modifying the code), then select <em>Run As &gt; Java Application</em>. Your program will run, and your <em>Console</em> <em>view</em> should display something like the following:</p>
+
+<pre><code class="language-bash">Hello, World!
+</code></pre>
+<p>Climactic, eh?</p>
+
+<p>You’ve written your first Java program. Congratulations!</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="next-steps">Next Steps</h2>
+
+<p>Java is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
 
 <pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 
-We can also do this with other Strings:
+<p>We can also do this with other Strings:</p>
 
 <pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
 
-## Other Data Types
 
-We can also display numbers and more complex expressions.
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="other-data-types">Other Data Types</h2>
+
+<p>We can also display numbers and more complex expressions.</p>
 
 <pre><code class="language-java" data-noescape="">System.out.println(42);
 System.out.println(1.23);
 System.out.println(2 + 3);</code></pre>
 
-Try a few of your own! We'll talk about other data types and expressions in days to come.
-
-
-
+<p>Try a few of your own! We’ll talk about other data types and expressions in days to come.</p>
 
 <style type="text/css">
 .reveal section img.logo {
@@ -301,7 +375,7 @@ Try a few of your own! We'll talk about other data types and expressions in days
 	margin: 0 0 1rem 2rem;
 }
 </style>
-</code></pre></code></pre>
+
 
         </section>
         
