@@ -38,7 +38,7 @@ Accept the default for workspace. (More on that later.)
 
 • Click the *Ok* button.
 
-## Now You've Got Class!
+## Now You've Got a NameSpace with a Class!
 <div class="sidebar">
 	<img alt="Select console application" src="./resources/hello3.png" />
 </div>
@@ -47,17 +47,21 @@ Accept the default for workspace. (More on that later.)
 
 # Let's Break It Down
 
-## C# Classes
+## C# NameSpace and Classes
 
-All Java code is found inside a *class*. This class is called `HelloWorld`.
+All C# code is found inside a *class* which is defined in a *NameSpace*. This NameSpace is called `HelloWorld`, and the class is called Program.
 
-<pre><code class="language-java" data-noescape>public <mark>class HelloWorld</mark> {
+<pre><code class="language-C#" data-noescape>nameSpace <mark>HelloWorld</mark> 
+{
+<pre><code class="language-C#" <mark>Program</mark> 
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	class Program
+	{
+		public static void main(String[] args) 
+		{
+		}
 
 	}
-
 }
 </code></pre>
 

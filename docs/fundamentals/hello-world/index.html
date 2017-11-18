@@ -112,7 +112,7 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="now-youve-got-class">Now You’ve Got Class!</h2>
+<h2 id="now-youve-got-a-namespace-with-a-class">Now You’ve Got a NameSpace with a Class!</h2>
 <div class="sidebar">
 	<img alt="Select console application" src="./resources/hello3.png" />
 </div>
@@ -133,29 +133,28 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="c-classes">C# Classes</h2>
+<h2 id="c-namespace-and-classes">C# NameSpace and Classes</h2>
 
-<p>All Java code is found inside a <em>class</em>. This class is called <code>HelloWorld</code>.</p>
+<p>All C# code is found inside a <em>class</em> which is defined in a <em>NameSpace</em>. This NameSpace is called <code>HelloWorld</code>, and the class is called Program.</p>
 
-<pre><code class="language-java" data-noescape="">public <mark>class HelloWorld</mark> {
+<pre><code class="language-C#" data-noescape="">nameSpace <mark>HelloWorld</mark> 
+{
+<pre>&lt;code class="language-C#" <mark>Program</mark> 
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	class Program
+	{
+		public static void main(String[] args) 
+		{
+		}
 
 	}
-
 }
-</code></pre>
+&lt;/code&gt;</pre>
 
+## Java Methods
 
+Think of *Methods* as the messages that we send in Java. All Java applications start with a `main` method.
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="java-methods">Java Methods</h2>
-
-<p>Think of <em>Methods</em> as the messages that we send in Java. All Java applications start with a <code>main</code> method.</p>
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
@@ -167,17 +166,13 @@
 }
 </code></pre>
 
+## Curly Brackets
+
+Curly brackets (`{` and `}`) indicate code blocks in Java. An opening curly bracket (`{`) must **always, always, always** have a corresponding closing curly bracket (`}`).
+
+### This applies to classes…
 
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="curly-brackets">Curly Brackets</h2>
-
-<p>Curly brackets (<code>{</code> and <code>}</code>) indicate code blocks in Java. An opening curly bracket (<code>{</code>) must <strong>always, always, always</strong> have a corresponding closing curly bracket (<code>}</code>).</p>
-
-<h3 id="this-applies-to-classes">This applies to classes…</h3>
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld <mark>{</mark>
 
@@ -190,12 +185,16 @@
 </code></pre>
 
 
+
+
         </section>
         
         <section>
           <!-- _S9SLIDE_  -->
 
-<h3 id="-as-well-as-methods">… as well as methods.</h3>
+
+
+### … as well as methods.
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
@@ -207,17 +206,11 @@
 }
 </code></pre>
 
+## Comments
 
+We can add comments to our code to explain it. They don't *do* anything.
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="comments">Comments</h2>
-
-<p>We can add comments to our code to explain it. They don’t <em>do</em> anything.</p>
-
-<p>Here, Eclipse has created a <code>TODO</code> comment for us to remind us that we need to do something-namely, write some code inside the method! We’ll do that next.</p>
+Here, Eclipse has created a `TODO` comment for us to remind us that we need to do something-namely, write some code inside the method! We'll do that next.
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
@@ -229,15 +222,9 @@
 }
 </code></pre>
 
+# Hello World!
 
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h1 id="hello-world">Hello World!</h1>
-
-<p>A common first program for people to write in a language is a program that says “Hello, World!” That’s just what we’ll do. Change your code to look like the following:</p>
+A common first program for people to write in a language is a program that says "Hello, World!" That's just what we'll do. Change your code to look like the following:
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
@@ -248,57 +235,43 @@
 }
 </code></pre>
 
-<p><code>println</code> is short for “print line”. <code>System.out</code> represents our console/terminal/command line. Here we are sending a <code>println</code> message to <code>System.out</code> with the content <code>"Hello, World!"</code></p>
+`println` is short for "print line". `System.out` represents our console/terminal/command line. Here we are sending a `println` message to `System.out` with the content `"Hello, World!"`
 
-<p>Let’s run it, and see what happens!</p>
+Let's run it, and see what happens!
 
+## A Simple Greeting
 
+Right click inside your editor (the pane where you've been modifying the code), then select *Run As &gt; Java Application*. Your program will run, and your *Console* *view* should display something like the following:
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="a-simple-greeting">A Simple Greeting</h2>
+```bash
+Hello, World!
+```
+Climactic, eh?
 
-<p>Right click inside your editor (the pane where you’ve been modifying the code), then select <em>Run As &gt; Java Application</em>. Your program will run, and your <em>Console</em> <em>view</em> should display something like the following:</p>
+You've written your first Java program. Congratulations!
 
-<pre><code class="language-bash">Hello, World!
-</code></pre>
-<p>Climactic, eh?</p>
+## Next Steps
 
-<p>You’ve written your first Java program. Congratulations!</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="next-steps">Next Steps</h2>
-
-<p>Java is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
+Java is a *strongly-typed* language. The type of `"Hello, World!"` is `String`, which is denoted by the double quotation marks:
 
 <pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 
-<p>We can also do this with other Strings:</p>
+We can also do this with other Strings:
 
 <pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
 
+## Other Data Types
 
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="other-data-types">Other Data Types</h2>
-
-<p>We can also display numbers and more complex expressions.</p>
+We can also display numbers and more complex expressions.
 
 <pre><code class="language-java" data-noescape="">System.out.println(42);
 System.out.println(1.23);
 System.out.println(2 + 3);</code></pre>
 
-<p>Try a few of your own! We’ll talk about other data types and expressions in days to come.</p>
+Try a few of your own! We'll talk about other data types and expressions in days to come.
+
+
+
 
 <style type="text/css">
 .reveal section img.logo {
@@ -310,7 +283,7 @@ System.out.println(2 + 3);</code></pre>
 	margin: 0 0 1rem 2rem;
 }
 </style>
-
+</code></pre>
 
         </section>
         
