@@ -51,10 +51,9 @@ Accept the default for workspace. (More on that later.)
 
 All C# code is found inside a *class* which is defined in a *NameSpace*. This NameSpace is called `HelloWorld`, and the class is called Program.
 
-<pre><code class="language-C#" data-noescape>nameSpace <mark>HelloWorld</mark> 
-{
-<pre><code class="language-C#" <mark>Program</mark> 
 
+<pre><code class="language-C#" data-noescape>nameSpace <mark>HelloWorld</mark> <mark>Program</mark> 
+{
 	class Program
 	{
 		public static void main(String[] args) 
@@ -64,7 +63,6 @@ All C# code is found inside a *class* which is defined in a *NameSpace*. This Na
 	}
 }
 </code></pre>
-
 ## Java Methods
 
 Think of *Methods* as the messages that we send in Java. All Java applications start with a `main` method.
@@ -78,7 +76,7 @@ Think of *Methods* as the messages that we send in Java. All Java applications s
 	}
 
 }
-</code></pre>
+
 
 ## Curly Brackets
 
