@@ -190,7 +190,7 @@
 <h2 id="this-applies-to-a-namespace">This applies to a namespace.</h2>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
-<mark>{</mark> *This opening curly brace signifies the opening of the namespace*
+<mark>{</mark> This opening curly brace signifies the opening of the namespace
 
 	class Program
 	{
@@ -199,7 +199,7 @@
 		}
 
 	}
-<mark>}</mark> *This closing clurly brace signifie the closing of the namespace*
+<mark>}</mark> This closing clurly brace signifie the closing of the namespace
 
 </code></pre>
 
@@ -215,13 +215,13 @@
 {
 
 	class Program
-	<mark>{</mark> *This opening curly brace signifies the opening of the class Program*
+	<mark>{</mark> This opening curly brace signifies the opening of the class Program
 
 		public static void main(String[] args) 
 		{
 		}
 
-<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
+	<mark>}</mark> This closing clurly brace signifie the closing of the class Program
 }
 
 </code></pre>
@@ -240,9 +240,9 @@
 	class Program
 	{
 		public static void main(String[] args) 
-	<mark>{</mark> *This opening curly brace signifies the opening of the main method*
+	<mark>{</mark> This opening curly brace signifies the opening of the main method
 
-	<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
+	<mark>}</mark> This closing clurly brace signifie the closing of the main method
 
 	}
 }
@@ -283,8 +283,8 @@ Finally we can also highlight the code we want to comment and use the following 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
 	public static void main(String[] args) {
-		<mark>// add code for future development</mark>
-		<mark>/*
+		<mark>// add code for future development
+		/*
 		add code for futuer development
 		*/</mark>
 	}
@@ -306,14 +306,17 @@ Finally we can also highlight the code we want to comment and use the following 
 
 	public static void main(String[] args) {
 		
-		<mark>Console.WriteLine("Hello World!")</mark>
+		<mark>Console.WriteLine("Hello World!");</mark>
 
 	}
 
 }
 </code></pre>
-
-<p><code>Console.WriteLine()</code> is a C# method that instructs our program to send the contents contained in the <em>()</em> to the console contained in our Visual Studio IDE. In our case the two words ‘Hello World!’ will appear in your console.</p>
+<div class="sidebar">
+	<img alt="Program example" src="./resources/hello4.png" />
+</div>
+<p><code>Console.WriteLine()</code> is a C# method that instructs our program to send the contents contained in the <em>()</em> to the console contained in our Visual Studio IDE. In our case the two words ‘Hello World!’ will appear in your console.
+Here is what your program should look like.</p>
 
 <p>Let’s run it, and see what happens!</p>
 
@@ -324,14 +327,25 @@ Finally we can also highlight the code we want to comment and use the following 
         <section>
           <!-- _S9SLIDE_ -->
 <h2 id="a-simple-greeting">A Simple Greeting</h2>
+<div class="sidebar">
+	<img alt="Start application" src="./resources/hello5.png" />
+</div>
 
-<p>Right click inside your editor (the pane where you’ve been modifying the code), then select <em>Run As &gt; Java Application</em>. Your program will run, and your <em>Console</em> <em>view</em> should display something like the following:</p>
+<p>Press the <em>Start</em> button highlighted located in the top of the Visual Studio IDE.
+Now press Ctrl F5 and the output will appear.</p>
 
-<pre><code class="language-bash">Hello, World!
-</code></pre>
-<p>Climactic, eh?</p>
 
-<p>You’ve written your first Java program. Congratulations!</p>
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="climactic-eh">Climactic, eh?</h2>
+<div class="sidebar">
+	<img alt="Select console application" src="./resources/hello6.png" />
+</div>
+
+<p>You’ve written your first C# program. Congratulations!</p>
 
 
 
@@ -341,13 +355,13 @@ Finally we can also highlight the code we want to comment and use the following 
           <!-- _S9SLIDE_ -->
 <h2 id="next-steps">Next Steps</h2>
 
-<p>Java is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
+<p>C# is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
 
-<pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
+<pre><code class="language-C#" data-noescape="">Console.WriteLine(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 
 <p>We can also do this with other Strings:</p>
 
-<pre><code class="language-java" data-noescape="">System.out.println(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
+<pre><code class="language-C#" data-noescape="">Console.WriteLine(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
 
 
 
@@ -359,9 +373,9 @@ Finally we can also highlight the code we want to comment and use the following 
 
 <p>We can also display numbers and more complex expressions.</p>
 
-<pre><code class="language-java" data-noescape="">System.out.println(42);
-System.out.println(1.23);
-System.out.println(2 + 3);</code></pre>
+<pre><code class="language-C#" data-noescape="">Console.WriteLine(42);
+Console.WriteLine(1.23);
+Console.WriteLine(2 + 3);</code></pre>
 
 <p>Try a few of your own! We’ll talk about other data types and expressions in days to come.</p>
 

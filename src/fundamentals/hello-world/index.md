@@ -89,7 +89,7 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 % 'data-noescape' attribute tells it to ignore our <mark> tags
 
 <pre><code class="language-C#" data-noescape>namespace HelloWorld 
-<mark>{</mark> *This opening curly brace signifies the opening of the namespace*
+<mark>{</mark> This opening curly brace signifies the opening of the namespace
 
 	class Program
 	{
@@ -98,7 +98,7 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 		}
 
 	}
-<mark>}</mark> *This closing clurly brace signifie the closing of the namespace*
+<mark>}</mark> This closing clurly brace signifie the closing of the namespace
 
 </code></pre>
 
@@ -108,13 +108,13 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 {
 
 	class Program
-	<mark>{</mark> *This opening curly brace signifies the opening of the class Program*
+	<mark>{</mark> This opening curly brace signifies the opening of the class Program
 
 		public static void main(String[] args) 
 		{
 		}
 
-<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
+	<mark>}</mark> This closing clurly brace signifie the closing of the class Program
 }
 
 </code></pre>
@@ -127,9 +127,9 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 	class Program
 	{
 		public static void main(String[] args) 
-	<mark>{</mark> *This opening curly brace signifies the opening of the main method*
+	<mark>{</mark> This opening curly brace signifies the opening of the main method
 
-	<mark>}</mark> *This closing clurly brace signifie the closing of the class Program*
+	<mark>}</mark> This closing clurly brace signifie the closing of the main method
 
 	}
 }
@@ -158,8 +158,8 @@ Finally we can also highlight the code we want to comment and use the following 
 <pre><code class="language-java" data-noescape>public class HelloWorld {
 
 	public static void main(String[] args) {
-		<mark>// add code for future development</mark>
-		<mark>/*
+		<mark>// add code for future development
+		/*
 		add code for futuer development
 		*/</mark>
 	}
@@ -175,45 +175,52 @@ A common first program for people to write in a language is a program that says 
 
 	public static void main(String[] args) {
 		
-		<mark>Console.WriteLine("Hello World!")</mark>
+		<mark>Console.WriteLine("Hello World!");</mark>
 
 	}
 
 }
 </code></pre>
-
+<div class="sidebar">
+	<img alt="Program example" src="./resources/hello4.png" />
+</div>
 `Console.WriteLine()` is a C# method that instructs our program to send the contents contained in the *()* to the console contained in our Visual Studio IDE. In our case the two words 'Hello World!' will appear in your console.
+Here is what your program should look like.
 
 Let's run it, and see what happens!
 
 ## A Simple Greeting
+<div class="sidebar">
+	<img alt="Start application" src="./resources/hello5.png" />
+</div>
 
-Right click inside your editor (the pane where you've been modifying the code), then select *Run As > Java Application*. Your program will run, and your *Console* *view* should display something like the following:
+Press the *Start* button highlighted located in the top of the Visual Studio IDE.
+Now press Ctrl F5 and the output will appear.
 
-```bash
-Hello, World!
-```
-Climactic, eh?
+## Climactic, eh?
+<div class="sidebar">
+	<img alt="Select console application" src="./resources/hello6.png" />
+</div>
 
-You've written your first Java program. Congratulations!
+You've written your first C# program. Congratulations!
 
 ## Next Steps
 
-Java is a *strongly-typed* language. The type of `"Hello, World!"` is `String`, which is denoted by the double quotation marks:
+C# is a *strongly-typed* language. The type of `"Hello, World!"` is `String`, which is denoted by the double quotation marks:
 
-<pre><code class="language-java" data-noescape>System.out.println(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
+<pre><code class="language-C#" data-noescape>Console.WriteLine(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 
 We can also do this with other Strings:
 
-<pre><code class="language-java" data-noescape>System.out.println(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
+<pre><code class="language-C#" data-noescape>Console.WriteLine(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
 
 ## Other Data Types
 
 We can also display numbers and more complex expressions.
 
-<pre><code class="language-java" data-noescape>System.out.println(42);
-System.out.println(1.23);
-System.out.println(2 + 3);</code></pre>
+<pre><code class="language-C#" data-noescape>Console.WriteLine(42);
+Console.WriteLine(1.23);
+Console.WriteLine(2 + 3);</code></pre>
 
 Try a few of your own! We'll talk about other data types and expressions in days to come.
 
