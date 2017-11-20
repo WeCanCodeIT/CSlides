@@ -14,6 +14,9 @@ Visual Studio is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). I
 
 Accept the default for workspace. (More on that later.)
 
+<br>
+<br>
+<br>
 © We Can Code IT, LLC
 
 ## Create a C# Project
