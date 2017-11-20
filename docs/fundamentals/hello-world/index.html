@@ -74,59 +74,68 @@
 
 <p>Accept the default for workspace. (More on that later.)</p>
 
-<article>
-    <header>
-        
+
 
         </section>
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2>this is the posts title</h2>
-    </header>
-    <footer>
-       <p>by aurel kurtula on <time>21:21pm</time></p> <ul><li>tag1</li><li>tag2</li><li>tag3</li></ul>
-    <footer>
-    <section>Here is the body of the article</section>
-&lt;/article&gt;
-
-## Create a C# Project
-
-
+<h2 id="create-a-c-project">Create a C# Project</h2>
 
 <div class="sidebar">
 	<img alt="Navigate to new project" src="./resources/Hello1.png" />
 </div>
 
+<p>• From the <em>File</em> Menu, select <em>New &gt; Project</em>.</p>
 
 
-• From the *File* Menu, select *New &gt; Project*.
 
-## Create a C# Project Continued
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="create-a-c-project-continued">Create a C# Project Continued</h2>
 
 <div class="sidebar">
 	<img alt="Select console application" src="./resources/hello2.png" />
 </div>
 
-• Select *Conole Application* from the *New Project* Window.
+<p>• Select <em>Conole Application</em> from the <em>New Project</em> Window.</p>
 
-• Specify a *Project name* of *Hello-World* as in the screenshot.
+<p>• Specify a <em>Project name</em> of <em>Hello-World</em> as in the screenshot.</p>
 
-• Click the *Ok* button.
+<p>• Click the <em>Ok</em> button.</p>
 
-## Now You've Got a NameSpace with a Class!
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="now-youve-got-a-namespace-with-a-class">Now You’ve Got a NameSpace with a Class!</h2>
 <div class="sidebar">
 	<img alt="Select console application" src="./resources/hello3.png" />
 </div>
 
-• You should see code similar to the following in your editor:
+<p>• You should see code similar to the following in your editor:</p>
 
-# Let's Break It Down
 
-## C# namespace and Classes
 
-All C# code is found inside a *class* which is defined in a *namespace*. This namespace is called `HelloWorld`, and the class is called Program.
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="lets-break-it-down">Let’s Break It Down</h1>
 
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="c-namespace-and-classes">C# namespace and Classes</h2>
+
+<p>All C# code is found inside a <em>class</em> which is defined in a <em>namespace</em>. This namespace is called <code>HelloWorld</code>, and the class is called Program.</p>
 
 <pre><code class="language-C#" data-noescape="">namespace <mark>HelloWorld</mark>  
 {
@@ -140,9 +149,15 @@ All C# code is found inside a *class* which is defined in a *namespace*. This na
 }
 </code></pre>
 
-## C# Methods
 
-Think of *Methods* as the messages that we send in C#. All C# applications start with a `main` method. We will discuss C# methods in more detail later in the course.
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="c-methods">C# Methods</h2>
+
+<p>Think of <em>Methods</em> as the messages that we send in C#. All C# applications start with a <code>main</code> method. We will discuss C# methods in more detail later in the course.</p>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
 {
@@ -156,13 +171,23 @@ Think of *Methods* as the messages that we send in C#. All C# applications start
 }
 </code></pre>
 
-## Curly Brackets
-
-Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your coding journey, you will find them essential to your trouble shooting efforts. An opening curly bracket (`{`) must **always, always, always** have a corresponding closing curly bracket (`}`). Did we say "ALWAYS"?
-
-## This applies to a namespace.
 
 
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="curly-brackets">Curly Brackets</h2>
+
+<p>Curly brackets (<code>{</code> and <code>}</code>) indicate code blocks in C#. As you start down your coding journey, you will find them essential to your trouble shooting efforts. An opening curly bracket (<code>{</code>) must <strong>always, always, always</strong> have a corresponding closing curly bracket (<code>}</code>). Did we say “ALWAYS”?</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="this-applies-to-a-namespace">This applies to a namespace.</h2>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
 <mark>{</mark> This opening curly brace signifies the opening of the namespace
@@ -178,7 +203,13 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 
 </code></pre>
 
-## … as well as Classes.
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="-as-well-as-classes">… as well as Classes.</h2>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
 {
@@ -195,7 +226,13 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 
 </code></pre>
 
-## … and finally Methods.
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="-and-finally-methods">… and finally Methods.</h2>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
 {
@@ -211,11 +248,17 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 }
 
 </code></pre>
-## Comments
 
-We can add comments to our code to explain it. Comments are very important as they not only help us remember what function our code is performing, comments can also help team members, code testers, and future developers to understand, test and make changes to your application. They don't *do* anything.
 
-Here, I have created a comment to remind me that I need to do something-namely, write some code inside the method! We'll do that next.
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="comments">Comments</h2>
+
+<p>We can add comments to our code to explain it. Comments are very important as they not only help us remember what function our code is performing, comments can also help team members, code testers, and future developers to understand, test and make changes to your application. They don’t <em>do</em> anything.</p>
+
+<p>Here, I have created a comment to remind me that I need to do something-namely, write some code inside the method! We’ll do that next.</p>
 
 <pre><code class="language-java" data-noescape="">public class HelloWorld {
 
@@ -227,10 +270,16 @@ Here, I have created a comment to remind me that I need to do something-namely, 
 }
 </code></pre>
 
-## ...Types of Comments
 
-As you can see we used to '//' to denote a command. We can use '//' to comment out single lines. We can also use '/*' to start commenting multiple lines of code, and end with '*/'.
-Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="types-of-comments">…Types of Comments</h2>
+
+<p>As you can see we used to ‘//’ to denote a command. We can use ‘//’ to comment out single lines. We can also use ‘/<em>’ to start commenting multiple lines of code, and end with ‘</em>/’.
+Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.</p>
 <pre><code class="language-C#" data-noescape="">public class HelloWorld {
 
 	public static void main(String[] args) {
@@ -243,9 +292,15 @@ Finally we can also highlight the code we want to comment and use the following 
 }
 </code></pre>
 
-# Hello World!
 
-A common first program for people to write in a language is a program that says "Hello, World!" That's just what we'll do. Change your code to look like the following:
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h1 id="hello-world">Hello World!</h1>
+
+<p>A common first program for people to write in a language is a program that says “Hello, World!” That’s just what we’ll do. Change your code to look like the following:</p>
 
 <pre><code class="language-C#" data-noescape="">class Program {
 
@@ -258,53 +313,80 @@ A common first program for people to write in a language is a program that says 
 }
 </code></pre>
 
-## Thumbs Up
 
-`Console.WriteLine()` is a C# method that instructs our program to send the contents contained in the *()* to the console contained in our Visual Studio IDE. In our case the two words 'Hello World!' will appear in your console.
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="thumbs-up">Thumbs Up</h2>
+
+<p><code>Console.WriteLine()</code> is a C# method that instructs our program to send the contents contained in the <em>()</em> to the console contained in our Visual Studio IDE. In our case the two words ‘Hello World!’ will appear in your console.</p>
 <div class="sidebar">
 	<img alt="Program example" src="./resources/hello4.png" />
 </div>
-Here is what your program should look like.
+<p>Here is what your program should look like.</p>
 
-Let's run it, and see what happens!
+<p>Let’s run it, and see what happens!</p>
 
-## A Simple Greeting
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="a-simple-greeting">A Simple Greeting</h2>
 <div class="sidebar">
 	<img alt="Start application" src="./resources/hello5.png" />
 </div>
 
-Press the *Start* button highlighted located in the top of the Visual Studio IDE.
-Now press Ctrl F5 and the output will appear.
+<p>Press the <em>Start</em> button highlighted located in the top of the Visual Studio IDE.
+Now press Ctrl F5 and the output will appear.</p>
 
-## Climactic, eh?
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="climactic-eh">Climactic, eh?</h2>
 <div class="sidebar">
 	<img alt="Select console application" src="./resources/hello6.png" />
 </div>
 
-You've written your first C# program. Congratulations!
+<p>You’ve written your first C# program. Congratulations!</p>
 
-## Next Steps
 
-C# is a *strongly-typed* language. The type of `"Hello, World!"` is `String`, which is denoted by the double quotation marks:
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="next-steps">Next Steps</h2>
+
+<p>C# is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
 
 <pre><code class="language-C#" data-noescape="">Console.WriteLine(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 
-We can also do this with other Strings:
+<p>We can also do this with other Strings:</p>
 
 <pre><code class="language-C#" data-noescape="">Console.WriteLine(<mark>"</mark>I can code it!<mark>"</mark>);</code></pre>
 
-## Other Data Types
 
-We can also display numbers and more complex expressions.
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="other-data-types">Other Data Types</h2>
+
+<p>We can also display numbers and more complex expressions.</p>
 
 <pre><code class="language-C#" data-noescape="">Console.WriteLine(42);
 Console.WriteLine(1.23);
 Console.WriteLine(2 + 3);</code></pre>
 
-Try a few of your own! We'll talk about other data types and expressions in days to come.
-
-
-
+<p>Try a few of your own! We’ll talk about other data types and expressions in days to come.</p>
 
 <style type="text/css">
 .reveal section img.logo {
@@ -316,7 +398,7 @@ Try a few of your own! We'll talk about other data types and expressions in days
 	margin: 0 0 1rem 2rem;
 }
 </style>
-</footer></footer></article>
+
 
         </section>
         

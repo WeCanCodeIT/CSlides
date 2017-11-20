@@ -14,16 +14,6 @@ Visual Studio is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). I
 
 Accept the default for workspace. (More on that later.)
 
-<article>
-    <header>
-        <h2>this is the posts title</h2>
-    </header>
-    <footer>
-       <p>by aurel kurtula on <time>21:21pm</time></p> <ul><li>tag1</li><li>tag2</li><li>tag3</li></ul>
-    <footer>
-    <section>Here is the body of the article</section>
-</article>
-
 ## Create a C# Project
 
 % TODO <em> below should probably be a caption class
