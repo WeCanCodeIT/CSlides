@@ -111,7 +111,7 @@ cupValues[0] = 42;
 cupValues[1] = 86;
 ```
 
-Notice I didn't *declare* `cupValues` again. I merely reassigned a new array to it. We will look at `List`s and `Collection`s later, types in Java that are more flexible.
+Notice I didn't *declare* `cupValues` again. I merely reassigned a new array to it. We will look at other data structures such `List`s and `Dictionaries`s later, types in C# that are more flexible.
 
 # Retrieving Values
 
@@ -239,9 +239,9 @@ Console.WriteLine("foo".indexOf('o')); //prints "1"
 
 Another version of the `indexOf` method (this is called *overloading*) will accept a `String`:
 ```C#
-Console.WriteLine("fee, fie, foe, fum".indexOf("foe")); //prints "10" <mark>WHY?</mark>
+Console.WriteLine("fee, fie, foe, fum".indexOf("foe")); //prints "10" 
 ```
-
+Why is the index value 10?
 ## A Little Wonky
 
 Arrays are objects, but they don't conform to all the rules of other objects.  
