@@ -62,9 +62,9 @@
 
 <p>Arrays allow us to store a sequence of values of a given type. This could be items on a menu, lottery numbers, or the birds in your menagerie.</p>
 
-<p><em>Head First Java</em> likens them a sequence of cups. This is a pretty good analogy.</p>
+<p>Lets liken our Array to a sequence of cups. This is a pretty good analogy.</p>
 
-<p>Each of these “cups” in an array holds a value, which we call an <em>element</em>. We reference a specific element using its zero-based <em>index</em>.</p>
+<p>Each of these “cups” in an array holds a value, which we call an <em>element</em>. We reference a specific element using its <em>zero-based index</em>. Its important to remember the index values of an Array and all other data strutures you will encounter will start with <em>0</em>.</p>
 
 <div class="cups">
 	<div><p class="row-label">Element →</p></div>
@@ -122,11 +122,11 @@ div.cups .cup {
           <!-- _S9SLIDE_ -->
 <h1 id="declaring-an-array">Declaring an Array</h1>
 
-<p>We declare an array using a syntax that we won’t see elsewhere in Java. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the <code>new</code> operator in a different way.</p>
+<p>We declare an array using the following syntax in C#. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the <code>new</code> operator in a different way.</p>
 
 <p>To create an array destined to hold the values of our cups from the previous example, we would do this:</p>
 
-<pre><code class="language-java">int[] cupValues = new int[5];
+<pre><code class="language-C#">int[] cupValues = new int[5];
 </code></pre>
 
 <p>This creates an array of type <code>int</code> whose name is <code>cupValues</code>. It has five elements.</p>
@@ -194,11 +194,11 @@ cupValues[1] = 86;
 
 <p>To retrieve values, we use a syntax like we used to assign values:</p>
 
-<pre><code class="language-java">System.out.println(cupValues[0]); // prints "42"
-System.out.println(cupValues[1]); // prints "86"
-System.out.println(cupValues[2]); // prints "23"
-System.out.println(cupValues[3]); // prints "8"
-System.out.println(cupValues[4]); // prints "91"
+<pre><code class="language-java">Console.WriteLine(cupValues[0]); // prints "42"
+Console.WriteLine(cupValues[1]); // prints "86"
+Console.WriteLine(cupValues[2]); // prints "23"
+Console.WriteLine(cupValues[3]); // prints "8"
+Console.WriteLine(cupValues[4]); // prints "91"
 </code></pre>
 
 
@@ -211,14 +211,14 @@ System.out.println(cupValues[4]); // prints "91"
 
 <p>Often, it’s important to know the size of an array. How many cups do I have?</p>
 
-<p>To do this, we use the <code>length</code> property, like so (notice that dot operator):</p>
+<p>To do this, we use the <code>.length</code> property, like so (notice that dot operator):</p>
 
 <pre><code class="language-java">int[] cupValues = new int[5];
 int numberOfCups = cupValues.length;
-System.out.println(numberOfCups); // prints "5"
+Console.WriteLine(numberOfCups); // prints "5"
 
 cupValues = new int[2];
-System.out.println(cupValues.length); // prints "2"
+Console.WriteLine(cupValues.length); // prints "2"
 </code></pre>
 
 <p>What is the value of <code>numberOfCups</code> after we run this code?</p>
@@ -233,10 +233,10 @@ System.out.println(cupValues.length); // prints "2"
 
 <p>We can also initialize an array with values. We do this using curly brackets to surround a comma-delimited list of values, like so:</p>
 
-<pre><code class="language-java">String[] giantWords = { "fee", "fie", "foe", "fum" };
+<pre><code class="language-C#">String[] giantWords = { "fee", "fie", "foe", "fum" };
 </code></pre>
 
-<p>Note that we also do not include the <em>size</em> of the array. Java figures this out based on the number of values we provide.</p>
+<p>Note that we also do not include the <em>size</em> of the array. C# figures this out based on the number of values we provide.</p>
 
 <div class="fragment sidebar"><img src="./resources/wat.jpg" alt="WAT?" /></div>
 
@@ -286,19 +286,19 @@ System.out.println(cupValues.length); // prints "2"
 
 <p>When we do this:</p>
 
-<pre><code class="language-java">String[] giantWords = { "fee", "fie", "foe", "fum" };
+<pre><code class="language-C#">String[] giantWords = { "fee", "fie", "foe", "fum" };
 </code></pre>
 
 <p>It is equivalent to doing this:</p>
 
-<pre><code class="language-java">String[] giantWords = new String[4];
+<pre><code class="language-C#">String[] giantWords = new String[4];
 giantWords[0] = "fee";
 giantWords[1] = "fie";
 giantWords[2] = "foe";
 giantWords[3] = "fum";
 </code></pre>
 
-<p>We can <em>initialize</em> an array with this syntax, but we can’t use it to later assign it new values. This is because array sizes are fixed (can’t change), and Java wouldn’t be able to check when compiling our code.</p>
+<p>We can <em>initialize</em> an array with this syntax, but we can’t use it to later assign it new values. This is because array sizes are fixed (can’t change), and C# wouldn’t be able to check when compiling our code.</p>
 
 
 
@@ -344,16 +344,16 @@ giantWords[3] = "fum";
 <p><code>split</code> is one of them. It allows us to split a <code>String</code> into an array of <code>String</code>s. It accepts one argument, which is the delimiter it should use to split the <code>String</code>:</p>
 
 <pre><code class="language-java">String source = "this, that, the other";
-String[] elements = source.split(", ");
+String[] elements = source.split("&lt;mark&gt;, &lt;/mark&gt;");//Describe this delimiter. Understanding this will be useful in predicting where the string will be split.
 
-System.out.println(elements[0]); // prints "this"
-System.out.println(elements[1]); // prints "that"
-System.out.println(elements[2]); // prints "the other"
+Console.WriteLine(elements[0]); // prints "this"
+Console.WriteLine(elements[1]); // prints "that"
+Console.WriteLine(elements[2]); // prints "the other"
 </code></pre>
-
 <p>What is the value of <code>elements.length</code>?</p>
 
-<p><em>Note: technically, the <code>split</code> method accepts a</em> regular expression, <em>pretty powerful stuff, but you can just think of it as a <code>String</code> for now.</em></p>
+<p><em>Note: technically, the <code>split</code> method accepts a</em> regular expression, <em>pretty powerful stuff, but you can just think of it as a <code>String</code> for now.</em>
+Question time: Why doesnt our elements array contain four elements?</p>
 
 
         </section>
@@ -363,21 +363,21 @@ System.out.println(elements[2]); // prints "the other"
 
 <h3 id="looking-at-characters">Looking at characters</h3>
 
-<p>We have talked about <code>String</code>s as sequences of characters. Now we have the tools to treat them that way. <code>String</code> has a <code>toCharArray</code> method that returns an array of <code>char</code>s:</p>
+<p>We have talked about <code>String</code>s as sequences of characters. Now we have the tools to treat them that way. <code>String</code> has a <code>toCharArray()</code> method that returns an array of <code>char</code>s:</p>
 
-<pre><code class="language-java">String myName = "Sue";
+<pre><code class="language-C#">String myName = "Sue";
 char[] letters = myName.toCharArray();
 
-System.out.println("The first letter of my name is " + letters[0]);
+Console.WriteLine("The first letter of my name is " + letters[0]);
 </code></pre>
 
 <p>A related method is <code>indexOf</code>, which returns the first index of a character:</p>
-<pre><code class="language-java">System.out.println(myName.indexOf('S')); //prints "0"
-System.out.println("foo".indexOf('o')); //prints "1"
+<pre><code class="language-C#">Console.WriteLine(myName.indexOf('S')); //prints "0"
+Console.WriteLine("foo".indexOf('o')); //prints "1"
 </code></pre>
 
 <p>Another version of the <code>indexOf</code> method (this is called <em>overloading</em>) will accept a <code>String</code>:</p>
-<pre><code class="language-java">System.out.println("fee, fie, foe, fum".indexOf("foe")); //prints "10"
+<pre><code class="language-C#">Console.WriteLine("fee, fie, foe, fum".indexOf("foe")); //prints "10" &lt;mark&gt;WHY?&lt;/mark&gt;
 </code></pre>
 
 
@@ -388,9 +388,7 @@ System.out.println("foo".indexOf('o')); //prints "1"
           <!-- _S9SLIDE_ -->
 <h2 id="a-little-wonky">A Little Wonky</h2>
 
-<p>Before teaching a bootcamp, I… <em>uhhh</em>… I mean a <em>friend</em> of mine often had to look up the syntax for arrays because they’re not really like other things in Java.</p>
-
-<p>Arrays are objects, but they don’t conform to all the rules of other objects. They are special snowflakes.</p>
+<p>Arrays are objects, but they don’t conform to all the rules of other objects.</p>
 
 <p>Some differences to be aware of:</p>
 

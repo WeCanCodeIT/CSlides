@@ -20,8 +20,8 @@ A `while` loop continues to do what you've told it to do *while* some condition 
 Usually, we won't use them for counting, but it's simple to illustrate them this way. This loop will count from one to ten:
 
 ```C#
-int count = 1;
-while (count < 11) {
+int count = 0;
+while (count < 10) {
 	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }

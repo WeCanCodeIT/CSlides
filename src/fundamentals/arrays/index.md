@@ -6,9 +6,9 @@ theme: league
 
 Arrays allow us to store a sequence of values of a given type. This could be items on a menu, lottery numbers, or the birds in your menagerie.
 
-*Head First Java* likens them a sequence of cups. This is a pretty good analogy.
+Lets liken our Array to a sequence of cups. This is a pretty good analogy.
 
-Each of these "cups" in an array holds a value, which we call an *element*. We reference a specific element using its zero-based *index*.
+Each of these "cups" in an array holds a value, which we call an *element*. We reference a specific element using its *zero-based index*. Its important to remember the index values of an Array and all other data strutures you will encounter will start with *0*.
 
 <div class="cups">
 	<div><p class="row-label">Element →</p></div>
@@ -60,11 +60,11 @@ div.cups .cup {
 
 # Declaring an Array
 
-We declare an array using a syntax that we won't see elsewhere in Java. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the `new` operator in a different way.
+We declare an array using the following syntax in C#. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the `new` operator in a different way.
 
 To create an array destined to hold the values of our cups from the previous example, we would do this:
 
-```java
+```C#
 int[] cupValues = new int[5];
 ```
 
@@ -118,26 +118,26 @@ Notice I didn't *declare* `cupValues` again. I merely reassigned a new array to 
 To retrieve values, we use a syntax like we used to assign values:
 
 ```java
-System.out.println(cupValues[0]); // prints "42"
-System.out.println(cupValues[1]); // prints "86"
-System.out.println(cupValues[2]); // prints "23"
-System.out.println(cupValues[3]); // prints "8"
-System.out.println(cupValues[4]); // prints "91"
+Console.WriteLine(cupValues[0]); // prints "42"
+Console.WriteLine(cupValues[1]); // prints "86"
+Console.WriteLine(cupValues[2]); // prints "23"
+Console.WriteLine(cupValues[3]); // prints "8"
+Console.WriteLine(cupValues[4]); // prints "91"
 ```
 
 # How Big Is It?
 
 Often, it's important to know the size of an array. How many cups do I have?
 
-To do this, we use the `length` property, like so (notice that dot operator):
+To do this, we use the `.length` property, like so (notice that dot operator):
 
 ```java
 int[] cupValues = new int[5];
 int numberOfCups = cupValues.length;
-System.out.println(numberOfCups); // prints "5"
+Console.WriteLine(numberOfCups); // prints "5"
 
 cupValues = new int[2];
-System.out.println(cupValues.length); // prints "2"
+Console.WriteLine(cupValues.length); // prints "2"
 ```
 
 What is the value of `numberOfCups` after we run this code?
@@ -146,11 +146,11 @@ What is the value of `numberOfCups` after we run this code?
 
 We can also initialize an array with values. We do this using curly brackets to surround a comma-delimited list of values, like so:
 
-```java
+```C#
 String[] giantWords = { "fee", "fie", "foe", "fum" };
 ```
 
-Note that we also do not include the *size* of the array. Java figures this out based on the number of values we provide.
+Note that we also do not include the *size* of the array. C# figures this out based on the number of values we provide.
 
 <div class="fragment sidebar"><img src="./resources/wat.jpg" alt="WAT?" /></div>
 
@@ -169,13 +169,13 @@ This creates a String array with these values:
 
 When we do this:
 
-```java
+```C#
 String[] giantWords = { "fee", "fie", "foe", "fum" };
 ```
 
 It is equivalent to doing this:
 
-```java
+```C#
 String[] giantWords = new String[4];
 giantWords[0] = "fee";
 giantWords[1] = "fie";
@@ -183,7 +183,7 @@ giantWords[2] = "foe";
 giantWords[3] = "fum";
 ```
 
-We can *initialize* an array with this syntax, but we can't use it to later assign it new values. This is because array sizes are fixed (can't change), and Java wouldn't be able to check when compiling our code.
+We can *initialize* an array with this syntax, but we can't use it to later assign it new values. This is because array sizes are fixed (can't change), and C# wouldn't be able to check when compiling our code.
 
 ## Let's Do It Together
 
@@ -207,46 +207,44 @@ There are some useful methods of `String` which *return* arrays.
 
 ```java
 String source = "this, that, the other";
-String[] elements = source.split(", ");
+String[] elements = source.split("<mark>, </mark>");//Describe this delimiter. Understanding this will be useful in predicting where the string will be split.
 
-System.out.println(elements[0]); // prints "this"
-System.out.println(elements[1]); // prints "that"
-System.out.println(elements[2]); // prints "the other"
+Console.WriteLine(elements[0]); // prints "this"
+Console.WriteLine(elements[1]); // prints "that"
+Console.WriteLine(elements[2]); // prints "the other"
 ```
-
 What is the value of `elements.length`?
 
 *Note: technically, the `split` method accepts a* regular expression, *pretty powerful stuff, but you can just think of it as a `String` for now.*
+Question time: Why doesnt our elements array contain four elements?
 
 !SLIDE
 
 ### Looking at characters
 
-We have talked about `String`s as sequences of characters. Now we have the tools to treat them that way. `String` has a `toCharArray` method that returns an array of `char`s:
+We have talked about `String`s as sequences of characters. Now we have the tools to treat them that way. `String` has a `toCharArray()` method that returns an array of `char`s:
 
-```java
+```C#
 String myName = "Sue";
 char[] letters = myName.toCharArray();
 
-System.out.println("The first letter of my name is " + letters[0]);
+Console.WriteLine("The first letter of my name is " + letters[0]);
 ```
 
 A related method is `indexOf`, which returns the first index of a character:
-```java
-System.out.println(myName.indexOf('S')); //prints "0"
-System.out.println("foo".indexOf('o')); //prints "1"
+```C#
+Console.WriteLine(myName.indexOf('S')); //prints "0"
+Console.WriteLine("foo".indexOf('o')); //prints "1"
 ```
 
 Another version of the `indexOf` method (this is called *overloading*) will accept a `String`:
-```java
-System.out.println("fee, fie, foe, fum".indexOf("foe")); //prints "10"
+```C#
+Console.WriteLine("fee, fie, foe, fum".indexOf("foe")); //prints "10" <mark>WHY?</mark>
 ```
 
 ## A Little Wonky
 
-Before teaching a bootcamp, I… *uhhh*… I mean a *friend* of mine often had to look up the syntax for arrays because they're not really like other things in Java.
-
-Arrays are objects, but they don't conform to all the rules of other objects. They are special snowflakes. 
+Arrays are objects, but they don't conform to all the rules of other objects.  
 
 Some differences to be aware of:
 
