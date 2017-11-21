@@ -12,17 +12,17 @@ There are many practical examples of loops:
 
 - Sunrise and sunset
 - Your daily routine: drink coffee, walk the dog, ask the neighbors if they've seen the dog, catch the dog, take a shower, go to work, come home, eat dinner, repeat
-
+- Question time: What are some real life examples of a loop?
 ## While Loops
 
 A `while` loop continues to do what you've told it to do *while* some condition continues to be true.
 
 Usually, we won't use them for counting, but it's simple to illustrate them this way. This loop will count from one to ten:
 
-```java
+```C#
 int count = 1;
 while (count < 11) {
-	System.out.println("The count is " + count);
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }
 ```
@@ -32,17 +32,17 @@ Try it!
 
 We start with the `while` keyword:
 
-<pre><code class="language-java" data-noescape>int count = 1;
-<mark>while</mark> (count < 11) {
-	System.out.println("The count is " + count);
+<pre><code class="language-C#" data-noescape>int count = 0;
+<mark>while</mark> (count < 10) {
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }</code></pre>
 
 <div class="fragment">
 <p>Followed by a set of parentheses:</p>
-<pre><code class="language-java" data-noescape>int count = 1;
-while <mark>(</mark>count < 11<mark>)</mark> {
-	System.out.println("The count is " + count);
+<pre><code class="language-C#" data-noescape>int count = 0;
+while <mark>(</mark>count < 10<mark>)</mark> {
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }</code></pre>
 </div>
@@ -51,9 +51,9 @@ while <mark>(</mark>count < 11<mark>)</mark> {
 
 Within these parentheses, we find a *condition*. This evaluates to true or false (`boolean`), just like our condition for an `if` statement:
 
-<pre><code class="language-java" data-noescape>int count = 1;
-while (<mark>count < 11</mark>) {
-	System.out.println("The count is " + count);
+<pre><code class="language-java" data-noescape>int count = 0;
+while (<mark>count < 10</mark>) {
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }</code></pre>
 
@@ -63,13 +63,13 @@ In this case, we will continue to *iterate* as long as the value of `count` is l
 
 Each time our `while` statement finds its condition to be true, it will execute the code inside the (*wait for it…*) **code block** that follows it, denoted by our friends the curly brackets:
 
-<pre><code class="language-java" data-noescape>int count = 1;
-while (count < 11) <mark>{</mark>
+<pre><code class="language-C#" data-noescape>int count = 0;
+while (count < 10) <mark>{</mark>
 	System.out.println("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 <mark>}</mark></code></pre>
 
-The way we read this would be: *"While count is less than eleven, we will print its value, then increase its value by one."*
+The way we read this would be: *"While count is less than ten, we will print its value, then increase its value by one."*
 
 ## Doing it at least once
 
@@ -77,22 +77,21 @@ A `while` statement checks its condition before it runs. A `do/while` is similar
 
 If I wanted to allow a user to ask for help regarding question options (this may remind you of a recent exercise), I may do something like this:
 
-```java
-Scanner input = new Scanner(System.in);
+```C#
 String porridgeTemperature;
 do {
-  System.out.println("Please specify porridge temperature.");
-  System.out.println("Type \"help\" to list options.");
-  porridgeTemperature = input.nextLine();
-  if(porridgeTemperature.equals("help")) {
-    System.out.println("Options: too hot, too cold, just right");
+  Console.WriteLine("Please specify porridge temperature.");
+  Console.WriteLine("Type \"help\" to list options.");
+  porridgeTemperature = Console.ReadLine();
+  if(porridgeTemperature == "help") {
+    Console.WriteLine("Options: too hot, too cold, just right");
   }
-} while(porridgeTemperature.equals("help"));
-input.close();
+} while(porridgeTemperature == "help");
+
 ```
 
 Note that since `porridgeTemperature` is accessed *outside* of the curly brackets, we must define it *before* the curly brackets for the `do/while` block.
-
+Question time: Can you give me a real life example of a *while* and *do while* loop?
 ## Let's Do It Together
 
 - If I wanted to ask the user for a message, then display it five times, how would I do this?
@@ -101,14 +100,14 @@ Note that since `porridgeTemperature` is accessed *outside* of the curly bracket
 
 ## It Never Stops
 
-Infinite loops aren't fun. You're sure to encounter one at some point. That's when you'll become more familiar with the *Debug perspective* in Eclipse, so that you can kill an errant loop.
+Infinite loops aren't fun. You're sure to encounter one at some point. That's when you'll become more familiar with the *Debug perspective* in Visual Studio, so that you can kill an errant loop.
 
 These happen when the circumstances never arise to make the condition for your loop become false:
 
-```java
+```C#
 while(true) {
-  System.out.println("I will run forever!");
-  System.out.println("(Or until you figure out how to stop me!)");
+  Console.WriteLine("I will run forever!");
+  Console.WriteLine("(Or until you figure out how to stop me!)");
 }
 ```
 

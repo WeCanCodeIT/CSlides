@@ -75,23 +75,24 @@
 <ul>
   <li>Sunrise and sunset</li>
   <li>Your daily routine: drink coffee, walk the dog, ask the neighbors if they’ve seen the dog, catch the dog, take a shower, go to work, come home, eat dinner, repeat</li>
-</ul>
-
-
+  <li>Question time: What are some real life examples of a loop?
+    
 
         </section>
         
         <section>
           <!-- _S9SLIDE_ -->
 <h2 id="while-loops">While Loops</h2>
+  </li>
+</ul>
 
 <p>A <code>while</code> loop continues to do what you’ve told it to do <em>while</em> some condition continues to be true.</p>
 
 <p>Usually, we won’t use them for counting, but it’s simple to illustrate them this way. This loop will count from one to ten:</p>
 
-<pre><code class="language-java">int count = 1;
+<pre><code class="language-C#">int count = 1;
 while (count &lt; 11) {
-	System.out.println("The count is " + count);
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }
 </code></pre>
@@ -107,17 +108,17 @@ while (count &lt; 11) {
 
 <p>We start with the <code>while</code> keyword:</p>
 
-<pre><code class="language-java" data-noescape="">int count = 1;
-<mark>while</mark> (count &lt; 11) {
-	System.out.println("The count is " + count);
+<pre><code class="language-C#" data-noescape="">int count = 0;
+<mark>while</mark> (count &lt; 10) {
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }</code></pre>
 
 <div class="fragment">
 <p>Followed by a set of parentheses:</p>
-<pre><code class="language-java" data-noescape="">int count = 1;
-while <mark>(</mark>count &lt; 11<mark>)</mark> {
-	System.out.println("The count is " + count);
+<pre><code class="language-C#" data-noescape="">int count = 0;
+while <mark>(</mark>count &lt; 10<mark>)</mark> {
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }</code></pre>
 </div>
@@ -132,9 +133,9 @@ while <mark>(</mark>count &lt; 11<mark>)</mark> {
 
 <p>Within these parentheses, we find a <em>condition</em>. This evaluates to true or false (<code>boolean</code>), just like our condition for an <code>if</code> statement:</p>
 
-<pre><code class="language-java" data-noescape="">int count = 1;
-while (<mark>count &lt; 11</mark>) {
-	System.out.println("The count is " + count);
+<pre><code class="language-java" data-noescape="">int count = 0;
+while (<mark>count &lt; 10</mark>) {
+	Console.WriteLine("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 }</code></pre>
 
@@ -150,13 +151,13 @@ while (<mark>count &lt; 11</mark>) {
 
 <p>Each time our <code>while</code> statement finds its condition to be true, it will execute the code inside the (<em>wait for it…</em>) <strong>code block</strong> that follows it, denoted by our friends the curly brackets:</p>
 
-<pre><code class="language-java" data-noescape="">int count = 1;
-while (count &lt; 11) <mark>{</mark>
+<pre><code class="language-C#" data-noescape="">int count = 0;
+while (count &lt; 10) <mark>{</mark>
 	System.out.println("The count is " + count);
 	count++; // remember, this increases the value of count by 1
 <mark>}</mark></code></pre>
 
-<p>The way we read this would be: <em>“While count is less than eleven, we will print its value, then increase its value by one.”</em></p>
+<p>The way we read this would be: <em>“While count is less than ten, we will print its value, then increase its value by one.”</em></p>
 
 
 
@@ -170,21 +171,20 @@ while (count &lt; 11) <mark>{</mark>
 
 <p>If I wanted to allow a user to ask for help regarding question options (this may remind you of a recent exercise), I may do something like this:</p>
 
-<pre><code class="language-java">Scanner input = new Scanner(System.in);
-String porridgeTemperature;
+<pre><code class="language-C#">String porridgeTemperature;
 do {
-  System.out.println("Please specify porridge temperature.");
-  System.out.println("Type \"help\" to list options.");
-  porridgeTemperature = input.nextLine();
-  if(porridgeTemperature.equals("help")) {
-    System.out.println("Options: too hot, too cold, just right");
+  Console.WriteLine("Please specify porridge temperature.");
+  Console.WriteLine("Type \"help\" to list options.");
+  porridgeTemperature = Console.ReadLine();
+  if(porridgeTemperature == "help") {
+    Console.WriteLine("Options: too hot, too cold, just right");
   }
-} while(porridgeTemperature.equals("help"));
-input.close();
+} while(porridgeTemperature == "help");
+
 </code></pre>
 
-<p>Note that since <code>porridgeTemperature</code> is accessed <em>outside</em> of the curly brackets, we must define it <em>before</em> the curly brackets for the <code>do/while</code> block.</p>
-
+<p>Note that since <code>porridgeTemperature</code> is accessed <em>outside</em> of the curly brackets, we must define it <em>before</em> the curly brackets for the <code>do/while</code> block.
+Question time: Can you give me a real life example of a <em>while</em> and <em>do while</em> loop?</p>
 
 
         </section>
@@ -210,13 +210,13 @@ input.close();
           <!-- _S9SLIDE_ -->
 <h2 id="it-never-stops">It Never Stops</h2>
 
-<p>Infinite loops aren’t fun. You’re sure to encounter one at some point. That’s when you’ll become more familiar with the <em>Debug perspective</em> in Eclipse, so that you can kill an errant loop.</p>
+<p>Infinite loops aren’t fun. You’re sure to encounter one at some point. That’s when you’ll become more familiar with the <em>Debug perspective</em> in Visual Studio, so that you can kill an errant loop.</p>
 
 <p>These happen when the circumstances never arise to make the condition for your loop become false:</p>
 
-<pre><code class="language-java">while(true) {
-  System.out.println("I will run forever!");
-  System.out.println("(Or until you figure out how to stop me!)");
+<pre><code class="language-C#">while(true) {
+  Console.WriteLine("I will run forever!");
+  Console.WriteLine("(Or until you figure out how to stop me!)");
 }
 </code></pre>
 
