@@ -14,9 +14,6 @@ Visual Studio is our **I**ntegrated **D**evelopment **E**nvironment (**IDE**). I
 
 Accept the default for workspace. (More on that later.)
 
-
-© We Can Code IT, LLC
-
 ## Create a C# Project
 
 % TODO <em> below should probably be a caption class
