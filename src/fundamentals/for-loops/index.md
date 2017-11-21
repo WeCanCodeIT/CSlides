@@ -6,18 +6,18 @@ theme: league
 
 Remember when we used a `when` loop to count?
 
-```java
-int count = 1;
-while(count <= 10) {
-  System.out.println("Count is " + count);
+```C#
+int count = 0;
+while(count < 10) {
+  Console.WriteLine("Count is" + count);
   count++;
 }
 ```
 The `for` loop allows us to do this in a more concise fashion.
 
-```java
-for(int count = 1; count <= 10; count++) {
-  System.out.println("Count is " + count);
+```C#
+for(int i = 0; i < 10; i++) {
+  Console.WriteLine("Count is" + i);
 }
 ```
 
@@ -25,31 +25,31 @@ for(int count = 1; count <= 10; count++) {
 
 The bit before the first semicolon inside a `for` statement runs *before* looping begins:
 
-<pre><code class="language-java hljs" data-noescape>for(<mark>int count = 1;</mark> count <= 10; count++) {
-  System.out.println("Count is " + count);
+<pre><code class="language-C# hljs" data-noescape>for(<mark>int i = 0;</mark> i < 10; i++) {
+  Console.WriteLine("Count is" + i);
 }</code></pre>
 
-You may hear this called many things. We will call it the *initialization expression*.
+You may hear this called many things. We will call it the *initialization statement*.
 
 This is analogous to how we initialized `count` before our while loop:
 
-<pre><code class="language-java hljs" data-noescape><mark>int count = 1;</mark>
-while(count <= 10) {
-  System.out.println("Count is " + count);
+<pre><code class="language-C# hljs" data-noescape><mark>int count = 0;</mark>
+while(count < 10) {
+  Console.WriteLine("Count is" + count);
   count++;
 }</code></pre>
 
-## Loop While…
+## While Loop…
 
 Our loop condition is the same and even in pretty much the same spot:
 
-<pre><code class="language-java hljs" data-noescape>for(int count = 1; <mark>count <= 10;</mark> count++) {
-  System.out.println("Count is " + count);
+<pre><code class="language-C# hljs" data-noescape>for(int count = 0; <mark>count < 10;</mark> count++) {
+  Console.WriteLine("Count is" + count);
 }</code></pre>
 
-<pre><code class="language-java hljs" data-noescape>int count = 1;
-while(<mark>count <= 10</mark>) {
-  System.out.println("Count is " + count);
+<pre><code class="language-C# hljs" data-noescape>int count = 0;
+while(<mark>count < 10</mark>) {
+  Console.WriteLine("Count is" + count);
   count++;
 }</code></pre>
 
@@ -57,13 +57,13 @@ while(<mark>count <= 10</mark>) {
 
 A `for` loop that follows the standard pattern makes it easy for us to find what happens *after* the loop.
 
-<pre><code class="language-java hljs" data-noescape>for(int count = 1; count <= 10; <mark>count++</mark>) {
-  System.out.println("Count is " + count);
+<pre><code class="language-C# hljs" data-noescape>for(int i = 0; i < 10; <mark>i++</mark>) {
+  Console.WriteLine("Count is" + i);
 }</code></pre>
 
-<pre><code class="language-java hljs" data-noescape>int count = 1;
-while(count <= 10) {
-  System.out.println("Count is " + count);
+<pre><code class="language-C# hljs" data-noescape>int count = 0;
+while(count < 10) {
+  Console.WriteLine("Count is" + count);
   <mark>count++;</mark>
 }</code></pre>
 
@@ -71,14 +71,13 @@ while(count <= 10) {
 
 Our *initialization expression* is usually a number, but initialize prety much anything we like. Also, our *increment expression* is often used to decrement, but you can also get weird:
 
-```java
-Scanner input = new Scanner(System.in);
+```C#
 
-for(String r = "foo"; !r.equals("quit"); r = input.nextLine()) {
-  System.out.println("What should I do?");
+for(String r = "foo"; !r.equals("quit"); r = Console.Readline()) {
+  Console.WriteLine("What should I do?");
 }
 
-System.out.println("Ok, I quit!");
+Console.WriteLine("Ok, I quit!");
 ```
 Yeah, probably don't do that. It's not *good*-weird.
 
@@ -88,7 +87,7 @@ Yeah, probably don't do that. It's not *good*-weird.
 
 Each of these three parts is optional. This:
 
-```java
+```C#
 for (; myCondition; ) {
   // do something
 }
@@ -96,7 +95,7 @@ for (; myCondition; ) {
 
 is the same as:
 
-```java
+```C#
 while(myCondition) {
   // do something
 }
