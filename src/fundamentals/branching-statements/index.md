@@ -94,12 +94,18 @@ Notice how using a return allows us to avoid using `else`—the method immediate
 ## Nested Loops
 
 It is not uncommon to place one loop inside another. Lets imagine a calendar if you will. Of course we know there are twelve months in a year. Each month has a specific number of days.
-If we needed to count every day in months 1 thru 12, we could use nested for-loops. Lets see how this works!!
+If we needed to count every day in months 1 thru 12, we could use nested for-loops. 
 
 Now lets code it!! We are going to assume every month has 30 days. We will create an outer loop and an inner loop. 
+
 Question time: Can someone tell me what the outer loop will represent? Months or Days?
+
 Question time: What else must our logic inlude if we want to count the number of days?
+
 Question time: Great we should use a variables. Now what type of variables should we use?
+
+
+##Lets see how this works!!
 
 ```C#
 class Program
@@ -121,7 +127,6 @@ class Program
         }
     }
 ```
-
 Now *that* is wizardy!
 
 Question time: How many total times will the inner loop run? How many times will the outer loop run? Why?
