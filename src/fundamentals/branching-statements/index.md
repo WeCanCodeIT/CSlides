@@ -131,8 +131,9 @@ class Program
     }
 ```
 Now *that* is wizardy!
-
+<div class="fragment">
 Question time: How many total times will the inner loop run? How many times will the outer loop run? Why?
+</div>
 
 ## Making It Pretty
 
@@ -155,4 +156,8 @@ static void Main(string[] args)
             Console.ReadLine();
         }
 ```
+Visual Studio Debugger is a great tool. 
 
+It can be used to understand the code you are writing, as well as troubleshoot the code you have written. 
+
+Learning how to use Debugger would be time well spent.
