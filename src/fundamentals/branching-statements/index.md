@@ -105,7 +105,7 @@ Question time: What else must our logic inlude if we want to count the number of
 Question time: Great we should use a variables. Now what type of variables should we use?
 
 
-##Lets see how this works!!
+## Lets see how this works!!
 
 ```C#
 class Program
