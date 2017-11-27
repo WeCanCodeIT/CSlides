@@ -205,14 +205,14 @@ There are some useful methods of `String` which *return* arrays.
 
 `split` is one of them. It allows us to split a `String` into an array of `String`s. It accepts one argument, which is the delimiter it should use to split the `String`:
 
-```java
+```C#
 String source = "this, that, the other";
-String[] elements = source.split("<mark>, </mark>");//Describe this delimiter. Understanding this will be useful in predicting where the string will be split.
-
+String[] elements = source.split("<mark>, </mark>");
 Console.WriteLine(elements[0]); // prints "this"
 Console.WriteLine(elements[1]); // prints "that"
 Console.WriteLine(elements[2]); // prints "the other"
 ```
+Describe this delimiter. Understanding this will be useful in predicting where the string will be split.
 What is the value of `elements.length`?
 
 *Note: technically, the `split` method accepts a* regular expression, *pretty powerful stuff, but you can just think of it as a `String` for now.*

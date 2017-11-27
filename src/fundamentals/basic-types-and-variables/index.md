@@ -6,27 +6,27 @@ theme: league
 
 We saw *literals* yesterday. In the statement:
 
-```java
-System.out.println("Hello, World!");
+```C#
+Console.WriteLine("Hello, World!");
 ```
 
 `"Hello, World!"` is a String literal. It's a String because it's a sequence of characters surrounded by quotation marks. It's a literal because it always has that value.
 
 ## Let's Not Be Literal
 
-In contrast, we have *variables*. In Java, a variable's *type* is defined, but its value can *vary* (thus the name).
+In contrast, we have *variables*. In C#, a variable's *type* is defined, but its value can *vary* (thus the name).
 
 <div class="fragment">
 <p>Instead of:</p>
 
-<pre><code class="language-java hljs">System.out.println("Hello, World!");
+<pre><code class="language-C# hljs">Console.WriteLine("Hello, World!");
 </code></pre>
 </div>
 
 <div class="fragment">
 <p>I could have written…</p>
-<pre><code class="language-java hljs">String message = "Hello, World!";
-System.out.println(message);</code></pre>
+<pre><code class="language-C# hljs">String message = "Hello, World!";
+Console.WriteLine(message);</code></pre>
 </div>
 
 ## Variables are variable
@@ -35,23 +35,23 @@ Variables store a value, but allow us to change the value that is stored.
 
 ```java
 String message = "I am Sam";
-System.out.println(message); // prints "I am Sam"
+Console.WriteLine(message); // prints "I am Sam"
 
 message = "I am Spartacus";
-System.out.println(message); // prints "I am Spartacus"
+Console.WriteLine(message); // prints "I am Spartacus"
 ```
 
 ## Reusing Variables
 
 Notice that in the previous example, when we first used our `message` variable, we specified its type:
 
-<pre><code class="language-java hljs" data-noescape><mark>String</mark> message = "I am Sam";
-System.out.println(message);</code></pre>
+<pre><code class="language-C# hljs" data-noescape><mark>String</mark> message = "I am Sam";
+Console.WriteLine(message);</code></pre>
 
 <div class="fragment">
 <p>When we reassigned its value, we didn't specify a type:</p>
-<pre><code class="language-java hljs" data-noescape>message = "I am Spartacus";
-System.out.println(message);</code></pre>
+<pre><code class="language-C# hljs" data-noescape>message = "I am Spartacus";
+Console.WriteLine(message);</code></pre>
 
 That's because we had already <em>declared</em> the variable. We declare a variable only once.
 </div>
@@ -92,32 +92,33 @@ We will talk about naming conventions quite a bit. They're important, since they
 
 Apart from constants (more on that later), we use `camelCase` to name variables. The first letter should be lowercase, and the first letter of each additional word in a variable's name should be uppercase:
 
-```java
+```C#
 String myVariable = "my variable's value";
 ```
 
 Not (all lowercase):
-```java
+```C#
 String myvariable = "my variable's value";
 ```
 
 Not (begins with a capital letter):
-```java
+```C#
 String MyVariable = "my variable's value";
 ```
 
 # Basic Data Types
 
-Java is not a *pure* object-oriented language. That is to say that it allows for *primitive* types as well as *objects*. For now, recognize that primitive types are declared in lowercase. Real objects will have their types capitalized.
+C# is a *pure* object-oriented language. That is to say that is all data types, for example int string char long, are considered *objects*. We will introduce *objects* later in the course. For now, recognize that data types are declared in lowercase.
 
 ## Booleans
 
-A `boolean` variable holds either the value `true` or `false`.
+A `boolean` variable holds either the value `true` or `false`, which is represented by a '1' for 'true' and '0' for 'false'.
 
 ```java
-boolean writingCodeIsFun = true;
-boolean rootCanalsAreFun = false; // unless you're a dentist?
+boolean writingCodeIsFun = true;// Is represented by a 1.
+boolean rootCanalsAreFun = false; // Is represented by a 0.
 ```
+Question time: Are we using camelCase or PascalCase for our variable naming convention?
 
 ## Integer Primitives
 
@@ -125,7 +126,7 @@ There are three sizes of integer (whole number) types: `short`, `int`, and `long
 
 All of the following are valid:
 
-```java
+```C#
 short answerInt = 42;
 int answerInt = 42;
 long answerInt = 42;
@@ -137,7 +138,7 @@ Floating point (numbers with decimal fractions) types are `float` and `double`. 
 
 Let's try it. (Note that we append 'f' to the value for the float variable):
 
-```java
+```C#
 public class FloatingPointDemo {
 
 	public static void main(String[] args) {
