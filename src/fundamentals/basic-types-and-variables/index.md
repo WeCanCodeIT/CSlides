@@ -59,13 +59,13 @@ That's because we had already <em>declared</em> the variable. We declare a varia
 ## Defining Variables
 
 When we do this:
-```java
+```C#
 String message = "I am Sam";
 ```
 
 <div class="fragment">
 <p>We are really combining these two things:</p>
-<pre><code class="language-java hljs">String message;
+<pre><code class="language-C# hljs">String message;
 message = "I am Sam";</code></pre>
 </div>
 
@@ -73,7 +73,7 @@ message = "I am Sam";</code></pre>
 
 We declare a variable by giving it a *type* and a *name*. That's what we did here:
 
-```java
+```C#
 String message;
 ```
 
@@ -83,7 +83,7 @@ The variable's *type* is `String`. Its *name* is `message`.
 
 When we did this, we assigned a value of `"I am Sam"` to the variable. *Initializing* is only different than *assigning* a value in that we haven't assigned a value yet:
 
-<pre><code class="language-java hljs" data-noescape>String message;
+<pre><code class="language-C# hljs" data-noescape>String message;
 <mark>message = "I am Sam";</mark></code></pre>
 
 # Variable Naming Conventions
@@ -108,8 +108,7 @@ String MyVariable = "my variable's value";
 
 # Basic Data Types
 
-C# is a *pure* object-oriented language. That is to say that is all data types, for example int string char long, are considered *objects*. We will introduce *objects* later in the course. For now, recognize that data types are declared in lowercase.
-
+There are two kinds of types in C#: value types and reference types. Variables of value types directly contain their data whereas variables of reference types store references to their data, the latter being known as objects. We will talk more about obects later in the course.
 ## Booleans
 
 A `boolean` variable holds either the value `true` or `false`, which is represented by a '1' for 'true' and '0' for 'false'.
@@ -120,7 +119,7 @@ boolean rootCanalsAreFun = false; // Is represented by a 0.
 ```
 Question time: Are we using camelCase or PascalCase for our variable naming convention?
 
-## Integer Primitives
+## Integer Value Types
 
 There are three sizes of integer (whole number) types: `short`, `int`, and `long`. They vary in their maximum and minimum values. `short`s support a smaller range of values than `int` supports. `int` supports a smaller range of values than `long` supports. We use `int`s (short for "integer") for most practical purposes. We often see `long`s for things like database record ids since we may have a lot of records in a database.
 
@@ -131,23 +130,24 @@ short answerInt = 42;
 int answerInt = 42;
 long answerInt = 42;
 ```
+Questions time: When do think we might use ints as coders?
 
-## Floating Point Primitives
+## Floating Point Value Types
 
 Floating point (numbers with decimal fractions) types are `float` and `double`. `double` is more precise than `float`.
 
 Let's try it. (Note that we append 'f' to the value for the float variable):
 
 ```C#
-public class FloatingPointDemo {
+class FloatingPointDemo {
 
 	public static void main(String[] args) {
 		
 		double doubleValue = 2.16440330489723961032;
-		System.out.println(doubleValue);
+		Console.WriteLine(doubleValue);
 		
 		float floatValue = 2.16440330489723961032f;
-		System.out.println(floatValue);
+		Console.WriteLine(floatValue);
 	}
 
 }
@@ -157,19 +157,21 @@ The values assigned to each variable are the same. Try it. What do you see?
 
 *Computers aren't as good at math as you thought, eh?*
 
-## Character primitives
+Questions time: When do you think as coders we might use Floating Points?
+
+## Character Value Types
 
 The `char` type holds individual characters. We define `char` literals by using single apostrophes.
 
-```java
+```C#
 char myChar = 'a';
 ```
 
 
-## String objects
+## String Referance Type
 
-Strings are proper objects. We'll talk more about them later. We've seen them. We denote their values with quotation marks:
+Strings are Referance Types. We've seen examples of them. We denote their values with quotation marks:
 
-```java
+```C#
 String myDeclaration = "I can code";
 ```

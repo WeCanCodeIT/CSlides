@@ -137,12 +137,12 @@ That's because we had already <em>declared</em> the variable. We declare a varia
 <h2 id="defining-variables">Defining Variables</h2>
 
 <p>When we do this:</p>
-<pre><code class="language-java">String message = "I am Sam";
+<pre><code class="language-C#">String message = "I am Sam";
 </code></pre>
 
 <div class="fragment">
 <p>We are really combining these two things:</p>
-<pre><code class="language-java hljs">String message;
+<pre><code class="language-C# hljs">String message;
 message = "I am Sam";</code></pre>
 </div>
 
@@ -156,7 +156,7 @@ message = "I am Sam";</code></pre>
 
 <p>We declare a variable by giving it a <em>type</em> and a <em>name</em>. That’s what we did here:</p>
 
-<pre><code class="language-java">String message;
+<pre><code class="language-C#">String message;
 </code></pre>
 
 <p>The variable’s <em>type</em> is <code>String</code>. Its <em>name</em> is <code>message</code>.</p>
@@ -171,7 +171,7 @@ message = "I am Sam";</code></pre>
 
 <p>When we did this, we assigned a value of <code>"I am Sam"</code> to the variable. <em>Initializing</em> is only different than <em>assigning</em> a value in that we haven’t assigned a value yet:</p>
 
-<pre><code class="language-java hljs" data-noescape="">String message;
+<pre><code class="language-C# hljs" data-noescape="">String message;
 <mark>message = "I am Sam";</mark></code></pre>
 
 
@@ -205,8 +205,7 @@ message = "I am Sam";</code></pre>
           <!-- _S9SLIDE_ -->
 <h1 id="basic-data-types">Basic Data Types</h1>
 
-<p>C# is a <em>pure</em> object-oriented language. That is to say that is all data types, for example int string char long, are considered <em>objects</em>. We will introduce <em>objects</em> later in the course. For now, recognize that data types are declared in lowercase.</p>
-
+<p>There are two kinds of types in C#: value types and reference types. Variables of value types directly contain their data whereas variables of reference types store references to their data, the latter being known as objects. We will talk more about obects later in the course.</p>
 
 
         </section>
@@ -228,7 +227,7 @@ boolean rootCanalsAreFun = false; // Is represented by a 0.
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="integer-primitives">Integer Primitives</h2>
+<h2 id="integer-value-types">Integer Value Types</h2>
 
 <p>There are three sizes of integer (whole number) types: <code>short</code>, <code>int</code>, and <code>long</code>. They vary in their maximum and minimum values. <code>short</code>s support a smaller range of values than <code>int</code> supports. <code>int</code> supports a smaller range of values than <code>long</code> supports. We use <code>int</code>s (short for “integer”) for most practical purposes. We often see <code>long</code>s for things like database record ids since we may have a lot of records in a database.</p>
 
@@ -238,6 +237,7 @@ boolean rootCanalsAreFun = false; // Is represented by a 0.
 int answerInt = 42;
 long answerInt = 42;
 </code></pre>
+<p>Questions time: When do think we might use ints as coders?</p>
 
 
 
@@ -245,21 +245,21 @@ long answerInt = 42;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="floating-point-primitives">Floating Point Primitives</h2>
+<h2 id="floating-point-value-types">Floating Point Value Types</h2>
 
 <p>Floating point (numbers with decimal fractions) types are <code>float</code> and <code>double</code>. <code>double</code> is more precise than <code>float</code>.</p>
 
 <p>Let’s try it. (Note that we append ‘f’ to the value for the float variable):</p>
 
-<pre><code class="language-C#">public class FloatingPointDemo {
+<pre><code class="language-C#">class FloatingPointDemo {
 
 	public static void main(String[] args) {
 		
 		double doubleValue = 2.16440330489723961032;
-		System.out.println(doubleValue);
+		Console.WriteLine(doubleValue);
 		
 		float floatValue = 2.16440330489723961032f;
-		System.out.println(floatValue);
+		Console.WriteLine(floatValue);
 	}
 
 }
@@ -269,17 +269,19 @@ long answerInt = 42;
 
 <p><em>Computers aren’t as good at math as you thought, eh?</em></p>
 
+<p>Questions time: When do you think as coders we might use Floating Points?</p>
+
 
 
         </section>
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="character-primitives">Character primitives</h2>
+<h2 id="character-value-types">Character Value Types</h2>
 
 <p>The <code>char</code> type holds individual characters. We define <code>char</code> literals by using single apostrophes.</p>
 
-<pre><code class="language-java">char myChar = 'a';
+<pre><code class="language-C#">char myChar = 'a';
 </code></pre>
 
 
@@ -288,11 +290,11 @@ long answerInt = 42;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="string-objects">String objects</h2>
+<h2 id="string-referance-type">String Referance Type</h2>
 
-<p>Strings are proper objects. We’ll talk more about them later. We’ve seen them. We denote their values with quotation marks:</p>
+<p>Strings are Referance Types. We’ve seen examples of them. We denote their values with quotation marks:</p>
 
-<pre><code class="language-java">String myDeclaration = "I can code";
+<pre><code class="language-C#">String myDeclaration = "I can code";
 </code></pre>
 
         </section>
