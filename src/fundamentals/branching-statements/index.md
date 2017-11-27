@@ -12,10 +12,10 @@ A `break` statement exits a loop (jumps to the code after its code block) immedi
 
 Here is an example of (bad) code that I saw in production. How could we write this using an equivalent `if` statement?
 
-```java
+```C#
 boolean shouldPrint = true;
 while(shouldPrint) {
-  System.out.println("I should print!");
+  Console.WriteLine("I should print!");
   break;
 }
 ```
@@ -28,22 +28,22 @@ We cried, then laughed a bit, and dubbed it the "while/break" statement. (No, th
 
 Remember Fortune Teller? We might have done something like this (assuming we were asking the user questions inside a loop):
 
-```java
+```C#
 while(true) {
-  System.out.println("What is your favorite color?"); 
-  String favoriteColor = input.next();
+  Console.WriteLine("What is your favorite color?"); 
+  String favoriteColor = Console.ReadLine();
 
-  if(favoriteColor.equals("Blue. No yel-- Auuuuuuuugh!")) {
-    System.out.println("You're just making Monty Python references.");
-    System.out.println("Get out!");
+  if(favoriteColor == ("Blue. No yel-- Auuuuuuuugh!")) {
+    Console.WriteLine("You're just making Monty Python references.");
+    Console.WriteLine("Get out!");
     break;
   }
 
-  System.out.println("Your favorite color is " + favoriteColor);
+  Console.WriteLine("Your favorite color is " + favoriteColor);
 }
 ```
-
 Try it!
+Question time: Can you think of one type of flow control logic you may use which requires a break statement? Here is a hint. Its not the following: if, if/else, if/else if.
 
 ## Continuing with… `continue`
 
@@ -53,12 +53,12 @@ Continue skips the current iteration, jumping to the end of the loop.
 
 Let's say we wanted to count from one to ten, skipping multiples of three:
 
-```java
-for(int count = 1; count <= 10; count++) {
-  if(count % 3 == 0) { // it's a multiple of three
+```C#
+for(int i = 1; i <= 10; i++) {
+  if(i % 3 == 0) { // it's a multiple of three
     continue;
   }
-  System.out.println("Count is " + count);
+  Console.WriteLine("i is " + i);
 }
 ```
 
@@ -71,12 +71,12 @@ How could we have changed our condition to make this code simpler and avoided us
 The third branching statement, `return`, isn't specific to loops. When we write our own methods, we'll use this to exit a method and *return* execution to the point where another method called it.
 
 Try this:
-```java
-public class EvenOrOdd {
+```C#
+class EvenOrOdd {
 
-  public static void main(String[] args) {
-    System.out.println("Message for 42: " + chooseMessage(42));
-    System.out.println("Message for 23: " + chooseMessage(23));
+  static void main(String[] args) {
+    Console.WriteLine("Message for 42: " + chooseMessage(42));
+    Console.WriteLine("Message for 23: " + chooseMessage(23));
   }
 
   public static String chooseMessage(int input) {
@@ -87,40 +87,64 @@ public class EvenOrOdd {
   }
 }
 ```
+Question time: What will chooseMessage(81) return?
 
 Notice how using a return allows us to avoid using `else`—the method immediately *returns* (responds) and exits. More on this when we get to methods.
 
 ## Nested Loops
 
-It is not uncommon to place one loop inside another. Imagine the second, minute, and hour hands of a clock. Once the second hand completes its circuit of the clock face, the minute hand advances. When the minute hand completes its circuit, the hour hand advances.
+It is not uncommon to place one loop inside another. Lets imagine a calendar if you will. Of course we know there are twelve months in a year. Each month has a specific number of days.
+If we needed to count every day in months 1 thru 12, we could use nested for-loops. Lets see how this works!!
 
-Let's do the hour and minute hand in code. We'll increment the minute hand by five minutes each time so that we don't fill up our console so quickly. Also, we'll only do three hours, starting with 1:00 and ending with 2:55:
+Now lets code it!! We are going to assume every month has 30 days. We will create an outer loop and an inner loop. 
+Question time: Can someone tell me what the outer loop will represent? Months or Days?
+Question time: What else must our logic inlude if we want to count the number of days?
+Question time: Great we should use a variables. Now what type of variables should we use?
 
-```java
-for (int hours = 1; hours < 3; hours++) {
-  for (int minutes = 0; minutes < 60; minutes += 5) {
-    System.out.println("The time is " + hours + ":" + minutes);
-  }
-}
+```C#
+class Program
+    {
+        static void Main(string[] args)
+        {
+            int sum = 0;//This variable will keep track of the days 
+            int total = 0;//This variable will sum the days of each month and save that value
+            for(int months = 1; months <= 12; months++)
+            {
+				}	
+                for(int days = 1; days <= 30; days++)
+                {
+                    sum = days;
+                }
+                total = total + sum;
+            }
+            Console.WriteLine(total);
+        }
+    }
 ```
 
 Now *that* is wizardy!
 
+Question time: How many total times will the inner loop run? How many times will the outer loop run? Why?
+
 ## Making It Pretty
 
-Notice how "1:00" comes out "1:0" in the previous example? This is because we're simply appending the value of `minutes` (`0` in this case) to the hours value. We referred to the `java.text.DecimalFormat` class when we were talking about formatting currency. We can also use it here to make our output prettier by giving it a format pattern. This is similar to how number formats in spreadsheets work:
+Now lets do something cool. Lets use nested for loops to draw a half pyramid.
+We are going to use the Debugging tool in Visual Studio and walk through each step in the loop.
 
-```java
-DecimalFormat paddedFormat = new DecimalFormat("00");
-
-for (int hours = 1; hours < 3; hours++) {
-  String paddedHours = paddedFormat.format(hours);
-  for (int minutes = 0; minutes < 60; minutes += 5) {
-    String paddedMinutes = paddedFormat.format(minutes);
-    String paddedTime = paddedHours + ":" + paddedMinutes;
-    System.out.println("The time is " + paddedTime);
-  }
-}
+```C#
+static void Main(string[] args)
+        {
+            int val = 5;//Equals the max number of columns and rows
+            int i, j, k;
+            for (i = 1; i <= val; i++)//OuterLoop is the number of rows
+            {
+                for (k = 1; k <= i; k++)//InnerLoop is the number of columns
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine("");
+            }
+            Console.ReadLine();
+        }
 ```
 
-Here, we are creating a DecimalFormat object (we call this an *instance*), then asking it to format our hours and minutes via its `format` method.
