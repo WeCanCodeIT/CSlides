@@ -1,4 +1,4 @@
-﻿
+
 
 <!doctype html>
 <html lang="en">
@@ -80,14 +80,14 @@
 <div class="fragment">
 <p>Instead of:</p>
 
-<pre><code class="language-C# hljs">Console.Writeline("Hello, World!");
+<pre><code class="language-C# hljs">Console.WriteLine("Hello, World!");
 </code></pre>
 </div>
 
 <div class="fragment">
 <p>I could have written…</p>
 <pre><code class="language-C# hljs">String message = "Hello, World!";
- Console.Writeline(message);</code></pre>
+Console.WriteLine(message);</code></pre>
 </div>
 
 
@@ -100,11 +100,11 @@
 
 <p>Variables store a value, but allow us to change the value that is stored.</p>
 
-<pre><code class="language-C#">String message = "I am Sam";
- Console.Writeline(message); // prints "I am Sam"
+<pre><code class="language-java">String message = "I am Sam";
+Console.WriteLine(message); // prints "I am Sam"
 
 message = "I am Spartacus";
-Console.Writeline(message); // prints "I am Spartacus"
+Console.WriteLine(message); // prints "I am Spartacus"
 </code></pre>
 
 
@@ -118,12 +118,12 @@ Console.Writeline(message); // prints "I am Spartacus"
 <p>Notice that in the previous example, when we first used our <code>message</code> variable, we specified its type:</p>
 
 <pre><code class="language-C# hljs" data-noescape=""><mark>String</mark> message = "I am Sam";
-Console.Writeline(message);</code></pre>
+Console.WriteLine(message);</code></pre>
 
 <div class="fragment">
 <p>When we reassigned its value, we didn't specify a type:</p>
 <pre><code class="language-C# hljs" data-noescape="">message = "I am Spartacus";
-Console.Writeline(message);</code></pre>
+Console.WriteLine(message);</code></pre>
 
 That's because we had already <em>declared</em> the variable. We declare a variable only once.
 </div>
@@ -137,12 +137,12 @@ That's because we had already <em>declared</em> the variable. We declare a varia
 <h2 id="defining-variables">Defining Variables</h2>
 
 <p>When we do this:</p>
-<pre><code class="language-C#">String message = "I am Sam";
+<pre><code class="language-java">String message = "I am Sam";
 </code></pre>
 
 <div class="fragment">
 <p>We are really combining these two things:</p>
-<pre><code class="language-C# hljs">String message;
+<pre><code class="language-java hljs">String message;
 message = "I am Sam";</code></pre>
 </div>
 
@@ -156,7 +156,7 @@ message = "I am Sam";</code></pre>
 
 <p>We declare a variable by giving it a <em>type</em> and a <em>name</em>. That’s what we did here:</p>
 
-<pre><code class="language-C#">String message;
+<pre><code class="language-java">String message;
 </code></pre>
 
 <p>The variable’s <em>type</em> is <code>String</code>. Its <em>name</em> is <code>message</code>.</p>
@@ -171,7 +171,7 @@ message = "I am Sam";</code></pre>
 
 <p>When we did this, we assigned a value of <code>"I am Sam"</code> to the variable. <em>Initializing</em> is only different than <em>assigning</em> a value in that we haven’t assigned a value yet:</p>
 
-<pre><code class="language-C# hljs" data-noescape="">String message;
+<pre><code class="language-java hljs" data-noescape="">String message;
 <mark>message = "I am Sam";</mark></code></pre>
 
 
@@ -205,7 +205,7 @@ message = "I am Sam";</code></pre>
           <!-- _S9SLIDE_ -->
 <h1 id="basic-data-types">Basic Data Types</h1>
 
-<p>Value and Referance are two kinds of "Types" in C#. In the following slides we will cover Basic Data Types which are commonly refered as Value Types and Strings which are considered Referance Types.</p>
+<p>C# is a <em>pure</em> object-oriented language. That is to say that is all data types, for example int string char long, are considered <em>objects</em>. We will introduce <em>objects</em> later in the course. For now, recognize that data types are declared in lowercase.</p>
 
 
 
@@ -215,11 +215,12 @@ message = "I am Sam";</code></pre>
           <!-- _S9SLIDE_ -->
 <h2 id="booleans">Booleans</h2>
 
-<p>A <code>boolean</code> variable holds either the value <code>true</code> or <code>false</code>.</p>
+<p>A <code>boolean</code> variable holds either the value <code>true</code> or <code>false</code>, which is represented by a ‘1’ for ‘true’ and ‘0’ for ‘false’.</p>
 
-<pre><code class="language-C#">boolean writingCodeIsFun = true;
-boolean rootCanalsAreFun = false; // unless you're a dentist?
+<pre><code class="language-java">boolean writingCodeIsFun = true;// Is represented by a 1.
+boolean rootCanalsAreFun = false; // Is represented by a 0.
 </code></pre>
+<p>Question time: Are we using camelCase or PascalCase for our variable naming convention?</p>
 
 
 
@@ -227,7 +228,7 @@ boolean rootCanalsAreFun = false; // unless you're a dentist?
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="integer-primitives">Integer Value Type</h2> 
+<h2 id="integer-primitives">Integer Primitives</h2>
 
 <p>There are three sizes of integer (whole number) types: <code>short</code>, <code>int</code>, and <code>long</code>. They vary in their maximum and minimum values. <code>short</code>s support a smaller range of values than <code>int</code> supports. <code>int</code> supports a smaller range of values than <code>long</code> supports. We use <code>int</code>s (short for “integer”) for most practical purposes. We often see <code>long</code>s for things like database record ids since we may have a lot of records in a database.</p>
 
@@ -244,21 +245,21 @@ long answerInt = 42;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="floating-point-primitives">Floating Point Value Types</h2>
+<h2 id="floating-point-primitives">Floating Point Primitives</h2>
 
 <p>Floating point (numbers with decimal fractions) types are <code>float</code> and <code>double</code>. <code>double</code> is more precise than <code>float</code>.</p>
 
 <p>Let’s try it. (Note that we append ‘f’ to the value for the float variable):</p>
 
-<pre><code class="language-C#">class FloatingPointDemo {
+<pre><code class="language-C#">public class FloatingPointDemo {
 
 	public static void main(String[] args) {
 		
 		double doubleValue = 2.16440330489723961032;
-        Console.Writeline(doubleValue);
+		System.out.println(doubleValue);
 		
 		float floatValue = 2.16440330489723961032f;
-        Console.Writeline(floatValue);
+		System.out.println(floatValue);
 	}
 
 }
@@ -274,11 +275,11 @@ long answerInt = 42;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="character-primitives">Character Value Types</h2>
+<h2 id="character-primitives">Character primitives</h2>
 
 <p>The <code>char</code> type holds individual characters. We define <code>char</code> literals by using single apostrophes.</p>
 
-<pre><code class="language-C#">char myChar = 'a';
+<pre><code class="language-java">char myChar = 'a';
 </code></pre>
 
 
@@ -287,11 +288,11 @@ long answerInt = 42;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="string-objects">String Referance Types</h2>
+<h2 id="string-objects">String objects</h2>
 
-<p>Strings are Referance Types. We’ve seen them. We denote their values with quotation marks:</p>
+<p>Strings are proper objects. We’ll talk more about them later. We’ve seen them. We denote their values with quotation marks:</p>
 
-<pre><code class="language-C#">String myDeclaration = "I can code";
+<pre><code class="language-java">String myDeclaration = "I can code";
 </code></pre>
 
         </section>
