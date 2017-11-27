@@ -98,12 +98,15 @@ If we needed to count every day in months 1 thru 12, we could use nested for-loo
 
 Now lets code it!! We are going to assume every month has 30 days. We will create an outer loop and an inner loop. 
 
+<div class="fragment">
 Question time: Can someone tell me what the outer loop will represent? Months or Days?
-
+</div>
+<div class="fragment">
 Question time: What else must our logic inlude if we want to count the number of days?
-
+</div>
+<div class="fragment">
 Question time: Great we should use a variables. Now what type of variables should we use?
-
+</div>
 
 ## Lets see how this works!!
 
