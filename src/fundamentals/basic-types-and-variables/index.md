@@ -175,3 +175,4 @@ Strings are Referance Types. We've seen examples of them. We denote their values
 ```C#
 String myDeclaration = "I can code";
 ```
+Question time: What is the differance between "a" and 'a'?
