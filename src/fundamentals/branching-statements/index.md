@@ -87,9 +87,11 @@ class EvenOrOdd {
   }
 }
 ```
-Question time: What will chooseMessage(81) return?
 
 Notice how using a return allows us to avoid using `else`—the method immediately *returns* (responds) and exits. More on this when we get to methods.
+<div class="fragment">
+Question time: What will chooseMessage(81) return?
+</div>
 
 ## Nested Loops
 
