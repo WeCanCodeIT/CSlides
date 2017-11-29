@@ -4,23 +4,25 @@ theme: league
 
 ## Strings are Things
 
-Mostly, we've dealt with primitives so far.
+`String` is a *class* from which we create *objects*. Object Oriented Programming (OOP) allows us to create *abstractions* to simplify the problem we're solving.
 
-`String` and `Scanner` are *classes* from which we create *objects*. Object Oriented Programming (OOP) allows us to create *abstractions* to simplify the problem we're solving.
+We use *abstraction* all the time in everyday activities. When you sit down to eat at your favorite resturaunt, one of the first things we order may be a drink.
 
-This is something we do all the time in spoken language—we refer to that collection of material and thread and (hopefully) style that you're wearing as a "shirt". We don't describe its manufacture unless we're tailors.
+If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, Sodium benzoate, Caffeine, Sodium citrate, Erythorbic acid,Gum arabic, 
 
-In a similar vein, a `String` represents a sequence of primitive `char`s. It allows us to call methods (send it messages) to manipulate that sequence of `char`s and create new `String`s.
+and Calcium disodium, the server would have no idea what you are asking. Right!! We use *abstraction* to descibe what we want to drink by utilizing the name 'Mountian Dew'.
+
+Abstraction allows us to use methods to manipulate a sequence of `char`s and create new `String`s.
 
 Today, we'll show you some of the ways that you can do that.
 
 ## Nothing to do with cats
 
-When we use the operator `+` with `String`s, we call this *concatenation*. It's not adding them as we would add numbers, but it's appending one `String` to another, resulting in a longer `String`. Java knows how to turn primitives into Strings, so it does that for us behind the scenes, saving us a bit of work. What would this display?
+When we use the operator `+` with `String`s, we call this *concatenation*. It's not adding them as we would add numbers, but it's appending one `String` to another, resulting in a longer `String`. C# knows how to turn characters into Strings, so it does that for us behind the scenes, saving us a bit of work. What would this display?
 
-```
+```C#
 int numberOfSuits = 4;
-System.out.println("I have " + numberOfSuits + " suits.");
+Console.WriteLine("I have " + numberOfSuits + " suits.");
 ```
 
 ![Purrsuit of Happiness](./resources/purrsuit.jpg)
@@ -29,25 +31,25 @@ System.out.println("I have " + numberOfSuits + " suits.");
 
 ## Strings are Objects
 
-When we deal with primitives, we compare them using the equals (`==`) operator:
+When we deal with Value type variables, we compare them using the equals (`==`) operator:
 
-```java
+```C#
 int numberOfMaids = 7;
 int numberOfMops = 7;
 
 if(numberOfMaids == numberOfMops) {
-  System.out.println("They might get it clear in half a year.");
+  Console.WriteLine("They might get it clear in half a year.");
 }
 ```
 
 When we compare *objects* (like `String`s), we use the `equals` method:
 
-```java
+```C#
 String shoeDescription = "Their shoes were clean and neat";
 
 if(shoeDescription.equals("Their shoes were clean and neat")) {
-  System.out.println("This is odd, because, you know,");
-  System.out.println("They hadn't any feet.");
+  Console.WriteLine("This is odd, because, you know,");
+  Console.WriteLine("They hadn't any feet.");
 }
 ```
 
@@ -55,27 +57,26 @@ Inspiration courtesy of Lewis Carroll's *The Walrus and The Carpenter*. (The odd
 
 # Just in Case
 
-Methods we call on Strings create and *return* new Strings rather than changing the original String. Strings in Java are *immutable*. A common need is to convert a String to all uppercase or all lowercase:
+Methods we call on Strings create and *return* new Strings rather than changing the original String. Strings in C# are *immutable* meaning the value of the string cannot be changed after initialization. A common need is to convert a String to all uppercase or all lowercase:
 
-```java
+```C#
 String myGreeting = "Hello";
-System.out.println(myGreeting.toUpperCase()); // prints "HELLO"
-System.out.println(myGreeting.toLowerCase()); // prints "hello"
-System.out.println(myGreeting); // prints "Hello"
+Console.WriteLine(myGreeting.toUpperCase()); // prints "HELLO"
+Console.WriteLine(myGreeting.toLowerCase()); // prints "hello"
+Console.WriteLine(myGreeting); // prints "Hello"
 ```
 
 ## Sensitivity Training
 
 We often use one of these methods to normalize user input. If we're asking for a color and call the `toLowerCase()` method on the user's response before comparing it to "red", the user can type "RED", "Red", or "red" and it won't matter.
 
-```java
-Scanner input = new Scanner(System.in);
+```C#
 
-System.out.println("Enter a color, please.")
-String response = input.nextLine();
+Console.WriteLine("Enter a color, please.")
+String response = Console.ReadLine();
 
-if(response.toLowerCase().equals("red")) {
-  System.out.println("Roses can be red. Also, lilies.");
+if(response.toLower().equals("red")) {
+  Console.WriteLine("Roses can be red. Also, lilies.");
 }
 ```
 
@@ -83,10 +84,10 @@ if(response.toLowerCase().equals("red")) {
 
 A String's `length()` method will tell us how many characters it contains.
 
-```java
+```C#
 String palindrome = "A dog, a panic, in a pagoda";
 int palindromeLength = palindrome.length();
-System.out.println(palindrome + " has " + palindromeLength
+Console.WriteLine(palindrome + " has " + palindromeLength
 	+ " characters.");
 ```
 
@@ -94,15 +95,15 @@ System.out.println(palindrome + " has " + palindromeLength
 
 Sometimes we need special characters in Strings. The obvious example is a quotation mark. Quotation marks are what open and close Strings, so how would we include a quotation mark in a String? We do something called *escaping*. We refer to the backslash (`\`) we use as an *escape character*.
 
-```java
-System.out.println("Phil said, \"You've got red on you\".");
+```C#
+Console.WriteLine("Phil said, \"You've got red on you\".");
 ```
 
 We can also use escaping to insert special characters like newlines (`\n`) and tabs (`\t`):
 
 ```java
-System.out.println("This is the first line.\nSecond line");
-System.out.println("\tThis line is indented.");
+Console.WriteLine("This is the first line.\nSecond line");
+Console.WriteLine("\tThis line is indented.");
 ```
 
 ## Other Useful Methods

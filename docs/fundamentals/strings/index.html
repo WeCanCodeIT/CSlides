@@ -60,13 +60,15 @@
 <!-- _S9SLIDE_ -->
 <h2 id="strings-are-things">Strings are Things</h2>
 
-<p>Mostly, we’ve dealt with primitives so far.</p>
+<p><code>String</code> is a <em>class</em> from which we create <em>objects</em>. Object Oriented Programming (OOP) allows us to create <em>abstractions</em> to simplify the problem we’re solving.</p>
 
-<p><code>String</code> and <code>Scanner</code> are <em>classes</em> from which we create <em>objects</em>. Object Oriented Programming (OOP) allows us to create <em>abstractions</em> to simplify the problem we’re solving.</p>
+<p>We use <em>abstraction</em> all the time in everyday activities. When you sit down to eat at your favorite resturaunt, one of the first things we order may be a drink.</p>
 
-<p>This is something we do all the time in spoken language-we refer to that collection of material and thread and (hopefully) style that you’re wearing as a “shirt”. We don’t describe its manufacture unless we’re tailors.</p>
+<p>If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, Sodium benzoate, Caffeine, Sodium citrate, Erythorbic acid,Gum arabic,</p>
 
-<p>In a similar vein, a <code>String</code> represents a sequence of primitive <code>char</code>s. It allows us to call methods (send it messages) to manipulate that sequence of <code>char</code>s and create new <code>String</code>s.</p>
+<p>and Calcium disodium, the server would have no idea what you are asking. Right!! We use <em>abstraction</em> to descibe what we want to drink by utilizing the name ‘Mountian Dew’.</p>
+
+<p>Abstraction allows us to use methods to manipulate a sequence of <code>char</code>s and create new <code>String</code>s.</p>
 
 <p>Today, we’ll show you some of the ways that you can do that.</p>
 
@@ -78,10 +80,10 @@
           <!-- _S9SLIDE_ -->
 <h2 id="nothing-to-do-with-cats">Nothing to do with cats</h2>
 
-<p>When we use the operator <code>+</code> with <code>String</code>s, we call this <em>concatenation</em>. It’s not adding them as we would add numbers, but it’s appending one <code>String</code> to another, resulting in a longer <code>String</code>. Java knows how to turn primitives into Strings, so it does that for us behind the scenes, saving us a bit of work. What would this display?</p>
+<p>When we use the operator <code>+</code> with <code>String</code>s, we call this <em>concatenation</em>. It’s not adding them as we would add numbers, but it’s appending one <code>String</code> to another, resulting in a longer <code>String</code>. C# knows how to turn characters into Strings, so it does that for us behind the scenes, saving us a bit of work. What would this display?</p>
 
-<pre><code>int numberOfSuits = 4;
-System.out.println("I have " + numberOfSuits + " suits.");
+<pre><code class="language-C#">int numberOfSuits = 4;
+Console.WriteLine("I have " + numberOfSuits + " suits.");
 </code></pre>
 
 <p><img src="./resources/purrsuit.jpg" alt="Purrsuit of Happiness" /></p>
@@ -96,23 +98,23 @@ System.out.println("I have " + numberOfSuits + " suits.");
           <!-- _S9SLIDE_ -->
 <h2 id="strings-are-objects">Strings are Objects</h2>
 
-<p>When we deal with primitives, we compare them using the equals (<code>==</code>) operator:</p>
+<p>When we deal with Value type variables, we compare them using the equals (<code>==</code>) operator:</p>
 
-<pre><code class="language-java">int numberOfMaids = 7;
+<pre><code class="language-C#">int numberOfMaids = 7;
 int numberOfMops = 7;
 
 if(numberOfMaids == numberOfMops) {
-  System.out.println("They might get it clear in half a year.");
+  Console.WriteLine("They might get it clear in half a year.");
 }
 </code></pre>
 
 <p>When we compare <em>objects</em> (like <code>String</code>s), we use the <code>equals</code> method:</p>
 
-<pre><code class="language-java">String shoeDescription = "Their shoes were clean and neat";
+<pre><code class="language-C#">String shoeDescription = "Their shoes were clean and neat";
 
 if(shoeDescription.equals("Their shoes were clean and neat")) {
-  System.out.println("This is odd, because, you know,");
-  System.out.println("They hadn't any feet.");
+  Console.WriteLine("This is odd, because, you know,");
+  Console.WriteLine("They hadn't any feet.");
 }
 </code></pre>
 
@@ -126,12 +128,12 @@ if(shoeDescription.equals("Their shoes were clean and neat")) {
           <!-- _S9SLIDE_ -->
 <h1 id="just-in-case">Just in Case</h1>
 
-<p>Methods we call on Strings create and <em>return</em> new Strings rather than changing the original String. Strings in Java are <em>immutable</em>. A common need is to convert a String to all uppercase or all lowercase:</p>
+<p>Methods we call on Strings create and <em>return</em> new Strings rather than changing the original String. Strings in C# are <em>immutable</em> meaning the value of the string cannot be changed after initialization. A common need is to convert a String to all uppercase or all lowercase:</p>
 
-<pre><code class="language-java">String myGreeting = "Hello";
-System.out.println(myGreeting.toUpperCase()); // prints "HELLO"
-System.out.println(myGreeting.toLowerCase()); // prints "hello"
-System.out.println(myGreeting); // prints "Hello"
+<pre><code class="language-C#">String myGreeting = "Hello";
+Console.WriteLine(myGreeting.toUpperCase()); // prints "HELLO"
+Console.WriteLine(myGreeting.toLowerCase()); // prints "hello"
+Console.WriteLine(myGreeting); // prints "Hello"
 </code></pre>
 
 
@@ -144,13 +146,12 @@ System.out.println(myGreeting); // prints "Hello"
 
 <p>We often use one of these methods to normalize user input. If we’re asking for a color and call the <code>toLowerCase()</code> method on the user’s response before comparing it to “red”, the user can type “RED”, “Red”, or “red” and it won’t matter.</p>
 
-<pre><code class="language-java">Scanner input = new Scanner(System.in);
+<pre><code class="language-C#">
+Console.WriteLine("Enter a color, please.")
+String response = Console.ReadLine();
 
-System.out.println("Enter a color, please.")
-String response = input.nextLine();
-
-if(response.toLowerCase().equals("red")) {
-  System.out.println("Roses can be red. Also, lilies.");
+if(response.toLower().equals("red")) {
+  Console.WriteLine("Roses can be red. Also, lilies.");
 }
 </code></pre>
 
@@ -164,9 +165,9 @@ if(response.toLowerCase().equals("red")) {
 
 <p>A String’s <code>length()</code> method will tell us how many characters it contains.</p>
 
-<pre><code class="language-java">String palindrome = "A dog, a panic, in a pagoda";
+<pre><code class="language-C#">String palindrome = "A dog, a panic, in a pagoda";
 int palindromeLength = palindrome.length();
-System.out.println(palindrome + " has " + palindromeLength
+Console.WriteLine(palindrome + " has " + palindromeLength
 	+ " characters.");
 </code></pre>
 
@@ -180,13 +181,13 @@ System.out.println(palindrome + " has " + palindromeLength
 
 <p>Sometimes we need special characters in Strings. The obvious example is a quotation mark. Quotation marks are what open and close Strings, so how would we include a quotation mark in a String? We do something called <em>escaping</em>. We refer to the backslash (<code>\</code>) we use as an <em>escape character</em>.</p>
 
-<pre><code class="language-java">System.out.println("Phil said, \"You've got red on you\".");
+<pre><code class="language-C#">Console.WriteLine("Phil said, \"You've got red on you\".");
 </code></pre>
 
 <p>We can also use escaping to insert special characters like newlines (<code>\n</code>) and tabs (<code>\t</code>):</p>
 
-<pre><code class="language-java">System.out.println("This is the first line.\nSecond line");
-System.out.println("\tThis line is indented.");
+<pre><code class="language-java">Console.WriteLine("This is the first line.\nSecond line");
+Console.WriteLine("\tThis line is indented.");
 </code></pre>
 
 
