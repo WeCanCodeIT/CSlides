@@ -142,4 +142,4 @@ Let's explore how we can use our IDE to examine the String class and discover ot
 
 ## Can Haz Moar?
 
-Try https://www.w3resource.com/csharp-exercises/string/index.php
+Try [C# Sharp String 43 exercises with solution](https://www.w3resource.com/csharp-exercises/string/index.php)
