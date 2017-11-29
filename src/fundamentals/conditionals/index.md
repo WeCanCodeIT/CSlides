@@ -100,12 +100,12 @@ Question time: If we sent the result of the conditional statement (heightInInche
 ```C#
 int heightInInches = 73;
 
-            if (heightInInches >= 60)
-            {
-                Console.WriteLine("You are tall enough to ride");
-            }
-				Console.WriteLine("You are to short to ride);
-				Console.WriteLine(heightInInches >= 60);
+    if (heightInInches >= 60)
+    {
+        Console.WriteLine("You are tall enough to ride");
+    }
+		Console.WriteLine("You are to short to ride);
+		Console.WriteLine(heightInInches >= 60);
 ```
 
 <div class="fragment">
@@ -157,7 +157,7 @@ if(heightInInches >= 60) <mark>{</mark>
 <pre><code class="language-C#" data-noescape>int heightInInches = 73;
 
 if(heightInInches >= 60) 
-  COnsole.WriteLine("You are tall enough to ride");</code></pre>
+  Console.WriteLine("You are tall enough to ride");</code></pre>
 
 ## Else what?
 
