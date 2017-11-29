@@ -122,7 +122,7 @@ Change the value of heightInInches to 42
 <pre><code class="language-C#">int heightInInches = 42;
 
 if(heightInInches >= 60) {
-  System.out.println("You are tall enough to ride");
+  Console.WriteLine("You are tall enough to ride");
 }
 	Console.WriteLine("You are to short to ride);
     Console.WriteLine(heightInInches >= 60);
