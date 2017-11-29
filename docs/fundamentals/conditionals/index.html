@@ -85,13 +85,16 @@
 <p><em>If</em> I am 16 or older, <em>then</em> I can drive legally.</p>
 
 <div class="fragment">
-<p>In Java, we would say:</p>
-<pre><code class="language-java">int age = 42;
+<p>In C#, we would say:</p>
+<pre><code class="language-C#">int age = 42;
 if (age &gt;= 16) {
-  System.out.println("You are " + age + ", so you are legal to drive.");
+  Console.WriteLine("You are " + age + ", so you are legal to drive.");
 }</code></pre>
 </div>
 
+<div class="fragment">
+Question time: What do think would happen if age == 15?
+</div>
 
 
         </section>
@@ -103,18 +106,35 @@ if (age &gt;= 16) {
 <p><em>If</em> I get eight or more hours of sleep, I am likely to feel more rested.</p>
 
 <div class="fragment">
-<p>In Java, we would say:</p>
-<pre><code class="language-java">int hoursOfSleep = 42;
+<p>In C#, we would say:</p>
+<pre><code class="language-C#">int hoursOfSleep = 42;
 if (hoursOfSleep &gt;= 8) {
-  System.out.println("You are likely to feel more rested.");
+  Console.WriteLine("You are likely to feel more rested.");
 }</code></pre>
+</div>
+
+<div class="fragment">
+Question time: What would happen if we changed the condition statement to read (hoursOfSleep !&gt; 8)?
 </div>
 
 <div class="fragment">
 <p>We can follow one conditional with another.</p>
-<pre><code class="language-java">if (hoursOfSleep == 42) {
-  System.out.println("He used 42 again, didn't he?");
- }</code></pre>
+<pre><code class="language-C#">if (hoursOfSleep == 42) {
+  Console.WriteLine("He used 42 again, didn't he?");
+ }
+ if(hoursOfSleep == 52){
+   Console.WriteLine(hoursOfSleep + "Aint such a bad number");
+ }
+ </code></pre>
+</div>
+<div class="fragment">
+Question time: What do you think would happen if hoursOfSleep == 42?
+</div>
+<div class="fragment">
+Question time: What do you think would happen if hoursOfSleep == 52?
+</div>
+<div class="fragment">
+Question time: What do you think would happen if hoursOfSleep == 102?
 </div>
 
 
@@ -123,24 +143,98 @@ if (hoursOfSleep &gt;= 8) {
         
         <section>
           <!-- _S9SLIDE_ -->
-<h1 id="lets-break-it-down">Let’s Break It Down</h1>
+<h2 id="so-let-break-down-the-if-statement">So let break down the ‘if’ statement!!</h2>
 
-<p>An <code>if</code> statement executes if its <em>condition</em> evaluates to <code>true</code>:</p>
+<p>An <code>if</code> statement starts with the keyword <code>if</code>:</p>
+<pre><code class="language-C#" data-noescape="">int heightInInches = 73;
 
-<pre><code class="language-java">int heightInInches = 73;
+<mark>if</mark>(heightInInches &gt;= 60) {
+  Console.WriteLine("You are tall enough to ride");
+}</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="next-comes-the-decision">Next comes the decision</h2>
+
+<p>‘if’ is then followed by parentheses that contain a <em>condition</em>:</p>
+<pre><code class="language-C#" data-noescape="">int heightInInches = 73;
+
+if<mark>(</mark>heightInInches &gt;= 60<mark>)</mark> {
+  Console.WriteLine("You are tall enough to ride");
+}</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-think-through-an-example">Lets think through an example</h2>
+
+<pre><code class="language-C#">int heightInInches = 73;
+
+if(heightInInches &gt;= 60) {
+  Console.WriteLine("You are tall enough to ride");
+}
+</code></pre>
+<div class="fragment">
+Question time: If we sent the result of the conditional statement (heightInInches &gt;= 60) to the console, what do you think we would see?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-code-it-and-see-what-results-returned-if-any">Lets code it and see what results returned if any!</h2>
+
+<pre><code class="language-C#">int heightInInches = 73;
+
+            if (heightInInches &gt;= 60)
+            {
+                Console.WriteLine("You are tall enough to ride");
+            }
+				Console.WriteLine("You are to short to ride);
+				Console.WriteLine(heightInInches &gt;= 60);
+</code></pre>
+
+<div class="fragment">
+Question time: What results did you get and were the results what you expected?
+</div>
+<div class="fragment">
+Question time: What data type do you think is represented with the answer you received?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-try-again">Lets try again</h2>
+
+<p>Change the value of heightInInches to 42</p>
+
+<pre><code class="language-C#">int heightInInches = 42;
 
 if(heightInInches &gt;= 60) {
   System.out.println("You are tall enough to ride");
 }
+	Console.WriteLine("You are to short to ride);
+    Console.WriteLine(heightInInches &gt;= 60);
+
 </code></pre>
 
 <div class="fragment">
-<p>Sorry, you're too short. :(</p>
-<pre><code class="language-java">int heightInInches = 42;
-
-if(heightInInches &gt;= 60) {
-  System.out.println("You are tall enough to ride");
-}</code></pre>
+Question time: What results did you get and were the results what you expected?
+</div>
+<div class="fragment">
+Question time: Again, what data type do you think is represented with the answer you received?
 </div>
 
 
@@ -149,43 +243,13 @@ if(heightInInches &gt;= 60) {
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="syntax">Syntax</h2>
+<h2 id="we-want-the-truth-or-not">We want the truth!!… Or Not!!</h2>
 
-<p>An <code>if</code> statement starts with the keyword <code>if</code>:</p>
-<pre><code class="language-java" data-noescape="">int heightInInches = 73;
-
-<mark>if</mark>(heightInInches &gt;= 60) {
-  System.out.println("You are tall enough to ride");
-}</code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="syntax-1">Syntax</h2>
-
-<p>It is followed by parentheses that contain a <em>condition</em>:</p>
-<pre><code class="language-java" data-noescape="">int heightInInches = 73;
-
-if<mark>(</mark>heightInInches &gt;= 60<mark>)</mark> {
-  System.out.println("You are tall enough to ride");
-}</code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="syntax-2">Syntax</h2>
-
-<p>This <em>condition</em> must evaluate to a <code>boolean</code> value:</p>
-<pre><code class="language-java" data-noescape="">int heightInInches = 73;
+<p>As we have seen the <em>condition</em> evaluates to a <code>boolean</code> value:</p>
+<pre><code class="language-C#" data-noescape="">int heightInInches = 73;
 
 if(<mark>heightInInches &gt;= 60</mark>) {
-  System.out.println("You are tall enough to ride");
+  Console.WriteLine("You are tall enough to ride");
 }</code></pre>
 
 
@@ -194,21 +258,19 @@ if(<mark>heightInInches &gt;= 60</mark>) {
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="syntax-3">Syntax</h2>
+<h2 id="ok-where-does-all-the-work-take-place">Ok where does all the work take place?</h2>
 
 <p>This is followed by a code block that executes only if the <em>condition</em> is <code>true</code>. Remember that code blocks open with a left curly bracket (<code>{</code>) and close with a right curly bracket (<code>}</code>):</p>
-<pre><code class="language-java" data-noescape="">int heightInInches = 73;
+<pre><code class="language-C#" data-noescape="">int heightInInches = 73;
 
 if(heightInInches &gt;= 60) <mark>{</mark>
-  System.out.println("You are tall enough to ride");
+  Console.WriteLine("You are tall enough to ride");
 <mark>}</mark></code></pre>
 
-<p>We <em>can</em> skip the curly brackets if we only want to execute one line of code, but that’s usually frowned upon since it’s easy to mess up. This code is the same:</p>
-
-<pre><code class="language-java" data-noescape="">int heightInInches = 73;
+<pre><code class="language-C#" data-noescape="">int heightInInches = 73;
 
 if(heightInInches &gt;= 60) 
-  System.out.println("You are tall enough to ride");</code></pre>
+  COnsole.WriteLine("You are tall enough to ride");</code></pre>
 
 
 
@@ -222,12 +284,12 @@ if(heightInInches &gt;= 60)
 
 <p>An <code>if</code> statement allows us to do something else if its <em>condition</em> does not evaluate to <code>true</code>:</p>
 
-<pre><code class="language-java" data-noescape="">int heightInInches = 42;
+<pre><code class="language-C#" data-noescape="">int heightInInches = 42;
 
 if(heightInInches &gt;= 60) {
-  System.out.println("You are tall enough to ride.");
+  Console.WriteLine("You are tall enough to ride.");
 } else {
-  System.out.println("I'm sorry, too short.");
+  Console.WriteLine("I'm sorry, too short.");
 }</code></pre>
 
 
@@ -240,12 +302,12 @@ if(heightInInches &gt;= 60) {
 
 <p>We can create sequences of <code>if/else</code> statements:</p>
 
-<pre><code class="language-java">if(heightInInches &gt;= 60) {
-  System.out.println("You are tall enough to ride.");
+<pre><code class="language-C#">if(heightInInches &gt;= 60) {
+  Console.WriteLine("You are tall enough to ride.");
 } else if(heightInInches &gt;= 30) {
-  System.out.println("Try the teacups. They look fun.")
+  Console.WriteLine("Try the teacups. They look fun.")
 } else {
-  System.out.println("I'm sorry, too short.");
+  Console.WriteLine("I'm sorry, too short.");
 }
 </code></pre>
 
@@ -259,7 +321,7 @@ if(heightInInches &gt;= 60) {
           <!-- _S9SLIDE_ -->
 <h1 id="swichin-it-up">Swichin’ it up!</h1>
 
-<p>Sometimes, we can use a <code>switch/case</code> statement to replace several <code>if/else</code> statements. Let’s say we are categorizing our amusement park patrons into “adult”, “youngster” (just short people, really), and everyone else.</p>
+<p>Sometimes, we can use a <code>switch/case</code> statement to replace several <code>if/else</code> statements. Let’s say we are categorizing our amusement park patrons into the following groups based on their ageGroup:adult, youngster, and everyone else.</p>
 
 
 
@@ -271,22 +333,42 @@ if(heightInInches &gt;= 60) {
 
 <p>We can use a <code>switch/case</code> statement to execute one or more statements based on a value:</p>
 
-<pre><code class="language-java">String ageGroup = "youngster";
+<pre><code class="language-C#">String ageGroup = "youngster";
 
 switch (ageGroup) {
 case "adult":
-	System.out.println("You can ride the rollercoaster!");
+	Console.WriteLine("You can ride the rollercoaster!");
+	break;
 case "youngster":
-	System.out.println("The teacups are fun.");
+	Console.WriteLine("The teacups are fun.");
 	break;
 default:
-	System.out.println("Oh, you must be a toddler. Toddle on!");
+	Console.WriteLine("Oh, you must be a toddler. Toddle on!");
 }
 </code></pre>
+<div class="fragment">
+What is displayed if we change `ageGroup`'s value to "adult"? Why?
+</div>
+<div class="fragment">
+What is displayed if we change its value to anything other than "adult" or "youngster"? Why?
+</div>
+<div class="fragment">
+What functions does the 'break' statement perform?
+</div>
 
-<p>What is displayed if we change <code>ageGroup</code>’s value to “adult”? Why?</p>
 
-<p>What is displayed if we change its value to anything other than “adult” or “youngster”? Why?</p>
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-switch-it-up-a-little">Lets switch it up a little</h2>
+
+<p>You are getting ready to take a trip to Columbus for work. You were thinking about all the items you should pack.</p>
+
+<p>You need to base the items you will take on the current tempurature in Columbus Oh.</p>
+
+<p>Write a ‘swtich’ statement that will use the currentTemp in Columbus, Oh to decide which of the following you should bring: Parka, Down Feather Jacket, PCoat, sweater.</p>
 
         </section>
         
