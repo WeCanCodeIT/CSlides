@@ -1,5 +1,5 @@
 title: Strings
-subtitle: TODO: need better title
+subtitle: A class of characters
 theme: league
 
 ## Strings are Things
