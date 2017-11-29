@@ -8,9 +8,7 @@ theme: league
 
 We use *abstraction* all the time in everyday activities. When you sit down to eat at your favorite resturaunt, one of the first things we order may be a drink.
 
-If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, Sodium benzoate, Caffeine, Sodium citrate, Erythorbic acid,Gum arabic, 
-
-and Calcium disodium, the server would have no idea what you are asking. Right!! We use *abstraction* to descibe what we want to drink by utilizing the name 'Mountian Dew'.
+If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, Sodium benzoate, Caffeine, Sodium citrate, Erythorbic acid,Gum arabic, and Calcium disodium, the server would have no idea what you are asking. Right!! We use *abstraction* to descibe what we want to drink by utilizing the name 'Mountian Dew'.
 
 Abstraction allows us to use methods to manipulate a sequence of `char`s and create new `String`s.
 
@@ -68,7 +66,7 @@ Console.WriteLine(myGreeting); // prints "Hello"
 
 ## Sensitivity Training
 
-We often use one of these methods to normalize user input. If we're asking for a color and call the `toLowerCase()` method on the user's response before comparing it to "red", the user can type "RED", "Red", or "red" and it won't matter.
+We often use one of these methods to normalize user input. If we're asking for a color and call the `toLower()` method on the user's response before comparing it to "red", the user can type "RED", "Red", or "red" and it won't matter.
 
 ```C#
 
@@ -130,7 +128,7 @@ Let's explore how we can use our IDE to examine the String class and discover ot
 
 ## Let's do it!
 
-- Use the `toLowerCase()` method with some of your previous exercises to ignore case while looking at the user's response.
+- Use the `toLower()` method with some of your previous exercises to ignore case while looking at the user's response.
 - Ask the user for her first name and last name. Use the `length()` method to tell her which is longer.
 - Ask the user for her first name and last name, then print her full name, including the necessary space between first and last name.
 - Ask the user to answer your riddle. Use the appropriate method to examine the answer, ignoring case. (*You* supply the riddle. Finding one is half the fun.)
@@ -144,4 +142,4 @@ Let's explore how we can use our IDE to examine the String class and discover ot
 
 ## Can Haz Moar?
 
-Try the [String-1](http://codingbat.com/java/String-1) problems at [CodingBat](http://codingbat.com/java)!
+Try https://www.w3resource.com/csharp-exercises/string/index.php
