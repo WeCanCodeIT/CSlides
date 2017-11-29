@@ -8,7 +8,7 @@ theme: league
 
 *This diagram isn't quite right. If you don't think learning to code is difficult, then you miiiight not get it yet.*
 
-# Conditional Statements
+## Conditional Statements
 
 Conditional statements are one of the ways that we control the flow of a program.
 
