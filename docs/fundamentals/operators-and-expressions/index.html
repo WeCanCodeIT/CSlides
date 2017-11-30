@@ -62,7 +62,7 @@
 
 <ul>
   <li>Learn about the different operators and their functions.</li>
-  <li>Become familiar with Java syntax.</li>
+  <li>Become familiar with C# syntax.</li>
 </ul>
 
 
@@ -299,20 +299,20 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h1 id="translating-english-to-java">Translating English to Java</h1>
+<h1 id="translating-english-to-c">Translating English to C</h1>
 
-<p>Let’s translate English statements into Java. First, we’ll do one together.</p>
+<p>Let’s translate English statements into C#. First, we’ll do one together.</p>
 
 <p>Start by writing the statements as comments. Here’s an example:</p>
 
-<pre><code class="language-java">// Jessica is 23 years old.
+<pre><code class="language-C#">// Jessica is 23 years old.
 int jessicaAge = 23;
 
 // Sam is 47.
 int samAge = 47;
 
 // Jessica is younger than Sam.
-System.out.println(jessicaAge &lt; samAge);
+Console.WriteLine(jessicaAge &lt; samAge);
 </code></pre>
 
 
@@ -327,11 +327,11 @@ System.out.println(jessicaAge &lt; samAge);
 
 <p>We need to create a variable to hold the age of Jessica. What should its type be?</p>
 
-<p><code class="language-java hljs"><span class="hljs-comment">// <span class="highlight">Jessica</span> is 23 <span class="highlight">years old</span>.</span></code></p>
+<p><code class="language-C# hljs"><span class="hljs-comment">// <span class="highlight">Jessica</span> is 23 <span class="highlight">years old</span>.</span></code></p>
 
 <div class="fragment">
 <p>Since we think of ages as whole numbers, we will use an <code>int</code>:</p>
-<code class="language-java hljs"><span class="highlight"><span class="hljs-keyword ">int</span> jessicaAge</span></code>
+<code class="language-C# hljs"><span class="highlight"><span class="hljs-keyword ">int</span> jessicaAge</span></code>
 </div>
 
 
@@ -346,11 +346,11 @@ System.out.println(jessicaAge &lt; samAge);
 
 <p>The word “is” means equals. How do we represent assignment?</p>
 
-<p><code class="language-java hljs"><span class="hljs-comment">// Jessica <span class="highlight">is 23</span> years old.</span></code></p>
+<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica <span class="highlight">is 23</span> years old.</span></code></p>
 
 <div class="fragment">
 <p>If Jessica "is 23", then Jessica's age = 23:</p>
-<code class="language-java hljs"><span class="hljs-keyword ">int</span> jessicaAge <span class="highlight">= <span class="hljs-number">23</span></span>;</code>
+<code class="language-C# hljs"><span class="hljs-keyword ">int</span> jessicaAge <span class="highlight">= <span class="hljs-number">23</span></span>;</code>
 </div>
 
 
@@ -365,11 +365,11 @@ System.out.println(jessicaAge &lt; samAge);
 
 <p>To say Jessica <em>is younger than</em> Sam means we are comparing their ages. Which operator would we use to compare them?</p>
 
-<p><code class="language-java hljs"><span class="hljs-comment">// Jessica <span class="highlight">is younger than</span> Sam.</span></code></p>
+<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica <span class="highlight">is younger than</span> Sam.</span></code></p>
 
 <div class="fragment">
 <p>We use the "less than" relational operator to perform this comparison:</p>
-<code class="language-java hljs">System.out.println(jessicaAge <span class="highlight">&lt;</span> samAge);</code>
+<code class="language-C# hljs">Console.WriteLine(jessicaAge <span class="highlight">&lt;</span> samAge);</code>
 </div>
 
 
@@ -382,12 +382,12 @@ System.out.println(jessicaAge &lt; samAge);
 
 <p>Single line comments start with <code>//</code>:</p>
 
-<p><code class="language-java hljs"><span class="hljs-comment"><span class="highlight">//</span> Jessica is 23 years old.</span><br />
+<p><code class="language-C# hljs"><span class="hljs-comment"><span class="highlight">//</span> Jessica is 23 years old.</span><br />
 <span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span>;<br />
 <span class="hljs-comment"><span class="highlight">//</span> Sam is 47.</span><br />
 <span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span>;<br />
 <span class="hljs-comment"><span class="highlight">//</span> Jessica is younger than Sam.</span><br />
-System.out.println(jessicaAge &lt; samAge);
+Console.WriteLine(jessicaAge &lt; samAge);
 </code></p>
 
 
@@ -400,17 +400,17 @@ System.out.println(jessicaAge &lt; samAge);
 
 <p>Each statement ends with a semicolon. It acts like a period (.) in English at the end of a sentence.</p>
 
-<p><code class="language-java hljs"><span class="hljs-comment">// Jessica is 23 years old.</span><br />
+<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica is 23 years old.</span><br />
 <span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span><span class="highlight">;</span><br />
 <span class="hljs-comment">// Sam is 47.</span><br />
 <span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span><span class="highlight">;</span><br />
 <span class="hljs-comment">// Jessica is younger than Sam.</span><br />
-System.out.println(jessicaAge &lt; samAge)<span class="highlight">;</span>
+Console.WriteLine(jessicaAge &lt; samAge)<span class="highlight">;</span>
 </code></p>
 
 <p>The statement:</p>
 
-<pre><code class="language-java">int jessicaAge = 23;
+<pre><code class="language-C#">int jessicaAge = 23;
 </code></pre>
 
 <p>reads as “Jessica’s age is 23.”</p>
@@ -423,16 +423,16 @@ System.out.println(jessicaAge &lt; samAge)<span class="highlight">;</span>
           <!-- _S9SLIDE_ -->
 <h2 id="lets-look-at-the-syntax-2">Let’s look at the syntax</h2>
 
-<p><code>println</code> is a <em>method</em>, so it ends with a set of opening and closing parentheses:</p>
+<p><code>Console.WriteLine</code> is a <em>method</em>, so it ends with a set of opening and closing parentheses:</p>
 
-<p><code class="language-java hljs">
-System.out.println<span class="highlight">(</span>jessicaAge &lt; samAge<span class="highlight">)</span>;
+<p><code class="language-C# hljs">
+Console.WriteLine<span class="highlight">(</span>jessicaAge &lt; samAge<span class="highlight">)</span>;
 </code></p>
 
 <div class="fragment">
 <p>Inside the parentheses, we find the method <em>arguments</em>. For the <code>println</code> method, this is what we want to print. In this case, that's whether Jessica is younger than Sam:</p>
-<code class="language-java hljs">
-System.out.println(<span class="highlight">jessicaAge &lt; samAge</span>);
+<code class="language-C# hljs">
+Console.WriteLine(<span class="highlight">jessicaAge &lt; samAge</span>);
 </code>
 </div>
 
@@ -442,7 +442,7 @@ System.out.println(<span class="highlight">jessicaAge &lt; samAge</span>);
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="your-turn-try-translating-these-word-problems-into-java">Your turn! Try translating these word problems into Java.</h2>
+<h2 id="your-turn-try-translating-these-word-problems-into-c">Your turn! Try translating these word problems into C#.</h2>
 
 <ul>
   <li>Lisa is cooking muffins. The recipe calls for 7 cups of sugar. She has already put in 2 cups. How many more cups does she need to put in?</li>
