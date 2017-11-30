@@ -59,7 +59,7 @@ If variable *a* holds `true` and variable b holds `false`, then:
 
 % TODO TMI? Note that the conditional AND and OR are *short-circuit* operators.
 
-# Translating English to C#
+## Translating English to CSharp
 
 Let's translate English statements into C#. First, we'll do one together.
 
