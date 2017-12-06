@@ -1,4 +1,4 @@
-title: Welcome to WeCan{Code}IT
+title: Welcome to WeCanCodeIT
 subtitle: The Journey Starts NOW!!
 theme: league
 
