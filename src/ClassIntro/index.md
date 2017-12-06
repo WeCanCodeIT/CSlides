@@ -18,7 +18,7 @@ theme: league
 
 ## Week One
 
-*Active Learning*
+Active Learning
 
 	- [ ] Variables, Operators, Expressions, Basic Types
 
@@ -28,7 +28,7 @@ theme: league
 
 	- [ ] Git and GitHub
 
-*Career Services*
+Career Services
 
 	- [ ] Intro to Career Services
 
@@ -36,7 +36,7 @@ theme: league
 
 ## Week Two
 
-*Active Learning*
+Active Learning
 
 	- [ ] Arrays
 
@@ -48,13 +48,13 @@ theme: league
 
 	- [ ] Unit Testing/TDD
 
-*Career Services*
+Career Services
 
 	- [ ] Resume Services
 
 ## Week Three
 
-*Active Learning*
+Active Learning
 
 	- [ ] Introduction to Object Oriented Programming(OOP)
 
@@ -64,25 +64,25 @@ theme: league
 
 	- [ ] Continue Testing/TDD
 	
-*Career Services*
+Career Services
 
 	- [ ] Watch Interview Videos
 
 ## Week Four
 
-*Active Learning*
+Active Learning
 
 	- [ ] Continue OOP
 
 	- [ ] Inheritance & Polymorphism
 	
-*Career Services*
+Career Services
 
 	- [ ] Watch Interview Videos
 
 ## Week Five
 
-*Active Learning*
+Active Learning
 
 	- [ ] HTML
 
@@ -90,7 +90,7 @@ theme: league
 
 	- [ ] BootStrap
 		
-*Career Services*
+Career Services
 
 	- [ ] Headshots
 
@@ -100,13 +100,13 @@ theme: league
 
 ## Week Six
 
-*Active Learning*
+Active Learning
 
 	- [ ] Code first design / MVC
 
 	- [ ] Razor
 			
-*Career Services*
+Career Services
 
 	- [ ] Star Story
 
@@ -116,30 +116,30 @@ theme: league
 
 ## Week Seven
 
-*Active Learning*
+Active Learning
 
 	- [ ] Sql Relational Databases and Design
 				
-*Career Services*
+Career Services
 
 	- [ ] Tech Interview Preparation
 
 
 ## Week Eight
 
-*Active Learning*
+Active Learning
 
 	- [ ] Database First/MVC
 
 	- [ ] Introduction to Pair Programming with Git/GitHub
 				
-*Career Services*
+Career Services
 
 	- [ ] Tech Interview Preparation
 
 ## Week Nine
 
-*Active Learning*
+Active Learning
 
 	- [ ] JavaScript/jQuery
 
@@ -147,13 +147,13 @@ theme: league
 
 	- [ ] Continue Testing/TDD
 				
-*Career Services*
+Career Services
 
 	- [ ] Networking
 
 ## Week Ten
 
-*Active Learning*
+Active Learning
 
 	- [ ] AJAX
 
@@ -163,7 +163,7 @@ theme: league
 
 	- [ ] Continue Pair Programming with Git/GitHub
 				
-*Career Services*
+Career Services
 
 	- [ ] Networking
 
@@ -183,7 +183,7 @@ theme: league
 
 	- [ ] Project Team Blue Sky Meeting
 				
-*Career Services*
+Career Services
 
 	- [ ] Networking
 
@@ -193,7 +193,7 @@ theme: league
 
 	- [ ] Scrum One and Two
 	
-*Career Services*
+Career Services
 
 	- [ ] Networking
 
@@ -203,7 +203,7 @@ theme: league
 
 	- [ ] Scrum Two and Three
 	
-*Career Services*
+Career Services
 
 	- [ ] Networking
 
@@ -217,6 +217,6 @@ theme: league
 
 	- [ ] Career Day
 	
-*Career Services*
+Career Services
 
 	- [ ] Networking
