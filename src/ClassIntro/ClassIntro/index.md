@@ -4,13 +4,13 @@ theme: league
 
 ## Overview
 
--Eleven weeks of active learning
+- Eleven weeks of active learning
 
 	- Four days of active learning per week
 
 	- One flex day to work on projects and/or pickup lessons
 
--Three weeks of team-based projects
+- Three weeks of team-based projects
 
 	- Four sprints three day in length each (Scrum)
 
@@ -18,7 +18,7 @@ theme: league
 
 ## Week One
 
--Active Learning
+- Active Learning
 
 	- Variables, Operators, Expressions, Basic Types
 
@@ -28,7 +28,7 @@ theme: league
 
 	- Git and GitHub
 
--Career Services
+- Career Services
 
 	- Intro to Career Services
 
@@ -36,7 +36,7 @@ theme: league
 
 ## Week Two
 
--Active Learning
+- Active Learning
 
 	- Arrays
 
