@@ -6,217 +6,217 @@ theme: league
 
 11 weeks of active learning
 
-	- [ ] Four days of active learning per week
+	- Four days of active learning per week
 
-	- [ ] One flex day to work on projects and/or pickup lessons
+	- One flex day to work on projects and/or pickup lessons
 
 3 weeks of team-based projects
 
-	- [ ] Four sprints three day in length each (Scrum)
+	- Four sprints three day in length each (Scrum)
 
-	- [ ] Staff acting as scrum masters and product owners
+	- Staff acting as scrum masters and product owners
 
 ## Week One
 
 Active Learning
 
-	- [ ] Variables, Operators, Expressions, Basic Types
+	- Variables, Operators, Expressions, Basic Types
 
-	- [ ] Conditionals
+	- Conditionals
 
-	- [ ] Strings and Text Processing
+	- Strings and Text Processing
 
-	- [ ] Git and GitHub
+	- Git and GitHub
 
 Career Services
 
-	- [ ] Intro to Career Services
+	- Intro to Career Services
 
-	- [ ] Interview Bucket List
+	- Interview Bucket List
 
 ## Week Two
 
 Active Learning
 
-	- [ ] Arrays
+	- Arrays
 
-	- [ ] Loops
+	- Loops
 
-	- [ ] Introduction to Object Oriented Programming(OOP)
+	- Introduction to Object Oriented Programming(OOP)
 
-	- [ ] Building Classes - Methods and Attributes
+	- Building Classes - Methods and Attributes
 
-	- [ ] Unit Testing/TDD
+	- Unit Testing/TDD
 
 Career Services
 
-	- [ ] Resume Services
+	- Resume Services
 
 ## Week Three
 
 Active Learning
 
-	- [ ] Introduction to Object Oriented Programming(OOP)
+	- Introduction to Object Oriented Programming(OOP)
 
-	- [ ] Lists
+	- Lists
 
-	- [ ] Dictionaries
+	- Dictionaries
 
-	- [ ] Continue Testing/TDD
+	- Continue Testing/TDD
 	
 Career Services
 
-	- [ ] Watch Interview Videos
+	- Watch Interview Videos
 
 ## Week Four
 
 Active Learning
 
-	- [ ] Continue OOP
+	- Continue OOP
 
-	- [ ] Inheritance & Polymorphism
+	- Inheritance & Polymorphism
 	
 Career Services
 
-	- [ ] Watch Interview Videos
+	- Watch Interview Videos
 
 ## Week Five
 
 Active Learning
 
-	- [ ] HTML
+	- HTML
 
-	- [ ] Cascading Style Sheets(CSS)
+	- Cascading Style Sheets(CSS)
 
-	- [ ] BootStrap
+	- BootStrap
 		
 Career Services
 
-	- [ ] Headshots
+	- Headshots
 
-	- [ ] Polish LinkedIn Profile
+	- Polish LinkedIn Profile
 
-	- [ ] Ten Second Elevator Speech
+	- Ten Second Elevator Speech
 
 ## Week Six
 
 Active Learning
 
-	- [ ] Code first design / MVC
+	- Code first design / MVC
 
-	- [ ] Razor
+	- Razor
 			
 Career Services
 
-	- [ ] Star Story
+	- Star Story
 
-	- [ ] Tech Interview Preparation
+	- Tech Interview Preparation
 
-	- [ ] Ten Second Elevator Speech
+	- Ten Second Elevator Speech
 
 ## Week Seven
 
 Active Learning
 
-	- [ ] Sql Relational Databases and Design
+	- Sql Relational Databases and Design
 				
 Career Services
 
-	- [ ] Tech Interview Preparation
+	- Tech Interview Preparation
 
 
 ## Week Eight
 
 Active Learning
 
-	- [ ] Database First/MVC
+	- Database First/MVC
 
-	- [ ] Introduction to Pair Programming with Git/GitHub
+	- Introduction to Pair Programming with Git/GitHub
 				
 Career Services
 
-	- [ ] Tech Interview Preparation
+	- Tech Interview Preparation
 
 ## Week Nine
 
 Active Learning
 
-	- [ ] JavaScript/jQuery
+	- JavaScript/jQuery
 
-	- [ ] Continue Pair Programming with Git/GitHub
+	- Continue Pair Programming with Git/GitHub
 
-	- [ ] Continue Testing/TDD
+	- Continue Testing/TDD
 				
 Career Services
 
-	- [ ] Networking
+	- Networking
 
 ## Week Ten
 
 Active Learning
 
-	- [ ] AJAX
+	- AJAX
 
-	- [ ] Java Script Object Notation(JSON)
+	- Java Script Object Notation(JSON)
 
-	- [ ] RESTful APIs
+	- RESTful APIs
 
-	- [ ] Continue Pair Programming with Git/GitHub
+	- Continue Pair Programming with Git/GitHub
 				
 Career Services
 
-	- [ ] Networking
+	- Networking
 
 ## Week 11
 
-*Guided Instruction*
+Guided Instruction
 
-	- [ ] Agile Scrum
+	- Agile Scrum
 
-	- [ ] Trellow
+	- Trellow
 
-*Final Project Preparation
+Final Project Preparation
 
-	- [ ] Projet Pitches
+	- Projet Pitches
 
-	- [ ] Project Team Placement
+	- Project Team Placement
 
-	- [ ] Project Team Blue Sky Meeting
+	- Project Team Blue Sky Meeting
 				
 Career Services
 
-	- [ ] Networking
+	- Networking
 
 ## Week 12
 
-*Final Project*
+Final Project
 
-	- [ ] Scrum One and Two
+	- Scrum One and Two
 	
 Career Services
 
-	- [ ] Networking
+	- Networking
 
 ## Week 13
 
-*Final Project*
+Final Project
 
-	- [ ] Scrum Two and Three
+	- Scrum Two and Three
 	
 Career Services
 
-	- [ ] Networking
+	- Networking
 
 ## Week 14
 
-*Final Project*
+Final Project
 
-	- [ ] Scrum Three and Four
+	- Scrum Three and Four
 
-	- [ ] Develope Project Presentation Video
+	- Develope Project Presentation Video
 
-	- [ ] Career Day
+	- Career Day
 	
 Career Services
 
-	- [ ] Networking
+	- Networking
