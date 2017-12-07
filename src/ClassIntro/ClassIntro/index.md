@@ -1,222 +1,103 @@
-title: Welcome to WeCanCodeIT
-subtitle: The Journey Starts NOW!!
+title: School Policies
+subtitle: Your Commitment is Your Success!!
 theme: league
 
-## Overview
+## Attendance and Grading Policy
 
-- Eleven weeks of active learning
+- Class is from 9:30am-3:30pm Monday-Friday.
 
-	- Four days of active learning per week
+	- You are required to attend a minimum of <mark>90%</mark> of class time to be eligible for graduation.
+	 
+	- Please inform your instructor and TA if extenuating circumstances arise.
 
-	- One flex day to work on projects and/or pickup lessons
+	- In order to pass the course, you must receive a grade of <mark>80%</mark> or higher averaged over all the assignments.
 
-- Three weeks of team-based projects
+## Projects
 
-	- Four sprints three day in length each (Scrum)
-
-	- Staff acting as scrum masters and product owners
-
-## Week One
-
-- Active Learning
-
-	- Variables, Operators, Expressions, Basic Types
-
-	- Conditionals
-
-	- Strings and Text Processing
-
-	- Git and GitHub
-
-- Career Services
-
-	- Intro to Career Services
-
-	- Interview Bucket List
-
-## Week Two
-
-- Active Learning
-
-	- Arrays
-
-	- Loops
-
-	- Introduction to Object Oriented Programming(OOP)
-
-	- Building Classes - Methods and Attributes
-
-	- Unit Testing/TDD
-
--Career Services
-
-	- Resume Services
-
-## Week Three
-
-- Active Learning
-
-	- Introduction to Object Oriented Programming(OOP)
-
-	- Lists
-
-	- Dictionaries
-
-	- Continue Testing/TDD
+- Projects are graded by WCCI staff. 
 	
-- Career Services
+	- Projects are typically worth <mark>100</mark> points. 
 
-	- Watch Interview Videos
-
-## Week Four
-
-- Active Learning
-
-	- Continue OOP
-
-	- Inheritance & Polymorphism
+	- <mark>90</mark> points of each project will be determined by the tasks that are completed.
 	
-- Career Services
+	- Partial credit <mark>may</mark> be assessed for a given task. 
+	
+	- Partial credit is given at the discretion of the grading instructor.
 
-	- Watch Interview Videos
+	- WCCI staff encourages questions concerning project grades.
+	
+	- The final <mark>10</mark> points of each project are determined by overall code quality, including code readability, proper variable names, and comments when necessary.
 
-## Week Five
+## Submission Policy
 
-- Active Learning
+- Students are required to submit all projects using the submission form provided by the instructors.
 
-	- HTML
+	- All student projects which are submitted late, will be subject to point deduction.
+ 
+	- If a student's project is not submitted through the submission form, despite completion, the project will maintain a status of not turned in or incomplete.
+	
+	- Any projects that are submitted, but do not execute(i.e. turned in with build errors) will be returned to the student for resubmission and receive point deductions for any lateness that may occur.
 
-	- Cascading Style Sheets(CSS)
+## Late and Incomplete Projects
 
-	- BootStrap
+- Projects are assigned every Friday during weeks one thru ten.
+
+	- Projects are due on or before <mark>9:30</mark> am the following Monday.
+	 
+	- Projects are considered late at <mark>9:31</mark> am the following monday.
+	
+	- <mark>Ten</mark> projects points will be deducted for projects submitted after <mark>9:30</mark> am on the following Monday.
+	
+	- <mark>Ten</mark> project points will be deducted every twenty-fours there-after. An example is as follows:
 		
-- Career Services
+		- Projects submitted on 9:31 am on project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>90%.</mark> 
+		
+		- Projects submitted on 9:31 am on the Tuesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>80%.</mark> 
 
-	- Headshots
+		- Projects submitted on 9:31 am on the Wednesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>70%.</mark> 
 
-	- Polish LinkedIn Profile
-
-	- Ten Second Elevator Speech
-
-## Week Six
-
-- Active Learning
-
-	- Code first design / MVC
-
-	- Razor
-			
-- Career Services
-
-	- Star Story
-
-	- Tech Interview Preparation
-
-	- Ten Second Elevator Speech
-
-## Week Seven
-
-- Active Learning
-
-	- Sql Relational Databases and Design
-				
-- Career Services
-
-	- Tech Interview Preparation
-
-
-## Week Eight
-
-- Active Learning
-
-	- Database First/MVC
-
-	- Introduction to Pair Programming with Git/GitHub
-				
-- Career Services
-
-	- Tech Interview Preparation
-
-## Week Nine
-
-- Active Learning
-
-	- JavaScript/jQuery
-
-	- Continue Pair Programming with Git/GitHub
-
-	- Continue Testing/TDD
-				
-- Career Services
-
-	- Networking
-
-## Week Ten
-
-- Active Learning
-
-	- AJAX
-
-	- Java Script Object Notation(JSON)
-
-	- RESTful APIs
-
-	- Continue Pair Programming with Git/GitHub
-				
-- Career Services
-
-	- Networking
-
-## Week 11
-
-- Guided Instruction
-
-	- Agile Scrum
-
-	- Trellow
-
-- Final Project Preparation
-
-	- Projet Pitches
-
-	- Project Team Placement
-
-	- Project Team Blue Sky Meeting
-				
-- Career Services
-
-	- Networking
-
-## Week 12
-
-- Final Project
-
-	- Scrum One and Two
+	- Once a project is <mark>five</mark> days late, the max grade possible will be 0%.
 	
-- Career Services
+	- If a student knows in advance that she or he will not be able to submit the project by its due date, that student is required to notify the instructors via email as soon as possible.
 
-	- Networking
+	- Extensions on project submissions will be given with the Education Team’s discretion in the case of extenuating circumstances.
 
-## Week 13
+## Unsatisfactory Progress Probationary Period
 
-- Final Project
+- In order to successfully complete the WCCI progam, a student must maintain, at a minimum, an 80% average project score.
 
-	- Scrum Two and Three
+- To participate in final projects and receive a graduation certificate, a student must maintain, at a minimum, an 80% average project score.
+
+- In the event a student's average course score does not meet the 80% average project score minimum,the following actions will be initated by WCCI:
+
+	- WCCI staff will notify the student by email of his or her unsatifactory acedemic situation.
+
+	- The student will meet with WCCI staff to discuss the students situation.
+
+	- WCCI staff will work with the student to identify areas of the curriculum where the student is having issues.
+
+	- WCCI staff will provide the necessary resources and instruction to reenforce course material.
+
+	- Upon completeion of the meeting, the student will be placed on academic probation for two weeks.
+	 
+	- During the two week academic probation period,the student is expected to complete and pass any portion of the class in which the student has failed. 
 	
-- Career Services
-
-	- Networking
-
-## Week 14
-
-- Final Project
-
-	- Scrum Three and Four
-
-	- Develope Project Presentation Video
-
-	- Career Day
+	- If the student cannot sucessfully complete and pass failed protions of the class within the two week probation perios, he or she may be dismissed from the program.  
 	
-- Career Services
+	- In the event a student is dismissed from the course, he or she may be eligible for a refund based upon WCCI's stated refund policies.
 
-	- Networking
+## Final Projects
+
+- Students must meet the 80% minimum average project score to be eligible to participate in final projects.
+
+
+
+## Staff Emails:
+
+- Daniel@Wecancodeit.org (Instructor)
+
+- Pete@wecancodeit.org (Instructor)
+
+- Melissa@wecancodeit.org (Student Success Coach)
+
+- Anne@wecancodeit.org (Campus Director)
