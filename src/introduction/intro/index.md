@@ -1,222 +1,224 @@
-title: Welcome to WeCanCodeIT
-subtitle: The Journey Starts NOW!!
+title: Introduction
+subtitle: Your Future Starts Now!!
 theme: league
- 
- ## Overview
- 
- - 11 weeks of active learning
- 
- 	- Four days of active learning per week
- 
- 	- One flex day to work on projects and/or pickup lessons
- 
- - 3 weeks of team-based projects
- 
- 	- Four sprints three day in length each (Scrum)
- 
- 	- Staff acting as scrum masters and product owners
- 
- ## Week One
- 
- - Active Learning
- 
- 	- Variables, Operators, Expressions, Basic Types
- 
- 	- Conditionals
- 
- 	- Strings and Text Processing
- 
- 	- Git and GitHub
- 
- - Career Services
- 
- 	- Intro to Career Services
- 
- 	- Interview Bucket List
- 
- ## Week Two
- 
- - Active Learning
- 
- 	- Arrays
- 
- 	- Loops
- 
- 	- Introduction to Object Oriented Programming(OOP)
- 
- 	- Building Classes - Methods and Attributes
- 
- 	- Unit Testing/TDD
- 
- - Career Services
- 
- 	- Resume Services
- 
- ## Week Three
- 
- - Active Learning
- 
- 	- Introduction to Object Oriented Programming(OOP)
- 
- 	- Lists
- 
- 	- Dictionaries
- 
- 	- Continue Testing/TDD
- 	
- - Career Services
- 
- 	- Watch Interview Videos
- 
- ## Week Four
- 
- - Active Learning
- 
- 	- Continue OOP
- 
- 	- Inheritance & Polymorphism
- 	
- - Career Services
- 
- 	- Watch Interview Videos
- 
- ## Week Five
- 
- - Active Learning
- 
- 	- HTML
- 
- 	- Cascading Style Sheets(CSS)
- 
- 	- BootStrap
- 		
- - Career Services
- 
- 	- Headshots
- 
- 	- Polish LinkedIn Profile
- 
- 	- Ten Second Elevator Speech
- 
- ## Week Six
- 
- - Active Learning
- 
- 	- Code first design / MVC
- 
- 	- Razor
- 			
- - Career Services
- 
- 	- Star Story
- 
- 	- Tech Interview Preparation
- 
- 	- Ten Second Elevator Speech
- 
- ## Week Seven
- 
- - Active Learning
- 
- 	- Sql Relational Databases and Design
- 				
- - Career Services
- 
- 	- Tech Interview Preparation
- 
- 
- ## Week Eight
 
- - Active Learning
+## Overview
  
- 	- Database First/MVC
+- 11 weeks of active learning.
  
- 	- Introduction to Pair Programming with Git/GitHub
- 				
- - Career Services
+	- Four days of active learning per week
  
- 	- Tech Interview Preparation
+	- One flex day to work on projects and or pickup lessons
  
- ## Week Nine
+- 3 weeks of team-based projects.
  
- - Active Learning
+	- Four sprints three day in length each (Scrum)
  
- 	- JavaScript/jQuery
+	- Staff acting as scrum masters and product owners
+
  
- 	- Continue Pair Programming with Git/GitHub
+## Week One
  
- 	- Continue Testing/TDD
- 				
- - Career Services
+- Active Learning
  
- 	- Networking
+	- Variables, Operators, Expressions, Basic Types
  
- ## Week Ten
+	- Conditionals
  
- - Active Learning
+	- Strings and Text Processing
  
- 	- AJAX
+	- Git and GitHub
  
- 	- Java Script Object Notation(JSON)
+- Career Services
  
- 	- RESTful APIs
+	- Intro to Career Services
  
- 	- Continue Pair Programming with Git/GitHub
- 				
- - Career Services
+	- Interview Bucket List
  
- 	- Networking
+## Week Two
  
- ## Week 11
+- Active Learning
  
- - Guided Instruction
+	- Arrays
  
- 	- Agile Scrum
+	- Loops
  
- 	- Trellow
+	- Introduction to Object Oriented Programming(OOP)
  
- - Final Project Preparation
+	- Building Classes- Methods and Attributes
  
- 	- Projet Pitches
+	- Unit Testing/TDD
  
- 	- Project Team Placement
+- Career Services
  
- 	- Project Team Blue Sky Meeting
- 				
- - Career Services
+	- Resume Services
  
- 	- Networking
+## Week Three
  
- ## Week 12
+- Active Learning
  
- - Final Project
+	- Introduction to Object Oriented Programming(OOP)
  
- 	- Scrum One and Two
+	- Lists
+ 
+	- Dictionaries
+ 
+	- Continue Testing/TDD
  	
- - Career Services
+- Career Services
  
- 	- Networking
+	- Watch Interview Videos
  
- ## Week 13
+## Week Four
  
- - Final Project
+- Active Learning
  
- 	- Scrum Two and Three
+	- Continue OOP
+ 
+	- Inheritance & Polymorphism
  	
- - Career Services
+- Career Services
  
- 	- Networking
+	- Watch Interview Videos
  
- ## Week 14
+## Week Five
  
- - Final Project
+- Active Learning
  
- 	- Scrum Three and Four
+	- HTML
  
- 	- Develope Project Presentation Video
+	- Cascading Style Sheets(CSS)
  
- 	- Career Day
+	- BootStrap
+ 		
+- Career Services
+ 
+	- Headshots
+ 
+	- Polish LinkedIn Profile
+ 
+	- Ten Second Elevator Speech
+ 
+## Week Six
+ 
+- Active Learning
+ 
+	- Code first design / MVC
+ 
+	- Razor
+ 			
+- Career Services
+ 
+	- Star Story
+ 
+	- Tech Interview Preparation
+ 
+	- Ten Second Elevator Speech
+ 
+## Week Seven
+ 
+- Active Learning
+ 
+	- Sql Relational Databases and Design
+ 				
+- Career Services
+ 
+	- Tech Interview Preparation
+ 
+ 
+## Week Eight
+
+- Active Learning
+ 
+	- Database First/MVC
+ 
+	- Introduction to Pair Programming with Git/GitHub
+ 				
+- Career Services
+ 
+	- Tech Interview Preparation
+ 
+## Week Nine
+ 
+- Active Learning
+ 
+	- JavaScript/jQuery
+ 
+	- Continue Pair Programming with Git/GitHub
+ 
+	- Continue Testing/TDD
+ 				
+- Career Services
+ 
+	- Networking
+ 
+## Week Ten
+ 
+- Active Learning
+ 
+	- AJAX
+ 
+	- Java Script Object Notation(JSON)
+ 
+	- RESTful APIs
+ 
+	- Continue Pair Programming with Git/GitHub
+ 				
+- Career Services
+ 
+	- Networking
+ 
+## Week 11
+ 
+- Guided Instruction
+ 
+	- Agile Scrum
+ 
+	- Trellow
+ 
+- Final Project Preparation
+ 
+	- Projet Pitches
+ 
+	- Project Team Placement
+ 
+	- Project Team Blue Sky Meeting
+ 				
+- Career Services
+ 
+	- Networking
+ 
+## Week 12
+ 
+- Final Project
+ 
+	- Scrum One and Two
  	
- - Career Services
+- Career Services
  
- 	- Networking
+	- Networking
+ 
+## Week 13
+ 
+- Final Project
+ 
+	- Scrum Two and Three
+ 	
+- Career Services
+ 
+	- Networking
+	
+	 
+## Week 14
+ 
+- Final Project
+ 
+	- Scrum Three and Four
+ 
+	- Develope Project Presentation Video
+ 
+	- Career Day
+ 	
+- Career Services
+ 
+	- Networking

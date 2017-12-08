@@ -60,7 +60,7 @@ theme: league
 	
 	- If a student knows in advance that she or he will not be able to submit the project by its due date, that student is required to notify the instructors via email as soon as possible.
 
-	- Extensions on project submissions will be given with the Education Team’s discretion in the case of extenuating circumstances.
+	- Extensions on project submissions will be given with the Education Team's discretion in the case of extenuating circumstances.
 
 ## Unsatisfactory Progress Probationary Period
 
