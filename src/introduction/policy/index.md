@@ -10,7 +10,7 @@ theme: league
 	 
 	- Please inform your instructor and TA if extenuating circumstances arise.
 
-	- In order to pass the course, you must receive a grade of <mark>80%</mark> or higher averaged over all the assignments.
+	- In order to pass the course, you must receive a grade of <mark><mark>80%</mark></mark> or higher averaged over all the assignments.
 
 ## Projects
 
@@ -52,7 +52,7 @@ theme: league
 		
 		- Projects submitted on 9:31 am on project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>90%.</mark> 
 		
-		- Projects submitted on 9:31 am on the Tuesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>80%.</mark> 
+		- Projects submitted on 9:31 am on the Tuesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark><mark>80%</mark>.</mark> 
 
 		- Projects submitted on 9:31 am on the Wednesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>70%.</mark> 
 
@@ -64,11 +64,11 @@ theme: league
 
 ## Unsatisfactory Progress Probationary Period
 
-- In order to successfully complete the WCCI progam, a student must maintain, at a minimum, an 80% average project score.
+- In order to successfully complete the WCCI progam, a student must maintain, at a minimum, an <mark>80%</mark> average project score.
 
-- To participate in final projects and receive a graduation certificate, a student must maintain, at a minimum, an 80% average project score.
+- To participate in final projects and receive a graduation certificate, a student must maintain, at a minimum, an <mark>80%</mark> average project score.
 
-- In the event a student's average course score does not meet the 80% average project score minimum,the following actions will be initated by WCCI:
+- In the event a student's average course score does not meet the <mark>80%</mark> average project score minimum,the following actions will be initated by WCCI:
 
 	- WCCI staff will notify the student by email of his or her unsatifactory acedemic situation.
 
@@ -84,11 +84,10 @@ theme: league
 	
 	- If the student cannot sucessfully complete and pass failed protions of the class within the two week probation perios, he or she may be dismissed from the program.  
 	
-	- In the event a student is dismissed from the course, he or she may be eligible for a refund based upon WCCI's stated refund policies.
 
 ## Final Projects
 
-- Students must meet the 80% minimum average project score to be eligible to participate in final projects.
+- Students must meet the <mark><mark>80%</mark></mark> minimum average project score to be eligible to participate in final projects.
 
 
 
