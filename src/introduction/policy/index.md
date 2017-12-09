@@ -16,7 +16,7 @@ theme: league
 
 - Projects are graded by WCCI staff. 
 	
-	- Projects are typically worth <mark>100</mark> points. 
+	- Projects are worth <mark>100</mark> points. 
 
 	- <mark>90</mark> points of each project will be determined by the tasks that are completed.
 	
