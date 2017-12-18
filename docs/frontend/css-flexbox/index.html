@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>CSS Flexbox - Boxes that flex</title>
+		<title>BootStrap - Build a Responsive website!!</title>
 
 		<meta name="description" content="- description not found -">
 		<meta name="author"      content="Your Name Here">
@@ -46,8 +46,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1 style="text-align: center">CSS Flexbox</h1>
-					<h3 style="text-align: center">Boxes that flex</h3>
+					<h1 style="text-align: center">BootStrap</h1>
+					<h3 style="text-align: center">Build a Responsive website!!</h3>
 					<div id="logo">
 						<img src="../../shared/images/wcci-logo.png">
 						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
@@ -58,9 +58,21 @@
         <section>
           
 <!-- _S9SLIDE_ -->
-<h2 id="css-flexbox">CSS Flexbox</h2>
+<h2 id="life-just-easier">Life Just Easier</h2>
 
-<p>The second layout tool in our CSS toolbox: Flexbox! It is a great tool to couple with CSS Grid to make sure that your content will look good on any device and with absolute ease. (At least compared to how this business used to get done. Which is bad. Very bad.) Flexbox is a very powerful tool and can actually be used to build out page layouts on its own. Hopefully by the end, though, it will become clear when to use grid and when to use flexbox. Let’s get started.</p>
+<div float="right"><img src="./resources/bootstrap.png" /></div>
+
+<ul>
+  <li>
+    <p>If you remember our journey through HTML, formatting a HTML page can be daunting, frustrating, almost impossible task.</p>
+  </li>
+  <li>
+    <p>We learned Content Styling Sheets(CSS) offer us greater flexibility and control in our web page developement process.</p>
+  </li>
+  <li>
+    <p>Now finally we will become masters using a tool which gives us a powerful flexbox grid system for building layouts of all shapes and sizes.</p>
+  </li>
+</ul>
 
 
 
@@ -68,70 +80,106 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="containers-again">Containers again!</h2>
+<h2 id="lets-learn-bootstrap">Lets Learn Bootstrap</h2>
 
-<p>Rejoice! It’s our friend the container again! This time we make it a flex container:</p>
+<div float="right"><img src="./resources/Bootstrap-grid.png" /></div>
 
-<pre><code class="language-html">&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-    &lt;title&gt;Flexbox Example&lt;/title&gt;
+<ul>
+  <li>
+    <p>Bootstrap’s uses a grid system which is composed of a series of containers, rows, and columns to layout and align content.</p>
+  </li>
+  <li>
+    <p>Bootstrap is built with flexbox and is fully responsive.</p>
+  </li>
+  <li>
+    <p>The image above gives a representation of many differant possible layouts of the Bootstrap grid.</p>
+  </li>
+</ul>
 
-    &lt;link rel="stylesheet" href="./layout.css"&gt;
-    &lt;link rel="stylesheet" href="./style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div class="container"&gt;
-        &lt;!-- Again, your content goes here --&gt;
-    &lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-<pre><code class="language-css">.container {
-    display: flex;
+<div class="fragment">
+ Question time: What are the max number of spans on a bootstrap grid?
+ </div>
+
+<div class="fragment">
+ Question time: What do we mean when we say "fully responsive"?
+ </div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="so-many-options">So Many Options</h2>
+
+<div float="right"><img src="./resources/1-basic-grid.png" /></div>
+
+<ul>
+  <li>
+    <p>As we can see, our options on how we layout our grid are almost unlimited.</p>
+  </li>
+  <li>
+    <p>So now lets discuss some of the terms we mentioned earlier.</p>
+
+    <ul>
+      <li>
+        <p>Container: Containers provide a means to center your site’s contents.</p>
+      </li>
+      <li>
+        <p>There are two types of Containers you can utilize: .container and .container-fluid.</p>
+      </li>
+      <li>
+        <p>.container has one fixed width for each screen size in bootstrap (xs,sm,md,lg);</p>
+      </li>
+      <li>
+        <p>So what does this mean in english?</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="container-explained">.container Explained</h2>
+
+<ul>
+  <li>Lets look at these lines of CSS code and walk through our explaintation.</li>
+</ul>
+
+<pre><code class="language-CSS">  @media (min-width: 568px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
 </code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="flex-container-and-flex-items">Flex Container and Flex Items</h2>
-
-<p>So there are two MAJOR pieces of vocabulary we need to understand before moving forward because we are going to reference them a lot.</p>
-
-<div class="fragment">
-    <h3>Flex Container</h3>
-
-    <p>The first thing we need if we are going to use flexbox is a flex container. In our example, our flex container is the div with the class <code>container</code>. (This is a fairly common practice btw so get used to it and try to start using it on your own) Setting the display to flex lets your code know that anything inside of this containing element should be treated with flexbox rules</p>
-</div>
-
-<div class="fragment">
-    <h3>Flex Item</h3>
-
-    <p>Now where would we be without some content to manipulate with this amazing tool. The direct children of the flex container are known as the flex items. This is the content that we are actually going to be manipulating. This is also why it's important to house your content in appropriate <code>section</code> tags. We are going to be affecting almost every element in our code with CSS so organize it.</p>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="the-axes">The Axes</h2>
-
-<h3 id="this">This:</h3>
-<p><img src="./resources/grid.gif" alt="graph" /></p>
-
-<div class="fragment">
-    <h3>Not this:</h3>
-    <img src="./resources/axes.jpg" alt="axe" style="width: 12%;" />
-</div>
+<ul>
+  <li>
+    <p>Lets say your browser window has a width of 700px.</p>
+  </li>
+  <li>
+    <p>Because 700px is greater than the .container width of 550px, the .container width will be 550px</p>
+  </li>
+  <li>
+    <p>The .container width will stay at 550px regardless of the browser size until the browser size reaches a min width of 992px.</p>
+  </li>
+  <li>
+    <p>Once the browser window reaches 992px, the .container width will increase to 970px.</p>
+  </li>
+</ul>
 
 
         </section>
@@ -139,15 +187,58 @@
         <section>
           <!-- _S9SLIDE_  -->
 
-<p>Flex item placement is based on two axes. The main-axis and the cross-axis.</p>
+<pre><code class="language-CSS">  @media (min-width: 568px) {
+  .container {
+    width: 550px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+</code></pre>
+<div class="fragment">
+ Question time: What will happen to our .container width when our browser size reaches 1159px?
+ </div>
 
-<h3 id="main-axis">Main-axis</h3>
-<p>The main-axis is the flex line that your content is placed on. By default the main-axis goes from left to right.</p>
+<div class="fragment">
+ Question time: What will happen to our .container width when our browser size reaches 1200px?
+ </div>
 
-<h3 id="cross-axis">Cross-axis</h3>
-<p>The cross-axis is situated perpendicular to the main-axis. This axis is used to distribute your content in the opposite direction of your main-axis.</p>
+<div class="fragment">
+ Question time: What will happen to our .container width when our browser size reaches 991px?
+ </div>
 
-<p>These two work together as a sort of binary placement system. Think (x, y) coordinates on a graph. But these coordinates can be dynamic. This is what makes flexbox so powerful.</p>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-practice">Lets Practice</h2>
+
+<ul>
+  <li>
+    <p>Lets put what we learned to the test</p>
+
+    <div float="right"><img src="./resources/boot1.png" /></div>
+
+    <ul>
+      <li>
+        <p>Open Visual Studio</p>
+      </li>
+      <li>
+        <p>Select File &gt; New &gt; WebSite</p>
+      </li>
+    </ul>
+  </li>
+</ul>
 
 
         </section>
@@ -155,608 +246,840 @@
         <section>
           <!-- _S9SLIDE_  -->
 
-<p>Let’s get some content inside of our document to play with:</p>
+<div float="right"><img src="./resources/boot2.png" /></div>
 
-<pre><code class="language-html">&lt;div class="container"&gt;
-    &lt;div class="flexItem flexItem--1"&gt;flex item 1&lt;/div&gt;
-    &lt;div class="flexItem flexItem--2"&gt;flex item 2&lt;/div&gt;
-    &lt;div class="flexItem flexItem--3"&gt;flex item 3&lt;/div&gt;
-    &lt;div class="flexItem flexItem--4"&gt;flex item 4&lt;/div&gt;
-    &lt;div class="flexItem flexItem--5"&gt;flex item 5&lt;/div&gt;
+<ul>
+  <li>
+    <p>Ensure <mark>Visual C#</mark> is selected under templates.</p>
+  </li>
+  <li>
+    <p>Ensure <mark>ASP.NET Empty Web Site</mark> is highlighted.</p>
+  </li>
+  <li>
+    <p>Select the <mark>Web Location Path</mark>.</p>
+  </li>
+  <li>
+    <p>Use your right arrow key to navigate to the end of the location path.</p>
+  </li>
+  <li>
+    <p>Change <mark>WebSite1</mark> to <mark>Bootstrap</mark>.</p>
+  </li>
+  <li>
+    <p>Your location address might have a value differant than <mark>WebSite1</mark>, not to worry just replace whatever value is there to <mark>Bootstrap</mark></p>
+  </li>
+  <li>
+    <p>Finally Select <mark>Ok</mark>.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot3.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-add-an-html-page">Lets add an HTML page</h2>
+
+<div float="right"><img src="./resources/boot4.png" /></div>
+
+<ul>
+  <li>Select Website &gt; Add New Item</li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<div float="right"><img src="./resources/boot5.png" /></div>
+
+<ul>
+  <li>
+    <p>Ensure <mark>Visual C#</mark> is selected under templates.</p>
+  </li>
+  <li>
+    <p>Ensure <mark>HTML Page</mark> is highlighted.</p>
+  </li>
+  <li>
+    <p>Change the value in the <mark>Name</mark> field to <mark>index.html</mark></p>
+  </li>
+  <li>
+    <p>Finally select <mark>Add</mark></p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-1">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot6.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-do-some-prep-work-next">Lets Do Some Prep Work Next</h2>
+
+<ul>
+  <li>Before we can begin, we need to add three items to our index.html page.</li>
+</ul>
+
+<pre><code class="language-C#">&lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<ul>
+  <li>
+    <p>These three items are necessary for Bootstrap to function correctly.</p>
+  </li>
+  <li>
+    <p>You will find current versions of these three items getbootstrap.com under Bootstrap CDN.</p>
+  </li>
+  <li>
+    <p>Although you will find more current versions at getbootstrap.com, for our purposes and to ensure stablility of code, we will use the versions listed.</p>
+  </li>
+  <li>
+    <p>You can find these versions if needed at <a href="https://www.w3schools.com/bootstrapbootstrap_get_started.asp">w3schools</a> under <mark>MAXCDN</mark></p>
+  </li>
+  <li>
+    <p>Goto your class Slack channel, and you can copy and past the three items from Slack into the <mark>Head section</mark> of your index.html page.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-2">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot7.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-build-our-container">Lets build our .container</h2>
+
+<ul>
+  <li>
+    <p>The following code will build the .container.</p>
+  </li>
+  <li>
+    <p>Remember the .container is responsible for the resposivness of you webpage.</p>
+  </li>
+  <li>
+    <p>You must encapsulate the code you want to be reposnsive with a .container class.</p>
+  </li>
+</ul>
+
+<pre><code class="language-C#"> &lt;div&gt; 
+  &lt;h2&gt;Without a Container&lt;/h2&gt;
+  &lt;p&gt;&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container"&gt; 
+  &lt;h2&gt;With a Container&lt;/h2&gt;
+  &lt;p&gt;&lt;/p&gt;
 &lt;/div&gt;
 </code></pre>
-<pre><code class="language-css">.container {
-    display: flex;
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-.flexItem {
-    margin-left: 5px;
-    padding: 11px;
-}
-.flexItem:first-child {
-    margin: 0;
-}
-</code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="flex-vs-inline-flex">Flex vs Inline-flex</h2>
-
-<h3 id="flex">Flex</h3>
-<p>So the first thing to notice is that <code>display: flex;</code> renders your container as a block level element. Most of the time, this is going to be what you want most of the time because you’ll want your container to fill the entirety of the space it occupies.</p>
-
-<p><img src="./resources/flex.png" alt="display: flex" style="width: 70%;" /></p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<h3 id="inline-flex">Inline-flex</h3>
-<p>If, for some reason, you want your container to be viewed as an inline level element, you can use <code>display: inline-flex;</code> instead of just flex. You’ll notice that our <code>auto</code> margins collapse when we do this because, as an inline level element, there is no extra space around our element.</p>
-
-<p><img src="./resources/inline-flex.png" alt="display: flex" style="width: 70%;" /></p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="flex-direction">Flex Direction</h2>
-
-<p>One of the first advantages that you’ll notice about flexbox is the ability to change the flow of your content from horizontal to vertical.</p>
-
-<p>Before flexbox this was not as easy as it may seem. Sure you could change the display of the elements to inline or block based on your needs but this always came with unexpected consequences, things that needed to be worked around, unnecessary containers, etc. Flexbox mitigates all of the nonsense for you. All you need to do to change orientation in flexbox is to change one line of code: <code>flex-direction</code>. Let’s see it in action.</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>So let’s have a reminder of what we’re looking at currently:</p>
-
-<p><img src="./resources/flex.png" alt="display flex" style="width: 70%;" /></p>
-
-<p>The default value of flex direction is row. There are three other options. Let’s check them out.</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>The next value to discuss is <code>row-reverse</code>:</p>
-
-<pre><code class="language-css" data-noescape="">
-.container {
-    display: flex;
-    <mark>flex-direction: row-reverse;</mark>
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Which gives us:</p>
-
-<p><img src="./resources/flex-direction-row-reverse.png" alt="row reverse" style="width: 70%;" /></p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Next we’re going to get into <code>column</code>:</p>
-
-<pre><code class="language-css" data-noescape="">
-.container {
-    display: flex;
-    <mark>flex-direction: column;</mark>
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>You’ll notice when we give our container <code>flex-direction: column</code> that our main-axis and cross-axis actually switch places. This makes your content flow vertically beginning at the top:</p>
-
-<p><img src="./resources/flex-direction-column.png" alt="column" style="width: 70%;" /></p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Finally, we’re going see what happens with <code>column-reverse</code>:</p>
-
-<pre><code class="language-css" data-noescape="">
-.container {
-    display: flex;
-    <mark>flex-direction: column-reverse;</mark>
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>For our final <code>flex-direction</code>, we see that the content behaves similar to how <code>row-reverse</code> behaves only in a new orientation:</p>
-
-<p><img src="./resources/flex-direction-column-reverse.png" alt="column reverse" style="width: 70%;" /></p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>As you can see, flexbox has a wide range of options when it comes to the orientation of your content. The power lies in how little code you have to write to get your content to behave this way.</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="flex-wrap">Flex Wrap</h2>
-
-<p>One of the first issues to deal with is wrapping content. You’ll notice if you compress your window, your flex items just squish together on the same line:</p>
-
-<div class="fragment">
-    <img src="./resources/squished-content.png" alt="column reverse" style="width: 70%;" />
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>We can fix this with another simple addition to our flexbox rules:</p>
-
-<pre><code class="language-css" data-noescape="">
-.container {
-    display: flex;
-    flex-direction: row;
-    <mark>flex-wrap: wrap;</mark>
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Now whenever our container is too narrow for our content to fit in one line, it will split onto as many lines as it needs to display properly.</p>
-
-<div class="fragment">
-    <img src="./resources/flex-wrap.png" alt="flex wrap" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>Other options are `nowrap` and `wrap-reverse`. Play around with both to see their functionality.</p>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="order">Order</h2>
-
-<p>Another really powerful aspect of flexbox is the <code>order</code> property. So we can give numerical values to individual elements and change their order.</p>
-
-<p>The default order value given to elements is 0. This is why they’re placed in the order they appear in your HTML. But if we wanted to have <code>flex item 4</code> at the front, we can simply give it an order value less than 0:</p>
-
-<pre><code class="language-css">.flexItem--4 {
-    order: -1;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Notice how <code>flex item 4</code> is now at the front of our list as opposed to the fourth slot, where it falls in our HTML layout:</p>
-
-<div class="fragment">
-    <img src="./resources/flexbox-order.png" alt="order change with flexbox" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>This is super valuable because we can leave our HTML semantically marked up and order things how we want them using CSS. This is the way things should be.</p>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="justify-content">Justify Content</h2>
-
-<p>So what good is all of this without being able to distribute your content the way you want? Exactly, worthless. So let’s jump into the magic of <code>justify-content</code>. The default value of <code>justify-content</code> is <code>flex-start</code>. This is what you’ve seen so far:</p>
-
-<div class="fragment">
-    <img src="./resources/flex.png" alt="flex-start" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>Notice how the content is flush with the left side or start of the container.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>The next value for <code>justify-content</code> is similar to the first. The value is <code>flex-end</code> and it does exactly what you’d expect:</p>
-
-<div class="fragment">
-    <img src="./resources/flex-end.png" alt="flex-end" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>All items are now aligned to the right side of the container.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>A really useful value for <code>justify-content</code> is <code>center</code>. It’s not only one of the most used values for <code>justify-content</code> but one of the big reasons to use the property at all. We’ll get to why this is such a powerful value in future slides:</p>
-
-<div class="fragment">
-    <img src="./resources/center.png" alt="center" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>This takes all content that you have inside of your container and centers it for you. On it's own it looks like you could easily do this with <code>text-align: center;</code>, and you'd be right. The real power here comes from a pairing with another property.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>The next value we’re going to discuss is <code>space-between</code>. This is a really interesting value because it’s functionality hasn’t even remotely existed in CSS until now. <code>space-between</code> takes all space remaining outside of your content and distributes it evenly between each element. Like so:</p>
-
-<div class="fragment">
-    <img src="./resources/space-between.png" alt="space-between" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>This is really useful for distributing things like navigation items.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>The final value we’re going to talk about is <code>space-around</code>. This value behaves similarly to <code>space-between</code> but instead places excess space on either side of each item. Like so:</p>
-
-<div class="fragment">
-    <img src="./resources/space-around.png" alt="space-around" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>This is really useful for times that you need to distribute extra space evenly and not have the first or last item be flush to the side of your container.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>So to recap, all values for justify-content are:</p>
-
-<pre><code class="language-css">.some-containing-element {
-    /* Note: you cannot use the 'or' pipes
-    ** in the declaration. They're just there
-    ** to denote possible options
-    **/
-    justify-content: flex-start || flex-end ||
-        center || space-between || space-around;
-}
-</code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="align-items">Align Items</h2>
-
-<p>This is where distributing items gets REALLY interesting (and way easier). The <code>align-items</code> property is very similar to <code>justify-content</code> except it handles distribution of items along the cross-axis instead of the main-axis. To see this in action, let’s add some height to our container and check out the default value, <code>stretch</code>:</p>
-
-<pre><code class="language-css" data-noescape="">
-.container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    <mark>height: 20rem;</mark>
-    justify-content: space-around;
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>As it’s name implies, <code>stretch</code> stretches all elements to take up all space available on the cross axis:</p>
-
-<div class="fragment">
-    <img src="./resources/stretch.png" alt="stretch" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>Sometimes this is very useful, other times, it's a nuisance. Luckily we have other values to choose from.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Our next stop on the <code>align-items</code> value trail is one we’ve seen already, <code>flex-start</code>! It does a very similar job here:</p>
-
-<div class="fragment">
-    <img src="./resources/align-items-flex-start.png" alt="align-items-flex-start" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>This is good for aligning everything to the top of your container.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>It would logically follow, then, that <code>align-items</code> also has a <code>flex-end</code> value. It very does:</p>
-
-<div class="fragment">
-    <img src="./resources/align-items-flex-end.png" alt="align-items-flex-end" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>Again, this performs very similarly to <code>flex-start</code> but aligns items to the bottom or end of the container.</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>And now, the moment you’ve had no idea you’d been waiting for. <code>align-items</code> has a <code>center</code> value! You should be freaking out about this but you probably have no idea the horrors that were trying to vertically center something without this amazing tool.</p>
-
-<div class="fragment">
-    <img src="./resources/align-items-center.png" alt="align-items-center" style="width: 70%;" />
-</div>
-
-<div class="fragment">
-    <p>This is SO amazing. Centering in CSS was truly the stuff of nightmares for the frontend developer until flexbox. What's even more amazing is when you pair it with `justify-content: center;`. LET'S DO THAT!</p>
-</div>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<pre><code class="language-css" data-noescape="">
-.container {
-    <mark>align-items: center;</mark>
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 20rem;
-    <mark>justify-content: center;</mark>
-    margin: 2rem auto;
-    padding: 11px;
-    max-width: 1000px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Which gives us:</p>
-
-<p><img src="./resources/align-center-and-justify-center.png" alt="Perfectly. Centered. Content." style="width: 70%;" /></p>
-
-<p>Content.👏 Aligned.👏 To.👏 The.👏 Center.👏 Of.👏 A.👏 Container.👏</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p><img src="./resources/mind-absolutely-blown.gif" alt="Mind Absolutely Blown" style="width: 70%;" /></p>
-
-<div class="fragment">
-    <p>Commence to losing your mind. I'll wait...</p>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="align-self">Align Self</h2>
-
-<p>Related to <code>align-items</code> but not totally is a property that can go on individual items called <code>align-self</code>. This allows you to have the functionality of <code>align-items</code> but with individual items. Let’s try is on item 2:</p>
-
-<pre><code class="language-css">.flexItem--2 {
-    align-self: stretch;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>This yields the result:</p>
-
-<p><img src="./resources/align-self-stretch.png" alt="Align self stretch" style="width: 70%;" /></p>
-
-<p>This way you can pretty much put things where ever you want them to be.</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p><img src="./resources/how-neat-is-that.gif" alt="super neat" style="width: 70%;" /></p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="flex-grow">Flex Grow</h2>
-
-<p>There is a property on flex items called <code>flex-grow</code>. This property has a default value of 0. But when applied to items in your flex container, it makes each item take up a certain amount of remaining space in the container. Let’s apply of 1 to all of our items and see how it goes.</p>
-
-<pre><code class="language-css">.flexItem {
-    flex-grow: 1;
-    margin: 5px;
-    padding: 11px;
-}
-</code></pre>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Notice how all elements are taking up all available space (minus margins) in the container.</p>
-
-<p><img src="./resources/flex-grow-one.png" alt="flex grow one" style="width: 70%;" /></p>
-
-<p>Let’s change the <code>flex-grow</code> property of item 3 and see how it’s affacted.</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<pre><code class="language-css">.flexItem--3 {
-    flex-grow: 5;
-}
-</code></pre>
-
-<p>Item 3 has a <code>flex-grow</code> value of 5 and the other 4 elements have a <code>flex-grow</code> value of one for a total of 9 units.</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Notice how item 3 appears larger now.</p>
-
-<p><img src="./resources/flex-grow-item-larger.png" alt="flex grow item larger" style="width: 70%;" /></p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="flex-basis">Flex Basis</h2>
-
-<p>Now on to <code>flex-basis</code>. This allows each item with the property applied to have a width that it must have. That is to say items cannot shrink smaller than their <code>flex-basis</code>. Let’s apply this with a value of <code>350px</code> to item 4 and see the result.</p>
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>Notice how when the container is compressed item four will not have a width lower than <code>350px</code></p>
-
-<p><img src="./resources/flex-basis.png" alt="flex basis" style="width: 48%;" />
-<img src="./resources/flex-basis-compressed.png" alt="flex basis compressed" style="width: 48%;" /></p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="now-for-practice">Now For Practice!</h2>
-
-<p>Clone the repository found <a href="https://github.com/donhamiltoniii/flexbox-practice-exercise">here</a> and follow the instructions in the README.md to complete the assignment. When you finish up, take a look at <a href="http://flexboxzombies.com">Flexbox Zombies</a> for some in-depth practice with flexbox.</p>
-
-<h3 id="other-resources">Other Resources</h3>
 <ul>
-  <li><a href="https://medium.freecodecamp.org/the-ultimate-guide-to-flexbox-learning-through-examples-8c90248d4676">The Ultimate Guide to Flexbox-Learning Through Examples</a></li>
-  <li><a href="https://flexboxzombies.com/p/flexbox-zombies">Flexbox Zombies</a></li>
-  <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Complete Guide to Flexbox</a></li>
+  <li>
+    <p>Write the code you see listed above in between the <mark>body</mark> tags on your index.html page.</p>
+  </li>
+  <li>
+    <p>Got your class Slack channel, and copy the information that was just posted.</p>
+  </li>
+  <li>
+    <p>Paste the information inbetween the <mark>p</mark> tags in the body of you index.html.</p>
+  </li>
 </ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-3">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot8.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="run-it">Run It!!</h2>
+
+<ul>
+  <li>
+    <p>If you will notice there is a small <mark>asterick</mark> on the index.html page tab next to the words index.html.</p>
+  </li>
+  <li>
+    <p>This asterick is there to remind you the page has not been saved.</p>
+  </li>
+  <li>
+    <p>Before we select Google Chrome, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the index.html tab.</p>
+  </li>
+  <li>
+    <p>The asterick is no longer there, so we can proceed.</p>
+  </li>
+  <li>
+    <p>Select Google Chrome</p>
+  </li>
+  <li>
+    <p>Once you browser opens, maximize it if it is not already.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-4">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot9.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="now-lets-talk-about-what-we-see">Now lets talk about what we see</h2>
+
+<div float="right"><img src="./resources/boot9.png" /></div>
+
+<div class="fragment">
+ Question time: Whats the differance between the text in a container, and the test not encapsulated in a container?
+ </div>
+
+<ul>
+  <li>The text inside the container is centered inside the container.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="test-it">Test It!!</h2>
+<div float="right"><img src="./resources/boot10.png" /></div>
+
+<ul>
+  <li>
+    <p>The containers size has been set inside the <mark>bootstrap.min.css</mark> we placed in the index.html head.</p>
+  </li>
+  <li>
+    <p>Now lets shrink and enlarge the browser and see what what the responsiveness differances are between the two paragraphs.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Lets get a volunteer to come up and demonstrate to the class.
+</div>
+
+<div class="fragment">
+So lets discuss the differances we see.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-add-container-fluid">Lets add .container-fluid</h2>
+
+<ul>
+  <li>
+    <p>Go ahead and stop the program from running by selecting the red <mark>box</mark> on the Standard toolbar.</p>
+  </li>
+  <li>
+    <p>Lets add a .container-fluid div to our code and compare the three.</p>
+  </li>
+  <li>
+    <p>Add the following code to your index.html</p>
+  </li>
+  <li>
+    <p>You can copy the <mark>p</mark> tag and its contents into the new container-fluid div.</p>
+  </li>
+</ul>
+
+<pre><code class="language-C#">&lt;div&gt; 
+  &lt;h2&gt;Without a Container&lt;/h2&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container"&gt; 
+  &lt;h2&gt;With a Container&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container-fluid"&gt; 
+  &lt;h2&gt;With a Container-fluid&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-5">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot11.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="run-it-1">Run It!!</h2>
+
+<ul>
+  <li>
+    <p>Before we select Google Chrome, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the index.html tab.</p>
+  </li>
+  <li>
+    <p>The asterick is no longer there, so we can proceed.</p>
+  </li>
+  <li>
+    <p>Select Google Chrome</p>
+  </li>
+  <li>
+    <p>Once you browser opens, maximize it if it is not already.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-6">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot12.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="now-lets-talk-about-what-we-see-1">Now lets talk about what we see</h2>
+
+<div float="right"><img src="./resources/boot12.png" /></div>
+
+<div class="fragment">
+ Question time: Whats the differance between the text in each container, and the test not encapsulated in a container?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="test-it-1">Test It!!</h2>
+
+<div float="right"><img src="./resources/boot13.png" /></div>
+
+<ul>
+  <li>
+    <p>The containers size has been set inside the <mark>bootstrap.min.css</mark> we placed in the index.html head.</p>
+  </li>
+  <li>
+    <p>Now lets shrink and enlarge the browser and see what what the responsiveness differances are between the three paragraphs.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Lets get a volunteer to come up and demonstrate to the class.
+</div>
+
+<div class="fragment">
+So lets discuss the differances we see.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="hey-wait-theres-only-one-column-per-rows">Hey wait there’s only one column per rows</h2>
+
+<div float="right"><img src="./resources/boot12.png" /></div>
+
+<ul>
+  <li>
+    <p>So obviously we cannot build a website with one column per row!</p>
+  </li>
+  <li>
+    <p>Lets add some columns to our code. I need a volunteer.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-seperate-the-masses">Lets seperate the masses</h2>
+
+<ul>
+  <li>
+    <p>Lets stop our program and go back to our index.html page in Visual Studio.</p>
+  </li>
+  <li>
+    <p>Lets discuss our code</p>
+  </li>
+</ul>
+
+<pre><code class="language-C#">&lt;div&gt; 
+  &lt;h2&gt;Without a Container&lt;/h2&gt;
+		&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container"&gt; 
+  &lt;h2&gt;With a Container&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container-fluid"&gt; 
+  &lt;h2&gt;With a Container-fluid&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<div class="fragment">
+Question time: How did we seperate each of our paragraphs?
+</div>
+
+<div class="fragment">
+Question time: Could we call each <mark>div</mark> with a container class a row? The answer to this question might not be a straight forward as you may think? We will cover why in later slides.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-do-this">Lets do This</h2>
+
+<ul>
+  <li>Because we need container classes to create rows with columns, lets delete the div without a container class.</li>
+</ul>
+
+<pre><code class="language-C#">&lt;div class="container"&gt; 
+  &lt;h2&gt;With a Container&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class="container-fluid"&gt; 
+  &lt;h2&gt;With a Container-fluid&lt;/h2&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+  <li>Now lets create three columns in each Container</li>
+</ul>
+
+<div class="fragment">
+Question time: Can someone explain how I would create three columns in each div?
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>
+    <p>Lets modify our code further to reflect the creation of columns. I need a volunteer.</p>
+  </li>
+  <li>
+    <p>Replace your existing code in you index.html with the following slides</p>
+  </li>
+</ul>
+
+<pre><code class="language-C#">&lt;div class="container"&gt;
+	&lt;div class="row"&gt; 
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>Finish modifying your code</li>
+</ul>
+
+<pre><code class="language-C#">&lt;div class="container-fluid"&gt; 
+	&lt;div class="row"&gt; 
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;	
+&lt;/div&gt;
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-7">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot14.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-discuss-what-we-have-done">Lets discuss what we have done</h2>
+
+<ul>
+  <li>
+    <p>We introduced a new class called <mark>Row</mark>.</p>
+  </li>
+  <li>
+    <p>Can someone explain why we used the class <mark>Row</mark> intead of just placing the columns inside the containers by themsleves?</p>
+  </li>
+</ul>
+
+<div class="fragment">
+- Wait!!! Lets not wonder what will happen, lets see what will happen. I need a volunteer.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="its-time-to-break-something">Its time to break something</h2>
+
+<ul>
+  <li>Lets remove the <mark>Row</mark> class from our .container.</li>
+</ul>
+
+<pre><code class="language-C#">&lt;div class="container"&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+		&lt;div class="col"&gt; 
+			&lt;h2&gt;With a Container&lt;/h2&gt;
+			&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+		&lt;/div&gt;
+&lt;/div&gt;
+
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-8">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot15.png" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="run-it-2">Run It!!</h2>
+
+<ul>
+  <li>
+    <p>Before we select Google Chrome, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the index.html tab.</p>
+  </li>
+  <li>
+    <p>The asterick is no longer there, so we can proceed.</p>
+  </li>
+  <li>
+    <p>Select Google Chrome</p>
+  </li>
+  <li>
+    <p>Once you browser opens, maximize it if it is not already.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-9">We should all be here!!</h2>
+
+<div float="right"><img src="./resources/boot16.png" /></div>
+
+<div class="fragment">
+Question time: So lets answer the question I posed earlier in the slides. Can we call each div with a container class a row?
+</div>
+
+<div class="fragment">
+No!! 
+</div>
+
+<div class="fragment">
+- Although a container may look like a row, its a container!! Lets picture a container.
+</div>
+
+<div class="fragment">
+<div float="right"><img src="./resources/container.jpg" /></div>
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>
+    <p>When we create a container, no matter if it is a <mark>.container or a .container-fluid</mark>, what we have done is create a defined space in which to set up our <mark>responsive</mark> page structure.</p>
+  </li>
+  <li>
+    <p>We then have the flexibilty using the <mark>Row</mark> and <mark>column</mark> classes to build our website to meet our design needs.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+- Question time: How many rows can we place in a container?
+</div>
+
+<div class="fragment">
+- Question time: How many columns can we place in a container?
+</div>
+
+<div class="fragment">
+- Task time: Lets answer those two questions through coding. I would like each of you to create the following page by modifying your index.html page.
+</div>
+
+<div class="fragment">
+   <div float="right"><img src="./resources/boot17.png" /></div>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-style-our-page-ever-further">Lets style our page ever further</h2>
+
+<ul>
+  <li>
+    <p>If we look at our page, our columns are all the same size in each row.</p>
+  </li>
+  <li>
+    <p>Well in the real world, we wouldnt be so lucky as to use a simple design like this.</p>
+  </li>
+  <li>
+    <p>Lets learn another tool which will help us to dicate the size of our columns and make the column sizes differant for each column.</p>
+  </li>
+  <li>
+    <p>By design the Bootstrap grid is 12 spans in width.</p>
+  </li>
+  <li>
+    <p>Lets look back at the defualt grid we presented in an ealier slide.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+   <div float="right"><img src="./resources/Bootstrap-grid.png" /></div>
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<div float="right"><img src="./resources/Bootstrap-grid.png" /></div>
+
+<ul>
+  <li>If you notice each span has a number: Span 1, Span 4, Span 6, Span 8.</li>
+</ul>
+
+<div class="fragment">
+Question time: Who can explain to the class what the numbers tell us in each of the spans?
+</div>
+
+<div class="fragment">
+The numbers signify how many units of spans each column is taking.
+</div>
+
+<div class="fragment">
+Question time: So if I needed 3 columns of the exact same size, what size would I make each span?
+</div>
+
+<div class="fragment">
+Remember a Bootstrap grid is 12 units across. When you set the sizes for your columns, they must total 12 units.
+</div>
+
+<div class="fragment">
+Volunteer Time!!
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>Lets make the following changes to the code.</li>
+</ul>
+
+<pre><code class="language-C#">	&lt;div class="container"&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col-4"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="col-8"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col-2"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="col-8"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="col-2"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>Lets make some changes to the .container-fluid code.</li>
+</ul>
+
+<pre><code class="language-C#">	&lt;div class="container-fluid"&gt; 
+		&lt;div class="row"&gt;
+			&lt;div class="col"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="col5"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="col7"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col9"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+			&lt;div class="col3"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col"&gt;
+				&lt;h2&gt;With a Container&lt;/h2&gt;
+				&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas euismod dolor rhoncus lectus rhoncus, sed ultrices neque hendrerit. Morbi iaculis accumsan elementum. Ut sem ipsum, tristique vitae elementum non, consequat luctus justo. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam id volutpat augue. Pellentesque pellentesque, nibh vitae finibus sollicitudin, magna odio lobortis magna, et facilisis nisl dui sit amet tortor.&lt;/p&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+</code></pre>
 
         </section>
         

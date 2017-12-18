@@ -8,61 +8,7 @@ HTML (Hyper Text Markup Language) is the first of three languages we use to crea
 
 ## Standard HTML Document
 
-- HTML is marked up with tags. There are common tags that you will see in each HTML document. Lets open Visual Studio and create a blank html document.
-
-- Lets put what we learned to the test. I need a volunteer!!
-
-    <div float="right"><img src="./resources/boot1.png" /></div>
-
-	- Open Visual Studio
-
-	- Select File > New > WebSite
-
-!SLIDE
-
-   <div float="right"><img src="./resources/boot2.png" /></div>
-
-- Ensure <mark>Visual C#</mark> is selected under templates.
-
-- Ensure <mark>ASP.NET Empty Web Site</mark> is highlighted.
-
-- Select the <mark>Web Location Path</mark>.
-
-- Use your right arrow key to navigate to the end of the location path.
-
-- Change <mark>WebSite1</mark> to <mark>Bootstrap</mark>. 
-
-- Your location address might have a value differant than <mark>WebSite1</mark>, not to worry just replace whatever value is there to <mark>Bootstrap</mark>
-
-- Finally Select <mark>Ok</mark>.
-
-## We should all be here!!
-
-   <div float="right"><img src="./resources/boot3.png" /></div>
-
-## Lets add an HTML page
-
-   <div float="right"><img src="./resources/boot4.png" /></div>
-
-- Select Website > Add New Item
-
-!SLIDE
-
-   <div float="right"><img src="./resources/boot5.png" /></div>
-
-- Ensure <mark>Visual C#</mark> is selected under templates.
-
-- Ensure <mark>HTML Page</mark> is highlighted.
-
-- Change the value in the <mark>Name</mark> field to <mark>index.html</mark> 
-
-- Finally select <mark>Add</mark>
-
-## We should all be here!!
-
-   <div float="right"><img src="./resources/boot6.png" /></div>   
-
-## Its all about the Tags
+HTML is marked up with tags. There are common tags that you will see in each HTML document. A basic HTML document looks like this:
 
 ```html
 <!DOCTYPE html>
@@ -78,13 +24,14 @@ HTML (Hyper Text Markup Language) is the first of three languages we use to crea
 </body>
 </html>
 ```
-- Our html page is built using <mark>Tags</mark>.
 
-- The Tags we will discuss in our index.html page are as follows:
+Tags to note are:
+- `<!DOCTYPE html>`
+- `<html>`
+- `<head>`
+- `<body>`
 
-	- <mark><!DOCTYPE html> <html> <head> <body></mark>
-
-- You'll notice these each have a closing tag (i.e. `</body>`). Let's look at these in more detail.
+You'll notice these each have a closing tag (i.e. `</body>`). Let's look at these in more detail.
 
 ## DOCTYPE
 
@@ -105,7 +52,7 @@ HTML (Hyper Text Markup Language) is the first of three languages we use to crea
 &lt;/html&gt;
 </code></pre>
 
-- The DOCTYPE tag tells your browser that this document is HTML. With that declaration, your browser knows to interpret this as HTML and display it as such.
+The DOCTYPE tag tells your browser that this document is HTML. With that declaration, your browser knows to interpret this as HTML and display it as such.
 
 ## HTML Tag
 
@@ -126,7 +73,7 @@ HTML (Hyper Text Markup Language) is the first of three languages we use to crea
 <mark>&lt;/html&gt;</mark>
 </code></pre>
 
-- The `<html>` tag houses all of your other tags. All of your content needs to be inside of them.
+The `<html>` tag houses all of your other tags. All of your content needs to be inside of them.
 
 ## Head Tag
 
@@ -147,7 +94,7 @@ HTML (Hyper Text Markup Language) is the first of three languages we use to crea
 &lt;/html&gt;
 </code></pre>
 
-- The `<head>` tag houses meta data for each of your pages. This content gives information to your browser about the page and content on the page. This is also where CSS and JS files can be attached to your page.
+The `<head>` tag houses meta data for each of your pages. This content gives information to your browser about the page and content on the page. This is also where CSS and JS files can be attached to your page.
 
 ## Body Tag
 
@@ -168,21 +115,15 @@ HTML (Hyper Text Markup Language) is the first of three languages we use to crea
 &lt;/html&gt;
 </code></pre>
 
-- The `<body>` tag houses all of the content that your user will see/interact with.
+The `<body>` tag houses all of the content that your user will see/interact with.
 
 # Box Model
 
-## Elements in HTML
+## The Box Model in HTML
 
-- HTML tags and the content they house are called elements. 
+HTML tags and the content they house are called elements.
 
-- Lets add a couple of <mark>elements</mark> to our page.
-
-- `<h1>W3Schools</h1>`
-
-- `<p>W3Schools is an excellent resources for questions about anything html</p>`
-
-- `<a href="https://www.w3schools.com">Visit W3Schools.com!</a>`
+`<p>This is an element</p>`
 
 These elements can be thought of as boxes. We will often house elements inside of each other. This can be for organization or just as a method of containing elements.
 
