@@ -1,22 +1,22 @@
-title: ArrayLists
-subtitle: Less Pain == More Fun
+title: Lists
+subtitle: Like Arrays, but Mutable!
 theme: league
 
-# Alphabet Soup
+# Data Collections
 
-The `ArrayList` class is part of the Java Collections Framework (JCF) API, which real people generally call "Collections". The JCF can be found in the `java.util` package.
+We have already seen one data collection type, an `array`. An `array` is a collection of values that have the same type, like `int` or `string`.
 
-But what is an API? That's an Application Programming Interface. And that's just a way of saying a bunch of types that you can (re)use. Think of APIs as tools in your toolbox.
+There are several types of data collections in C#, many of which you will see during the upcoming weeks and even more during final projects.
 
-We use `ArrayList` as a tool to make dealing with sequences of things easier. It offers us an abstraction to do away with fiddling about with arrays. We're going to contrast using `ArrayList` with using arrays.
+Today, we will be talking about `Lists`.
 
 ## Arrays are fixed size
 
 We can't change the size of an array once we've created it. It will never grow or shrink. This array will always have a `length` of three:
 
-```java
+<code class="language-C#" data-noescape>
 int[] myArray = {1, 2, 3};
-```
+</code>
 
 If I wanted to add an element to this array, I'd generally do something like this (but hopefully I'd use a loop):
 
