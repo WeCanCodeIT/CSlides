@@ -28,10 +28,9 @@ for(int index = 0; index < oldArray.Length; index++) {
   myArray[index] = oldArray[index];
 }
 myArray[3] = 42;
-```
+</code>
 
 We are forced to create a new array and assigned it to our `myArray` variable. Imagine if we needed to insert a new element in the middle? *Yuck!*
-
 
 ## Let's Start a New Project
 
@@ -55,6 +54,12 @@ Create the following list.
 
 Notice the similarities and differences between creating a new List versus creating an array.
 
+## Initializing an Empty List
+
+Unlike arrays, with lists we don't have to set a size when we create an empty list.
+
+<div float="right"><img src="./resources/newEmptyList.jpg" /></div>
+
 ## Mutable
 
 Unlike an array, a List is mutable, meaning that it does not have a fixed size and can increase or decrease in size.
@@ -62,6 +67,10 @@ Unlike an array, a List is mutable, meaning that it does not have a fixed size a
 We can use the <mark>.Add()</mark> method to add elements to our list.
 
 <div float="right"><img src="./resources/addToToyList.jpg" /></div>
+
+<div class="fragment">
+What did our `foreach` loop do?
+</div>
 
 ## Objects like any other
 

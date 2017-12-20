@@ -89,53 +89,104 @@ int[] oldArray = myArray;</code></p>
 for(int index = 0; index &lt; oldArray.Length; index++) {
   myArray[index] = oldArray[index];
 }
-myArray[3] = 42;</p>
-<pre><code>
-We are forced to create a new array and assigned it to our `myArray` variable. Imagine if we needed to insert a new element in the middle? *Yuck!*
+myArray[3] = 42;
+&lt;/code&gt;</p>
+
+<p>We are forced to create a new array and assigned it to our <code>myArray</code> variable. Imagine if we needed to insert a new element in the middle? <em>Yuck!</em></p>
 
 
-## Let's Start a New Project
 
-Create a new Console Application with the title "ToyStore"
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-start-a-new-project">Let’s Start a New Project</h2>
 
-&lt;div float="right"&gt;&lt;img src="./resources/createproject.jpg" /&gt;&lt;/div&gt;
+<p>Create a new Console Application with the title “ToyStore”</p>
 
-## Array Review
+<div float="right"><img src="./resources/createproject.jpg" /></div>
 
-This is how we'd set up an array of toys at our toy store. Remember, arrays have a fixed size.
 
-&lt;div float="right"&gt;&lt;img src="./resources/toyarray.jpg" /&gt;&lt;/div&gt;
 
-## How To Initialize a List
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="array-review">Array Review</h2>
 
-A list is created with the &lt;mark&gt;new&lt;/mark&gt; keyword, which we will see a lot more of soon!
+<p>This is how we’d set up an array of toys at our toy store. Remember, arrays have a fixed size.</p>
 
-Create the following list.
+<div float="right"><img src="./resources/toyarray.jpg" /></div>
 
-&lt;div float="right"&gt;&lt;img src="./resources/toylist.jpg" /&gt;&lt;/div&gt;
 
-Notice the similarities and differences between creating a new List versus creating an array.
 
-## Mutable
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="how-to-initialize-a-list">How To Initialize a List</h2>
 
-Unlike an array, a List is mutable, meaning that it does not have a fixed size and can increase or decrease in size.
+<p>A list is created with the <mark>new</mark> keyword, which we will see a lot more of soon!</p>
 
-We can use the &lt;mark&gt;.Add()&lt;/mark&gt; method to add elements to our list.
+<p>Create the following list.</p>
 
-&lt;div float="right"&gt;&lt;img src="./resources/addToToyList.jpg" /&gt;&lt;/div&gt;
+<div float="right"><img src="./resources/toylist.jpg" /></div>
 
-## Objects like any other
+<p>Notice the similarities and differences between creating a new List versus creating an array.</p>
 
-The way we use `ArrayList`s is the same as we would use any other class. We create an instance of it, then we call methods (send messages) to ask it to modify itself or give us information.
 
-## How big is it?
 
-We've already seen the `size` method in use. It corresponds to `length` for an array.
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="initializing-an-empty-list">Initializing an Empty List</h2>
 
-To check whether an array is empty, we would compare its `length` to zero:
+<p>Unlike arrays, with lists we don’t have to set a size when we create an empty list.</p>
 
-```java
-if(myArray.length == 0) {
+<div float="right"><img src="./resources/newEmptyList.jpg" /></div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="mutable">Mutable</h2>
+
+<p>Unlike an array, a List is mutable, meaning that it does not have a fixed size and can increase or decrease in size.</p>
+
+<p>We can use the <mark>.Add()</mark> method to add elements to our list.</p>
+
+<div float="right"><img src="./resources/addToToyList.jpg" /></div>
+
+<div class="fragment">
+What did our `foreach` loop do?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="objects-like-any-other">Objects like any other</h2>
+
+<p>The way we use <code>ArrayList</code>s is the same as we would use any other class. We create an instance of it, then we call methods (send messages) to ask it to modify itself or give us information.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="how-big-is-it">How big is it?</h2>
+
+<p>We’ve already seen the <code>size</code> method in use. It corresponds to <code>length</code> for an array.</p>
+
+<p>To check whether an array is empty, we would compare its <code>length</code> to zero:</p>
+
+<pre><code class="language-java">if(myArray.length == 0) {
   System.out.println("I'm empty!");
 }
 </code></pre>
