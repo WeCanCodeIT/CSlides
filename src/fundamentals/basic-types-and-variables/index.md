@@ -2,6 +2,42 @@ title: Basic Types and Variables
 subtitle: •••
 theme: league
 
+## Lets Build on what we learned yesterday
+
+<div float="right"><img src="./resources/var1.png" /></div>
+
+- We have already build our first application, so lets open <mark>Hello World</mark> and build upon our success
+
+- Volunteer Time!!
+
+- Open Visual Studio
+
+- Select File > Open > Project Solution
+
+!SLIDE
+
+<div float="right"><img src="./resources/var2.png" /></div>
+
+- Select HelloWorld > Open
+
+## We should all be here!!
+
+<div float="right"><img src="./resources/var3.png" /></div>
+
+- Lets review a few things before we begin
+
+<div class="fragment">
+Question time: Where are classes defined in C#?
+</div>
+
+<div class="fragment">
+Question time: All C# programs must have what type of method?
+</div>
+
+<div class="fragment">
+Question time: What features indicate the beginning and ending of a segment of code, method, or class? 
+</div>
+
 ## It's a Value-Based Proposition
 
 We saw *literals* yesterday. In the statement:
@@ -14,165 +50,497 @@ Console.WriteLine("Hello, World!");
 
 ## Let's Not Be Literal
 
-In contrast, we have *variables*. In C#, a variable's *type* is defined, but its value can *vary* (thus the name).
+- In contrast, we have *variables*. In C#, a variable's *type* is defined, but its value can *vary* (thus the name).
+
+- Lets experiment
+
+- In our code we have <mark>Console.WriteLine("")</mark>
+
+- Lets declare a variable and assign it the value <mark>Hello, World!</mark>
+
+- Underneath <mark>Console.WriteLine("")</mark> lets insert the following code:
+
+<pre><code class="language-C# hljs">string message = "Hello World!";
+</code></pre>
+
+
+## We should all be here
+
+<div float="right"><img src="./resources/var4.png" /></div>
+
+- You may see a green wavy line underneath the variable name <mark>message</mark>
+
+- This line indicates we have created a variable that is not being used.
+
+- If you use your pointer and hover over the green line, Visual Studio will display a pop up message.
+
+- This message will describe the purpose of the green line, and in some cases offer a solution if the problem requires attention
+
+- We will discuss this tool Visual Studio provides for us at a later time.
+
+!SLIDE
+
+<div float="right"><img src="./resources/var5.png" /></div>
+
+- So lets discuss what we have done
+
+- We have declared a variable called <mark>message</mark>
+
+- The operating system has reserved an empty space in memory for our <mark>message</mark> variable
+
+- Next we assigned our <mark>string message</mark> a value of <mark>Hello World!</mark>
+
+
+## We should all be here
+
+<div float="right"><img src="./resources/var6.png" /></div>
+
+- Volunteer Time!!
 
 <div class="fragment">
-<p>Instead of:</p>
+Question time: We named our string variable <mark>message</mark>. Do you think we could have used any name we wanted?
+</div>
 
-<pre><code class="language-C# hljs">Console.WriteLine("Hello, World!");
+<div class="fragment">
+Question time: When we are creating variables, do you think using descriptive names would be important? If so why?
+</div>
+
+<div class="fragment">
+- Now lets append our code so we send the <mark>Console.WriteLine()</mark> and the contents of <mark>message</mark> to the Visual Studio console.
+</div>
+
+!SLIDE
+
+- Underneath <mark>string message = "Hello World!";</mark> lets insert the following code:
+
+<pre><code class="language-C# hljs">Console.WriteLine(message);
+</code></pre>
+
+- Lets see what our code should look like
+
+<div class="fragment">
+
+Question time: What output to the console do you think this line of code will produce? If any?
+</div>
+
+
+
+<div class="fragment">
+    <div float="right"><img src="./resources/var7.png" /></div>
+</div>
+
+
+## Run It!!
+
+- If you will notice there is a small <mark>asterick</mark> on the Program.cs page tab next to the words Program.cs.
+
+- This asterick is there to remind you the page has not been saved.
+
+- Before we select Start, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the Program.cs tab.
+
+- The asterick is no longer there, so we can proceed.
+
+- Select Start
+
+- You should see a blank screen pop-up and dissapear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
+
+## We should all be here
+
+<div float="right"><img src="./resources/var8.png" /></div>
+
+- Volunteer time!!
+
+- As we have just observed, variable allow us to store values.
+
+- We created a <mark>string</mark> variable, and assigned it a value of "Hello World!".
+
+
+<div class="fragment">
+Question time: Think about the name <mark>variable</mark>. What does the name imply?
+</div>
+
+<div class="fragment">
+It implys that the contents can vary. Lets use a cup as an example. We can create a cup(variable) and we can fill it with coffee(value) in the morning, then tea(value) at night.
+</div>
+
+
+## Variables are variable
+
+- So now that we know how flexible a variable can be, lets do an experiment.
+
+- Lets close our console window.
+
+<div class="fragment">
+Question time: We want to give our string variable <mark>message</mark> a new value. Any ideas on how we accomplish this daunting task?
+</div>
+
+<div class="fragment">
+Lets give it a try. Underneath <mark>Console.WriteLine(message);</mark>, insert the following code:
+</div>
+
+<div class="fragment">
+message = "I am Spartacus";
+</div>
+
+## We should all be here
+
+<div float="right"><img src="./resources/var9.png" /></div>
+
+- Now lets copy <mark>Console.WriteLine(message);</mark>, and paste it below <mark>message = "I am Spartacus";</mark>.
+
+<div class="fragment">
+Question time: What output to the console do you think this line of code will produce? If any?
+</div>
+
+## Very important information
+
+<div class="fragment">
+Question time: Why didn't we type the following when changing the value of <mark>message</mark>: 
+
+<pre><code class="language-C# hljs">string message = "I am Spartacus";
 </code></pre>
 </div>
 
 <div class="fragment">
-<p>I could have written…</p>
-<pre><code class="language-C# hljs">String message = "Hello, World!";
-Console.WriteLine(message);</code></pre>
+The first part of the command, on the left side of the <mark>=</mark> sign, <mark>string message</mark> declares a variable of type string, while the second part, on the right side of the <mark>=</mark> sign, Initializes the variable with a value.
 </div>
-
-## Variables are variable
-
-Variables store a value, but allow us to change the value that is stored.
-
-```java
-String message = "I am Sam";
-Console.WriteLine(message); // prints "I am Sam"
-
-message = "I am Spartacus";
-Console.WriteLine(message); // prints "I am Spartacus"
-```
-
-## Reusing Variables
-
-Notice that in the previous example, when we first used our `message` variable, we specified its type:
-
-<pre><code class="language-C# hljs" data-noescape><mark>String</mark> message = "I am Sam";
-Console.WriteLine(message);</code></pre>
 
 <div class="fragment">
-<p>When we reassigned its value, we didn't specify a type:</p>
-<pre><code class="language-C# hljs" data-noescape>message = "I am Spartacus";
-Console.WriteLine(message);</code></pre>
-
-That's because we had already <em>declared</em> the variable. We declare a variable only once.
+Once you declare a variable you cannot declare another variable with the same name. Using the type <mark>string</mark> tells Visual Studio you are declaring a new variable.
 </div>
 
-## Defining Variables
+## Run It!!
 
-When we do this:
-```C#
-String message = "I am Sam";
-```
+- Once again you will notice there is a small <mark>asterick</mark> on the Program.cs page tab next to the words Program.cs.
+
+- Before we select Start, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the Program.cs tab.
+
+- The asterick is no longer there, so we can proceed.
+
+- Select Start
+
+- You should see a blank screen pop-up and dissapear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
+
+
+## We should all be here
+
+<div float="right"><img src="./resources/var10.png" /></div>
+
+- Its time to understand why we recieved the results we see in the console.
+
+- Lets execute the program step by step the way Visual Studio does when you select Start
+
+## Step by step
+
+- Visual Studio looks in the <mark>Program Class</mark> for the <mark>main</mark> method.
+
+	- Visual Studio executes the code in the <mark>main</mark> method from top down.
+
+	<div class="fragment">
+	- Visual Studio executes <mark>Console.WriteLine("Hello World!")</mark>, and prints what to the console?
+	</div>
+
+	<div class="fragment">
+	- Visual Studio executes <mark>string message = "Hello World!";</mark>, and assigns the what value to what variable.
+	</div>
+
+	<div class="fragment">
+	- Visual Studio executes <mark>Console.WriteLine(message);</mark>, and print what value to the console?
+	</div>
+
+	<div class="fragment">
+	- Visual Studio executes <mark>message = "I am Spartacus";</mark>, and assigns the what value to what variable.
+	</div>
+
+	<div class="fragment">
+	- Visual Studio executes <mark>Console.WriteLine(message);</mark>, and print what value to the console?
+	</div>
+
+
+## Variable Naming Conventions
+
+- When we attended grade school, we learned the importance of correct punctuation, capitalization, and sentenace structure.
+
+- We learned we adhered to the standards we learned not because it was easier for us to write, but we learned it was important so other people can read what we wrote.
+
+- Coding is just another form of writing, and you will find has its own standards on how code should be written.
+
+- As with writing a paper in school, we adhere to writing standards in coding for the benifit of those who may read the code we have written.
+
+- The first standard we will tackle is called <mark>Naming Conventions</mark>
+
+- We will talk about naming conventions quite a bit. 
+
+- Lets take a look at our code, and cover some of the naming standards we have already used but now we can give them a name.
+
+!SLIDE
+
+<pre><code class="language-C#" data-noescape>namespace <mark>HelloWorld</mark>
+{
+    class <mark>Program</mark>
+    {
+        static void <mark>Main</mark>(string[] args)
+        {
+            Console.<mark>WriteLine</mark>("Hello World!");
+            string message = "Hello World!";
+            Console.<mark>WriteLine</mark>(message);
+            message = "I am Spartacus";
+            Console.<mark>WriteLine</mark>(message);
+        }
+    }
+}
+</code></pre>
+
+- If you look at the highlighted text in our code, you will see they all have one thing in commom. Can anyone tell the class to what I am referring?
+
+- Each highlighted word starts with the first letter in that word capitalized. 
+
+- If you look at the word <mark>WriteLine</mark>, you see its actually two words. You will also notice the first letter of each word is capitalized.
+
+- This naming convention is called <mark>PascalCase</mark>. Simply put the first letter in each word is capitalized.
+
+- In C# we would use PascalCase when we name the following: Classes and Methods. We will talk more about these later.
+
+!SLIDE
+
+- To better understand our next naming convention, we need to make a few changes and additions to our code.
+
+- Volunteer time!!
+
+- Look at the code below, and make the following highlighted changes and additions
+
+<pre><code class="language-C#" data-noescape>namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            string <mark>messageOne</mark> = "Hello World!";
+            Console.WriteLine(<mark>messageOne</mark>);
+            <mark>string messageTwo</mark> = "I am Spartacus";
+            Console.WriteLine(<mark>messageTwo</mark>);
+        }
+    }
+}
+</code></pre>
+## We should all be here
+
+<div float="right"><img src="./resources/var11.png" /></div>
+
+!SLIDE
+
+<pre><code class="language-C#" data-noescape>namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hello World!");
+            string <mark>messageOne</mark> = "Hello World!";
+            Console.WriteLine(<mark>messageOne</mark>);
+            string <mark>messageTwo</mark> = "I am Spartacus";
+            Console.WriteLine(<mark>messageTwo</mark>);
+        }
+    }
+}
+</code></pre>
+
+- If you look at the highlighted text in our code, you will see they all have one thing in commom. Can anyone tell the class to what I am referring?
+
+- Each highlighted word starts with the first letter in that word lowerCase and the beginning of the second word is upperCase. 
+
+- This naming convention is called <mark>camelCase</mark>. As stated the first letter in the first word lowerCase and the beginning of the second word and every subsequent word in upperCase. 
+
+- In C# we would use camelCase when we name the following: Variables and Method Arguments. We will talk more about these later.
+
+## Basic Data Types
+
+- There are two kinds of basic data types in C#
+
+- We refer to these to basic data types as <mark>value types</mark> and <mark>reference types</mark>. 
+
+- To better understand basic data types, we need to make a few changes and additions to our code.
+
+- Volunteer time!!
+
+!SLIDE
+
+- Look at the code below, and make the following highlighted changes and additions
+
+<pre><code class="language-C#" data-noescape>namespace HelloWorld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string messageOne = "Hello World!";
+            string messageTwo = "I am Spartacus";
+            <mark>int age = 35;
+            double height = 72.50;
+            float weight = 210.0284606f;
+            bool isGodLike = true;
+            char gender = 'M';
+            Console.WriteLine(messageOne);
+            Console.WriteLine(messageTwo);
+            Console.WriteLine(age);
+            Console.WriteLine(height);
+            Console.WriteLine(weight);
+            Console.WriteLine(isGodLike);
+            Console.WriteLine(gender);</mark>
+        }
+    }
+}
+</code></pre> 
+
+## We should all be here
+
+<div float="right"><img src="./resources/var12.png" /></div>
+
+## Value type variables
+
+- Value type variables contain their data whereas variables of reference types store references to their data.
+
+- We have already seen value type variables in the code we have written.
+
+- The highlighted variables list below are examples of value type variables. 
+
+<pre><code class="language-C#" data-noescape>
+        static void Main(string[] args)
+        {
+            string messageOne = "Hello World!";
+            string messageTwo = "I am Spartacus";
+            <mark>int age</mark> = 35;
+            <mark>double height</mark> = 72.50;
+            <mark>float weight</mark> = 210.0284606f;
+            <mark>bool isGodLike</mark> = true;
+            <mark>char gender</mark> = 'M';
+            Console.WriteLine(messageOne);
+            Console.WriteLine(messageTwo);
+            Console.WriteLine(age);
+            Console.WriteLine(height);
+            Console.WriteLine(weight);
+            Console.WriteLine(isGodLike);
+        }
+    }
+</code></pre> 
+
+## Integer value type variable
+
+- The value variable integer comes in five flavors, but we will focus on only three: short, int and long.
+
+- You might have guessed the name denotes the size of the integer. Your guess would be correct.
+
+- Integer(int) are whole numbers, and have following sizes and value ranges: 
+
+	- Short: size = 2 byte Value range = -32,768 to 32,767
+
+	- int:	 size = 2 or 4 bytes Value range = -32,768 to 32,767 or -2,147,483,648 to 2,147,483,647
+
+	- long:	 size = 4 bytes Value range = -2,147,483,648 to 2,147,483,647
+
+- Integers should not be used for precise calculations or calculations that require a decimal point.
 
 <div class="fragment">
-<p>We are really combining these two things:</p>
-<pre><code class="language-C# hljs">String message;
-message = "I am Sam";</code></pre>
+Question time: What situations when you are coding do you think an int would be the preferred data type?
 </div>
 
-## Declaring vs Initializing a Variable
+<div class="fragment">
+Question time: Which of the following is not a short: 45, 32,767, 8000, -32,769
+</div>
 
-We declare a variable by giving it a *type* and a *name*. That's what we did here:
+## Floating value type variables
 
-```C#
-String message;
-```
+- The Floating value type variable comes in three flavors, but we will focus on ony two: double and float.
 
-The variable's *type* is `String`. Its *name* is `message`.
+- When your code needs to perform precision arithmatic, or your code requires using exponetially large numbers a floating value type variable is your data type.
 
-## Initializing a variable
+- Floating value type variables use decimal places and have the following sizes, value ranges and precision.
 
-When we did this, we assigned a value of `"I am Sam"` to the variable. *Initializing* is only different than *assigning* a value in that we haven't assigned a value yet:
+	- Float:	size = 4 bytes Value range = 1.2E-38 to 3.4E+38 Precision = 6 decimal places
 
-<pre><code class="language-C# hljs" data-noescape>String message;
-<mark>message = "I am Sam";</mark></code></pre>
+	- Double:	size = 8 bytes Value range = 2.3E-308 to 1.7E+308 Precision = 15 decimal places
 
-# Variable Naming Conventions
-
-We will talk about naming conventions quite a bit. They're important, since they reduce the *cognitive load* of people that need to look at your code. (This person might be you.)
-
-Apart from constants (more on that later), we use `camelCase` to name variables. The first letter should be lowercase, and the first letter of each additional word in a variable's name should be uppercase:
-
-```C#
-String myVariable = "my variable's value";
-```
-
-Not (all lowercase):
-```C#
-String myvariable = "my variable's value";
-```
-
-Not (begins with a capital letter):
-```C#
-String MyVariable = "my variable's value";
-```
-
-# Basic Data Types
-
-There are two kinds of types in C#: value types and reference types. Variables of value types directly contain their data whereas variables of reference types store references to their data, the latter being known as objects. We will talk more about obects later in the course.
+<pre><code class="language-C#" data-noescape>
+        static void Main(string[] args)
+        {
+            string messageOne = "Hello World!";
+            string messageTwo = "I am Spartacus";
+            int age = 35;
+            <mark>double height</mark> = 72.50;
+            <mark>float weight</mark> = 210.0284606f;
+            bool isGodLike = true;
+            char gender = 'M';
+        }
+    }
+</code></pre> 
+ 
 ## Booleans
 
-A `boolean` variable holds either the value `true` or `false`, which is represented by a '1' for 'true' and '0' for 'false'.
+- A `boolean` value type variable holds either the value `true` or `false`, which is represented by a '1' for 'true' and '0' for 'false'.
 
-```java
-boolean writingCodeIsFun = true;// Is represented by a 1.
-boolean rootCanalsAreFun = false; // Is represented by a 0.
-```
-Question time: Are we using camelCase or PascalCase for our variable naming convention?
+<pre><code class="language-C#" data-noescape>
+        static void Main(string[] args)
+        {
+            string messageOne = "Hello World!";
+            string messageTwo = "I am Spartacus";
+            int age = 35;
+            double height = 72.50;
+            float weight = 210.0284606f;
+            <mark>bool isGodLike</mark> = true;
+            char gender = 'M';
+        }
+    }
+</code></pre> 
 
-## Integer Value Types
-
-There are three sizes of integer (whole number) types: `short`, `int`, and `long`. They vary in their maximum and minimum values. `short`s support a smaller range of values than `int` supports. `int` supports a smaller range of values than `long` supports. We use `int`s (short for "integer") for most practical purposes. We often see `long`s for things like database record ids since we may have a lot of records in a database.
-
-All of the following are valid:
-
-```C#
-short answerInt = 42;
-int answerInt = 42;
-long answerInt = 42;
-```
-Questions time: When do think we might use ints as coders?
-
-## Floating Point Value Types
-
-Floating point (numbers with decimal fractions) types are `float` and `double`. `double` is more precise than `float`.
-
-Let's try it. (Note that we append 'f' to the value for the float variable):
-
-```C#
-class FloatingPointDemo {
-
-	public static void main(String[] args) {
-		
-		double doubleValue = 2.16440330489723961032;
-		Console.WriteLine(doubleValue);
-		
-		float floatValue = 2.16440330489723961032f;
-		Console.WriteLine(floatValue);
-	}
-
-}
-```
-
-The values assigned to each variable are the same. Try it. What do you see?
-
-*Computers aren't as good at math as you thought, eh?*
-
-Questions time: When do you think as coders we might use Floating Points?
 
 ## Character Value Types
 
-The `char` type holds individual characters. We define `char` literals by using single apostrophes.
+- The `char` value type vairable holds individual characters. 
 
-```C#
-char myChar = 'a';
-```
+- We define `char` literals by using single apostrophes.
 
+<pre><code class="language-C#" data-noescape>
+        static void Main(string[] args)
+        {
+            string messageOne = "Hello World!";
+            string messageTwo = "I am Spartacus";
+            int age = 35;
+            double height = 72.50;
+            float weight = 210.0284606f;
+            bool isGodLike = true;
+            <mark>char gender</mark> = 'M';
+        }
+    }
+</code></pre> 
 
 ## String Referance Type
 
-Strings are Referance Types. We've seen examples of them. We denote their values with quotation marks:
+- Strings are Referance Types. 
 
-```C#
-String myDeclaration = "I can code";
-```
+- We've seen examples of them. 
+
+- We denote their values with quotation marks:
+
+<pre><code class="language-C#" data-noescape>
+        static void Main(string[] args)
+        {
+            <mark>string messageOne</mark> = "Hello World!";
+            <mark>string messageTwo</mark> = "I am Spartacus";
+            int age = 35;
+            double height = 72.50;
+            float weight = 210.0284606f;
+            bool isGodLike = true;
+            char gender = 'M';
+        }
+    }
+</code></pre> 
+
+<div class="fragment">
 Question time: What is the differance between "a" and 'a'?
+</div>
+
+## We should all be here!!
+
+<div float="right"><img src="./resources/var12.png" /></div>
+
