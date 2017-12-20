@@ -250,125 +250,18 @@ What result did you expect? What method that we've learned can we use to change 
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="order-is-important">Order is important</h2>
+<h2 id="loops-and-conditionals-with-lists">Loops and Conditionals with Lists</h2>
 
-<p>Arrays remember the order in which you <code>add</code> elements. Other types of collections don’t care so much, but order is one of the intrinsic properties of a list. Try running this code, then changing the order of the <code>add</code> calls and running it again:</p>
+<p>Just like an array, we can iterate through a list. Write out the following code:</p>
 
-<pre><code class="language-java">ArrayList&lt;String&gt; giantWords = new ArrayList&lt;String&gt;();
-giantWords.add("fee");
-giantWords.add("fie");
-giantWords.add("foe");
-System.out.println(myList);
-</code></pre>
+<div float="right"><img src="./resources/LoopAndConditionalWithList.jpg" /></div>
 
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="loopy-again">Loopy again</h2>
-
-<p>Like arrays, an <code>ArrayList</code> is <em>iterable</em>, so we can use the enhanced for loop with it:</p>
-<pre><code class="language-java">ArrayList&lt;String&gt; giantWords = new ArrayList&lt;String&gt;();
-giantWords.add("fee");
-giantWords.add("fie");
-giantWords.add("foe");
-
-for(String word: giantWords) {
-  System.out.print(word + "! ");
-}
-System.out.println();
-</code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="more-tools">More Tools</h2>
-
-<p><code>ArrayList</code> has a number of other useful methods. The examples assume our list was created like so:</p>
-
-<pre><code class="language-java">ArrayList&lt;String&gt; myThings = new ArrayList&lt;String&gt;();
-myThings.add("this");
-myThings.add("that");
-myThings.add("the other");
-</code></pre>
-
-<p>Here are some other methods we can use:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>method</th>
-      <th>example</th>
-      <th>what it does</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><code>clear()</code></td>
-      <td><code>myThings.clear();</code></td>
-      <td>removes all the elements</td>
-    </tr>
-    <tr>
-      <td><code>set(int index, String element)</code></td>
-      <td><code>myThings.set(1, "foo");</code></td>
-      <td>assigns “foo” to index 1, replacing “that”:<br />“this”, “foo”, “the other”</td>
-    </tr>
-    <tr>
-      <td><code>add(int index, String element)</code></td>
-      <td><code>myThings.add(1, "foo");</code></td>
-      <td>inserts “foo” at index 1, shifting the others down to make room:<br />“this”, “foo”, “that”, “the other”</td>
-    </tr>
-    <tr>
-      <td><code>remove(int index)</code></td>
-      <td><code>myThings.remove(1);</code></td>
-      <td>removes the element at index 1:<br />“this”, “the other”</td>
-    </tr>
-    <tr>
-      <td><code>remove(Object o)</code></td>
-      <td><code>myThings.remove("that");</code></td>
-      <td>removes the value from the list:<br />“this”, “the other”</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="exploring-arraylist">Exploring <code>ArrayList</code></h2>
-
-<p>As you move into exercises, you’ll be inclined to dig into the <code>ArrayList</code> class. You might not find what you expect. As part of the Collections framework, <code>ArrayList</code> is just one piece of the puzzle. You’ll find that some of the methods we’re using aren’t even <em>in</em> <code>ArrayList</code>!</p>
-
-<p>That’s because <code>java.util.ArrayList</code> <em>is a</em> specific type of <code>java.util.List</code>, which in turn <em>is a</em> type of <code>java.lang.Iterable</code>.</p>
-
-<p>This is called inheritance. <code>ArrayList</code> <em>inherits</em> from its parent class and interfaces. More on that later.</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="a-method-by-any-other-name">A method by any other name…</h2>
-
-<p>Notice the convention we’re seeing with methods. It’s a good one to follow when you create your own methods. Generally, a method should be doing something or giving us information, not both. It’s a good practice to use verbs for methods that do things, and nouns for methods that give us information. It is also common to see methods whose names start with <code>get</code> or <code>is</code> that give us information.</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="not-all-bad">Not all bad</h2>
-
-<p>When might we use an array rather than an <code>ArrayList</code>?</p>
+<div class="fragment">
+What is the logic behind this code?
+</div>
+<div class="fragment">
+Will we ever get to the `else` statement?
+</div>
 
 
 

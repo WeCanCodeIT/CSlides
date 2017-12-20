@@ -121,69 +121,18 @@ We can use methods inside of loops and conditionals. Write out the example below
 What result did you expect? What method that we've learned can we use to change the result?
 </div>
 
-## Order is important
+## Loops and Conditionals with Lists
 
-Arrays remember the order in which you `add` elements. Other types of collections don't care so much, but order is one of the intrinsic properties of a list. Try running this code, then changing the order of the `add` calls and running it again:
+Just like an array, we can iterate through a list. Write out the following code:
 
-```java
-ArrayList<String> giantWords = new ArrayList<String>();
-giantWords.add("fee");
-giantWords.add("fie");
-giantWords.add("foe");
-System.out.println(myList);
-```
+<div float="right"><img src="./resources/LoopAndConditionalWithList.jpg" /></div>
 
-## Loopy again
-
-Like arrays, an `ArrayList` is *iterable*, so we can use the enhanced for loop with it:
-```java
-ArrayList<String> giantWords = new ArrayList<String>();
-giantWords.add("fee");
-giantWords.add("fie");
-giantWords.add("foe");
-
-for(String word: giantWords) {
-  System.out.print(word + "! ");
-}
-System.out.println();
-```
-
-## More Tools
-
-`ArrayList` has a number of other useful methods. The examples assume our list was created like so:
-
-```java
-ArrayList<String> myThings = new ArrayList<String>();
-myThings.add("this");
-myThings.add("that");
-myThings.add("the other");
-```
-
-Here are some other methods we can use:
-
-|method			|example				|what it does
-|----------		|---------				|------------
-|`clear()`		|`myThings.clear();`	|removes all the elements
-|`set(int index, String element)`	|`myThings.set(1, "foo");`	|assigns "foo" to index 1, replacing "that":<br>"this", "foo", "the other"
-|`add(int index, String element)`	|`myThings.add(1, "foo");`	|inserts "foo" at index 1, shifting the others down to make room:<br>"this", "foo", "that", "the other"
-|`remove(int index)`	|`myThings.remove(1);`	|removes the element at index 1:<br>"this", "the other"
-|`remove(Object o)`		|`myThings.remove("that");`	|removes the value from the list:<br>"this", "the other"
-
-## Exploring `ArrayList`
-
-As you move into exercises, you'll be inclined to dig into the `ArrayList` class. You might not find what you expect. As part of the Collections framework, `ArrayList` is just one piece of the puzzle. You'll find that some of the methods we're using aren't even *in* `ArrayList`!
-
-That's because `java.util.ArrayList` *is a* specific type of `java.util.List`, which in turn *is a* type of `java.lang.Iterable`.
-
-This is called inheritance. `ArrayList` *inherits* from its parent class and interfaces. More on that later.
-
-## A method by any other name…
-
-Notice the convention we're seeing with methods. It's a good one to follow when you create your own methods. Generally, a method should be doing something or giving us information, not both. It's a good practice to use verbs for methods that do things, and nouns for methods that give us information. It is also common to see methods whose names start with `get` or `is` that give us information.
-
-## Not all bad
-
-When might we use an array rather than an `ArrayList`?
+<div class="fragment">
+What is the logic behind this code?
+</div>
+<div class="fragment">
+Will we ever get to the `else` statement?
+</div>
 
 ## Do It!
 
