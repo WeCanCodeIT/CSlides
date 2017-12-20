@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>ArrayLists - Less Pain == More Fun</title>
+		<title>Lists - Like Arrays, but Mutable!</title>
 
 		<meta name="description" content="- description not found -">
 		<meta name="author"      content="Your Name Here">
@@ -46,8 +46,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1 style="text-align: center">ArrayLists</h1>
-					<h3 style="text-align: center">Less Pain == More Fun</h3>
+					<h1 style="text-align: center">Lists</h1>
+					<h3 style="text-align: center">Like Arrays, but Mutable!</h3>
 					<div id="logo">
 						<img src="../../shared/images/wcci-logo.png">
 						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
@@ -58,13 +58,13 @@
         <section>
           
 <!-- _S9SLIDE_ -->
-<h1 id="alphabet-soup">Alphabet Soup</h1>
+<h1 id="data-collections">Data Collections</h1>
 
-<p>The <code>ArrayList</code> class is part of the Java Collections Framework (JCF) API, which real people generally call “Collections”. The JCF can be found in the <code>java.util</code> package.</p>
+<p>We have already seen one data collection type, an <code>array</code>. An <code>array</code> is a collection of values that have the same type, like <code>int</code> or <code>string</code>.</p>
 
-<p>But what is an API? That’s an Application Programming Interface. And that’s just a way of saying a bunch of types that you can (re)use. Think of APIs as tools in your toolbox.</p>
+<p>There are several types of data collections in C#, many of which you will see during the upcoming weeks and even more during final projects.</p>
 
-<p>We use <code>ArrayList</code> as a tool to make dealing with sequences of things easier. It offers us an abstraction to do away with fiddling about with arrays. We’re going to contrast using <code>ArrayList</code> with using arrays.</p>
+<p>Today, we will be talking about <code>Lists</code>.</p>
 
 
 
@@ -76,8 +76,9 @@
 
 <p>We can’t change the size of an array once we’ve created it. It will never grow or shrink. This array will always have a <code>length</code> of three:</p>
 
-<pre><code class="language-java">int[] myArray = {1, 2, 3};
-</code></pre>
+<p><code class="language-C#" data-noescape="">
+int[] myArray = {1, 2, 3};
+</code></p>
 
 <p>If I wanted to add an element to this array, I’d generally do something like this (but hopefully I’d use a loop):</p>
 

@@ -20,11 +20,11 @@ int[] myArray = {1, 2, 3};
 
 If I wanted to add an element to this array, I'd generally do something like this (but hopefully I'd use a loop):
 
-```java
+<code class="language-C#" data-noescape>
 int[] oldArray = myArray;
 
 myArray = new int[4];
-for(int index = 0; index < oldArray.length; index++) {
+for(int index = 0; index < oldArray.Length; index++) {
   myArray[index] = oldArray[index];
 }
 myArray[3] = 42;
@@ -32,41 +32,36 @@ myArray[3] = 42;
 
 We are forced to create a new array and assigned it to our `myArray` variable. Imagine if we needed to insert a new element in the middle? *Yuck!*
 
-## ArrayLists can grow and shrink
+## Lists can grow and shrink
 
 `ArrayList` is a standard class, so we create an *instance* of it just like any class we'd create:
-```java
-ArrayList<String> giantWords = new ArrayList<String>();
+```C#
+List<string> giantWords = new List<string>();
 giantWords.add("fee");
 giantWords.add("fie");
 giantWords.add("foe");
-System.out.println(giantWords);
-System.out.println("my list has " + giantWords.size() + " elements");
+foreach (string word in giantWords)
+{
+	Console.WriteLine(word);
+}
+Console.WriteLine("my list has " + giantWords.Count + " elements");
 
 giantWords.add("fum");
-System.out.println(giantWords);
-System.out.println("my list has " + giantWords.size() + " elements");
+foreach (string word in giantWords)
+{
+	Console.WriteLine(word);
+}
+Console.WriteLine("my list has " + giantWords.Count + " elements");
 ```
 
-I'm not even forced to specify the size! The `size` method tells me how big my list currently is.
+I'm not even forced to specify the size! The `Count` property tells me how big my list currently is.
 
-If you run this code, you'll also see that `ArrayList` also gives us a better `String` representation than arrays did. (It does this in its `toString` method. All classes have one.)
 
-Something there looks strange, though, eh?
+## Let's Start a New Project
 
-## Parameterized Types
+Create a new Console Application with the title "ToyStore"
 
-The syntax for our declaration and initialization probably looks a bit funky at first:
-
-```java
-ArrayList<String> giantWords = new ArrayList<String>();
-```
-
-One would read this as "an `ArrayList` of `Strings` named `myList`".
-
-`ArrayList` is a *parameterized type*. It requires us to specify a *type parameter*. Here, that type is `String`.
-
-What does this mean? When we declare an `ArrayList`, we also declare what type of things it will hold. We can only add `String`s to this `ArrayList`.
+<div float="right"><img src="./resources/createproject.jpeg" /></div>
 
 ## Primitives except when they ain't
 
