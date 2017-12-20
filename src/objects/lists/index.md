@@ -61,7 +61,7 @@ I'm not even forced to specify the size! The `Count` property tells me how big m
 
 Create a new Console Application with the title "ToyStore"
 
-<div float="right"><img src="./resources/createproject.jpeg" /></div>
+<div float="right"><img src="./resources/createproject.jpg" /></div>
 
 ## Primitives except when they ain't
 
