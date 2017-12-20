@@ -82,15 +82,14 @@ int[] myArray = {1, 2, 3};
 
 <p>If I wanted to add an element to this array, I’d generally do something like this (but hopefully I’d use a loop):</p>
 
-<p><code class="language-C#" data-noescape="">
-int[] oldArray = myArray;</code></p>
+<pre><code class="language-C#">int[] oldArray = myArray;
 
-<p>myArray = new int[4];
+myArray = new int[4];
 for(int index = 0; index &lt; oldArray.Length; index++) {
   myArray[index] = oldArray[index];
 }
 myArray[3] = 42;
-&lt;/code&gt;</p>
+</code></pre>
 
 <p>We are forced to create a new array and assigned it to our <code>myArray</code> variable. Imagine if we needed to insert a new element in the middle? <em>Yuck!</em></p>
 
@@ -170,32 +169,11 @@ What did our `foreach` loop do?
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="objects-like-any-other">Objects like any other</h2>
+<h2 id="printing-elements-in-a-list">Printing Elements in a List</h2>
 
-<p>The way we use <code>ArrayList</code>s is the same as we would use any other class. We create an instance of it, then we call methods (send messages) to ask it to modify itself or give us information.</p>
+<p>We saw what the <code>foreach</code> loop did in our previous slide. There is another way to print elements in a list using their indices.</p>
 
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="how-big-is-it">How big is it?</h2>
-
-<p>We’ve already seen the <code>size</code> method in use. It corresponds to <code>length</code> for an array.</p>
-
-<p>To check whether an array is empty, we would compare its <code>length</code> to zero:</p>
-
-<pre><code class="language-java">if(myArray.length == 0) {
-  System.out.println("I'm empty!");
-}
-</code></pre>
-
-<p>We can ask an <code>ArrayList</code> whether it’s empty:</p>
-<pre><code>ArrayList&lt;Integer&gt; answers = new ArrayList&lt;Integer&gt;();
-System.out.println("Are you out of answers? " + answers.isEmpty());
-</code></pre>
-<p>Try adding something to yours and see how the response changes.</p>
+<div float="right"><img src="./resources/PrintAtIndex.jpg" /></div>
 
 
 
@@ -203,29 +181,17 @@ System.out.println("Are you out of answers? " + answers.isEmpty());
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="do-you-have-one-of-these">Do you have one of these?</h2>
+<h2 id="objects-and-methods">Objects and Methods</h2>
 
-<p>If we wanted to check whether an array contained an element, we would iterate over it, checking each element:</p>
+<p>We will be talking a lot more about objects this week, but it is good for you to know that Lists are a type of object.</p>
 
-<pre><code class="language-java">String[] myTools = { "hammer", "shovel", "wrench" };
-for(String tool: myTools) {
-  if(tool.equals("hammer")) {
-    System.out.println("I have a hammer!");
-  }
-}
-</code></pre>
-
-<p><code>ArrayList</code> has a <code>contains</code> method for this:</p>
-
-<pre><code class="language-java">ArrayList&lt;String&gt; myTools = new ArrayList&lt;String&gt;();
-myTools.add("hammer");
-myTools.add("shovel");
-myTools.add("wrench");
-
-if(myTools.contains("hammer")) {
-  System.out.println("I have a hammer!");
-}
-</code></pre>
+<p>Lists have several built-in properties and methods, which we will go over now. Some of those are:</p>
+<ul>
+  <li>.Count</li>
+  <li>.Insert()</li>
+  <li>.Add()</li>
+  <li>.Remove()</li>
+</ul>
 
 
 
@@ -233,29 +199,50 @@ if(myTools.contains("hammer")) {
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="where-is-it">Where is it?</h2>
+<h2 id="count-and-remove">Count and Remove</h2>
 
-<p>If I want to know the index of an element in an array, it’s a bit painful:</p>
+<p>The .Count property is the List-version of the .Length property that is built in to arrays. .Count tells us the size of the list.</p>
 
-<pre><code class="language-java">String[] myTools = { "hammer", "shovel", "wrench" };
-for(int index = 0; index &lt; myTools.length; index++) {
-  if(myTools[index].equals("shovel")) {
-	  System.out.println("Shovel is element " + index);
-  }
-}
-</code></pre>
+<p>Write out the following code and share what you discover about .Remove().</p>
 
-<p>With an <code>ArrayList</code>, we have the <code>indexOf</code> method:</p>
+<div float="right"><img src="./resources/CountAndRemove.jpg" /></div>
 
-<pre><code class="language-java">ArrayList&lt;String&gt; myTools = new ArrayList&lt;String&gt;();
-myTools.add("hammer");
-myTools.add("shovel");
-myTools.add("wrench");
 
-System.out.println("Shovel is element " + myTools.indexOf("shovel"));
-</code></pre>
 
-<p><em>Look, ma! No curly brackets!</em></p>
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="insert">Insert</h2>
+
+<p>The .Insert() method allows us to put a new element in our list AND specify which index we want that element to go to. Take a look at the following code.</p>
+
+<div float="right"><img src="./resources/InsertMethod.jpg" /></div>
+
+<div class="fragment">
+What index is each element at?
+</div>
+<div class="fragment">
+Where did the elements originally at the indices of 0, 2, and 1 go?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="contains">Contains</h2>
+
+<p>Another built-in method with Lists is the .Contains() method. .Contains() checks for a value in a list and returns a boolean value.</p>
+
+<p>We can use methods inside of loops and conditionals. Write out the example below:</p>
+
+<div float="right"><img src="./resources/ConditionalAndContains.jpg" /></div>
+
+<div class="fragment">
+What result did you expect? What method that we've learned can we use to change the result?
+</div>
 
 
 

@@ -20,7 +20,7 @@ int[] myArray = {1, 2, 3};
 
 If I wanted to add an element to this array, I'd generally do something like this (but hopefully I'd use a loop):
 
-<code class="language-C#" data-noescape>
+```C#
 int[] oldArray = myArray;
 
 myArray = new int[4];
@@ -28,7 +28,7 @@ for(int index = 0; index < oldArray.Length; index++) {
   myArray[index] = oldArray[index];
 }
 myArray[3] = 42;
-</code>
+```
 
 We are forced to create a new array and assigned it to our `myArray` variable. Imagine if we needed to insert a new element in the middle? *Yuck!*
 
@@ -72,80 +72,54 @@ We can use the <mark>.Add()</mark> method to add elements to our list.
 What did our `foreach` loop do?
 </div>
 
-## Objects like any other
+## Printing Elements in a List
 
-The way we use `ArrayList`s is the same as we would use any other class. We create an instance of it, then we call methods (send messages) to ask it to modify itself or give us information.
+We saw what the `foreach` loop did in our previous slide. There is another way to print elements in a list using their indices.
 
-## How big is it?
+<div float="right"><img src="./resources/PrintAtIndex.jpg" /></div>
 
-We've already seen the `size` method in use. It corresponds to `length` for an array.
+## Objects and Methods
 
-To check whether an array is empty, we would compare its `length` to zero:
+We will be talking a lot more about objects this week, but it is good for you to know that Lists are a type of object.
 
-```java
-if(myArray.length == 0) {
-  System.out.println("I'm empty!");
-}
-```
+Lists have several built-in properties and methods, which we will go over now. Some of those are:
+ - .Count
+ - .Insert()
+ - .Add()
+ - .Remove()
 
-We can ask an `ArrayList` whether it's empty:
-```
-ArrayList<Integer> answers = new ArrayList<Integer>();
-System.out.println("Are you out of answers? " + answers.isEmpty());
-```
-Try adding something to yours and see how the response changes.
+## Count and Remove
 
-## Do you have one of these?
+The .Count property is the List-version of the .Length property that is built in to arrays. .Count tells us the size of the list.
 
-If we wanted to check whether an array contained an element, we would iterate over it, checking each element:
+Write out the following code and share what you discover about .Remove().
 
-```java
-String[] myTools = { "hammer", "shovel", "wrench" };
-for(String tool: myTools) {
-  if(tool.equals("hammer")) {
-    System.out.println("I have a hammer!");
-  }
-}
-```
+<div float="right"><img src="./resources/CountAndRemove.jpg" /></div>
 
-`ArrayList` has a `contains` method for this:
+## Insert
 
-```java
-ArrayList<String> myTools = new ArrayList<String>();
-myTools.add("hammer");
-myTools.add("shovel");
-myTools.add("wrench");
+The .Insert() method allows us to put a new element in our list AND specify which index we want that element to go to. Take a look at the following code.
 
-if(myTools.contains("hammer")) {
-  System.out.println("I have a hammer!");
-}
-```
+<div float="right"><img src="./resources/InsertMethod.jpg" /></div>
 
-## Where is it?
+<div class="fragment">
+What index is each element at?
+</div>
+<div class="fragment">
+Where did the elements originally at the indices of 0, 2, and 1 go?
+</div>
 
-If I want to know the index of an element in an array, it's a bit painful:
+## Contains
 
-```java
-String[] myTools = { "hammer", "shovel", "wrench" };
-for(int index = 0; index < myTools.length; index++) {
-  if(myTools[index].equals("shovel")) {
-	  System.out.println("Shovel is element " + index);
-  }
-}
-```
+Another built-in method with Lists is the .Contains() method. .Contains() checks for a value in a list and returns a boolean value.
 
-With an `ArrayList`, we have the `indexOf` method:
+We can use methods inside of loops and conditionals. Write out the example below:
 
-```java
-ArrayList<String> myTools = new ArrayList<String>();
-myTools.add("hammer");
-myTools.add("shovel");
-myTools.add("wrench");
+<div float="right"><img src="./resources/ConditionalAndContains.jpg" /></div>
 
-System.out.println("Shovel is element " + myTools.indexOf("shovel"));
-```
-
-*Look, ma! No curly brackets!*
+<div class="fragment">
+What result did you expect? What method that we've learned can we use to change the result?
+</div>
 
 ## Order is important
 
