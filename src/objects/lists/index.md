@@ -32,30 +32,6 @@ myArray[3] = 42;
 
 We are forced to create a new array and assigned it to our `myArray` variable. Imagine if we needed to insert a new element in the middle? *Yuck!*
 
-## Lists can grow and shrink
-
-`ArrayList` is a standard class, so we create an *instance* of it just like any class we'd create:
-```C#
-List<string> giantWords = new List<string>();
-giantWords.add("fee");
-giantWords.add("fie");
-giantWords.add("foe");
-foreach (string word in giantWords)
-{
-	Console.WriteLine(word);
-}
-Console.WriteLine("my list has " + giantWords.Count + " elements");
-
-giantWords.add("fum");
-foreach (string word in giantWords)
-{
-	Console.WriteLine(word);
-}
-Console.WriteLine("my list has " + giantWords.Count + " elements");
-```
-
-I'm not even forced to specify the size! The `Count` property tells me how big my list currently is.
-
 
 ## Let's Start a New Project
 
@@ -63,43 +39,29 @@ Create a new Console Application with the title "ToyStore"
 
 <div float="right"><img src="./resources/createproject.jpg" /></div>
 
-## Primitives except when they ain't
+## Array Review
 
-A limitation of these type parameters is that they can only be objects. We can't put primitives like `int`s into an `ArrayList`. Wouldn't get very far if we didn't have a workaround, would we?
+This is how we'd set up an array of toys at our toy store. Remember, arrays have a fixed size.
 
-For each of the primitive types, Java has a corresponding class to create full-fledged objects to represent that value. These are found in the `java.lang` package, like `String`, so we don't need `import` statements for them:
+<div float="right"><img src="./resources/toyarray.jpg" /></div>
 
-|primitive	|class
-|---------	|-----
-|boolean	|Boolean
-|char		|Character
-|int		|Integer
-|long		|Long
-|double		|Double
-|short		|Short
-|byte		|Byte
-|double		|Double
-|float		|Float
+## How To Initialize a List
 
-Remember our naming conventions? Classes start with an uppercase letter.
+A list is created with the <mark>new</mark> keyword, which we will see a lot more of soon!
 
-## That's starting to sound ugly!
+Create the following list.
 
-It's not as bad as you may think. Java does something called *autoboxing* to automatically convert between primitives and objects, so I can do this:
+<div float="right"><img src="./resources/toylist.jpg" /></div>
 
-```java
-ArrayList<Integer> answers = new ArrayList<Integer>();
-int ultimateAnswer = 42;
-answers.add(ultimateAnswer);
-answers.add(86);
+Notice the similarities and differences between creating a new List versus creating an array.
 
-System.out.println("The answers are: " + answers);
+## Mutable
 
-Integer asIntegerObject = ultimateAnswer;
-System.out.println("The ultimate answer is " + asIntegerObject);
-```
+Unlike an array, a List is mutable, meaning that it does not have a fixed size and can increase or decrease in size.
 
-When you need an object, Java will "box" your primitive. When you need a primitive, Java will "unbox" your object.
+We can use the <mark>.Add()</mark> method to add elements to our list.
+
+<div float="right"><img src="./resources/addToToyList.jpg" /></div>
 
 ## Objects like any other
 
