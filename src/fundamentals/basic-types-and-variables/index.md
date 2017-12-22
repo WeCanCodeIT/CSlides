@@ -6,7 +6,7 @@ theme: league
 
 <div float="right"><img src="./resources/var1.png" /></div>
 
-- We have already build our first application, so lets open <mark>Hello World</mark> and build upon our success
+- We have already started building our first application, so lets open <mark>Hello World</mark> and build upon our success
 
 - Volunteer Time!!
 
@@ -543,4 +543,40 @@ Question time: What is the differance between "a" and 'a'?
 ## We should all be here!!
 
 <div float="right"><img src="./resources/var12.png" /></div>
+
+## Run It!!
+
+- If you will notice there is a small <mark>asterick</mark> on the Program.cs page tab next to the words Program.cs.
+
+- This asterick is there to remind you the page has not been saved.
+
+- Before we select Start, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the Program.cs tab.
+
+- The asterick is no longer there, so we can proceed.
+
+- Select Start
+
+- You should see a blank screen pop-up and dissapear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
+
+## We should all be here!!
+
+<div float="right"><img src="./resources/var13.png" /></div>
+
+- Lets talk about what we see.
+
+## Time for some reflection
+
+- Now that we have learned about Basic Types and Variables, lets take a minute to answer any questions.
+
+- Lets go ahead and save our project, as we will continue building our project throughout the week.
+
+- I hope you have followed along, and you have sucessfully finshed the coding exercises throughout this lecture.
+
+- The project we are building will give you the experience and tools you need to sucessfully complete your weekend project.
+
+- If your code does not look and act like the code we in the lst slide, please get with one of your team mates and correct what issues you might have.
+
+- If you still have questions about anything we have covered, please do not hesitate to as one of the WCCI instructors.
+
+
 
