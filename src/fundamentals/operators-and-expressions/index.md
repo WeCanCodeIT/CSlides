@@ -366,9 +366,11 @@ int a = 25 int b = 15
 
 - We can use the operater <mark>++</mark> to increment by <mark>1</mark> or the operator <mark>--</mark> to decrement by <mark>1</mark>.
 
-- Lets make some changes to our code and see how it works.
+
 
 !SLIDE
+
+- Lets make some changes to our code and see how it works.
 
 - Add the following code under the last line on code in our project:
 
@@ -410,8 +412,6 @@ ageTwo-=2;
 --ageTwo;
 ```
 - Although we do not commonly use the last two increment and decrement examples, they can and will be useful. 
-
-- I would suggest experimenting with both during your coding practice.
 
 ## Equality operators
 
@@ -474,146 +474,83 @@ Question time: What value is returned with the following: ("pete" !> "PETE")? Wh
 <div class="fragment">
 Question time: What value is returned with the following: (5 <= 2)? Why? 
 </div>
-	
-!SLIDE
-
-If variable *a* holds 10 and variable *b* holds 15, then:
-
-|Operator|Operation|Description|Expression|Result
-|--------|---------|-----------|------------------|------
-|>|greater than|evaluates to true of the first operand is greater than the second operand|`a > b`|false
-|>=|greater than or equal to|evaluates to true of the first operand is greater than *or equal to* the second operand|`a >= b`<br>`a >= 10`|false<br>true
-|<|less than|evaluates to true of the first operand is less than the second operand|`a < b`|true
-|<=|less than or equal to|evaluates to true of the first operand is less than *or equal to* the second operand|`a <= b`<br>`a <= 10`|true<br>true
-
-## Write practice statements for the logical operators
-
-If variable *a* holds `true` and variable b holds `false`, then:
-
-|Operator|Operation|Description|Expression|Result
-|--------|---------|-----------|------------------|------
-|&&|conditional AND|evaluates to true if both operands are true;<br>otherwise, evaluates to false|`a && b`<br>`a && true`|false<br>true
-|&#124;&#124;|conditional OR|evaluates to true if either operand is true;<br>otherwise, evaluates to false|`a || b`<br>`b || false`|true<br>false
-
-% TODO TMI? Note that the conditional AND and OR are *short-circuit* operators.
-
-## Translating English to CSharp
-
-Let's translate English statements into C#. First, we'll do one together.
-
-Start by writing the statements as comments. Here's an example:
-
-```C#
-// Jessica is 23 years old.
-int jessicaAge = 23;
-
-// Sam is 47.
-int samAge = 47;
-
-// Jessica is younger than Sam.
-Console.WriteLine(jessicaAge < samAge);
-```
-
-## Let's break it down…
-
-### Defining a variable to hold Jessica's age:
-
-We need to create a variable to hold the age of Jessica. What should its type be?
-
-<p><code class="language-C# hljs"><span class="hljs-comment">// <span class="highlight">Jessica</span> is 23 <span class="highlight">years old</span>.</span></code></p>
 
 <div class="fragment">
-<p>Since we think of ages as whole numbers, we will use an <code>int</code>:</p>
-<code class="language-C# hljs"><span class="highlight"><span class="hljs-keyword ">int</span> jessicaAge</span></code>
+I would suggest experimenting with  the operators we have covered during your coding practice.
 </div>
 
-## Let's break it down…
 
-### Assigning a value for Jessica's age:
+## Logical operators
 
-The word "is" means equals. How do we represent assignment?
+- Finally last but not least let discuss the <mark>logical operators</mark>. <mark>&&</mark> and <mark>||</mark>.
 
-<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica <span class="highlight">is 23</span> years old.</span></code></p>
+- Whe an we make decisions in life, we commonly use the following language:
+
+	- I will goto the mall, if Mitchells and Brownstone are open.
+
+	- I will goto the mall, if Mitchells or Brownstone are open.
+
+- We use statements just like these to control the decision manking process in coding.
+
+- Lets rewrite these two statements in code.
+
+	- ("shopping" && "ice cream") The <mark>&&</mark> operator is comonly called the <mark>AND</mark>.
+
+	- ("hiking" `||` "beach") The <mark>||</mark> operator is comonly called the <mark>OR</mark>.
+
+## How about we take this one step further.
+
+- We can use these operators in conjunction with each other.
+
+- When we use logical operators we have to be careful to understand they have an order of operations.
+
+- The <mark>&&</mark> operator has presedence over the <mark>||</mark> operator.
+
+- Lets see an example.
+
+	- I will goto the mall, if Mitchells and Brownstone are open, or I will goto the beach if the Beachcomber or the Boardwalk or open.
+
+- Now lets rewrite in code. (("Mitchells" && "Brownstone") `||` ("Beachcomber" `||` "Boardwalk"))
+
+- So because of order of operations If Mitchells and the Brownstone are <mark>BOTH</mark> open we are going to the mall.
+
+- If Mitchells or the Brownstone are closed and <mark>EITHER</mark> the Beachcomber or the Boardwalk are open then its off to the beach.
 
 <div class="fragment">
-<p>If Jessica "is 23", then Jessica's age = 23:</p>
-<code class="language-C# hljs"><span class="hljs-keyword ">int</span> jessicaAge <span class="highlight">= <span class="hljs-number">23</span></span>;</code>
+Question time: What values will be returned when a logical operation is processed? 
 </div>
 
-## Let's break it down…
 
-### Comparing Jessica's and Sam's ages:
+## So lets put into code the following statements.
 
-To say Jessica *is younger than* Sam means we are comparing their ages. Which operator would we use to compare them?
+- Pair programming time!! 
 
-<code class="language-C# hljs"><span class="hljs-comment">// Jessica <span class="highlight">is younger than</span> Sam.</span></code>
+- Volunteer time!!
 
 <div class="fragment">
-<p>We use the "less than" relational operator to perform this comparison:</p>
-<code class="language-C# hljs">Console.WriteLine(jessicaAge <span class="highlight">&lt;</span> samAge);</code>
-</div>
-
-## Let's look at the syntax
-
-Single line comments start with `//`:
-
-<code class="language-C# hljs"><span class="hljs-comment"><span class="highlight">//</span> Jessica is 23 years old.</span><br>
-<span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span>;<br>
-<span class="hljs-comment"><span class="highlight">//</span> Sam is 47.</span><br>
-<span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span>;<br>
-<span class="hljs-comment"><span class="highlight">//</span> Jessica is younger than Sam.</span><br>
-Console.WriteLine(jessicaAge &lt; samAge);
-</code>
-
-## Let's look at the syntax
-
-Each statement ends with a semicolon. It acts like a period (.) in English at the end of a sentence.
-
-<code class="language-C# hljs"><span class="hljs-comment">// Jessica is 23 years old.</span><br>
-<span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span><span class="highlight">;</span><br>
-<span class="hljs-comment">// Sam is 47.</span><br>
-<span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span><span class="highlight">;</span><br>
-<span class="hljs-comment">// Jessica is younger than Sam.</span><br>
-Console.WriteLine(jessicaAge &lt; samAge)<span class="highlight">;</span>
-</code>
-
-The statement:
-
-```C#
-int jessicaAge = 23;
-```
-
-reads as "Jessica's age is 23."
-
-## Let's look at the syntax
-
-`Console.WriteLine` is a *method*, so it ends with a set of opening and closing parentheses:
-
-<code class="language-C# hljs">
-Console.WriteLine<span class="highlight">(</span>jessicaAge &lt; samAge<span class="highlight">)</span>;
-</code>
-
-<div class="fragment">
-<p>Inside the parentheses, we find the method <em>arguments</em>. For the <code>println</code> method, this is what we want to print. In this case, that's whether Jessica is younger than Sam:</p>
-<code class="language-C# hljs">
-Console.WriteLine(<span class="highlight">jessicaAge &lt; samAge</span>);
-</code>
-</div>
-
-## Your turn! Try translating these word problems into C#.
-
 - Lisa is cooking muffins. The recipe calls for 7 cups of sugar. She has already put in 2 cups. How many more cups does she need to put in?
+<div>
+
+<div class="fragment">
 - At a restaurant, Mike and his three friends decided to divide the bill evenly. If each person paid $13 then what was the total bill?
+<div>
+
+<div class="fragment">
 - How many packages of diapers can you buy with $40 if one package costs $8?
+<div>
+
+<div class="fragment">
 - Last Friday Trevon had $29. Over the weekend he received some money for cleaning the attic. He now has $41. How much money did he receive?
+<div>
+
+<div class="fragment">
 - Last week Julia ran 30 miles more than Pranav. Julia ran 47 miles. How many miles did Pranav run?
+<div>
+
+<div class="fragment">
 - How many boxes of envelopes can you buy with $12 if one box costs $3?
+<div>
+
+<div class="fragment">
 - After paying $5.12 for a salad, Norachai has $27.10. How much money did he have before buying the salad?
-
-## Just keep coding! Just keep coding!
-
-- 331 students went on a field trip. Six buses were filled and 7 students traveled in cars. How many students were in each bus?
-- Aliyah had $24 to spend on seven pencils. After buying them she had $10. How much did each pencil cost?
-- The sum of three consecutive numbers is 72. What is the smallest of these numbers?
-- The sum of three consecutive even numbers is 48. What is the smallest of these numbers?
-- Maria has boxes. She buys seven more. A week later, half of her boxes are destroyed in a fire, leaving her with 22 boxes. With how many did she start?
+<div>

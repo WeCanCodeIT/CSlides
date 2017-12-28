@@ -698,9 +698,6 @@ The modulus operator will have my useful benefits in coding, so make sure you un
   <li>
     <p>We can use the operater <mark>++</mark> to increment by <mark>1</mark> or the operator <mark>--</mark> to decrement by <mark>1</mark>.</p>
   </li>
-  <li>
-    <p>Lets make some changes to our code and see how it works.</p>
-  </li>
 </ul>
 
 
@@ -710,7 +707,12 @@ The modulus operator will have my useful benefits in coding, so make sure you un
           <!-- _S9SLIDE_  -->
 
 <ul>
-  <li>Add the following code under the last line on code in our project:</li>
+  <li>
+    <p>Lets make some changes to our code and see how it works.</p>
+  </li>
+  <li>
+    <p>Add the following code under the last line on code in our project:</p>
+  </li>
 </ul>
 
 <pre><code class="language-C#">ageTwo++;
@@ -777,12 +779,7 @@ ageTwo-=2;
 --ageTwo;
 </code></pre>
 <ul>
-  <li>
-    <p>Although we do not commonly use the last two increment and decrement examples, they can and will be useful.</p>
-  </li>
-  <li>
-    <p>I would suggest experimenting with both during your coding practice.</p>
-  </li>
+  <li>Although we do not commonly use the last two increment and decrement examples, they can and will be useful.</li>
 </ul>
 
 
@@ -845,7 +842,7 @@ ageTwo-=2;
     <p>We can also check for <mark>inequality</mark> with the <mark>inequality</mark> operator <mark>!=</mark>.</p>
   </li>
   <li>
-    <p>We will see plenty of examples in upcoming classes which will demonstrate how to use <mark>equality</mark> operators. For our purposes I will highlight a few examples.</p>
+    <p>We will see plenty of examples in upcoming classes which will demonstrate how to use <mark>inequality</mark> operators. For our purposes I will highlight a few examples.</p>
 
     <ul>
       <li>
@@ -900,268 +897,100 @@ ageTwo-=2;
       </li>
     </ul>
   </li>
+</ul>
+
+<div class="fragment">
+Question time: What value is returned with the following: ("pete" !&gt; "PETE")? Why? 
+</div>
+
+<div class="fragment">
+Question time: What value is returned with the following: (5 &lt;= 2)? Why? 
+</div>
+
+<div class="fragment">
+I would suggest experimenting with  the operators we have covered during your coding practice.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="logical-operators">Logical operators</h2>
+
+<ul>
   <li>
-    <p>Finally lets incorporate our <mark>!</mark> operator.</p>
+    <p>Finally last but not least let discuss the <mark>logical operators</mark>. <mark>&amp;&amp;</mark> and <mark>||</mark>.</p>
+  </li>
+  <li>
+    <p>Whe an we make decisions in life, we commonly use the following language:</p>
 
     <ul>
       <li>
-        <p>So <mark>a !&lt; b</mark> checks to see if <mark>a</mark> is not less than value <mark>b</mark>.</p>
+        <p>I will goto the mall, if Mitchells and Brownstone are open.</p>
       </li>
       <li>
-        <p>Likewise, <mark>a !&gt; b</mark> checks to see if <mark>a</mark> is not greater than value <mark>b</mark>.</p>
+        <p>I will goto the mall, if Mitchells or Brownstone are open.</p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>We use statements just like these to control the decision manking process in coding.</p>
+  </li>
+  <li>
+    <p>Lets rewrite these two statements in code.</p>
+
+    <ul>
+      <li>
+        <p>(“shopping” &amp;&amp; “ice cream”) The <mark>&amp;&amp;</mark> operator is comonly called the <mark>AND</mark>.</p>
+      </li>
+      <li>
+        <p>(“hiking” <code>||</code> “beach”) The <mark>||</mark> operator is comonly called the <mark>OR</mark>.</p>
       </li>
     </ul>
   </li>
 </ul>
 
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_  -->
-
-<p>If variable <em>a</em> holds 10 and variable <em>b</em> holds 15, then:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Operation</th>
-      <th>Description</th>
-      <th>Expression</th>
-      <th>Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&gt;</td>
-      <td>greater than</td>
-      <td>evaluates to true of the first operand is greater than the second operand</td>
-      <td><code>a &gt; b</code></td>
-      <td>false</td>
-    </tr>
-    <tr>
-      <td>&gt;=</td>
-      <td>greater than or equal to</td>
-      <td>evaluates to true of the first operand is greater than <em>or equal to</em> the second operand</td>
-      <td><code>a &gt;= b</code><br /><code>a &gt;= 10</code></td>
-      <td>false<br />true</td>
-    </tr>
-    <tr>
-      <td>&lt;</td>
-      <td>less than</td>
-      <td>evaluates to true of the first operand is less than the second operand</td>
-      <td><code>a &lt; b</code></td>
-      <td>true</td>
-    </tr>
-    <tr>
-      <td>&lt;=</td>
-      <td>less than or equal to</td>
-      <td>evaluates to true of the first operand is less than <em>or equal to</em> the second operand</td>
-      <td><code>a &lt;= b</code><br /><code>a &lt;= 10</code></td>
-      <td>true<br />true</td>
-    </tr>
-  </tbody>
-</table>
-
-
 
         </section>
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="write-practice-statements-for-the-logical-operators">Write practice statements for the logical operators</h2>
-
-<p>If variable <em>a</em> holds <code>true</code> and variable b holds <code>false</code>, then:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Operator</th>
-      <th>Operation</th>
-      <th>Description</th>
-      <th>Expression</th>
-      <th>Result</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>&amp;&amp;</td>
-      <td>conditional AND</td>
-      <td>evaluates to true if both operands are true;<br />otherwise, evaluates to false</td>
-      <td><code>a &amp;&amp; b</code><br /><code>a &amp;&amp; true</code></td>
-      <td>false<br />true</td>
-    </tr>
-    <tr>
-      <td>||</td>
-      <td>conditional OR</td>
-      <td>evaluates to true if either operand is true;<br />otherwise, evaluates to false</td>
-      <td><code>a || b</code><br /><code>b || false</code></td>
-      <td>true<br />false</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="translating-english-to-csharp">Translating English to CSharp</h2>
-
-<p>Let’s translate English statements into C#. First, we’ll do one together.</p>
-
-<p>Start by writing the statements as comments. Here’s an example:</p>
-
-<pre><code class="language-C#">// Jessica is 23 years old.
-int jessicaAge = 23;
-
-// Sam is 47.
-int samAge = 47;
-
-// Jessica is younger than Sam.
-Console.WriteLine(jessicaAge &lt; samAge);
-</code></pre>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-break-it-down">Let’s break it down…</h2>
-
-<h3 id="defining-a-variable-to-hold-jessicas-age">Defining a variable to hold Jessica’s age:</h3>
-
-<p>We need to create a variable to hold the age of Jessica. What should its type be?</p>
-
-<p><code class="language-C# hljs"><span class="hljs-comment">// <span class="highlight">Jessica</span> is 23 <span class="highlight">years old</span>.</span></code></p>
-
-<div class="fragment">
-<p>Since we think of ages as whole numbers, we will use an <code>int</code>:</p>
-<code class="language-C# hljs"><span class="highlight"><span class="hljs-keyword ">int</span> jessicaAge</span></code>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-break-it-down-1">Let’s break it down…</h2>
-
-<h3 id="assigning-a-value-for-jessicas-age">Assigning a value for Jessica’s age:</h3>
-
-<p>The word “is” means equals. How do we represent assignment?</p>
-
-<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica <span class="highlight">is 23</span> years old.</span></code></p>
-
-<div class="fragment">
-<p>If Jessica "is 23", then Jessica's age = 23:</p>
-<code class="language-C# hljs"><span class="hljs-keyword ">int</span> jessicaAge <span class="highlight">= <span class="hljs-number">23</span></span>;</code>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-break-it-down-2">Let’s break it down…</h2>
-
-<h3 id="comparing-jessicas-and-sams-ages">Comparing Jessica’s and Sam’s ages:</h3>
-
-<p>To say Jessica <em>is younger than</em> Sam means we are comparing their ages. Which operator would we use to compare them?</p>
-
-<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica <span class="highlight">is younger than</span> Sam.</span></code></p>
-
-<div class="fragment">
-<p>We use the "less than" relational operator to perform this comparison:</p>
-<code class="language-C# hljs">Console.WriteLine(jessicaAge <span class="highlight">&lt;</span> samAge);</code>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-look-at-the-syntax">Let’s look at the syntax</h2>
-
-<p>Single line comments start with <code>//</code>:</p>
-
-<p><code class="language-C# hljs"><span class="hljs-comment"><span class="highlight">//</span> Jessica is 23 years old.</span><br />
-<span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span>;<br />
-<span class="hljs-comment"><span class="highlight">//</span> Sam is 47.</span><br />
-<span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span>;<br />
-<span class="hljs-comment"><span class="highlight">//</span> Jessica is younger than Sam.</span><br />
-Console.WriteLine(jessicaAge &lt; samAge);
-</code></p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-look-at-the-syntax-1">Let’s look at the syntax</h2>
-
-<p>Each statement ends with a semicolon. It acts like a period (.) in English at the end of a sentence.</p>
-
-<p><code class="language-C# hljs"><span class="hljs-comment">// Jessica is 23 years old.</span><br />
-<span class="hljs-keyword">int</span> jessicaAge = <span class="hljs-number">23</span><span class="highlight">;</span><br />
-<span class="hljs-comment">// Sam is 47.</span><br />
-<span class="hljs-keyword">int</span> samAge = <span class="hljs-number">47</span><span class="highlight">;</span><br />
-<span class="hljs-comment">// Jessica is younger than Sam.</span><br />
-Console.WriteLine(jessicaAge &lt; samAge)<span class="highlight">;</span>
-</code></p>
-
-<p>The statement:</p>
-
-<pre><code class="language-C#">int jessicaAge = 23;
-</code></pre>
-
-<p>reads as “Jessica’s age is 23.”</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-look-at-the-syntax-2">Let’s look at the syntax</h2>
-
-<p><code>Console.WriteLine</code> is a <em>method</em>, so it ends with a set of opening and closing parentheses:</p>
-
-<p><code class="language-C# hljs">
-Console.WriteLine<span class="highlight">(</span>jessicaAge &lt; samAge<span class="highlight">)</span>;
-</code></p>
-
-<div class="fragment">
-<p>Inside the parentheses, we find the method <em>arguments</em>. For the <code>println</code> method, this is what we want to print. In this case, that's whether Jessica is younger than Sam:</p>
-<code class="language-C# hljs">
-Console.WriteLine(<span class="highlight">jessicaAge &lt; samAge</span>);
-</code>
-</div>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="your-turn-try-translating-these-word-problems-into-c">Your turn! Try translating these word problems into C#.</h2>
+<h2 id="how-about-we-take-this-one-step-further">How about we take this one step further.</h2>
 
 <ul>
-  <li>Lisa is cooking muffins. The recipe calls for 7 cups of sugar. She has already put in 2 cups. How many more cups does she need to put in?</li>
-  <li>At a restaurant, Mike and his three friends decided to divide the bill evenly. If each person paid $13 then what was the total bill?</li>
-  <li>How many packages of diapers can you buy with $40 if one package costs $8?</li>
-  <li>Last Friday Trevon had $29. Over the weekend he received some money for cleaning the attic. He now has $41. How much money did he receive?</li>
-  <li>Last week Julia ran 30 miles more than Pranav. Julia ran 47 miles. How many miles did Pranav run?</li>
-  <li>How many boxes of envelopes can you buy with $12 if one box costs $3?</li>
-  <li>After paying $5.12 for a salad, Norachai has $27.10. How much money did he have before buying the salad?</li>
+  <li>
+    <p>We can use these operators in conjunction with each other.</p>
+  </li>
+  <li>
+    <p>When we use logical operators we have to be careful to understand they have an order of operations.</p>
+  </li>
+  <li>
+    <p>The <mark>&amp;&amp;</mark> operator has presedence over the <mark>||</mark> operator.</p>
+  </li>
+  <li>
+    <p>Lets see an example.</p>
+
+    <ul>
+      <li>I will goto the mall, if Mitchells and Brownstone are open, or I will goto the beach if the Beachcomber or the Boardwalk or open.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Now lets rewrite in code. ((“Mitchells” &amp;&amp; “Brownstone”) <code>||</code> (“Beachcomber” <code>||</code> “Boardwalk”))</p>
+  </li>
+  <li>
+    <p>So because of order of operations If Mitchells and the Brownstone are <mark>BOTH</mark> open we are going to the mall.</p>
+  </li>
+  <li>
+    <p>If Mitchells or the Brownstone are closed and <mark>EITHER</mark> the Beachcomber or the Boardwalk are open then its off to the beach.</p>
+  </li>
 </ul>
+
+<div class="fragment">
+Question time: What values will be returned when a logical operation is processed? 
+</div>
 
 
 
@@ -1169,15 +998,45 @@ Console.WriteLine(<span class="highlight">jessicaAge &lt; samAge</span>);
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="just-keep-coding-just-keep-coding">Just keep coding! Just keep coding!</h2>
+<h2 id="so-lets-put-into-code-the-following-statements">So lets put into code the following statements.</h2>
 
 <ul>
-  <li>331 students went on a field trip. Six buses were filled and 7 students traveled in cars. How many students were in each bus?</li>
-  <li>Aliyah had $24 to spend on seven pencils. After buying them she had $10. How much did each pencil cost?</li>
-  <li>The sum of three consecutive numbers is 72. What is the smallest of these numbers?</li>
-  <li>The sum of three consecutive even numbers is 48. What is the smallest of these numbers?</li>
-  <li>Maria has boxes. She buys seven more. A week later, half of her boxes are destroyed in a fire, leaving her with 22 boxes. With how many did she start?</li>
+  <li>
+    <p>Pair programming time!!</p>
+  </li>
+  <li>
+    <p>Volunteer time!!</p>
+  </li>
 </ul>
+
+<div class="fragment">
+- Lisa is cooking muffins. The recipe calls for 7 cups of sugar. She has already put in 2 cups. How many more cups does she need to put in?
+<div>
+
+<div class="fragment">
+- At a restaurant, Mike and his three friends decided to divide the bill evenly. If each person paid $13 then what was the total bill?
+<div>
+
+<div class="fragment">
+- How many packages of diapers can you buy with $40 if one package costs $8?
+<div>
+
+<div class="fragment">
+- Last Friday Trevon had $29. Over the weekend he received some money for cleaning the attic. He now has $41. How much money did he receive?
+<div>
+
+<div class="fragment">
+- Last week Julia ran 30 miles more than Pranav. Julia ran 47 miles. How many miles did Pranav run?
+<div>
+
+<div class="fragment">
+- How many boxes of envelopes can you buy with $12 if one box costs $3?
+<div>
+
+<div class="fragment">
+- After paying $5.12 for a salad, Norachai has $27.10. How much money did he have before buying the salad?
+<div>
+</div></div></div></div></div></div></div></div></div></div></div></div></div></div>
 
         </section>
         
