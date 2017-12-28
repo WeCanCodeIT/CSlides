@@ -12,7 +12,34 @@ If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, S
 
 Abstraction allows us to use methods to manipulate a sequence of `char`s and create new `String`s.
 
-Today, we'll show you some of the ways that you can do that.
+## Clean, organized, commented code increases your success
+
+- Before we jump into our next lesson, lets revisit our Hello World project.
+
+- We are going to organize and comment our code.
+
+- Doing so will help us to keep track of our progress, understand what our code's function, and help in future development and troubleshooting.
+
+- Go ahead and open up Visual Studion > then open our Hello World project.
+
+!SLIDE
+
+- Volunteer time
+
+- Please make the following changes to your code
+
+<div float="center"><img src="./resources/str1.png" /></div>
+
+!SLIDE
+
+- Please make the following changes to your code
+
+<div float="right"><img src="./resources/str2.png" /></div>
+
+## The wonderful world of Strings
+
+
+
 
 ## Nothing to do with cats
 

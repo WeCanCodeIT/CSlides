@@ -413,7 +413,7 @@ ageTwo-=2;
 ```
 - Although we do not commonly use the last two increment and decrement examples, they can and will be useful. 
 
-## Equality operators
+## Value variable equality operators
 
 - We have seen how we use the <mark>=</mark> operator to assign a value to a variable.
 
