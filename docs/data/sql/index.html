@@ -1,0 +1,594 @@
+
+
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Introduction to SQL Queries - The Basics</title>
+
+		<meta name="description" content="- description not found -">
+		<meta name="author"      content="Your Name Here">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../../shared/css/reveal.css">
+		<link rel="stylesheet" href="../../shared/css/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../../shared/lib/css/zenburn.css">
+
+		<!-- WCCI style tweaks -->
+		<link rel="stylesheet" href="../../shared/css/wcci.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../../shared/css/print/pdf.css' : '../../shared/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1 style="text-align: center">Introduction to SQL Queries</h1>
+					<h3 style="text-align: center">The Basics</h3>
+					<div id="logo">
+						<img src="../../shared/images/wcci-logo.png">
+						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
+					</div>
+				</section>
+
+        
+        <section>
+          
+<!-- _S9SLIDE_ -->
+<h1 id="sql">SQL</h1>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="description">Description</h2>
+<ul>
+  <li>What is SQL?</li>
+  <li>What is a query?</li>
+</ul>
+
+<h3 id="taking-off-the-seat-belt-writing-sql-queries-instead-of-using-the-editor">Taking off the seat belt. Writing SQL Queries instead of using the editor.</h3>
+<p>You’ve used SSMS previously to create databases for your MVC database first project. Let’s review how we created tables there, added keys, and even selected from the table. What’s going on? Behind the scenes of SSMS, which is a GUI for SQL Server (the db), SQL Queries are hard at work for you. It’s time to learn how to write them yourselves.</p>
+
+<h3 id="sql-is-a-language">SQL is a language</h3>
+<p>SQL stands for Structured Query Language. It’s a language specific to getting information from databases like SQL Server. It’s pretty standard across relational DBs, so it is also used with MySQL, Oracle, and many more.</p>
+
+<h3 id="what-are-queries">What are queries?</h3>
+<p>A query is a question that is asked of a database.  This can include one table or many tables to find the answer.  We can create queries using SQL Server Management Studio (SSMS) and the Query Editor Window.  SSMS executes queries for each action it does, so when you’re clicking buttons and updating tables, you’re actually executing SQL queries in the background.  We are going to explain some of the queries that you will us most often when asking questions of databases.</p>
+
+<h3 id="show-it">Show It</h3>
+<ul>
+  <li>Let’s practice creating a database by hand. First open up SSMS and create a new database called QueryPractice.</li>
+  <li>
+    <p>To start a new query right click your new database and select “New Query”.</p>
+
+    <p><img src="/Images/ChangeDatabaseScreenShot.PNG" alt="New query" /></p>
+  </li>
+  <li>
+    <p>This opens a new Query Editor Window for us.</p>
+  </li>
+  <li>
+    <p>We can change the database we are working with using the drop down in the top left. 
+<img src="/Images/ChangeDatabaseScreenShot.PNG" alt="Database selector" /></p>
+
+    <p>Be sure your query editor window says QueryPractice.</p>
+  </li>
+  <li>We are able to enter our queries into this window. There are two way we can run our queries in this window.
+    <ul>
+      <li>Each time we hit the green “Execute” button, or we hit the F5 key it will run all SQL commands in our query window.</li>
+      <li>Another common way to execute queries is to select a line or lines that contain SQL commands and hit the green “Execute” button, or the F5 key. This will only run the selected lines. This can be useful if you have a number of different SQL commands, you don’t need to create a new query window for each new set of commands.
+        <ul>
+          <li>BUT, you need to be very careful to make sure you <em>ALWAYS</em> have something selected or else it will run every command in your query window.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Formatting SQL: SQL is non case sensitive, but it’s convention to write all the the SQL specific keywords in all uppercase. We can end our statements with a semicolon(;). They aren’t always required and our query will probably work without them, but it is the standard to include them. We can break our SQL into as many lines as we like, people like to format their SQL queries in different ways.</li>
+</ul>
+
+<h3 id="queries">Queries</h3>
+<ul>
+  <li>We’ll be creating a database to help track the menu items as a restaurant.</li>
+  <li>Lets start with a query to create a new table:</li>
+</ul>
+
+<h4 id="creating-a-table">Creating a table</h4>
+<pre><code class="language-SQL">CREATE TABLE MenuItem(
+    MenuItemID int IDENTITY(1,1) NOT NULL,
+    ItemName varchar(50) NOT NULL,
+    ItemDescription varchar(50) NULL,
+    Price float NULL,
+    CONSTRAINT PK_MenuID PRIMARY KEY CLUSTERED (MenuItemID)
+)
+</code></pre>
+<ul>
+  <li>
+    <p>You may notice the keywords CONSTRAINT and CLUSTERED, which may be new to you. A constraint in SQL specifies certain properties that the database data must comply with, like a set of rules. The CLUSTERED keyword means the records in the table are physically stored in a sorted manner.</p>
+  </li>
+  <li>
+    <p>Before you run the preceding query take some time to discuss the command with your neighbor. What looks the same? What looks different? Do you notice anything familiar?</p>
+  </li>
+  <li>
+    <p>Now, add the query into your query window and run. If everything ran successfully you should get the following message: <code>Command(s) completed successfully.</code></p>
+  </li>
+</ul>
+
+<h4 id="insert">INSERT</h4>
+<ul>
+  <li>
+    <p>Now that we have a table let’s insert some data into it. We can use the <code>INSERT</code> command to do that.</p>
+  </li>
+  <li>Before running the INSERT command take some time to review these commands. Take note at how we list each column we want to <em>insert</em> into, separated by commas. Then in the next section we list each of the values to be inserted into the columns.
+    <pre><code class="language-SQL">INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price]) VALUES ('Hamburger','Angus beef', 12.00);
+INSERT INTO MenuItem ([ItemName],[Price]) VALUES ('Salad',7.00);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price]) VALUES ('Cheese','Swiss', 5.00);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price]) VALUES ('Hamburger','Black Bean Burger', 8.00);
+</code></pre>
+  </li>
+  <li>After performing the operation you should see the following message: <code>(1 row(s) affected)</code>, once per insert statement.</li>
+</ul>
+
+<h3 id="select">SELECT</h3>
+
+<ul>
+  <li>Now that we have some info in the database how do we view it? Let’s start with the following SELECT statement</li>
+</ul>
+
+<pre><code class="language-SQL">SELECT * FROM MenuItem;
+</code></pre>
+
+<ul>
+  <li>
+    <p>It starts out with the SELECT keyword. The next part is the asterisk (*), this means we will pull back <em>all</em> columns for the table. Which table exactly? The FROM keyword is what we use to designate which table we’re selecting from. And FROM is followed with the table we’re selecting from. In this case its our <code>MenuItem</code> table.</p>
+  </li>
+  <li>
+    <p>How else can we select things? If we don’t need all columns, we can specify exactly which columns we want to pull information from. Here is how we select just the ItemName and the Price columns in the MenuItem table.</p>
+  </li>
+</ul>
+
+<pre><code class="language-SQL">SELECT ItemName,Price FROM MenuItem;
+</code></pre>
+
+<h3 id="do-it">Do It</h3>
+
+<ul>
+  <li>There’s a lot more we can do with select statements. Work together through the following queries:</li>
+</ul>
+
+<pre><code class="language-SQL">/*If we want to make sure we don't get any duplicates we can use DISTINCT*/
+SELECT DISTINCT ItemName FROM MenuItem;
+
+
+/*We can use COUNT to count the total number of records in a table. */
+SELECT COUNT(ItemName) FROM MenuItem;
+
+
+/*We can use COUNT with DISTINCT to make select unique values in a column */
+SELECT COUNT(DISTINCT ItemName) FROM MenuItem;
+
+
+/*We can use AVG to calculate the average value of a column*/
+SELECT AVG(Price) FROM MenuItem;
+
+
+/*WHERE lets us further define what we're selecting. We can use conditionals similar to an "if" statement in C#*/
+SELECT * FROM MenuItem WHERE ItemName = 'Hamburger';
+SELECT * FROM MenuItem WHERE MenuItemID = 1;
+
+/*It's also fairly common to see a SQL statement split up where each part is on a new line for readability*/
+SELECT * 
+FROM MenuItem 
+WHERE ItemName = 'Hamburger';
+
+
+/*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
+SELECT * FROM MenuItem WHERE ItemName != 'Hamburger';
+SELECT * FROM MenuItem WHERE ItemName &lt;&gt; 'Hamburger';
+
+
+/*We can compare using SELECT, just like in C#*/
+SELECT * FROM MenuItem WHERE Price &gt; 7;
+
+
+/*We can use the keyword AND to create range to compare with.*/
+SELECT * FROM MenuItem WHERE Price BETWEEN 7 AND 9;
+
+
+/*We can use ORDER BY and ASC to order our results in ascending order*/
+SELECT * FROM MenuItem ORDER BY Price ASC;
+
+
+/*We can also use ORDER BY and DESC to order our results in descending order*/
+SELECT * FROM MenuItem ORDER BY Price DESC;
+</code></pre>
+
+<h3 id="like">LIKE</h3>
+<ul>
+  <li>
+    <p>In SQL we might have a situation where we might want to search for something, but we don’t know exactly what we are looking for. We can use the keyword LIKE to include a wildcard character in our WHERE clauses. This allows us to match a partial string.</p>
+  </li>
+  <li>
+    <p>The wildcard character in SQL is the percentage sign %. We can use it like in the following example.</p>
+  </li>
+</ul>
+
+<pre><code class="language-SQL">/*Here we are using the LIKE and the wildcard character(%) to match the remainder of a string.*/
+SELECT * from MenuItem WHERE ItemName LIKE 'Ham%';
+
+
+/*Finally, we can combine everything we've learned in a query like the following. Have fun experimenting!*/
+SELECT AVG(Price) 
+FROM MenuItem
+WHERE ItemName LIKE 'Ham%';
+</code></pre>
+
+<h3 id="update">UPDATE</h3>
+<ul>
+  <li>We’ve learned how to insert data. What if we want to update the values? We have a lot of different ways of performing updates. The following update will find all the Hamburgers and change their price to 14.0.</li>
+</ul>
+
+<p>One key to remember about updates is that you <em>almost always</em> want to have a WHERE to specify criteria in your UPDATE statement, otherwise you will update the <em>entire table</em>!</p>
+
+<pre><code class="language-SQL">UPDATE MenuItem  
+    SET Price = 14.0  
+    WHERE ItemName = 'Hamburger';
+</code></pre>
+
+<h3 id="delete">DELETE</h3>
+<ul>
+  <li>We also have a DELETE keyword that removes data. We need to give it a condition, this is how it finds the data(rows) it should delete. NOTE: Be very careful with the DELETE command. There is no <em>undo</em>, so once the data is gone. It’s gone! So just remember to double check before you delete, and don’t leave any extra DELETE commands in your query window.</li>
+</ul>
+
+<pre><code class="language-SQL">DELETE FROM MenuItem
+WHERE ItemName = 'Hamburger';
+</code></pre>
+
+<h3 id="other-commands">Other commands</h3>
+<ul>
+  <li>There are many other SQL commands to learn but these are the most common. There are resources at the end of this page that point towards places to learn more about SQL commands.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+
+
+<h3 id="relationships">Relationships</h3>
+<ul>
+  <li>
+    <p>We know that Microsoft SQL Server is a <em>Relational</em> database. How can we define a foreign key relationship using SQL queries?</p>
+  </li>
+  <li>
+    <p>Before we begin we need to delete the table we’ve been using so far. Don’t worry, using SQL queries we can quickly, delete, recreate, and populate our databases and tables with information. To delete our table we can run the following command.</p>
+  </li>
+</ul>
+
+<pre><code class="language-SQL">DROP TABLE MenuItem;
+</code></pre>
+
+<ul>
+  <li>Now lets create a two new tables with a foreign key relationship. Take some time to study the following example before proceeding.
+```SQL
+CREATE TABLE Category(
+  CategoryID int IDENTITY(1,1) NOT NULL,
+  Name varchar(50) NOT NULL,
+  CONSTRAINT PK_CategoryID PRIMARY KEY CLUSTERED (CategoryID)</li>
+</ul>
+
+<p>);</p>
+
+<p>CREATE TABLE MenuItem(
+	MenuItemID int IDENTITY(1,1) NOT NULL,
+	ItemName varchar(50) NOT NULL,
+    ItemDescription varchar(50) NULL,
+    Price float NULL,
+    CategoryID int NOT NULL,
+	CONSTRAINT PK_MenuID PRIMARY KEY CLUSTERED (MenuItemID),
+    CONSTRAINT FK_PRODUCT foreign key (CategoryID) references Category(CategoryID)
+);</p>
+<pre><code>- Can you see the relationship between the two tables? 
+
+- We're almost ready to start using our new tables. Before we can use our MenuItem table, we need to add data into our Category table.
+
+```SQL
+INSERT INTO Category([Name]) VALUES ('Lunch');
+INSERT INTO Category ([Name]) VALUES ('Dinner');
+</code></pre>
+
+<ul>
+  <li>Now that we have at least one category we can add new menu items. Can you tell what’s different with these INSERT statements?
+```SQL
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Hamburger’,’Angus beef’, 12.00,2);
+INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES (‘Salad’,7.00,1);
+INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES (‘Salad’,8.00,2);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Ham and Cheese Sandwich’,’Black Forest Ham with Swiss Cheese’, 5.00,1);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Hamburger’,’Black Bean Burger’, 8.00,2);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Turkey and Cheese Sandwich’,’Smoked Turkey and American Cheese’, 5.00,1);</li>
+</ul>
+
+<pre><code>### Do It
+- Practice using different SQL commands to insert, update, delete and select rows from your table. Try calculating different values based on the information stored in your tables.
+
+---
+
+### Joins
+- Joins are a way for us to show related information in a single query. You can think about them like the linking tables we've used before. Joins allow us to pull data from multiple tables into one query using a common field between the related tables.  For example, in the tables we created above, there is a common field between them: CategoryID.  Having this field in both tables will allow us to JOIN the information in both tables in a single SELECT statement.
+
+- An INNER JOIN is the most common type of join. There are other types of joins as well, they all functional similarly but are used for asking slightly different types of questions.
+
+Using the database tables we created above, let's create a SELECT statement that joins the MenuItem table and the Category table together.  We can do this using the common field between the two tables: CategoryID.
+
+```SQL
+SELECT
+	Category.CategoryID
+	,Category.[Name]
+	,MenuItem.ItemName
+	,MenuItem.ItemDescription
+	,MenuItem.Price
+FROM MenuItem
+	INNER JOIN Category
+		ON MenuItem.CategoryID = Category.CategoryID
+</code></pre>
+
+<p>Notice first that when we list the fields that we want to select, we are doing it with the following format:</p>
+
+<p>[table name].[field name]</p>
+
+<p>The reason for this is if both tables have a field with the same name, we have to tell SQL which field to select.  If we do not do this, the query will not execute and you will see the following error:</p>
+
+<p>Ambiguous column name ‘CategoryID’.</p>
+
+<p>In this SELECT statement, you can see we use the keywords “INNER JOIN” and then specify the table name, Category.  We then have to tell SQL what field is common between the two tables using the “ON” keyword.  Finally, we specify the fields that contain the matching values using this format:</p>
+
+<p>[table name].[field name] = [table name].[field name]</p>
+
+<h3 id="do-it-1">Do It</h3>
+<ul>
+  <li>
+    <p>We will need to create a new database and load it with some pre-populated data. Create a new database called JoinPractice. Download the zip file from here: http://www.dofactory.com/sql/sample-database . Once you have downloaded and unzipped the SQL scripts, open them in SSMS.</p>
+  </li>
+  <li>
+    <p>Before running the scripts be sure that you are running each of them against our JoinPractice database, check the database drop down in the top left before running the scripts. First run the <code>sample-model.sql</code> to create the tables. Then run the <code>sample-data.sql</code> to populate it with data.</p>
+  </li>
+  <li>
+    <p>Now that we have a database full of information, what else can we ask? Try answering the following questions with your dataset. You may need to research additional features of SQL Server to answer some of these</p>
+    <ul>
+      <li>How many customers are there?</li>
+      <li>How many orders are there?</li>
+      <li>What is the most expensive order? (<em>HINT:</em> Research MAX)</li>
+      <li>How many suppliers are in each country? (<em>HINT:</em> Research GROUP BY)</li>
+      <li>Who is the highest spending customer? (<em>HINT:</em> Research SUM)</li>
+      <li>Which customer has the most orders?</li>
+      <li>What is the most expensive product?</li>
+      <li>
+        <p>What is the most popular order?</p>
+      </li>
+      <li>What other questions can you come up with to answer using this data set?</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="there-are-standard-behaviors-in-a-typical-rest-api">There are standard behaviors in a typical REST API</h2>
+
+<ul>
+  <li>Get all resources</li>
+  <li>Get an individual resource</li>
+  <li>Create or add new resource</li>
+  <li>Update/change a resource</li>
+  <li>Delete a resource</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="what-is-jpa">What is JPA</h2>
+
+<ul>
+  <li>Java Persistence API
+    <ul>
+      <li>Allows for <strong>Object-Relational Mapping (ORM)</strong></li>
+    </ul>
+  </li>
+  <li>Most databases that you are accessing are SQL</li>
+  <li><strong>SQL</strong> is a Relational Database</li>
+  <li>A <strong>Relational Database</strong> contains tables and keys</li>
+  <li>ORM lets you map entity classes to SQL tables</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="the-entity-class">The Entity Class</h2>
+
+<ul>
+  <li>The class that needs mapped to the database</li>
+  <li>Think of the member variables (instance data) as the columns</li>
+  <li>Think of the objects (class instances) as the rows</li>
+</ul>
+
+<p>Example:</p>
+
+<pre><code>  @Entity
+  public class CourseTopic {
+  
+  @Id
+  @GeneratedValue
+  private String id;
+  private String name;
+  private String description;
+
+</code></pre>
+<ul>
+  <li>with the <strong>@Entity</strong> annotation JPA knows to create a table called CourseTopic with 3 columns: id, name and description</li>
+  <li><strong>@Id</strong> tells the database where the primary key is</li>
+  <li>The annotations affect what is directly underneath, therefore attaching @Id to the String id member</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="the-process">The Process</h2>
+
+<ul>
+  <li>Step 1: Entity Mapping</li>
+  <li>Step 2: Find the class to connect to the database and run commands to access, save and retrieve data
+    <ul>
+      <li>No matter what your entity is, the structure will remain very similar (Standard operations)</li>
+    </ul>
+  </li>
+  <li>Step 3: Determine the key (link) for your database using the @Id annotation</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="the-crudrepository">The CrudRepository</h2>
+
+<ul>
+  <li>Contains the logic for an entity class</li>
+  <li>Each Entity class can create its own repository to extend the CrudRepository</li>
+  <li>CrudRepository Generic Type</li>
+  <li>CrudRepository&lt;Entity Class, Type for Key&gt;
+    <ul>
+      <li><strong>public interface TopicRepository extends CrudRepository&lt;CourseTopic,Long&gt;</strong></li>
+    </ul>
+  </li>
+  <li>You will now have access to all methods that come out of the box with CrudRepository
+    <ul>
+      <li>These methods will update
+        <ul>
+          <li>Get all resources</li>
+          <li>Get an individual resource</li>
+          <li>Create or add new resource</li>
+          <li>Update/change a resource</li>
+          <li>Delete a resource</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="one-to-many">One to Many</h2>
+
+<ul>
+  <li><strong>@OneToMany</strong> (mapped by “instructor”)</li>
+  <li>one Instructor can be tied into multiple CourseTopics</li>
+  <li>A course is then tied to a particular topic</li>
+  <li><strong>mapped by</strong> is the owning side of a bi-directional relationship</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="many-to-one">Many to One</h2>
+
+<ul>
+  <li><strong>@ManyToOne</strong></li>
+  <li>There can be many courses tied to one instructor</li>
+</ul>
+
+<style type="text/css">
+.reveal section img.logo {
+	border: none;
+	background-color: rgba(255, 255, 255, 0.25);
+	padding: 1rem;
+}
+.reveal ol, .reveal dl, .reveal ul {
+	margin: 0 0 1rem 2rem;
+}
+</style>
+
+
+        </section>
+        
+
+			</div>
+		</div>
+
+		<script src="../../shared/lib/js/head.min.js"></script>
+		<script src="../../shared/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				// I suspect there's a better way to do this...
+				width: 1920 * 0.8,
+				height: 1080,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../../shared/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../../shared/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../../shared/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../../shared/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../../shared/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
