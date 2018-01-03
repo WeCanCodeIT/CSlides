@@ -25,10 +25,14 @@ A query is a question that is asked of a database.  This can include one table o
     <div float="right"><img src="./resources/ChangeDatabaseScreenShot.jpg" /></div>
 - This opens a new Query Editor Window for us. 
 
+!SLIDE
+
 - We can change the database we are working with using the drop down in the top left. 
 <div float="right"><img src="./resources/ChangeDatabaseScreenShot.jpg" /></div>
 
     Be sure your query editor window says QueryPractice.
+
+!SLIDE
     
 - We are able to enter our queries into this window. There are two way we can run our queries in this window.
     - Each time we hit the green "Execute" button, or we hit the F5 key it will run all SQL commands in our query window.
@@ -81,6 +85,8 @@ SELECT * FROM MenuItem;
 
 - It starts out with the SELECT keyword. The next part is the asterisk (*), this means we will pull back _all_ columns for the table. Which table exactly? The FROM keyword is what we use to designate which table we're selecting from. And FROM is followed with the table we're selecting from. In this case its our `MenuItem` table.
 
+!SLIDE
+
 - How else can we select things? If we don't need all columns, we can specify exactly which columns we want to pull information from. Here is how we select just the ItemName and the Price columns in the MenuItem table.
 
 ```SQL
@@ -95,50 +101,78 @@ SELECT ItemName,Price FROM MenuItem;
 ```SQL
 /*If we want to make sure we don't get any duplicates we can use DISTINCT*/
 SELECT DISTINCT ItemName FROM MenuItem;
+```
 
+!SLIDE
 
+```SQL
 /*We can use COUNT to count the total number of records in a table. */
 SELECT COUNT(ItemName) FROM MenuItem;
+```
 
+!SLIDE
 
+```SQL
 /*We can use COUNT with DISTINCT to make select unique values in a column */
 SELECT COUNT(DISTINCT ItemName) FROM MenuItem;
+```
 
-## continued
+!SLIDE
 
+```SQL
 /*We can use AVG to calculate the average value of a column*/
 SELECT AVG(Price) FROM MenuItem;
+```
 
+!SLIDE
 
+```SQL
 /*WHERE lets us further define what we're selecting. We can use conditionals similar to an "if" statement in C#*/
 SELECT * FROM MenuItem WHERE ItemName = 'Hamburger';
 SELECT * FROM MenuItem WHERE MenuItemID = 1;
+```
 
+!SLIDE
+
+```SQL
 /*It's also fairly common to see a SQL statement split up where each part is on a new line for readability*/
 SELECT * 
 FROM MenuItem 
 WHERE ItemName = 'Hamburger';
+```
 
-## even more!
+!SLIDE
 
+```SQL
 /*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
 SELECT * FROM MenuItem WHERE ItemName != 'Hamburger';
 SELECT * FROM MenuItem WHERE ItemName <> 'Hamburger';
+```
 
+!SLIDE
 
+```SQL
 /*We can compare using SELECT, just like in C#*/
 SELECT * FROM MenuItem WHERE Price > 7;
+```
 
-## Other keywords
+!SLIDE
 
+```SQL
 /*We can use the keyword AND to create range to compare with.*/
 SELECT * FROM MenuItem WHERE Price BETWEEN 7 AND 9;
+```
 
+!SLIDE
 
+```SQL
 /*We can use ORDER BY and ASC to order our results in ascending order*/
 SELECT * FROM MenuItem ORDER BY Price ASC;
+```
 
+!SLIDE
 
+```SQL
 /*We can also use ORDER BY and DESC to order our results in descending order*/
 SELECT * FROM MenuItem ORDER BY Price DESC;
 ```
@@ -186,8 +220,6 @@ WHERE ItemName = 'Hamburger';
 
 - There are many other SQL commands to learn but these are the most common. There are resources at the end of this page that point towards places to learn more about SQL commands.
 
----
-
 ## Relationships
 
 - We know that Microsoft SQL Server is a _Relational_ database. How can we define a foreign key relationship using SQL queries?
@@ -197,8 +229,10 @@ WHERE ItemName = 'Hamburger';
 ```SQL
 DROP TABLE MenuItem;
 ```
+!SLIDE
 
 - Now lets create a two new tables with a foreign key relationship. Take some time to study the following example before proceeding.
+
 ```SQL
 CREATE TABLE Category(
 	CategoryID int IDENTITY(1,1) NOT NULL,
@@ -206,7 +240,11 @@ CREATE TABLE Category(
 	CONSTRAINT PK_CategoryID PRIMARY KEY CLUSTERED (CategoryID)
 
 );
+```
 
+!SLIDE
+
+```SQL
 CREATE TABLE MenuItem(
 	MenuItemID int IDENTITY(1,1) NOT NULL,
 	ItemName varchar(50) NOT NULL,
@@ -219,7 +257,7 @@ CREATE TABLE MenuItem(
 ```
 - Can you see the relationship between the two tables? 
 
-## continued
+!SLIDE
 
 - We're almost ready to start using our new tables. Before we can use our MenuItem table, we need to add data into our Category table.
 
@@ -229,6 +267,7 @@ INSERT INTO Category ([Name]) VALUES ('Dinner');
 ```
 
 - Now that we have at least one category we can add new menu items. Can you tell what's different with these INSERT statements?
+
 ```SQL
 INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES ('Hamburger','Angus beef', 12.00,2);
 INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES ('Salad',7.00,1);
@@ -243,57 +282,6 @@ INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES 
 - Practice using different SQL commands to insert, update, delete and select rows from your table. Try calculating different values based on the information stored in your tables.
 
 ---
-
-## Joins
-
-- Joins are a way for us to show related information in a single query. You can think about them like the linking tables we've used before. Joins allow us to pull data from multiple tables into one query using a common field between the related tables.  For example, in the tables we created above, there is a common field between them: CategoryID.  Having this field in both tables will allow us to JOIN the information in both tables in a single SELECT statement.
-
-- An INNER JOIN is the most common type of join. There are other types of joins as well, they all functional similarly but are used for asking slightly different types of questions.
-
-Using the database tables we created above, let's create a SELECT statement that joins the MenuItem table and the Category table together.  We can do this using the common field between the two tables: CategoryID.
-
-```SQL
-SELECT
-	Category.CategoryID
-	,Category.[Name]
-	,MenuItem.ItemName
-	,MenuItem.ItemDescription
-	,MenuItem.Price
-FROM MenuItem
-	INNER JOIN Category
-		ON MenuItem.CategoryID = Category.CategoryID
-```
-
-Notice first that when we list the fields that we want to select, we are doing it with the following format:
-
-[table name].[field name]
-
-The reason for this is if both tables have a field with the same name, we have to tell SQL which field to select.  If we do not do this, the query will not execute and you will see the following error:
-
-Ambiguous column name 'CategoryID'.
-
-In this SELECT statement, you can see we use the keywords "INNER JOIN" and then specify the table name, Category.  We then have to tell SQL what field is common between the two tables using the "ON" keyword.  Finally, we specify the fields that contain the matching values using this format:
-
-[table name].[field name] = [table name].[field name]
-
-
-## Do It
-
-- We will need to create a new database and load it with some pre-populated data. Create a new database called JoinPractice. Download the zip file from here: http://www.dofactory.com/sql/sample-database . Once you have downloaded and unzipped the SQL scripts, open them in SSMS. 
-
-- Before running the scripts be sure that you are running each of them against our JoinPractice database, check the database drop down in the top left before running the scripts. First run the `sample-model.sql` to create the tables. Then run the `sample-data.sql` to populate it with data.
-
-- Now that we have a database full of information, what else can we ask? Try answering the following questions with your dataset. You may need to research additional features of SQL Server to answer some of these
-    - How many customers are there?
-    - How many orders are there?
-    - What is the most expensive order? (_HINT:_ Research MAX)
-    - How many suppliers are in each country? (_HINT:_ Research GROUP BY)
-    - Who is the highest spending customer? (_HINT:_ Research SUM)
-    - Which customer has the most orders?
-    - What is the most expensive product?
-    - What is the most popular order?
-
-    - What other questions can you come up with to answer using this data set?
 
 
 

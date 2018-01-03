@@ -97,15 +97,28 @@
 
     <div float="right"><img src="./resources/ChangeDatabaseScreenShot.jpg" /></div>
   </li>
-  <li>
-    <p>This opens a new Query Editor Window for us.</p>
-  </li>
+  <li>This opens a new Query Editor Window for us.</li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
   <li>We can change the database we are working with using the drop down in the top left.</li>
 </ul>
 <div float="right"><img src="./resources/ChangeDatabaseScreenShot.jpg" /></div>
 
 <pre><code>Be sure your query editor window says QueryPractice.
 </code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
 
 <ul>
   <li>We are able to enter our queries into this window. There are two way we can run our queries in this window.
@@ -200,12 +213,17 @@ INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price]) VALUES ('Hamburger',
 </code></pre>
 
 <ul>
-  <li>
-    <p>It starts out with the SELECT keyword. The next part is the asterisk (*), this means we will pull back <em>all</em> columns for the table. Which table exactly? The FROM keyword is what we use to designate which table we’re selecting from. And FROM is followed with the table we’re selecting from. In this case its our <code>MenuItem</code> table.</p>
-  </li>
-  <li>
-    <p>How else can we select things? If we don’t need all columns, we can specify exactly which columns we want to pull information from. Here is how we select just the ItemName and the Price columns in the MenuItem table.</p>
-  </li>
+  <li>It starts out with the SELECT keyword. The next part is the asterisk (*), this means we will pull back <em>all</em> columns for the table. Which table exactly? The FROM keyword is what we use to designate which table we’re selecting from. And FROM is followed with the table we’re selecting from. In this case its our <code>MenuItem</code> table.</li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>How else can we select things? If we don’t need all columns, we can specify exactly which columns we want to pull information from. Here is how we select just the ItemName and the Price columns in the MenuItem table.</li>
 </ul>
 
 <pre><code class="language-SQL">SELECT ItemName,Price FROM MenuItem;
@@ -225,51 +243,109 @@ INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price]) VALUES ('Hamburger',
 
 <pre><code class="language-SQL">/*If we want to make sure we don't get any duplicates we can use DISTINCT*/
 SELECT DISTINCT ItemName FROM MenuItem;
+</code></pre>
 
 
-/*We can use COUNT to count the total number of records in a table. */
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can use COUNT to count the total number of records in a table. */
 SELECT COUNT(ItemName) FROM MenuItem;
+</code></pre>
 
 
-/*We can use COUNT with DISTINCT to make select unique values in a column */
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can use COUNT with DISTINCT to make select unique values in a column */
 SELECT COUNT(DISTINCT ItemName) FROM MenuItem;
+</code></pre>
 
-## continued
 
-/*We can use AVG to calculate the average value of a column*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can use AVG to calculate the average value of a column*/
 SELECT AVG(Price) FROM MenuItem;
+</code></pre>
 
 
-/*WHERE lets us further define what we're selecting. We can use conditionals similar to an "if" statement in C#*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*WHERE lets us further define what we're selecting. We can use conditionals similar to an "if" statement in C#*/
 SELECT * FROM MenuItem WHERE ItemName = 'Hamburger';
 SELECT * FROM MenuItem WHERE MenuItemID = 1;
+</code></pre>
 
-/*It's also fairly common to see a SQL statement split up where each part is on a new line for readability*/
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*It's also fairly common to see a SQL statement split up where each part is on a new line for readability*/
 SELECT * 
 FROM MenuItem 
 WHERE ItemName = 'Hamburger';
+</code></pre>
 
-## even more!
 
-/*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
 SELECT * FROM MenuItem WHERE ItemName != 'Hamburger';
 SELECT * FROM MenuItem WHERE ItemName &lt;&gt; 'Hamburger';
+</code></pre>
 
 
-/*We can compare using SELECT, just like in C#*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can compare using SELECT, just like in C#*/
 SELECT * FROM MenuItem WHERE Price &gt; 7;
+</code></pre>
 
-## Other keywords
 
-/*We can use the keyword AND to create range to compare with.*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can use the keyword AND to create range to compare with.*/
 SELECT * FROM MenuItem WHERE Price BETWEEN 7 AND 9;
+</code></pre>
 
 
-/*We can use ORDER BY and ASC to order our results in ascending order*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can use ORDER BY and ASC to order our results in ascending order*/
 SELECT * FROM MenuItem ORDER BY Price ASC;
+</code></pre>
 
 
-/*We can also use ORDER BY and DESC to order our results in descending order*/
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">/*We can also use ORDER BY and DESC to order our results in descending order*/
 SELECT * FROM MenuItem ORDER BY Price DESC;
 </code></pre>
 
@@ -353,14 +429,6 @@ WHERE ItemName = 'Hamburger';
         
         <section>
           <!-- _S9SLIDE_ -->
-
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
 <h2 id="relationships">Relationships</h2>
 
 <ul>
@@ -375,18 +443,31 @@ WHERE ItemName = 'Hamburger';
 <pre><code class="language-SQL">DROP TABLE MenuItem;
 </code></pre>
 
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
 <ul>
-  <li>Now lets create a two new tables with a foreign key relationship. Take some time to study the following example before proceeding.
-```SQL
-CREATE TABLE Category(
-  CategoryID int IDENTITY(1,1) NOT NULL,
-  Name varchar(50) NOT NULL,
-  CONSTRAINT PK_CategoryID PRIMARY KEY CLUSTERED (CategoryID)</li>
+  <li>Now lets create a two new tables with a foreign key relationship. Take some time to study the following example before proceeding.</li>
 </ul>
 
-<p>);</p>
+<pre><code class="language-SQL">CREATE TABLE Category(
+	CategoryID int IDENTITY(1,1) NOT NULL,
+	Name varchar(50) NOT NULL,
+	CONSTRAINT PK_CategoryID PRIMARY KEY CLUSTERED (CategoryID)
 
-<p>CREATE TABLE MenuItem(
+);
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<pre><code class="language-SQL">CREATE TABLE MenuItem(
 	MenuItemID int IDENTITY(1,1) NOT NULL,
 	ItemName varchar(50) NOT NULL,
     ItemDescription varchar(50) NULL,
@@ -394,67 +475,38 @@ CREATE TABLE Category(
     CategoryID int NOT NULL,
 	CONSTRAINT PK_MenuID PRIMARY KEY CLUSTERED (MenuItemID),
     CONSTRAINT FK_PRODUCT foreign key (CategoryID) references Category(CategoryID)
-);</p>
-<pre><code>- Can you see the relationship between the two tables? 
+);
+</code></pre>
+<ul>
+  <li>Can you see the relationship between the two tables?</li>
+</ul>
 
-## continued
 
-- We're almost ready to start using our new tables. Before we can use our MenuItem table, we need to add data into our Category table.
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
 
-```SQL
-INSERT INTO Category([Name]) VALUES ('Lunch');
+<ul>
+  <li>We’re almost ready to start using our new tables. Before we can use our MenuItem table, we need to add data into our Category table.</li>
+</ul>
+
+<pre><code class="language-SQL">INSERT INTO Category([Name]) VALUES ('Lunch');
 INSERT INTO Category ([Name]) VALUES ('Dinner');
 </code></pre>
 
 <ul>
-  <li>Now that we have at least one category we can add new menu items. Can you tell what’s different with these INSERT statements?
-```SQL
-INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Hamburger’,’Angus beef’, 12.00,2);
-INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES (‘Salad’,7.00,1);
-INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES (‘Salad’,8.00,2);
-INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Ham and Cheese Sandwich’,’Black Forest Ham with Swiss Cheese’, 5.00,1);
-INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Hamburger’,’Black Bean Burger’, 8.00,2);
-INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES (‘Turkey and Cheese Sandwich’,’Smoked Turkey and American Cheese’, 5.00,1);</li>
+  <li>Now that we have at least one category we can add new menu items. Can you tell what’s different with these INSERT statements?</li>
 </ul>
 
-<pre><code>## Do It
+<pre><code class="language-SQL">INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES ('Hamburger','Angus beef', 12.00,2);
+INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES ('Salad',7.00,1);
+INSERT INTO MenuItem ([ItemName],[Price],[CategoryID]) VALUES ('Salad',8.00,2);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES ('Ham and Cheese Sandwich','Black Forest Ham with Swiss Cheese', 5.00,1);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES ('Hamburger','Black Bean Burger', 8.00,2);
+INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES ('Turkey and Cheese Sandwich','Smoked Turkey and American Cheese', 5.00,1);
 
-- Practice using different SQL commands to insert, update, delete and select rows from your table. Try calculating different values based on the information stored in your tables.
-
----
-
-## Joins
-
-- Joins are a way for us to show related information in a single query. You can think about them like the linking tables we've used before. Joins allow us to pull data from multiple tables into one query using a common field between the related tables.  For example, in the tables we created above, there is a common field between them: CategoryID.  Having this field in both tables will allow us to JOIN the information in both tables in a single SELECT statement.
-
-- An INNER JOIN is the most common type of join. There are other types of joins as well, they all functional similarly but are used for asking slightly different types of questions.
-
-Using the database tables we created above, let's create a SELECT statement that joins the MenuItem table and the Category table together.  We can do this using the common field between the two tables: CategoryID.
-
-```SQL
-SELECT
-	Category.CategoryID
-	,Category.[Name]
-	,MenuItem.ItemName
-	,MenuItem.ItemDescription
-	,MenuItem.Price
-FROM MenuItem
-	INNER JOIN Category
-		ON MenuItem.CategoryID = Category.CategoryID
 </code></pre>
-
-<p>Notice first that when we list the fields that we want to select, we are doing it with the following format:</p>
-
-<p>[table name].[field name]</p>
-
-<p>The reason for this is if both tables have a field with the same name, we have to tell SQL which field to select.  If we do not do this, the query will not execute and you will see the following error:</p>
-
-<p>Ambiguous column name ‘CategoryID’.</p>
-
-<p>In this SELECT statement, you can see we use the keywords “INNER JOIN” and then specify the table name, Category.  We then have to tell SQL what field is common between the two tables using the “ON” keyword.  Finally, we specify the fields that contain the matching values using this format:</p>
-
-<p>[table name].[field name] = [table name].[field name]</p>
-
 
 
         </section>
@@ -464,29 +516,16 @@ FROM MenuItem
 <h2 id="do-it-1">Do It</h2>
 
 <ul>
-  <li>
-    <p>We will need to create a new database and load it with some pre-populated data. Create a new database called JoinPractice. Download the zip file from here: http://www.dofactory.com/sql/sample-database . Once you have downloaded and unzipped the SQL scripts, open them in SSMS.</p>
-  </li>
-  <li>
-    <p>Before running the scripts be sure that you are running each of them against our JoinPractice database, check the database drop down in the top left before running the scripts. First run the <code>sample-model.sql</code> to create the tables. Then run the <code>sample-data.sql</code> to populate it with data.</p>
-  </li>
-  <li>
-    <p>Now that we have a database full of information, what else can we ask? Try answering the following questions with your dataset. You may need to research additional features of SQL Server to answer some of these</p>
-    <ul>
-      <li>How many customers are there?</li>
-      <li>How many orders are there?</li>
-      <li>What is the most expensive order? (<em>HINT:</em> Research MAX)</li>
-      <li>How many suppliers are in each country? (<em>HINT:</em> Research GROUP BY)</li>
-      <li>Who is the highest spending customer? (<em>HINT:</em> Research SUM)</li>
-      <li>Which customer has the most orders?</li>
-      <li>What is the most expensive product?</li>
-      <li>
-        <p>What is the most popular order?</p>
-      </li>
-      <li>What other questions can you come up with to answer using this data set?</li>
-    </ul>
-  </li>
+  <li>Practice using different SQL commands to insert, update, delete and select rows from your table. Try calculating different values based on the information stored in your tables.</li>
 </ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+
 
 <style type="text/css">
 .reveal section img.logo {
