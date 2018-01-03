@@ -22,11 +22,11 @@ A query is a question that is asked of a database.  This can include one table o
 - Let's practice creating a database by hand. First open up SSMS and create a new database called QueryPractice.
 - To start a new query right click your new database and select "New Query". 
 
-    ![New query](/Images/ChangeDatabaseScreenShot.PNG)
+    <div float="right"><img src="./resources/ChangeDatabaseScreenShot.jpg" /></div>
 - This opens a new Query Editor Window for us. 
 
 - We can change the database we are working with using the drop down in the top left. 
-![Database selector](/Images/ChangeDatabaseScreenShot.PNG)
+<div float="right"><img src="./resources/ChangeDatabaseScreenShot.jpg" /></div>
 
     Be sure your query editor window says QueryPractice.
     
