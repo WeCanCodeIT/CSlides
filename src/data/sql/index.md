@@ -4,21 +4,21 @@ theme: league
 
 % TODO update screenshots for Windows UI
 
-# SQL
-## Description
-  - What is SQL?
-  - What is a query?
 
-### Taking off the seat belt. Writing SQL Queries instead of using the editor.
+## Taking off the seat belt. Writing SQL Queries instead of using the editor.
+
 You've used SSMS previously to create databases for your MVC database first project. Let's review how we created tables there, added keys, and even selected from the table. What's going on? Behind the scenes of SSMS, which is a GUI for SQL Server (the db), SQL Queries are hard at work for you. It's time to learn how to write them yourselves. 
 
-### SQL is a language
+## SQL is a language
+
 SQL stands for Structured Query Language. It's a language specific to getting information from databases like SQL Server. It's pretty standard across relational DBs, so it is also used with MySQL, Oracle, and many more. 
 
-### What are queries?
+## What are queries?
+
 A query is a question that is asked of a database.  This can include one table or many tables to find the answer.  We can create queries using SQL Server Management Studio (SSMS) and the Query Editor Window.  SSMS executes queries for each action it does, so when you're clicking buttons and updating tables, you're actually executing SQL queries in the background.  We are going to explain some of the queries that you will us most often when asking questions of databases.
 
-### Show It
+## Show It
+
 - Let's practice creating a database by hand. First open up SSMS and create a new database called QueryPractice.
 - To start a new query right click your new database and select "New Query". 
 
@@ -36,11 +36,13 @@ A query is a question that is asked of a database.  This can include one table o
         - BUT, you need to be very careful to make sure you _ALWAYS_ have something selected or else it will run every command in your query window.
 - Formatting SQL: SQL is non case sensitive, but it's convention to write all the the SQL specific keywords in all uppercase. We can end our statements with a semicolon(;). They aren't always required and our query will probably work without them, but it is the standard to include them. We can break our SQL into as many lines as we like, people like to format their SQL queries in different ways. 
 
-### Queries
+## Queries
+
 - We'll be creating a database to help track the menu items as a restaurant. 
 - Lets start with a query to create a new table:
 
-#### Creating a table
+## Creating a table
+
 ```SQL
 CREATE TABLE MenuItem(
     MenuItemID int IDENTITY(1,1) NOT NULL,
@@ -56,9 +58,9 @@ CREATE TABLE MenuItem(
 
 - Now, add the query into your query window and run. If everything ran successfully you should get the following message: `Command(s) completed successfully.`
 
-#### INSERT 
-- Now that we have a table let's insert some data into it. We can use the `INSERT` command to do that.
+## INSERT 
 
+- Now that we have a table let's insert some data into it. We can use the `INSERT` command to do that.
 
 - Before running the INSERT command take some time to review these commands. Take note at how we list each column we want to _insert_ into, separated by commas. Then in the next section we list each of the values to be inserted into the columns.
 ```SQL
@@ -69,7 +71,7 @@ INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price]) VALUES ('Hamburger',
 ```
 - After performing the operation you should see the following message: `(1 row(s) affected)`, once per insert statement.
 
-### SELECT
+## SELECT
 
 - Now that we have some info in the database how do we view it? Let's start with the following SELECT statement
 
@@ -85,7 +87,7 @@ SELECT * FROM MenuItem;
 SELECT ItemName,Price FROM MenuItem;
 ```
 
-### Do It
+## Do It
 
 - There's a lot more we can do with select statements. Work together through the following queries:
 
@@ -102,6 +104,7 @@ SELECT COUNT(ItemName) FROM MenuItem;
 /*We can use COUNT with DISTINCT to make select unique values in a column */
 SELECT COUNT(DISTINCT ItemName) FROM MenuItem;
 
+## continued
 
 /*We can use AVG to calculate the average value of a column*/
 SELECT AVG(Price) FROM MenuItem;
@@ -116,6 +119,7 @@ SELECT *
 FROM MenuItem 
 WHERE ItemName = 'Hamburger';
 
+## even more!
 
 /*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
 SELECT * FROM MenuItem WHERE ItemName != 'Hamburger';
@@ -125,6 +129,7 @@ SELECT * FROM MenuItem WHERE ItemName <> 'Hamburger';
 /*We can compare using SELECT, just like in C#*/
 SELECT * FROM MenuItem WHERE Price > 7;
 
+## Other keywords
 
 /*We can use the keyword AND to create range to compare with.*/
 SELECT * FROM MenuItem WHERE Price BETWEEN 7 AND 9;
@@ -138,7 +143,8 @@ SELECT * FROM MenuItem ORDER BY Price ASC;
 SELECT * FROM MenuItem ORDER BY Price DESC;
 ```
 
-### LIKE
+## LIKE
+
 - In SQL we might have a situation where we might want to search for something, but we don't know exactly what we are looking for. We can use the keyword LIKE to include a wildcard character in our WHERE clauses. This allows us to match a partial string.
 
 
@@ -155,7 +161,8 @@ FROM MenuItem
 WHERE ItemName LIKE 'Ham%';
  ```
 
-### UPDATE
+## UPDATE
+
 - We've learned how to insert data. What if we want to update the values? We have a lot of different ways of performing updates. The following update will find all the Hamburgers and change their price to 14.0.  
 
 One key to remember about updates is that you _almost always_ want to have a WHERE to specify criteria in your UPDATE statement, otherwise you will update the *entire table*!
@@ -166,7 +173,8 @@ UPDATE MenuItem
     WHERE ItemName = 'Hamburger';
 ```
 
-### DELETE
+## DELETE
+
 - We also have a DELETE keyword that removes data. We need to give it a condition, this is how it finds the data(rows) it should delete. NOTE: Be very careful with the DELETE command. There is no _undo_, so once the data is gone. It's gone! So just remember to double check before you delete, and don't leave any extra DELETE commands in your query window.
 
 ```SQL
@@ -174,12 +182,14 @@ DELETE FROM MenuItem
 WHERE ItemName = 'Hamburger';
 ```
 
-### Other commands
+## Other commands
+
 - There are many other SQL commands to learn but these are the most common. There are resources at the end of this page that point towards places to learn more about SQL commands.
 
 ---
 
-### Relationships
+## Relationships
+
 - We know that Microsoft SQL Server is a _Relational_ database. How can we define a foreign key relationship using SQL queries?
 
 - Before we begin we need to delete the table we've been using so far. Don't worry, using SQL queries we can quickly, delete, recreate, and populate our databases and tables with information. To delete our table we can run the following command.
@@ -209,6 +219,8 @@ CREATE TABLE MenuItem(
 ```
 - Can you see the relationship between the two tables? 
 
+## continued
+
 - We're almost ready to start using our new tables. Before we can use our MenuItem table, we need to add data into our Category table.
 
 ```SQL
@@ -226,12 +238,14 @@ INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES 
 INSERT INTO MenuItem ([ItemName],[ItemDescription],[Price],[CategoryID]) VALUES ('Turkey and Cheese Sandwich','Smoked Turkey and American Cheese', 5.00,1);
 
 ```
-### Do It
+## Do It
+
 - Practice using different SQL commands to insert, update, delete and select rows from your table. Try calculating different values based on the information stored in your tables.
 
 ---
 
-### Joins
+## Joins
+
 - Joins are a way for us to show related information in a single query. You can think about them like the linking tables we've used before. Joins allow us to pull data from multiple tables into one query using a common field between the related tables.  For example, in the tables we created above, there is a common field between them: CategoryID.  Having this field in both tables will allow us to JOIN the information in both tables in a single SELECT statement.
 
 - An INNER JOIN is the most common type of join. There are other types of joins as well, they all functional similarly but are used for asking slightly different types of questions.
@@ -263,7 +277,8 @@ In this SELECT statement, you can see we use the keywords "INNER JOIN" and then 
 [table name].[field name] = [table name].[field name]
 
 
-### Do It
+## Do It
+
 - We will need to create a new database and load it with some pre-populated data. Create a new database called JoinPractice. Download the zip file from here: http://www.dofactory.com/sql/sample-database . Once you have downloaded and unzipped the SQL scripts, open them in SSMS. 
 
 - Before running the scripts be sure that you are running each of them against our JoinPractice database, check the database drop down in the top left before running the scripts. First run the `sample-model.sql` to create the tables. Then run the `sample-data.sql` to populate it with data.
@@ -281,82 +296,7 @@ In this SELECT statement, you can see we use the keywords "INNER JOIN" and then 
     - What other questions can you come up with to answer using this data set?
 
 
-## There are standard behaviors in a typical REST API 
 
-- Get all resources
-- Get an individual resource 
-- Create or add new resource
-- Update/change a resource
-- Delete a resource
-
-## What is JPA
-
-- Java Persistence API
-  - Allows for **Object-Relational Mapping (ORM)**
-- Most databases that you are accessing are SQL
-- **SQL** is a Relational Database
-- A **Relational Database** contains tables and keys 
-- ORM lets you map entity classes to SQL tables
-
-## The Entity Class
-
-- The class that needs mapped to the database
-- Think of the member variables (instance data) as the columns
-- Think of the objects (class instances) as the rows 
-
-Example:
-
- ```
-  @Entity
-  public class CourseTopic {
-  
-  @Id
-  @GeneratedValue
-  private String id;
-  private String name;
-  private String description;
-
-```
-- with the **@Entity** annotation JPA knows to create a table called CourseTopic with 3 columns: id, name and description
-- **@Id** tells the database where the primary key is
-- The annotations affect what is directly underneath, therefore attaching @Id to the String id member
-
-## The Process
-
-- Step 1: Entity Mapping
-- Step 2: Find the class to connect to the database and run commands to access, save and retrieve data
-  - No matter what your entity is, the structure will remain very similar (Standard operations)
-- Step 3: Determine the key (link) for your database using the @Id annotation
-
-## The CrudRepository
-
-- Contains the logic for an entity class
-- Each Entity class can create its own repository to extend the CrudRepository
-- CrudRepository Generic Type
-- CrudRepository<Entity Class, Type for Key>
-  - **public interface TopicRepository extends CrudRepository<CourseTopic,Long>**
-- You will now have access to all methods that come out of the box with CrudRepository
-  - These methods will update
-    - Get all resources
-    - Get an individual resource 
-    - Create or add new resource
-    - Update/change a resource
-    - Delete a resource 
-
-## One to Many
-
-- **@OneToMany** (mapped by "instructor")
-- one Instructor can be tied into multiple CourseTopics
-- A course is then tied to a particular topic 
-- **mapped by** is the owning side of a bi-directional relationship
-
-## Many to One
-
-- **@ManyToOne**
-- There can be many courses tied to one instructor
-
-
-% TODO should move this after I've nailed it down
 
 <style type="text/css">
 .reveal section img.logo {
