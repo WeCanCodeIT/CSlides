@@ -273,15 +273,17 @@ theme: league
 
 - This page is you main GitHub profile page. We will spend some time in a future lesson updating this page.
 
-- You will notice a grid calendar which at this point has one green square present.
+- You will notice the <mark>Activity Grid</mark> which at this point has one green square present.
 
-- This <mark>Activity Grid</mark> will show prospective employers how much time you have spend coding. We will work to fill this grid with green squares.
+- This grid will show prospective employers how much time you have spend coding. We will work to fill this grid with green squares.
 
-- Going foward we will create a new repostiory for every project or website we develope. 
+
 
 ## In conclusion
 
 - We now have to foundation for saving our code and tracking code versions. 
+
+- Going foward we will create a new repostiory for every project or website we develope. 
 
 - Likewise, we also have the tools which will allow others to collaberate with us on our programs.
 
