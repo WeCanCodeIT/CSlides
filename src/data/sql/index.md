@@ -127,7 +127,8 @@ SELECT AVG(Price) FROM MenuItem;
 !SLIDE
 
 ```SQL
-/*WHERE lets us further define what we're selecting. We can use conditionals similar to an "if" statement in C#*/
+/*WHERE lets us further define what we're selecting.*/
+/* We can use conditionals similar to an "if" statement in C#*/
 SELECT * FROM MenuItem WHERE ItemName = 'Hamburger';
 SELECT * FROM MenuItem WHERE MenuItemID = 1;
 ```
@@ -135,7 +136,8 @@ SELECT * FROM MenuItem WHERE MenuItemID = 1;
 !SLIDE
 
 ```SQL
-/*It's also fairly common to see a SQL statement split up where each part is on a new line for readability*/
+/*It's also fairly common to see a SQL statement split up */
+/* where each part is on a new line for readability*/
 SELECT * 
 FROM MenuItem 
 WHERE ItemName = 'Hamburger';
@@ -144,7 +146,8 @@ WHERE ItemName = 'Hamburger';
 !SLIDE
 
 ```SQL
-/*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
+/*We can use WHERE to determine when things are not equal as well. */
+/* Both statements are equivalent, the second uses a SQL specific form*/
 SELECT * FROM MenuItem WHERE ItemName != 'Hamburger';
 SELECT * FROM MenuItem WHERE ItemName <> 'Hamburger';
 ```
@@ -173,7 +176,8 @@ SELECT * FROM MenuItem ORDER BY Price ASC;
 !SLIDE
 
 ```SQL
-/*We can also use ORDER BY and DESC to order our results in descending order*/
+/*We can also use ORDER BY and DESC to order */
+/*our results in descending order*/
 SELECT * FROM MenuItem ORDER BY Price DESC;
 ```
 
@@ -185,11 +189,13 @@ SELECT * FROM MenuItem ORDER BY Price DESC;
 - The wildcard character in SQL is the percentage sign %. We can use it like in the following example.
 
 ```SQL
-/*Here we are using the LIKE and the wildcard character(%) to match the remainder of a string.*/
+/*Here we are using the LIKE and the wildcard character(%) */
+/*to match the remainder of a string.*/
 SELECT * from MenuItem WHERE ItemName LIKE 'Ham%';
 
 
-/*Finally, we can combine everything we've learned in a query like the following. Have fun experimenting!*/
+/*Finally, we can combine everything we've learned in a query like */
+/*the following. Have fun experimenting!*/
 SELECT AVG(Price) 
 FROM MenuItem
 WHERE ItemName LIKE 'Ham%';

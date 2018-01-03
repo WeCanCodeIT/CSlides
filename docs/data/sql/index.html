@@ -281,7 +281,8 @@ SELECT AVG(Price) FROM MenuItem;
         <section>
           <!-- _S9SLIDE_  -->
 
-<pre><code class="language-SQL">/*WHERE lets us further define what we're selecting. We can use conditionals similar to an "if" statement in C#*/
+<pre><code class="language-SQL">/*WHERE lets us further define what we're selecting.*/
+/* We can use conditionals similar to an "if" statement in C#*/
 SELECT * FROM MenuItem WHERE ItemName = 'Hamburger';
 SELECT * FROM MenuItem WHERE MenuItemID = 1;
 </code></pre>
@@ -292,7 +293,8 @@ SELECT * FROM MenuItem WHERE MenuItemID = 1;
         <section>
           <!-- _S9SLIDE_  -->
 
-<pre><code class="language-SQL">/*It's also fairly common to see a SQL statement split up where each part is on a new line for readability*/
+<pre><code class="language-SQL">/*It's also fairly common to see a SQL statement split up */
+/* where each part is on a new line for readability*/
 SELECT * 
 FROM MenuItem 
 WHERE ItemName = 'Hamburger';
@@ -304,7 +306,8 @@ WHERE ItemName = 'Hamburger';
         <section>
           <!-- _S9SLIDE_  -->
 
-<pre><code class="language-SQL">/*We can use WHERE to determine when things are not equal as well. Both statements are equivalent, the second uses a SQL specific form*/
+<pre><code class="language-SQL">/*We can use WHERE to determine when things are not equal as well. */
+/* Both statements are equivalent, the second uses a SQL specific form*/
 SELECT * FROM MenuItem WHERE ItemName != 'Hamburger';
 SELECT * FROM MenuItem WHERE ItemName &lt;&gt; 'Hamburger';
 </code></pre>
@@ -345,7 +348,8 @@ SELECT * FROM MenuItem ORDER BY Price ASC;
         <section>
           <!-- _S9SLIDE_  -->
 
-<pre><code class="language-SQL">/*We can also use ORDER BY and DESC to order our results in descending order*/
+<pre><code class="language-SQL">/*We can also use ORDER BY and DESC to order */
+/*our results in descending order*/
 SELECT * FROM MenuItem ORDER BY Price DESC;
 </code></pre>
 
@@ -366,11 +370,13 @@ SELECT * FROM MenuItem ORDER BY Price DESC;
   </li>
 </ul>
 
-<pre><code class="language-SQL">/*Here we are using the LIKE and the wildcard character(%) to match the remainder of a string.*/
+<pre><code class="language-SQL">/*Here we are using the LIKE and the wildcard character(%) */
+/*to match the remainder of a string.*/
 SELECT * from MenuItem WHERE ItemName LIKE 'Ham%';
 
 
-/*Finally, we can combine everything we've learned in a query like the following. Have fun experimenting!*/
+/*Finally, we can combine everything we've learned in a query like */
+/*the following. Have fun experimenting!*/
 SELECT AVG(Price) 
 FROM MenuItem
 WHERE ItemName LIKE 'Ham%';
