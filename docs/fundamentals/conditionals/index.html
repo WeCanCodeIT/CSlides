@@ -72,7 +72,19 @@
           <!-- _S9SLIDE_ -->
 <h2 id="conditional-statements">Conditional Statements</h2>
 
-<p>Conditional statements are one of the ways that we control the flow of a program.</p>
+<div float="right"><img src="./resources/Cond1.png" /></div>
+
+<ul>
+  <li>
+    <p>Conditional statements are one of the ways that we control the flow of a program.</p>
+  </li>
+  <li>
+    <p>We control the flow by making decisions.</p>
+  </li>
+  <li>
+    <p>Lets walk through the flow control diagram above.</p>
+  </li>
+</ul>
 
 
 
@@ -80,7 +92,528 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="we-might-say">We might say…</h2>
+<h2 id="heros-fight-battles">Hero’s fight battles!!’</h2>
+
+<ul>
+  <li>
+    <p>Lets revisit or hero Spartacus in our Hello World program.</p>
+  </li>
+  <li>
+    <p>If its not already, open your <mark>HelloWorld</mark> program in Visual Studio.</p>
+  </li>
+  <li>
+    <p>Spartacus, like all heros, makes his living fighting battles.</p>
+  </li>
+  <li>
+    <p>We will use conditional statements to help our hero do the following:</p>
+
+    <ul>
+      <li>
+        <p>Choose which battle to fight</p>
+      </li>
+      <li>
+        <p>Choose the route to take</p>
+      </li>
+      <li>
+        <p>Choose how may soldiers to take into battle.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here">We should all be here</h2>
+
+<div float="right"><img src="./resources/Cond2.png" /></div>
+
+<ul>
+  <li>
+    <p>Volunteer time</p>
+  </li>
+  <li>
+    <p>Lets start by <mark>Commenting out</mark> part ten.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Question time: What are two of the methods we can use to comment code?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="decision-time">Decision time</h2>
+
+<ul>
+  <li>
+    <p>We need to give our hero some choices of what cities his army can fight the Roman empire.</p>
+  </li>
+  <li>
+    <p>Likewsie giving Spartacus options on which route he can take would be nice.</p>
+  </li>
+  <li>
+    <p>Lets start with the cities. We will write a scenerio is normal language, then convert it to code.</p>
+  </li>
+  <li>
+    <p>Spartacus has three cities from which to choose: Vesuvius, Nola, Nuceria.</p>
+  </li>
+  <li>
+    <p>The weather plays a huge part in when and where to fight battles, so the weather will dictate his choice of city.</p>
+  </li>
+  <li>
+    <p>If the weather is sunny Vesuvius, Spartacus will march his army to Vesuvius.</p>
+  </li>
+  <li>
+    <p>If the weather is raining in Vesuvius and Nuceria but sunny in Nola, then Nola is in play.</p>
+  </li>
+  <li>
+    <p>Finally, If it is raining in Vesuvius and Nola, but sunny in Nuceria, then Nuceria should expect a visit.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-experiment">Lets experiment</h2>
+
+<ul>
+  <li>
+    <p>When making decisions in coding one of the methods we commonly use is the <mark>if</mark> statements.</p>
+  </li>
+  <li>
+    <p>We can see how this corresponds with our story.</p>
+
+    <ul>
+      <li><mark>If</mark> the weather is sunny in central Italy, then Spartacus will march his army to Vesuvius.</li>
+    </ul>
+  </li>
+  <li>
+    <p>In order to write our first <mark>if</mark> statement we must refresh our memory on the <mark>equality</mark> operators we learned in a previous lecture.</p>
+  </li>
+  <li>
+    <p>I need two volunteers to come to the whiteboard and refresh our memories.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Question time: Do we need to create any variables to use in our <mark>if</mark> statement? If so what should they be?
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>
+    <p>After reading our story, we see we <mark>will</mark> need to declare some variables and assign them some values.</p>
+  </li>
+  <li>
+    <p>Spartacus has three cities from which to choose: Vesuvius, Nola, Nuceria.</p>
+  </li>
+  <li>
+    <p>Lets create three variables one for each city.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Question time: What type of variable should we use?
+</div>
+
+<div class="fragment">
+<p>Add the following code below part ten of your HelloWorld program:</p>
+<pre><code class="language-C#">
+//Part eleven conditional examples
+string city1 = "Vesuvius";
+string city2 = "Nola";
+string city3 = "Nuceria";
+</code></pre>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-whould-all-be-here">We whould all be here</h2>
+
+<div float="right"><img src="./resources/Cond3.png" /></div>
+
+<ul>
+  <li>
+    <p>In order to make the correct decision, Spartacus needs a weather report from each City.</p>
+  </li>
+  <li>
+    <p>We will have our program ask for the weather in each city.</p>
+  </li>
+  <li>
+    <p>Lets create three variables which will be assigned a weather value from the user.</p>
+  </li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<div class="fragment">
+<p>Add the following code below part ten of your HelloWorld program:</p>
+<pre><code class="language-C#">
+//Part eleven conditional examples
+string city1 = "Vesuvius";
+string city2 = "Nola";
+string city3 = "Nuceria";
+string Vesuvius;
+string Nola;
+string Nuceria;
+</code></pre>
+</div>
+
+<div class="fragment">
+Question time: What built in method does C# provide to recieve input from a user at the console?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="continue-building">Continue building</h2>
+
+<p>Add the following code below part ten of your HelloWorld program:</p>
+<pre><code class="language-C#">
+//Part eleven conditional examples
+string city1 = "Vesuvius";
+string city2 = "Nola";
+string city3 = "Nuceria";
+string vesuvius;
+string nola;
+string nuceria;
+
+//Solicit user input example
+Console.WriteLine("What is the weather in {0}?", city1);
+vesuvius = Console.ReadLine();
+Console.WriteLine("What is the weather in " + city2 + "?");
+nola = Console.ReadLine();
+Console.WriteLine("What is the weather in Nuceria?");
+nuceria = Console.ReadLine();
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-1">We should all be here</h2>
+
+<div float="right"><img src="./resources/Cond4.png" /></div>
+
+<ul>
+  <li>
+    <p>Now that we have some code we can test, lets use three temporary <mark>Console.WriteLines()</mark> to test our output.</p>
+  </li>
+  <li>
+    <p>I need two volunteers to write the correct code to test our output on the whiteboard.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="test-test-test-then-test-some-more">Test test test then test some more</h2>
+
+<p>Add the following code below part ten of your HelloWorld program:</p>
+<pre><code class="language-C#">
+//Part eleven conditional examples
+string city1 = "Vesuvius";
+string city2 = "Nola";
+string city3 = "Nuceria";
+string vesuvius;
+string nola;
+string nuceria;
+
+//Solicit user input example
+Console.WriteLine("What is the weather in {0}?", city1);
+vesuvius = Console.ReadLine();
+Console.WriteLine("What is the weather in " + city2 + "?");
+nola = Console.ReadLine();
+Console.WriteLine("What is the weather in Nuceria?");
+nuceria = Console.ReadLine();
+
+Console.WriteLine("The weather in {0} is {1}", city1, vesuvius);
+Console.WriteLine("The weather in " + city2 + " is " + nola);
+Console.WriteLine("The weather in Nuceria is " + nuceria);
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="execute-our-test">Execute our Test</h2>
+
+<ul>
+  <li>
+    <p>Place the following values when prompted:</p>
+
+    <ul>
+      <li>
+        <p>input1 = <mark>sunny</mark></p>
+      </li>
+      <li>
+        <p>input2 = <mark>raining</mark></p>
+      </li>
+      <li>
+        <p>input3 = <mark>raining</mark></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+<div class="fragment">
+<p>We should all be here</p>
+<div float="right"><img src="./resources/Cond5.png" /></div>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="so-where-will-spartacus-go">So where will Spartacus go!!</h2>
+
+<ul>
+  <li>
+    <p>Now that our code is tested and works as we expected, lets start buliding our decision logic.</p>
+  </li>
+  <li>
+    <p>Sart with the first statement: <mark>If</mark> the weather is sunny in Vesuvius, then Spartacus will march his army to Vesuvius.</p>
+  </li>
+</ul>
+
+<p>Make the following changes and additions to your code:</p>
+<pre><code class="language-C#" data-noescape="">
+//Solicit user input example
+Console.WriteLine("What is the weather in {0}?", city1);
+vesuvius = Console.ReadLine();
+Console.WriteLine("What is the weather in " + city2 + "?");
+nola = Console.ReadLine();
+Console.WriteLine("What is the weather in Nuceria?");
+nuceria = Console.ReadLine();
+
+<mark>if(vesuvius == "sunny"){
+	Console.WriteLine("We will march to Vesuvius");
+}</mark>
+</code></pre>
+
+<div class="fragment">
+Question time: What value is returned if vesuvius == "sunny"? Remember to think bool. What do you expect to happen if the statement is true?
+</div>
+
+<div class="fragment">
+Execute the program with the following values: sunny, sunny, sunny.
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-2">We should all be here</h2>
+
+<div float="right"><img src="./resources/Cond6.png" /></div>
+
+<ul>
+  <li>
+    <p>We know when the <mark>equality</mark> was executed its value was <mark>true</mark> so the code within the <mark>if</mark> statement was executed.</p>
+  </li>
+  <li>
+    <p>Lets include the next two cites and test our code with the following values: sunny, sunny sunny.</p>
+  </li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Make the following changes and additions to your code:</p>
+<pre><code class="language-C#" data-noescape="">
+
+if(vesuvius == "sunny"){
+	Console.WriteLine("We will march to Vesuvius");
+}
+<mark>if(nole == "sunny"){
+	Console.WriteLine("We will march to Vesuvius");
+}</mark>
+<mark>if(nuceria == "sunny"){
+	Console.WriteLine("We will march to Vesuvius");
+}</mark>
+</code></pre>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-3">We should all be here</h2>
+
+<div float="right"><img src="./resources/Cond7.png" /></div>
+
+<ul>
+  <li>
+    <p>Well his doesnt really help our hero, because according to our logic he is marching to all three cities.</p>
+  </li>
+  <li>
+    <p>In order to set him up for success, we need to include something else in our code to narrow down our choices.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Question time: What type of operator should we use to help us narrow down our choices?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="its-only-logical-captian-kirk">Its only logical Captian Kirk</h2>
+
+<ul>
+  <li>
+    <p>Because Spartacus has to make a decision based on the weather in three cities, we need to have three statments to test all three conditions.</p>
+  </li>
+  <li>
+    <p>We will use the <mark>logic</mark> operators <mark>&amp;&amp;</mark> and <mark>||</mark> to help us reach our goal.</p>
+  </li>
+  <li>
+    <p>Lets look back at our statments and see where our <mark>logical</mark> operators will come into play.</p>
+  </li>
+  <li>
+    <p>If the weather is sunny Vesuvius, Spartacus will march his army to Vesuvius.</p>
+  </li>
+  <li>
+    <p>This statement is telling Spartacus that if the sun is shining in Vesuvius, then he will march to Vesuvius. It doesnt matter what the weather is anywhere else.</p>
+  </li>
+</ul>
+<p>Would you agree this statement is fine? There is only one condition we need to meet.</p>
+<pre><code class="language-C#" data-noescape="">
+
+if(vesuvius == "sunny"){
+	Console.WriteLine("We will march to Vesuvius");
+}
+</code></pre>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>Now lets look at the second statement: If the weather is raining in Vesuvius and Nuceria but sunny in Nola, then Nola is in play.</li>
+</ul>
+
+<p>We could read this statement as follows:</p>
+<pre><code class="language-C#" data-noescape="">
+
+if(vesuvius == "raining") &amp;&amp; (nuceria == "raining") &amp;&amp; (nola == "sunny"){
+	Console.WriteLine("We will march to Nola");
+}
+if(vesuvius == "raining") &amp;&amp; (nuceria == "sunny") &amp;&amp; (nola == "raining"){
+	Console.WriteLine("We will march to Nuceria");
+}
+</code></pre>
+
+<ul>
+  <li>Is the two example we have used the <mark>&amp;&amp; or and</mark> operator to narrow down our options.</li>
+</ul>
+
+<div class="fragment">
+Question time: What does the &amp;&amp; operator tell each bool value of each equality operator must return?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="test-test-test-and-test-again">Test test test and test again</h2>
+
+<ul>
+  <li>Make the follwing additions to your code.</li>
+</ul>
+
+<p>Make the follwing additions to your code.</p>
+<pre><code class="language-C#" data-noescape="">
+if(vesuvius == "sunny"){
+	Console.WriteLine("We will march to Vesuvius");
+}
+if((vesuvius == "raining") &amp;&amp; (nuceria == "raining") &amp;&amp; (nola == "sunny")){
+	Console.WriteLine("We will march to Nola");
+}
+if((vesuvius == "raining") &amp;&amp; (nuceria == "sunny") &amp;&amp; (nola == "raining")){
+	Console.WriteLine("We will march to Nuceria");
+}
+</code></pre>
+
+<ul>
+  <li>Execute the program with the following input: sunny, sunny, sunny.</li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="we-should-all-be-here-4">We should all be here</h2>
+
+<div float="right"><img src="./resources/Cond8.png" /></div>
+
+<div class="fragment">
+Question time: Why did we get the answer we receieved?
+</div>
+
+<div class="fragment">
+Answer time: Because of the &amp;&amp; operator, all of the equalities must evalute to true or the code inside the if statement will not be executed.
+</div>
+
+<div class="fragment">
+Answer time: Although the two other cities were sunny which returned true, the two remaing equalities returned false.
+</div>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
 
 <p><em>If</em> I am 16 or older, <em>then</em> I can drive legally.</p>
 
@@ -101,7 +634,7 @@ Question time: What do think would happen if age == 15?
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="we-might-say-1">We might say…</h2>
+<h2 id="we-might-say">We might say…</h2>
 
 <p><em>If</em> I get eight or more hours of sleep, I am likely to feel more rested.</p>
 
