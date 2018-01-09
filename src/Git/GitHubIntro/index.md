@@ -12,19 +12,19 @@ theme: league
 
 - Understanding the GitHub process and its effective use is critical.
 
-- This lesson will learn the GitHub and GitBash process and the importance of version control. 
+- In this lesson we will learn the GitHub and GitBash process and the importance of version control. 
 
 ## Code version control
 
 <div float="right"><img src="./resources/Git2.png" /></div>
 
-- When you are developing software, you will almost certinaly be developing as part of a team.
+- When you are developing software, you will almost certainly be developing as part of a team.
 
-- Meaning you may have two or more developers add, deleting, creating and editing a project at the same time.
+- Meaning you may have two or more developers adding, deleting, creating and editing a project at the same time.
 
-- On a small project you might be able to track and keep up with changes, on larger project FORGET IT!
+- On a small project you might be able to track and keep up with changes, on a larger project - FORGET IT!
 
-- So lets learn how to use GitHub and GitBash. 
+- So let's learn how to use GitHub and GitBash. 
 
 - Volunteer time!!
 
@@ -46,7 +46,7 @@ theme: league
 	
 	- Potential employers WILL browse GitHub to review your work!!
 	
-	- You do not want your username and email to distract fromyour work in GitHub.
+	- You do not want your username and email to distract from your work in GitHub.
 	
 - Once you have selected a professional <mark>username</mark> and <mark>email</mark>, then enter a password.
 
@@ -72,7 +72,7 @@ theme: league
 
 - As our journey through this course continues, we will cover GitHub in greater detail.
 
-- Lets move on to GitBash
+- Let's move on to GitBash
 
 ## GitBash
 
@@ -84,17 +84,17 @@ theme: league
 
 	- Select Start > All Programs > Git > GitBash
 
-- If you are not using a WCCI laptop, please goto <mark>https://git-scm.com/downloads</mark> and download and install the latest version of GitBash.
+- If you are not using a WCCI laptop, please go to <mark>https://git-scm.com/downloads</mark> and download and install the latest version of GitBash.
 
 ## GitBash cont.
 
 <div float="right"><img src="./resources/Git8.png" /></div>
 
-- To navigate through GitBash, we use dos command line.
+- To navigate through GitBash, we use DOS command line.
 
 - We want to navigate to the folder in Visual Studio where our <mark>HelloWorld</mark> program resides.
 
-- Type the following: cd documents > cd Visual\ Studio\ 2015 > cd Projects > cd HelloWorld
+- Type the following: cd documents > cd Visual\ Studio\ 2017 > cd Projects > cd HelloWorld
 
 ## GitBash cont.
 
@@ -110,9 +110,9 @@ theme: league
 
 <div float="right"><img src="./resources/Git9.png" /></div>
 
-- When we intially create a project or website in Visual Studio we must use GitBash to <mark>initialize</mark> the local repository.
+- When we initially create a project or website in Visual Studio we must use GitBash to <mark>initialize</mark> the local repository.
 
-- We intialize the local project or webste repository by executing the following command at the root of the local repository in GitBash: <mark>git init</mark>.
+- We intialize the local project or website repository by executing the following command at the root of the local repository in GitBash: <mark>git init</mark>.
 
 - Next we must add a <mark>.gitignore</mark> file to the root of our local repository.
 
@@ -120,7 +120,7 @@ theme: league
 
 <div float="right"><img src="./resources/Git10.png" /></div>
 
-- The purpose of the .gitignore file is to allow you to ignore files that you never want to commit into a repository ie... editor backup files, build products or local configuration overrides.
+- The purpose of the .gitignore file is to allow you to ignore files that you never want to commit into a repository (ie... editor backup files, build products or local configuration overrides).
 
 - You can generate a .gitignore file by browsing to <mark>https://www.gitignore.io/</mark>
 
@@ -132,7 +132,7 @@ theme: league
 
 - Highlight and copy the entire contents of the web page that appears.
 
-- Goto your desktop, and create and open a new text file. Paste the contents of the .gitignore file into the new text file.
+- Go to your desktop, and create and open a new text file. Paste the contents of the .gitignore file into the new text file.
 
 - Save the file as <mark>.gitignore</mark>. Change <mark>file type</mark> to <mark>all files</mark>.
 
@@ -142,7 +142,7 @@ theme: league
 
 - You will now see a document on your desktop with no name. Keep this copy for future projects.
 
-- Make a copy of this file, and place it in the root of you <mark>HelloWorld</mark> local repository.
+- Make a copy of this file, and place it in the root of your <mark>HelloWorld</mark> local repository.
 
 ## GitBash cont.
 
@@ -158,7 +158,7 @@ theme: league
 
 - We add the files to be processed by typing the following commands in GitBash: <mark>git add .</mark> and pressing <mark>enter</mark>.
 
-- Now lets check the status of our <mark>git add .</mark> to see what files have been added
+- Now let's check the status of our <mark>git add .</mark> to see what files have been added
 
 ## GitBash cont.
 
@@ -175,7 +175,7 @@ theme: league
 
 <div float="right"><img src="./resources/Git16.png" /></div>
 
-- In order to link up our local <mark>HelloWorld<mark> repositry with GitHub, we must create a repositry in GitHub.
+- In order to link up our local <mark>HelloWorld<mark> repository with GitHub, we must create a repository in GitHub.
 
 - Use Chrome to open your home page in the GitHub account we just created.
 
@@ -183,7 +183,7 @@ theme: league
 
 <div float="right"><img src="./resources/Git17.png" /></div>
 
-- If you haven't already goto the email address you used to create you GitHub account, and verify your email address.
+- If you haven't already, go to the email address you used to create your GitHub account, and verify your email address.
 
 - In the upper right hand corner of the page, you will see a <mark>+</mark>.
 
@@ -195,7 +195,7 @@ theme: league
 
 - Give the new repository the same name as our local repository.
 
-- Although the description is optional, lets enter the following: <mark> My first C# program</mark>.
+- Although the description is optional, let's enter the following: <mark> My first C# program</mark>.
 
 - Finally select <mark>Create Repository</mark>.
 
@@ -213,13 +213,13 @@ theme: league
 
 <div float="right"><img src="./resources/Git19.png" /></div>
 
-- Return to your GitBash window, and enter the following command: <mark>git commit -m "Initial Commit"
+- Return to your GitBash window, and enter the following command: <mark>git commit -m "Initial Commit"</mark>
 
 - The <mark>-m</mark> tells GitBash we are including a message in our commit.
 
 - When we <mark>commit</mark>, we are adding files to be tracked by GitBash and GitHub. 
 
-- We will use this command everytime we make changes to our program. Including a message help us keep track of what was changed in GitHub.
+- We will use this command every time we make changes to our program, thereby including a message help us keep track of what was changed in GitHub.
 
 ## GitBash/GitHub cont.
 
@@ -227,7 +227,7 @@ theme: league
 
 - Press <mark>enter</mark>.
 
-- Now GitBash is setup to track the changes we make to our code.
+- Now GitBash is set up to track the changes we make to our code.
 
 - Because we are the only ones who currently have acccess to the project, we need to <mark>push</mark> our code to the GitHub repository.
 
@@ -235,11 +235,11 @@ theme: league
 
 <div float="right"><img src="./resources/Git21.png" /></div>
 
-- In your GitBash window, enter the following command: <mark>git remote add origin https://github.com/WCCIStudent/HelloWorld.git </mark>
+- In your GitBash window, enter the following command: <mark>git remote add origin https://github.com/WCCIStudent/HelloWorld.git </mark> (where "WCCIStudent" is your GitHub username)
 
 - You can copy and paste this directly from GitHub to you GitBash window and press <mark>enter</mark>.
 
-- Now that we have set up a relatioship between the local repository on your desktop and your GitHub repository, lets do our first push.
+- Now that we have set up a relationship between the local repository on your desktop and your GitHub repository, let's do our first push.
 
 ## GitBash/GitHub cont.
 
@@ -247,7 +247,7 @@ theme: league
 
 - In your GitBash window, enter the following command: <mark>git push -u origin master</mark>
 
-- You can copy and paste this directly from GitHub to you GitBash window and press <mark>enter</mark>.
+- You can copy and paste this directly from GitHub to your GitBash window and press <mark>enter</mark>.
 
 ## GitBash/GitHub cont.
 
@@ -271,9 +271,9 @@ theme: league
 
 <div float="right"><img src="./resources/Git25.png" /></div>
 
-- This page is you main GitHub profile page. We will spend some time in a future lesson updating this page.
+- This page is your main GitHub profile page. We will spend some time in a future lesson updating this page.
 
-- You will notice the <mark>Activity Grid</mark> which at this point has one green square present.
+- You will notice the <mark>Activity Grid</mark>, which at this point has one green square present.
 
 - This grid will show prospective employers how much time you have spend coding. We will work to fill this grid with green squares.
 
@@ -281,12 +281,12 @@ theme: league
 
 ## In conclusion
 
-- We now have to foundation for saving our code and tracking code versions. 
+- We now have the foundation for saving our code and tracking code versions. 
 
-- Going foward we will create a new repostiory for every project or website we develope. 
+- Going forward we will create a new repository for every project or website we develop. 
 
-- Likewise, we also have the tools which will allow others to collaberate with us on our programs.
+- Likewise, we also have the tools which will allow others to collaborate with us on our programs.
 
-- GitHub and GitBash offer developers many other tools which we will discussin future lessons.
+- GitHub and GitBash offer developers many other tools which we will discuss in future lessons.
 
-- Using GitHub and GitBash will become second nature, and you will shortly see the wide range of benifits these tools offer.
+- Using GitHub and GitBash will become second nature, and you will shortly see the wide range of benefits these tools offer.
