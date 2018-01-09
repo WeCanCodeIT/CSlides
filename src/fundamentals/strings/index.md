@@ -8,19 +8,19 @@ theme: league
 
 We use *abstraction* all the time in everyday activities. When you sit down to eat at your favorite resturaunt, one of the first things we order may be a drink.
 
-If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, Sodium benzoate, Caffeine, Sodium citrate, Erythorbic acid,Gum arabic, and Calcium disodium, the server would have no idea what you are asking. Right!! We use *abstraction* to descibe what we want to drink by utilizing the name 'Mountian Dew'.
+If you ordered Sugar, Concentrated orange juice, Citric acid, Natural flavors, Sodium benzoate, Caffeine, Sodium citrate, Erythorbic acid, Gum arabic, and Calcium disodium, the server would have no idea what you are asking. Right!! We use *abstraction* to descibe what we want to drink by utilizing the name 'Mountain Dew'.
 
 Abstraction allows us to use methods to manipulate a sequence of `char`s and create new `string`s.
 
 ## Clean, organized, commented code increases your success
 
-- Before we jump into our next lesson, lets revisit our Hello World project.
+- Before we jump into our next lesson, let's revisit our Hello World project.
 
 - We are going to organize and comment our code.
 
 - Doing so will help us to keep track of our progress, understand what our code's function, and help in future development and troubleshooting.
 
-- Go ahead and open up Visual Studion > then open our Hello World project.
+- Go ahead and open up Visual Studio > then open our Hello World project.
 
 !SLIDE
 
@@ -36,7 +36,7 @@ Abstraction allows us to use methods to manipulate a sequence of `char`s and cre
 
 <div float="right"><img src="./resources/str2.png" /></div>
 
-- Lets keep our Hello World program open.
+- Let's keep our Hello World program open.
 
 ## The wonderful world of strings
 
@@ -60,7 +60,7 @@ Abstraction allows us to use methods to manipulate a sequence of `char`s and cre
 
 - C# knows how to turn characters into strings, so it does that for us behind the scenes, saving us a bit of work. 
 
-- Lets do an experiment
+- Let's do an experiment
 
 - Volunteer time
 
@@ -75,7 +75,7 @@ Abstraction allows us to use methods to manipulate a sequence of `char`s and cre
 <div float="right"><img src="./resources/str3.png" /></div>
 
 <div class="fragment">
-Question time: Any quesses what the console will show when we execute our code?
+Question time: Any guesses what the console will show when we execute our code?
 </div>
 
 
@@ -100,15 +100,15 @@ Question time: Any quesses what the console will show when we execute our code?
 Console.WriteLine(messageOne + " " + messageTwo + "."); 
 ```
 <div class="fragment">
-Question time: Any quesses what the console will show when we execute our code?
+Question time: Any guesses what the console will show when we execute our code?
 </div>
 
 <div class="fragment">
-Lets have two volunteers come up and write on the whiteboard what they think the output will show.
+Let's have two volunteers come up and write on the whiteboard what they think the output will show.
 </div>
 
 <div class="fragment">
-Ok run your program and lets see if we are right.
+Run your program and let's see if we are right.
 </div>
 
 ## We should all be here
@@ -133,11 +133,11 @@ Ok run your program and lets see if we are right.
 
 - Once you have completed the exercise, execute your code.
 
-## We whould all be here
+## We should all be here
 
 <div float="right"><img src="./resources/str6.png" /></div>
 
-- Did you get the same output? If not why?
+- Did you get the same output? If not, why?
 
 ## Please make sure your code is the same as the code below.
 
@@ -153,11 +153,11 @@ Ok run your program and lets see if we are right.
 
 - For our purposes in this lesson, it is important to note indexes in Computer Science start with <mark>0</mark>.
 
-- So if I wrote the following sentence: <mark>I am 35 years old, and yes it's true I am godlike.</mark>.
+- So if I wrote the following sentence: <mark>I am 35 years old, and yes it's true I am godlike ...</mark>.
 
-- We know we need two variables to construct the sentence. We chose <mark>ageOne</mark> and <mark>isGodLike</mark>.
+- ... We know that we need two variables to construct the sentence. We chose <mark>ageOne</mark> and <mark>isGodLike</mark>.
 
-- Now lets use indexing to construct our output.
+- Now let's use indexing to construct our output.
   
 !SLIDE
 
@@ -170,12 +170,12 @@ Console.WriteLine("My father is {0} years old, and yes it's {1} he is a god.", a
 ```
 - Notice the entire sentence is enclosed in <mark>quotes</mark>, but we have included <mark>{0}</mark> and <mark>{1}</mark>.
 
-- These two values are called <mark>indexes</mark>, and they referance the postions of the two vaiables <mark>ageOne, isGodLikeOne</mark>.
+- These two values are called <mark>indexes</mark>, and they referance the positions of the two variables <mark>ageOne, isGodLikeOne</mark>.
 
 - <mark>ageThree</mark> is in the <mark>0</mark> position and <mark>isGodLikeOne</mark> is in the <mark>1</mark> position.
 
 <div class="fragment">
-Question time: What would be the value of the index, If we added a third vaiable at the end of the sentence?
+Question time: What would be the value of the index, if we added a third variable at the end of the sentence?
 </div>
 
 ## Pair programming time
@@ -192,11 +192,11 @@ Question time: What would be the value of the index, If we added a third vaiable
 
 - Once you have completed the exercise, execute your code.
 
-## We whould all be here
+## We should all be here
 
 <div float="right"><img src="./resources/str8.png" /></div>
 
-- Did you get the same output? If not why?
+- Did you get the same output? If not, why?
 
 ## Please make sure your code is the same as the code below.
 
@@ -205,7 +205,7 @@ Question time: What would be the value of the index, If we added a third vaiable
 
 ## strings are Objects
 
-- What operator do we use When we want to check for equality between value type variables?
+- What operator do we use when we want to check for equality between value type variables?
 
 <div class="fragment">
 Remember the following: Console.WriteLine(5 == 5)
@@ -219,7 +219,7 @@ When we compare objects like strings, we use the equals method.
 We will use our code to give us two examples.
 </div>
 
-## Lets experiment
+## Let's experiment
 
 - Volunteer time
 
@@ -242,33 +242,33 @@ Question time: Before we execute our program, can anyone guess what values will 
 </div>
 
 <div class="fragment">
-Now lets execute our program.
+Now let's execute our program.
 </div>
 
 ## We should all be here
 
 <div float="right"><img src="./resources/str11.png" /></div>
 
-- Looking at our results, we can tell the equals method returns a bool value.
+- Looking at our results, we can tell the Equals method returns a bool value.
 
-- In later lessons, we will learn to use the <mark>equals</mark> method to facilitate the decision making process in our program.
+- In later lessons, we will learn to use the <mark>Equals</mark> method to facilitate the decision making process in our program.
 
-- In the following slides we will cover some methods we can use with strings that you may find extremely valueable in the near future. <mark>Hint</mark> <mark>Hint</mark>
+- In the following slides we will cover some methods we can use with strings that you may find extremely valuable in the near future. <mark>Hint</mark> <mark>Hint</mark>
 
 ## Just in Case
 
-- Methods we call on strings create and *return* new strings rather than changing the original string.
+- The methods that we call on strings create and *return* new strings rather than changing the original string.
  
-- Strings in C# are *immutable* meaning the value of the string cannot be changed after initialization.
+- Strings in C# are *immutable* meaning the size of the string cannot be changed after initialization.
  
 - In upcoming projects and exercises, you my find it useful to convert a string to all uppercase or all lowercase.
 
-- Lets look at an example of how to accomplish such a feat.
+- Let's look at an example of how to accomplish such a feat.
 
 ```C#
 string myGreeting = "Hello";
-Console.WriteLine(myGreeting.toUpperCase()); // prints "HELLO"
-Console.WriteLine(myGreeting.toLowerCase()); // prints "hello"
+Console.WriteLine(myGreeting.ToUpper()); // prints "HELLO"
+Console.WriteLine(myGreeting.ToLower()); // prints "hello"
 Console.WriteLine(myGreeting); // prints "Hello"
 ```
 <div class="fragment">
@@ -276,14 +276,14 @@ Question time: When do you think it would be wise to change the case of a word w
 </div>
 
 <div class="fragment">
-Lets look at an example.
+Let's look at an example.
 </div>
 
 ## Sensitivity Training
 
 - We often use one of these methods to normalize user input. 
 
-- Say we're asking for a color and call the `toLower()` method on the user's response.
+- Say we're asking for a color and call the `ToLower()` method on the user's response.
 
 - Before comparing the user input to "red", the user can type "RED", "Red", or "red" and it won't matter.
 
@@ -292,32 +292,32 @@ Lets look at an example.
 Console.WriteLine("Enter a color, please.")
 string response = Console.ReadLine();
 
-if(response.toLower().equals("red")) {
-  Console.WriteLine("Roses can be red. Also, lilies.");
+if(response.ToLower().Equals("red")) {
+  Console.WriteLine("Roses can be red. Also, lillies.");
 }
 ```
-- Wait a minute what is this tomfoolery? We havent discussed <mark>string response = Console.ReadLine();</mark> before?
+- Wait a minute ... what is this tomfoolery? We haven't discussed <mark>string response = Console.ReadLine();</mark> before?
 
-- Well we will cover this in more detail at a later time.
+- We will cover this in more detail at a later time.
 
 - Essentially we are telling our program to take input from the console and save that input as a string to the variable called <mark>response</mark>.
 
 ## Length
 
-- As we will soon learn, aquiring the length of a string, as well as, other data structures will be very important. 
+- As we will soon learn, aquiring the length of a string, as well as other data structures, will be very important. 
 
 - We already know a string is just a collection of characters.
 
-- C# provides a method called `length` which will tell us how many characters a string contains.
+- C# provides a property for strings called `Length`, which will tell us how many characters a string contains.
 
-- Lets do and experiment.
+- Let's do an experiment.
 
 - Volunteer time. 
 
 
 !SLIDE
 
-- Lets make the following changes and additions to our code.
+- Let's make the following changes and additions to our code.
 
 - Comment out part nine of our Hello World code.
 
@@ -339,27 +339,27 @@ Console.WriteLine("The length of messageTwo is " + messTwoLength);
 <div float="right"><img src="./resources/str12.png" /></div>
 
 <div class="fragment">
-Question time: What values do you think will returned for messageOne.Length and messageTwo.Length
+Question time: What values do you think will returned for messageOne.Length and messageTwo.Length?
 </div>
 
 <div class="fragment">
-Question time: What is the differance between the first two Console.WriteLines and the second two?
+Question time: What is the difference between the first two `Console.WriteLine`'s and the second two?
 </div>
 
-- Lets execute our program and see if we get the results we anticipated.
+- Let's execute our program and see if we get the results we anticipated.
 
 ## We should all be here
 
 <div float="right"><img src="./resources/str13.png" /></div>
 
-- Now lets talk about our results
+- Now let's talk about our results
 
 <div class="fragment">
-Question time: Any quesses why we received these results? 
+Question time: Any guesses why we received these results? 
 </div>
 
 <div class="fragment">
-Question time: We assigned the length values to variables. Why couldn't add those two values together or perfom other mathimatical operations?
+Question time: We assigned the Length values to variables. Why couldn't we add those two values together or perform other mathematical operations?
 </div>
 
 ## Escape!
@@ -387,11 +387,11 @@ Console.WriteLine("\tThis line is indented.");
 
 method	|description|example|result
 ------	|-----------|-------|------
-`trim`|trims the whitespace from the beginning and end of a `string`; useful for cleaning up user input|`" bar  ".trim()`|`"bar"`
-`indexOf`|returns the index of the first occurence of a substring in this `string`|`"foo bar baz".indexOf("bar")`|`4`
-`contains`|indicates whether this `string` contains a substring|`"foobarbaz".contains("ba")`|`true`
-`startsWith`|indicates whether this `string` starts with another|`"foo".startsWith("f")`|`true`
-`endsWith`|indicates whether this `string` ends with another|`"baz".endsWith("az")`|`true`
-`substring`|returns a substring starting at the specified index, optionally including an end index|`"hello".substring(1)`<br />`"hello".substring(1, 4)`|`"ello"`<br/>`"ell"`
+`Trim`|trims the whitespace from the beginning and end of a `string`; useful for cleaning up user input|`" bar  ".Trim()`|`"bar"`
+`IndexOf`|returns the index of the first occurrence of a substring in this `string`|`"foo bar baz".IndexOf("bar")`|`4`
+`Contains`|indicates whether this `string` contains a substring|`"foobarbaz".Contains("ba")`|`true`
+`StartsWith`|indicates whether this `string` starts with another|`"foo".StartsWith("f")`|`true`
+`EndsWith`|indicates whether this `string` ends with another|`"baz".EndsWith("az")`|`true`
+`Substring`|returns a substring starting at the specified index, optionally including an end index|`"hello".Substring(1)`<br />`"hello".Substring(1, 4)`|`"ello"`<br/>`"ell"`
 
 Try [C# Sharp string 43 exercises with solution](https://www.w3resource.com/csharp-exercises/string/index.php)
