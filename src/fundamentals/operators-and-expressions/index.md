@@ -7,7 +7,7 @@ theme: league
 
 <div float="right"><img src="./resources/opr1.png" /></div>
 
-- We have already starting building our first application, so lets open <mark>Hello World</mark> and build upon our success
+- We have already started building our first application, so let's open <mark>Hello World</mark> and build upon our success.
 
 - Volunteer Time!!
 
@@ -25,37 +25,37 @@ theme: league
 
 <div float="right"><img src="./resources/opr3.png" /></div>
 
-- Lets review a few things before we begin
+- Let's review a few things before we begin
 
 <div class="fragment">
-Question time: What is the differance between an integer and a float value type variables?
+Question time: What is the differance between an integer and a float value type variable?
 </div>
 
 <div class="fragment">
-Question time: When value type variable would you use to denote true or false?
+Question time: What value type variable would you use to denote true or false?
 </div>
 
 <div class="fragment">
-Question time: How would you denote the differance between a string and a char?
+Question time: How would you denote the difference between a string and a char?
 </div>
 
 # Put on your math hats
 
-- Throughout our academic careers, one of the main focus's of our education was arithmetic.
+- Throughout our academic careers, one of the main focuses of our education was arithmetic.
 
-- We learned some basic fundamentals about how we perform basic operations like: addition, substraction, division, and mutliplication.
+- We learned some basic fundamentals about how we perform basic operations like: addition, subtraction, division, and multiplication.
 
 - We also learned each operation has its own <mark>operator</mark> which we use to show what type of operation we are performing.
 
-- For example, if we wante to add we used the <mark>+</mark> operator. Subtract we used the <mark>-</mark> operator. Multiply we used the <mark>*</mark> symbol and when we divide <mark>/</mark>.
+- For example, if we wanted to add, we used the <mark>+</mark> operator. Subtract, we used the <mark>-</mark> operator. Multiply, we used the <mark>*</mark> symbol and when we divide <mark>/</mark>.
 
-- In the first part of our lesson, we are going to dicuss how we use these same operators in coding, and how we use variables in place of the actual numbers we are accustomed to using.
+- In the first part of our lesson, we are going to discuss how we use these same operators in coding, and how we use variables in place of the actual numbers we are accustomed to using.
 
-- Likewise, we will introduce you to some operators you may not be familier with, but are critical in achieving clean sucessful code.
+- Likewise, we will introduce you to some operators you may not be familiar with, but are critical in achieving clean successful code.
 
 ## Remember value type variables hold a value
 
-- Lets look at our code we have already written. We highlighted each of the value type variables we declared. Likewise, we assigned a value to each.
+- Let's look at our code we have already written. We highlighted each of the value type variables we declared. Likewise, we assigned a value to each.
 
 <pre><code class="language-C#" data-noescape>
         static void Main(string[] args)
@@ -81,7 +81,7 @@ Question time: What is the value of weight?
 
 ## Variable means the value can change
 
-- When we are writing code, we use variables becuase often time the values we assign will change. Hence the term variable!!
+- When we are writing code, we use variables because oftentime the values we assign will change. Hence the term variable!!
 
 - Because we know these values will change, we cannot directly address the actual values of the variables when performing math operations.
 
@@ -123,7 +123,7 @@ Question time: What is the value of weight?
 
 <div float="right"><img src="./resources/opr4.png" /></div>
 
-- Ok lets run our application and see our results
+- Ok let's run our application and see our results
 
 !SLIDE
 
@@ -138,7 +138,7 @@ Question time: When we perform the multiplcation operation on variables weightOn
 </div>
 
 <div class="fragment">
-Question time: Looking at our results, what logic can we infer about performing mathamatical operations using value type variables. 
+Question time: Looking at our results, what logic can we infer about performing mathematical operations using value type variables? 
 </div>
 
 <div class="fragment">
@@ -146,10 +146,10 @@ Question time: Is it safe to assume we are actually performing the operations on
 </div>
 
 <div class="fragment">
-Question time: Because we are using variables, if we assigned new values to our variables would our answers change? Lets do an experiment!! 
+Question time: Because we are using variables, if we assigned new values to our variables would our answers change? Let's do an experiment!! 
 </div>
 
-## Lets test your knowledge
+## Let's test your knowledge
 
 - Volunteer time!!
 
@@ -167,21 +167,21 @@ Question time: Because we are using variables, if we assigned new values to our 
 
 - Once you have assigned the variables new values and written the code to send them to the console, go ahead and save your project then run it!!
 
-## Lets see our results
+## Let's see our results
 
 <div float="right"><img src="./resources/opr7.png" /></div>
 
-- Did anyone get get differant results?
+- Did anyone get get different results?
 
-- Lets look at our code.
+- Let's look at our code.
 
 ## We should all be here
 
 <div float="right"><img src="./resources/opr6.png" /></div>
 
-- You will find in coding as you have found in life. There are many roads and techniques you can utilize which will give you the same result.
+- You will find in coding - as you have found in life - that there are many roads and techniques you can utilize which will give you the same result.
 
-- Even if you achived the same results, but your code does not look the same as the code above, then please take a minute to change your code.
+- Even if you achieved the same results, but your code does not look the same as the code above, then please take a minute to change your code.
 
 - For the sake of continuity, we need all your code to look the same as mine.
 
@@ -192,11 +192,11 @@ We learned if we assigned new values to our variables our answers will change.
 </div>
 
 <div class="fragment">
-Question time: What is the advantage of using variables when performing mathamatical operations when coding? 
+Question time: What is the advantage of using variables when performing mathematical operations when coding? 
 </div>
 
 <div class="fragment">
--Here is a referance chart you can use to refresh your memory on what we have learned so far.
+-Here is a reference chart you can use to refresh your memory on what we have learned so far.
 </div>
 
 
@@ -237,7 +237,7 @@ int a = 25 int b = 15
             int ageTwo  = 45;
             <mark>int ageThree = 80;</mark>
 
-            <mark>The code inbetween has been hidden for readability</mark>
+            <mark>The code in-between has been hidden for readability</mark>
 
 			ageTwo = <mark>70</mark>;
             heightTwo = 35.12345f;
@@ -256,10 +256,10 @@ int a = 25 int b = 15
 
 <div float="right"><img src="./resources/opr8.png" /></div>
 
-- Lets run our program and discuss the results
+- Let's run our program and discuss the results
 
 
-## So lets discuss our results.
+## So let's discuss our results.
 
 <div float="right"><img src="./resources/opr9.png" /></div>
 
@@ -271,22 +271,22 @@ int a = 25 int b = 15
 
 - Finally what is up with <mark>ageThree % ageOne</mark> giving us a result of <mark>10</mark>?
 
-- Do we have any math genius's in the classroom? Can anyone quess why we are getting the results we are getting?
+- Do we have any math geniuses in the classroom? Can anyone guess why we are getting the results we are getting?
 
-## Its all about whats left over
+## It's all about what's left over
 
-- The modulus operator will give us the <mark>remainder</mark> in a division caluclation.
+- The modulus operator will give us the <mark>remainder</mark> in a division calculation.
 
 - When you look at both operators <mark>/</mark> and <mark>%</mark> they are each responsible for returning one of the two values we would expect perfoming normal division.
 
-- Lets look at some easy examples for mod.
+- Let's look at some easy examples for mod.
 
  <div class="fragment">
 <div float="right"><img src="./resources/mod.png" /></div>
 </div>
 
 <div class="fragment">
-The modulus operator will have my useful benefits in coding, so make sure you understand the modulus concept.
+The modulus operator will have many useful benefits in coding, so make sure you understand the modulus concept.
 </div>
 
 -Here is a referance chart you can use to refresh your memory on what we have learned so far.
@@ -305,15 +305,15 @@ int a = 25 int b = 15
 
 - You will see this predominantly in loops and counters. We will go into great detail about loops and counters later in the course.
 
-- We may need to count everytime a loop is run, or we may need to count the number of times a value has changed.
+- We may need to count every time a loop is run, or we may need to count the number of times a value has changed.
 
 - One way of adding <mark>1</mark> to an variable is to simply write: <mark>ageTwo = ageTwo +1;</mark>
 
-	- The caluclation on the right side of our statement ageTwo = <mark>ageTwo + 1</mark>; is performed first.
+	- The calculation on the right side of our statement ageTwo = <mark>ageTwo + 1</mark>; is performed first.
 
 	- Because <mark>ageTwo</mark> is a value type variable, we can save our calculation in <mark>ageTwo</mark>.
 
-	- Lets do an experiment!!
+	- Let's do an experiment!!
 
 - In order to better visualize this concept we will be discussing, we will need to make some changes and additions to our code.
 
@@ -328,7 +328,7 @@ int a = 25 int b = 15
  <pre><code class="language-C#" data-noescape>
 	static void Main(string[] args)
         {
-            <mark>The code inbetween has been hidden for readability</mark>
+            <mark>The code in-between has been hidden for readability</mark>
 
 			ageTwo = 70;
             heightTwo = 35.12345f;
@@ -349,20 +349,20 @@ int a = 25 int b = 15
 
 <div float="right"><img src="./resources/opr10.png" /></div>
 
-- Lets run our program and discuss the results
+- Let's run our program and discuss the results
 
 
-## So lets discuss our results.
+## So let's discuss our results.
 
 <div float="right"><img src="./resources/opr11.png" /></div>
 
 - An examination of our code shows ageTwo was assigned a value of <mark>70</mark>.
 
-- When we assigned the new value by adding <mark>1</mark> to ageTwo thus increasing the value by <mark>1</mark>.
+- When we assigned the new value by adding <mark>1</mark> to ageTwo, we increased the value by <mark>1</mark>.
 
 - This step is called <mark>incrementing</mark>. If we were to subtract by <mark>1</mark> this step would be called <mark>decrementing</mark>.
 
-- Convienently though C# has gven us a shortcut to perform the same function.
+- Conveniently though, C# has given us a shortcut to perform the same function.
 
 - We can use the operater <mark>++</mark> to increment by <mark>1</mark> or the operator <mark>--</mark> to decrement by <mark>1</mark>.
 
@@ -370,7 +370,7 @@ int a = 25 int b = 15
 
 !SLIDE
 
-- Lets make some changes to our code and see how it works.
+- Let's make some changes to our code and see how it works.
 
 - Add the following code under the last line on code in our project:
 
@@ -384,15 +384,15 @@ Console.WriteLine(ageTwo);
 
 <div float="right"><img src="./resources/opr12.png" /></div>
 
-- Lets run our program and discuss the results
+- Let's run our program and discuss the results
 
-## So lets discuss our results.
+## So let's discuss our results.
 
 <div float="right"><img src="./resources/opr13.png" /></div>
  
- - As we have seen, the <mark>increment and decrement</mark> allow us to perform the same functions as the variable assignment, but the amount of code is significanlty decreased.
+ - As we have seen, the <mark>increment and decrement</mark> allow us to perform the same functions as the variable assignment, but the amount of code is significantly decreased.
 
- - We also have flexibility with the <mark>increment and decrement</mark> oerators to add or subtract values greater than <mark>1</mark>.
+ - We also have flexibility with the <mark>increment and decrement</mark> operators to add or subtract values greater than <mark>1</mark>.
 
 !SLIDE
 
@@ -423,7 +423,7 @@ ageTwo-=2;
 
 	- By using the <mark>=</mark> operator, we can say that ageTwo owns the value <mark>70</mark>.
 
-- We also have another catagory of operators which use the <mark>=</mark> operator. We use the following <mark>equality</mark> operators when we need to make decisions on the flow of logic.
+- We also have another category of operators which use the <mark>=</mark> operator. We use the following <mark>equality</mark> operators when we need to make decisions on the flow of logic.
 
 - It is important to note using and <mark>equality</mark> operator will not return a numeric value. The <mark>equality</mark> operator will instead return a value of <mark>True</mark> or <mark>False</mark>.
 
@@ -455,13 +455,13 @@ ageTwo-=2;
 
 - If we think back again to our early education years, we will remember using the following operators.
 
-	- We would use the <mark>< ></mark> operator to check if value <mark>a</mark> is less than or greater than value <mark>b</mark>. 
+	- We would use the <mark>< or ></mark> operator to check if value <mark>a</mark> is less than or greater than value <mark>b</mark>. 
 	
 	- So <mark>a < b</mark> checks to see if <mark>a</mark> is less than value <mark>b</mark>.
 
 	- Likewise, <mark>a > b</mark> checks to see if <mark>a</mark> is greater than value <mark>b</mark>.
 	
-- Now lets incorporate our <mark>=</mark> operator.
+- Now let's incorporate our <mark>=</mark> operator.
 
 	- So <mark>a <= b</mark> checks to see if <mark>a</mark> is less than or equal to value <mark>b</mark>.
 
@@ -482,19 +482,19 @@ I would suggest experimenting with  the operators we have covered during your co
 
 ## Logical operators
 
-- Finally last but not least let discuss the <mark>logical operators</mark>. <mark>&&</mark> and <mark>||</mark>.
+- Finally, last but not least, let's discuss the <mark>logical operators</mark>. <mark>&&</mark> and <mark>||</mark>.
 
-- Whe an we make decisions in life, we commonly use the following language:
+- When we make decisions in life, we commonly use the following language:
 
-	- I will goto the mall, if Mitchells and Brownstone are open.
+	- I will go to the mall, if Mitchells and Brownstone are open.
 
-	- I will goto the mall, if Mitchells or Brownstone are open.
+	- I will go to the mall, if Mitchells or Brownstone are open.
 
-- We use statements just like these to control the decision manking process in coding.
+- We use statements just like these to control the decision making process in coding.
 
-- Lets rewrite these two statements in code.
+- Let's rewrite these two statements in code.
 
-	- ("shopping" && "ice cream") The <mark>&&</mark> operator is comonly called the <mark>AND</mark>.
+	- ("shopping" && "ice cream") The <mark>&&</mark> operator is commonly called the <mark>AND</mark>.
 
 	- ("hiking" `||` "beach") The <mark>||</mark> operator is comonly called the <mark>OR</mark>.
 
@@ -502,17 +502,17 @@ I would suggest experimenting with  the operators we have covered during your co
 
 - We can use these operators in conjunction with each other.
 
-- When we use logical operators we have to be careful to understand they have an order of operations.
+- When we use logical operators we have to be careful to understand that they have an order of operations.
 
-- The <mark>&&</mark> operator has presedence over the <mark>||</mark> operator.
+- The <mark>&&</mark> operator has precedence over the <mark>||</mark> operator.
 
-- Lets see an example.
+- Let's see an example.
 
-	- I will goto the mall, if Mitchells and Brownstone are open, or I will goto the beach if the Beachcomber or the Boardwalk or open.
+	- I will go to the mall, if Mitchells and Brownstone are open, or I will go to the beach if the Beachcomber or the Boardwalk or open.
 
-- Now lets rewrite in code. (("Mitchells" && "Brownstone") `||` ("Beachcomber" `||` "Boardwalk"))
+- Now let's rewrite in code. (("Mitchells" && "Brownstone") `||` ("Beachcomber" `||` "Boardwalk"))
 
-- So because of order of operations If Mitchells and the Brownstone are <mark>BOTH</mark> open we are going to the mall.
+- So because of order of operations, if Mitchells and the Brownstone are <mark>BOTH</mark> open we are going to the mall.
 
 - If Mitchells or the Brownstone are closed and <mark>EITHER</mark> the Beachcomber or the Boardwalk are open then its off to the beach.
 
@@ -521,7 +521,7 @@ Question time: What values will be returned when a logical operation is processe
 </div>
 
 
-## So lets put into code the following statements.
+## So let's put into code the following statements.
 
 - Pair programming time!! 
 
