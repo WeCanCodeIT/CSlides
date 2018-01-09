@@ -2,11 +2,11 @@ title: Basic Types and Variables
 subtitle: •••
 theme: league
 
-## Lets Build on what we learned yesterday
+## Let's Build on what we learned yesterday
 
 <div float="right"><img src="./resources/var1.png" /></div>
 
-- We have already started building our first application, so lets open <mark>Hello World</mark> and build upon our success
+- We have already started building our first application, so let's open <mark>Hello World</mark> and build upon our success
 
 - Volunteer Time!!
 
@@ -24,7 +24,7 @@ theme: league
 
 <div float="right"><img src="./resources/var3.png" /></div>
 
-- Lets review a few things before we begin
+- Let's review a few things before we begin
 
 <div class="fragment">
 Question time: Where are classes defined in C#?
@@ -46,13 +46,13 @@ We saw *literals* yesterday. In the statement:
 Console.WriteLine("Hello, World!");
 ```
 
-`"Hello, World!"` is a String literal. It's a String because it's a sequence of characters surrounded by quotation marks. It's a literal because it always has that value.
+`"Hello, World!"` is a string literal. It's a string because it's a sequence of characters surrounded by quotation marks. It's a literal because it always has that value.
 
 ## Let's Not Be Literal
 
 - In contrast, we have *variables*. In C#, a variable's *type* is defined, but its value can *vary* (thus the name).
 
-- Lets experiment
+- Let's experiment
 
 - In our code we have <mark>Console.WriteLine("")</mark>
 
@@ -72,9 +72,9 @@ Console.WriteLine("Hello, World!");
 
 - This line indicates we have created a variable that is not being used.
 
-- If you use your pointer and hover over the green line, Visual Studio will display a pop up message.
+- If you use your cursor and hover over the green line, Visual Studio will display a pop up message.
 
-- This message will describe the purpose of the green line, and in some cases offer a solution if the problem requires attention
+- This message will describe the purpose of the green line, and in some cases offer a solution if the problem requires attention.
 
 - We will discuss this tool Visual Studio provides for us at a later time.
 
@@ -82,7 +82,7 @@ Console.WriteLine("Hello, World!");
 
 <div float="right"><img src="./resources/var5.png" /></div>
 
-- So lets discuss what we have done
+- So let's discuss what we have done
 
 - We have declared a variable called <mark>message</mark>
 
@@ -102,21 +102,21 @@ Question time: We named our string variable <mark>message</mark>. Do you think w
 </div>
 
 <div class="fragment">
-Question time: When we are creating variables, do you think using descriptive names would be important? If so why?
+Question time: When we are creating variables, do you think using descriptive names would be important? If so, why?
 </div>
 
 <div class="fragment">
-- Now lets append our code so we send the <mark>Console.WriteLine()</mark> and the contents of <mark>message</mark> to the Visual Studio console.
+- Now let's append our code so we send the <mark>Console.WriteLine()</mark> and the contents of <mark>message</mark> to the Visual Studio console.
 </div>
 
 !SLIDE
 
-- Underneath <mark>string message = "Hello World!";</mark> lets insert the following code:
+- Underneath <mark>string message = "Hello World!";</mark> let's insert the following code:
 
 <pre><code class="language-C# hljs">Console.WriteLine(message);
 </code></pre>
 
-- Lets see what our code should look like
+- Let's see what our code should look like
 
 <div class="fragment">
 
@@ -142,7 +142,7 @@ Question time: What output to the console do you think this line of code will pr
 
 - Select Start
 
-- You should see a blank screen pop-up and dissapear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
+- You should see a blank screen pop-up and disappear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
 
 ## We should all be here
 
@@ -150,7 +150,7 @@ Question time: What output to the console do you think this line of code will pr
 
 - Volunteer time!!
 
-- As we have just observed, variable allow us to store values.
+- As we have just observed, variables allow us to store values.
 
 - We created a <mark>string</mark> variable, and assigned it a value of "Hello World!".
 
@@ -160,22 +160,22 @@ Question time: Think about the name <mark>variable</mark>. What does the name im
 </div>
 
 <div class="fragment">
-It implys that the contents can vary. Lets use a cup as an example. We can create a cup(variable) and we can fill it with coffee(value) in the morning, then tea(value) at night.
+It implies that the contents can vary. Let's use a cup as an example. We can create a cup(variable) and we can fill it with coffee(value) in the morning, then tea(value) at night.
 </div>
 
 
 ## Variables are variable
 
-- So now that we know how flexible a variable can be, lets do an experiment.
+- So now that we know how flexible a variable can be, let's do an experiment.
 
-- Lets close our console window.
+- Let's close our console window.
 
 <div class="fragment">
 Question time: We want to give our string variable <mark>message</mark> a new value. Any ideas on how we accomplish this daunting task?
 </div>
 
 <div class="fragment">
-Lets give it a try. Underneath <mark>Console.WriteLine(message);</mark>, insert the following code:
+Let's give it a try. Underneath <mark>Console.WriteLine(message);</mark>, insert the following code:
 </div>
 
 <div class="fragment">
@@ -186,7 +186,7 @@ message = "I am Spartacus";
 
 <div float="right"><img src="./resources/var9.png" /></div>
 
-- Now lets copy <mark>Console.WriteLine(message);</mark>, and paste it below <mark>message = "I am Spartacus";</mark>.
+- Now let's copy <mark>Console.WriteLine(message);</mark>, and paste it below <mark>message = "I am Spartacus";</mark>.
 
 <div class="fragment">
 Question time: What output to the console do you think this line of code will produce? If any?
@@ -202,7 +202,7 @@ Question time: Why didn't we type the following when changing the value of <mark
 </div>
 
 <div class="fragment">
-The first part of the command, on the left side of the <mark>=</mark> sign, <mark>string message</mark> declares a variable of type string, while the second part, on the right side of the <mark>=</mark> sign, Initializes the variable with a value.
+The first part of the command, on the left side of the <mark>=</mark> sign, <mark>string message</mark> declares a variable of type string, while the second part, on the right side of the <mark>=</mark> sign, initializes the variable with a value.
 </div>
 
 <div class="fragment">
@@ -213,28 +213,28 @@ Once you declare a variable you cannot declare another variable with the same na
 
 - Once again you will notice there is a small <mark>asterick</mark> on the Program.cs page tab next to the words Program.cs.
 
-- Before we select Start, lets go ahead and select the <mark>Single Floppy Disk</mark> right above the Program.cs tab.
+- Before we select Start, let's go ahead and select the <mark>Single Floppy Disk</mark> right above the Program.cs tab.
 
 - The asterick is no longer there, so we can proceed.
 
-- Select Start
+- Select Start.
 
-- You should see a blank screen pop-up and dissapear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
+- You should see a blank screen pop-up and disappear. This is the console. Press <mark>Ctrl F5</mark> and the console window will appear.
 
 
 ## We should all be here
 
 <div float="right"><img src="./resources/var10.png" /></div>
 
-- Its time to understand why we recieved the results we see in the console.
+- Its time to understand why we received the results we see in the console.
 
-- Lets execute the program step by step the way Visual Studio does when you select Start
+- Lets execute the program step by step the way Visual Studio does when you select Start.
 
 ## Step by step
 
-- Visual Studio looks in the <mark>Program Class</mark> for the <mark>main</mark> method.
+- Visual Studio looks in the <mark>Program Class</mark> for the <mark>Main</mark> method.
 
-	- Visual Studio executes the code in the <mark>main</mark> method from top down.
+	- Visual Studio executes the code in the <mark>Main</mark> method from top down.
 
 	<div class="fragment">
 	- Visual Studio executes <mark>Console.WriteLine("Hello World!")</mark>, and prints what to the console?
@@ -259,19 +259,19 @@ Once you declare a variable you cannot declare another variable with the same na
 
 ## Variable Naming Conventions
 
-- When we attended grade school, we learned the importance of correct punctuation, capitalization, and sentenace structure.
+- When we attended grade school, we learned the importance of correct punctuation, capitalization, and sentence structure.
 
-- We learned we adhered to the standards we learned not because it was easier for us to write, but we learned it was important so other people can read what we wrote.
+- We adhered to the standards we learned not because it was easier for us to write, but we learned it was important so other people can read what we wrote.
 
 - Coding is just another form of writing, and you will find has its own standards on how code should be written.
 
-- As with writing a paper in school, we adhere to writing standards in coding for the benifit of those who may read the code we have written.
+- As with writing a paper in school, we adhere to writing standards in coding for the benefit of those who may read the code we have written.
 
 - The first standard we will tackle is called <mark>Naming Conventions</mark>
 
 - We will talk about naming conventions quite a bit. 
 
-- Lets take a look at our code, and cover some of the naming standards we have already used but now we can give them a name.
+- Let's take a look at our code, and cover some of the naming standards we have already used but now we can give them a name.
 
 !SLIDE
 
@@ -295,7 +295,7 @@ Once you declare a variable you cannot declare another variable with the same na
 
 - Each highlighted word starts with the first letter in that word capitalized. 
 
-- If you look at the word <mark>WriteLine</mark>, you see its actually two words. You will also notice the first letter of each word is capitalized.
+- If you look at the word <mark>WriteLine</mark>, you see it's actually two words. You will also notice the first letter of each word is capitalized.
 
 - This naming convention is called <mark>PascalCase</mark>. Simply put the first letter in each word is capitalized.
 
@@ -346,7 +346,7 @@ Once you declare a variable you cannot declare another variable with the same na
 }
 </code></pre>
 
-- If you look at the highlighted text in our code, you will see they all have one thing in commom. Can anyone tell the class to what I am referring?
+- If you look at the highlighted text in our code, you will see they all have one thing in common. Can anyone tell the class to what I am referring?
 
 - Each highlighted word starts with the first letter in that word lowerCase and the beginning of the second word is upperCase. 
 
@@ -431,7 +431,7 @@ Once you declare a variable you cannot declare another variable with the same na
 
 - You might have guessed the name denotes the size of the integer. Your guess would be correct.
 
-- Integer(int) are whole numbers, and have following sizes and value ranges: 
+- Integer(int) types are whole numbers, and have following sizes and value ranges: 
 
 	- Short: size = 2 byte Value range = -32,768 to 32,767
 
@@ -514,9 +514,9 @@ Question time: Which of the following is not a short: 45, 32,767, 8000, -32,769
     }
 </code></pre> 
 
-## String Referance Type
+## String Reference Type
 
-- Strings are Referance Types. 
+- Strings are Reference Types. 
 
 - We've seen examples of them. 
 
@@ -537,7 +537,7 @@ Question time: Which of the following is not a short: 45, 32,767, 8000, -32,769
 </code></pre> 
 
 <div class="fragment">
-Question time: What is the differance between "a" and 'a'?
+Question time: What is the difference between "a" and 'a'?
 </div>
 
 ## We should all be here!!
@@ -562,21 +562,21 @@ Question time: What is the differance between "a" and 'a'?
 
 <div float="right"><img src="./resources/var13.png" /></div>
 
-- Lets talk about what we see.
+- Let's talk about what we see.
 
 ## Time for some reflection
 
-- Now that we have learned about Basic Types and Variables, lets take a minute to answer any questions.
+- Now that we have learned about Basic Types and Variables, let's take a minute to answer any questions.
 
-- Lets go ahead and save our project, as we will continue building our project throughout the week.
+- Let's go ahead and save our project, as we will continue building our project throughout the week.
 
-- I hope you have followed along, and you have sucessfully finshed the coding exercises throughout this lecture.
+- I hope you have followed along, and you have sucessfully finished the coding exercises throughout this lecture.
 
 - The project we are building will give you the experience and tools you need to sucessfully complete your weekend project.
 
-- If your code does not look and act like the code we in the lst slide, please get with one of your team mates and correct what issues you might have.
+- If your code does not look and act like the code we have in the lst slide, please get with one of your team mates and correct what issues you might have.
 
-- If you still have questions about anything we have covered, please do not hesitate to as one of the WCCI instructors.
+- If you still have questions about anything we have covered, please do not hesitate to ask one of the WCCI instructors.
 
 
 
