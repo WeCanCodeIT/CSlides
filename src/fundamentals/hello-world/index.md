@@ -32,7 +32,7 @@ Accept the default for workspace. (More on that later.)
 	<img alt="Select console application" src="./resources/hello2.png" />
 </div>
 
-• Select *Conole Application* from the *New Project* Window.
+• Select *Console Application* from the *New Project* Window.
 
 • Specify a *Project name* of *Hello-World* as in the screenshot.
 
@@ -56,7 +56,7 @@ All C# code is found inside a *class* which is defined in a *namespace*. This na
 {
 	<mark>class Program</mark>
 	{
-		public static void main(String[] args) 
+		public static void Main(string[] args) 
 		{
 		}
 
@@ -66,13 +66,13 @@ All C# code is found inside a *class* which is defined in a *namespace*. This na
 
 ## C# Methods
 
-Think of *Methods* as the messages that we send in C#. All C# applications start with a `main` method. We will discuss C# methods in more detail later in the course.
+Think of *Methods* as the messages that we send in C#. All C# applications start with a `Main` method. We will discuss C# methods in more detail later in the course.
 
 <pre><code class="language-C#" data-noescape>namespace HelloWorld 
 {
 	class Program
 	{
-		<mark>public static void main(String[] args)</mark> 
+		<mark>public static void Main(string[] args)</mark> 
 		{
 		}
 
@@ -93,12 +93,12 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 
 	class Program
 	{
-		public static void main(String[] args) 
+		public static void Main(string[] args) 
 		{
 		}
 
 	}
-<mark>}</mark> This closing clurly brace signifie the closing of the namespace
+<mark>}</mark> This closing curly brace signifies the closing of the namespace.
 
 </code></pre>
 
@@ -110,11 +110,11 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 	class Program
 	<mark>{</mark> This opening curly brace signifies the opening of the class Program
 
-		public static void main(String[] args) 
+		public static void Main(string[] args) 
 		{
 		}
 
-	<mark>}</mark> This closing clurly brace signifie the closing of the class Program
+	<mark>}</mark> This closing curly brace signifies the closing of the class Program.
 }
 
 </code></pre>
@@ -126,10 +126,10 @@ Curly brackets (`{` and `}`) indicate code blocks in C#. As you start down your 
 
 	class Program
 	{
-		public static void main(String[] args) 
-	<mark>{</mark> This opening curly brace signifies the opening of the main method
+		public static void Main(string[] args) 
+	<mark>{</mark> This opening curly brace signifies the opening of the Main method.
 
-	<mark>}</mark> This closing clurly brace signifie the closing of the main method
+	<mark>}</mark> This closing curly brace signifies the closing of the Main method.
 
 	}
 }
@@ -141,9 +141,9 @@ We can add comments to our code to explain it. Comments are very important as th
 
 Here, I have created a comment to remind me that I need to do something—namely, write some code inside the method! We'll do that next.
 
-<pre><code class="language-java" data-noescape>public class HelloWorld {
+<pre><code class="language-C#" data-noescape>public class HelloWorld {
 
-	public static void main(String[] args) {
+	public static void Main(string[] args) {
 		<mark>// add code for future development</mark>
 
 	}
@@ -154,13 +154,13 @@ Here, I have created a comment to remind me that I need to do something—namely
 ## ...Types of Comments
 
 As you can see we used to '//' to denote a command. We can use '//' to comment out single lines. We can also use '/*' to start commenting multiple lines of code, and end with '*/'.
-Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.
+Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: <mark>Ctrl K C</mark> and the following keystrokes to uncomment code: <mark>Ctrl K U.</mark>
 <pre><code class="language-C#" data-noescape>public class HelloWorld {
 
-	public static void main(String[] args) {
+	public static void Main(string[] args) {
 		<mark>//</mark> add code for future development
 		<mark>/*</mark>
-		add code for futuer development
+		add code for future development
 		<mark>*/</mark>
 	}
 
@@ -173,7 +173,7 @@ A common first program for people to write in a language is a program that says 
 
 <pre><code class="language-C#" data-noescape>class Program {
 
-	public static void main(String[] args) {
+	public static void Main(string[] args) {
 		
 		<mark>Console.WriteLine("Hello World!");</mark>
 
@@ -198,7 +198,7 @@ Let's run it, and see what happens!
 </div>
 
 Press the *Start* button highlighted located in the top of the Visual Studio IDE.
-Now press Ctrl F5 and the output will appear.
+Now press <mark>Ctrl F5</mark> and the output will appear.
 
 ## Climactic, eh?
 <div class="sidebar">
@@ -209,7 +209,7 @@ You've written your first C# program. Congratulations!
 
 ## Next Steps
 
-C# is a *strongly-typed* language. The type of `"Hello, World!"` is `String`, which is denoted by the double quotation marks:
+C# is a *strongly-typed* language. The type of `"Hello, World!"` is `string`, which is denoted by the double quotation marks:
 
 <pre><code class="language-C#" data-noescape>Console.WriteLine(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 

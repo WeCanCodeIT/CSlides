@@ -100,7 +100,7 @@
 	<img alt="Select console application" src="./resources/hello2.png" />
 </div>
 
-<p>• Select <em>Conole Application</em> from the <em>New Project</em> Window.</p>
+<p>• Select <em>Console Application</em> from the <em>New Project</em> Window.</p>
 
 <p>• Specify a <em>Project name</em> of <em>Hello-World</em> as in the screenshot.</p>
 
@@ -141,7 +141,7 @@
 {
 	<mark>class Program</mark>
 	{
-		public static void main(String[] args) 
+		public static void Main(string[] args) 
 		{
 		}
 
@@ -157,13 +157,13 @@
           <!-- _S9SLIDE_ -->
 <h2 id="c-methods">C# Methods</h2>
 
-<p>Think of <em>Methods</em> as the messages that we send in C#. All C# applications start with a <code>main</code> method. We will discuss C# methods in more detail later in the course.</p>
+<p>Think of <em>Methods</em> as the messages that we send in C#. All C# applications start with a <code>Main</code> method. We will discuss C# methods in more detail later in the course.</p>
 
 <pre><code class="language-C#" data-noescape="">namespace HelloWorld 
 {
 	class Program
 	{
-		<mark>public static void main(String[] args)</mark> 
+		<mark>public static void Main(string[] args)</mark> 
 		{
 		}
 
@@ -194,12 +194,12 @@
 
 	class Program
 	{
-		public static void main(String[] args) 
+		public static void Main(string[] args) 
 		{
 		}
 
 	}
-<mark>}</mark> This closing clurly brace signifie the closing of the namespace
+<mark>}</mark> This closing curly brace signifies the closing of the namespace.
 
 </code></pre>
 
@@ -217,11 +217,11 @@
 	class Program
 	<mark>{</mark> This opening curly brace signifies the opening of the class Program
 
-		public static void main(String[] args) 
+		public static void Main(string[] args) 
 		{
 		}
 
-	<mark>}</mark> This closing clurly brace signifie the closing of the class Program
+	<mark>}</mark> This closing curly brace signifies the closing of the class Program.
 }
 
 </code></pre>
@@ -239,10 +239,10 @@
 
 	class Program
 	{
-		public static void main(String[] args) 
-	<mark>{</mark> This opening curly brace signifies the opening of the main method
+		public static void Main(string[] args) 
+	<mark>{</mark> This opening curly brace signifies the opening of the Main method.
 
-	<mark>}</mark> This closing clurly brace signifie the closing of the main method
+	<mark>}</mark> This closing curly brace signifies the closing of the Main method.
 
 	}
 }
@@ -260,9 +260,9 @@
 
 <p>Here, I have created a comment to remind me that I need to do something-namely, write some code inside the method! We’ll do that next.</p>
 
-<pre><code class="language-java" data-noescape="">public class HelloWorld {
+<pre><code class="language-C#" data-noescape="">public class HelloWorld {
 
-	public static void main(String[] args) {
+	public static void Main(string[] args) {
 		<mark>// add code for future development</mark>
 
 	}
@@ -279,13 +279,13 @@
 <h2 id="types-of-comments">…Types of Comments</h2>
 
 <p>As you can see we used to ‘//’ to denote a command. We can use ‘//’ to comment out single lines. We can also use ‘/<em>’ to start commenting multiple lines of code, and end with ‘</em>/’.
-Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: Ctrl K C and the following keystrokes to uncomment code: Ctrl K U.</p>
+Finally we can also highlight the code we want to comment and use the following keystrokes to comment that code: <mark>Ctrl K C</mark> and the following keystrokes to uncomment code: <mark>Ctrl K U.</mark></p>
 <pre><code class="language-C#" data-noescape="">public class HelloWorld {
 
-	public static void main(String[] args) {
+	public static void Main(string[] args) {
 		<mark>//</mark> add code for future development
 		<mark>/*</mark>
-		add code for futuer development
+		add code for future development
 		<mark>*/</mark>
 	}
 
@@ -304,7 +304,7 @@ Finally we can also highlight the code we want to comment and use the following 
 
 <pre><code class="language-C#" data-noescape="">class Program {
 
-	public static void main(String[] args) {
+	public static void Main(string[] args) {
 		
 		<mark>Console.WriteLine("Hello World!");</mark>
 
@@ -341,7 +341,7 @@ Finally we can also highlight the code we want to comment and use the following 
 </div>
 
 <p>Press the <em>Start</em> button highlighted located in the top of the Visual Studio IDE.
-Now press Ctrl F5 and the output will appear.</p>
+Now press <mark>Ctrl F5</mark> and the output will appear.</p>
 
 
 
@@ -364,7 +364,7 @@ Now press Ctrl F5 and the output will appear.</p>
           <!-- _S9SLIDE_ -->
 <h2 id="next-steps">Next Steps</h2>
 
-<p>C# is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>String</code>, which is denoted by the double quotation marks:</p>
+<p>C# is a <em>strongly-typed</em> language. The type of <code>"Hello, World!"</code> is <code>string</code>, which is denoted by the double quotation marks:</p>
 
 <pre><code class="language-C#" data-noescape="">Console.WriteLine(<mark>"</mark>Hello, World!<mark>"</mark>);</code></pre>
 
