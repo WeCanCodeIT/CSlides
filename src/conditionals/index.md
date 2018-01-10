@@ -16,15 +16,15 @@ theme: league
 
 - We control the flow by making decisions.
 
-- Lets walk through the flow control diagram above.
+- Let's walk through the flow control diagram above.
 
-## Hero's fight battles!!'
+## Heroes fight battles!!'
 
-- Lets revisit or hero Spartacus in our Hello World program.
+- Let's revisit our hero Spartacus in our Hello World program.
 
-- If its not already, open your <mark>HelloWorld</mark> program in Visual Studio.
+- If it's not already, open your <mark>HelloWorld</mark> program in Visual Studio.
 
-- Spartacus, like all heros, makes his living fighting battles.
+- Spartacus, like all heroes, makes his living fighting battles.
 
 - We will use conditional statements to help our hero do the following:
 
@@ -38,17 +38,17 @@ theme: league
 
 - Volunteer time
 
-- Lets start by <mark>Commenting out</mark> part ten.
+- Let's start by <mark>Commenting out</mark> part ten.
 
 <div class="fragment">
 Question time: What are two of the methods we can use to comment code?
 </div>
 
-## iF this then.....
+## if this then.....
 
 - An <mark>if</mark> statement is exactly what it sounds like.
 
-- We use if statements in like everyday. If the tempurature is atleast 80 degrees, I will goto the beach.
+- We use if statements in code like we do in every day life. If the temperature is at least 80 degrees, I will go to the beach.
 
 - Putting the above statement in code would look like this: if(temp >= 80)
 
@@ -70,9 +70,9 @@ Question time: How would we change the equality operator to make the conditional
 
 ## Where to go
 
-- Now lets use the <mark>if</mark> statement to give our hero direction.
+- Now let's use the <mark>if</mark> statement to give our hero direction.
 
-- Spartacus wants to goto battle, but doesnt want tto march to the closest city.
+- Spartacus wants to go to battle, but doesn't want to march to the closest city.
 
 - Our <mark>if</mark> statement in spoken language might read: If the city is less than 125 miles, then I will march there.
 
@@ -90,13 +90,13 @@ Question time: What equality operator would we use in our conditional statement?
 
 <div float="right"><img src="./resources/Cond3.png" /></div>
 
-- Once complete execute the code with the following inputs: 126 40 55
+- Once complete, execute the code with the following inputs: `126` `40` `55`
 
-- Obvioulsy our scope is small. This example is to show the working of the concept in its simplest form.
+- Obviously our scope is small. This example is to show the working of the concept in its simplest form.
 
-- Its importand to understand each <mark>if</mark> in this example will be executed if the conditional statement is met.
+- It's important to understand each <mark>if</mark> in this example will be executed if the conditional statement is met.
 
-- You may have noticed we included a few items we have not yet discussed, lets review them
+- You may have noticed we included a few items we have not yet discussed, so let's review them.
 
 ## Strings again?
 
@@ -118,26 +118,27 @@ Question time: If we wanted to convert input from the console to a double and sa
 
 ## Who is going to march
 
-- Now we need to make sure Spartacus has the best soldiers to goto battle.
+- Now we need to make sure Spartacus has the best soldiers to go to battle.
 
-- Our statement in spoken language woud look as follows: If a soldier is an officer, or 26 years old or younger, they will goto battle, else they will stay home.
+- Our statement in spoken language would look as follows: If a soldier is an officer, or 26 years old or younger, they will go to battle, else they will stay home.
 
-- We are introducing a new type of <mark>if</mark> called and <mark>if else</mark> statement. Lets review the following:
+- We are introducing a new type of <mark>if</mark> called and <mark>if else</mark> statement. Let's review the following:
 
 <pre><code class="language-C#">
 Console.WriteLine("What is your rank?");
 string rank = Console.ReadLine();
 
-Console.WriteLine("What is your age
+Console.WriteLine("What is your age?");
 int age = int.Parse(Console.ReadLine());
 
 if ((rank == "officer") || (age <= 26))
 { 
     Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
-} else
+} 
+else
 {
 
-    Console.WriteLine("Sorry you are staying home.");
+    Console.WriteLine("Sorry, you are staying home.");
 }
 </code></pre>
 
@@ -151,7 +152,7 @@ if ((rank == "officer") || (age <= 26))
 
 - Execute the code twice with the following inputs: <mark>officer 26</mark> then <mark>corporal 24</mark>.
 
-- Notice the if statement is being executed, and if the conditional fails the else statement will be printed.
+- Notice the if statement is being executed, and if the conditional fails, the else statement will be printed.
 
 <div class="fragment">
 Question time: When will the first statement be printed?
@@ -165,13 +166,13 @@ Notice the if statement is being executed, and if the conditional fails the else
 
 - So far we have reviewed and seen examples of the <mark>if</mark> and <mark>if else</mark> statements.
 
-- We know if statments <mark?WILL</mark> be executed, and their values returned if the conditional statement is met.
+- We know if statments <mark>WILL</mark> be executed, and their values returned if the conditional statement is met.
 
 - We know if else statements will be executed and the else will be executed if the conditional statement is <mark>NOT</mark>met.
 
 - Finally we are going to learn about the <mark>if else if</mark> statement.
 
-- Lets rewrite our prior <mark>if else</mark> statement into and <mark>if else if</mark>.
+- Let's rewrite our prior <mark>if else</mark> statement into and <mark>if else if</mark>.
 
 ## If else if...
 
@@ -218,14 +219,14 @@ Execute your code. Use input that will test each part of the <mark>if esle</mark
 
 !SLIDE
 
-- Here is an example of a <mark>Switch Case</mark>. Add the following code to your Hello Project.
+- Here is an example of a <mark>Switch Case</mark>. Add the following code to your Hello World project.
 
 <pre><code class="language-C#">
 
 switch(job)
 {
     case "infantry":
-        Console.Write("You will carry a sword");
+        Console.WriteLine("You will carry a sword");
         break;
 
     case "archers":
@@ -236,7 +237,7 @@ switch(job)
         Console.WriteLine("You will carry pots and pans");
         break;
 	
-	case "specialist":
+	case "catapault":
         Console.WriteLine("You will operate the catapault");
         break;
 
@@ -257,18 +258,18 @@ switch(job)
 
 ## Switch case explained
 
-- Switch case statement is seperated into four sections
+- Switch case statement is separated into four sections
 
 	- The <mark>switch method</mark> which takes a variable. This variable acts as part of a conditional with the case statement.
 
 	- The <mark>case</mark> statement whose value is compared to the variable in the switch method.
 
-	- The <mark>output</mark> statement wil be delivered when the comparison is true.
+	- The <mark>output</mark> statement will be delivered when the comparison is true.
 
 	- The <mark>break</mark> statement which has the effect of exiting the statement if the case statement is true.
 
-	- Its importante to note if none of othe case statments are true, the default case <mark>WILL</mark> be executed.
+	- Its important to note if none of othe case statments are true, the default case <mark>WILL</mark> be executed.
 
-- For many students the <mark>switch case</mark> seems pretty daunting, but with practice will be a very usefule tool.
+- For many students the <mark>switch case</mark> seems pretty daunting, but with practice will be a very useful tool.
 
 

@@ -8,7 +8,7 @@ theme: league
 
 	- You are required to attend a minimum of <mark>90%</mark> of class time to be eligible for graduation.
 	 
-	- Please inform your instructor and TA if extenuating circumstances arise.
+	- Please inform your facilitators if extenuating circumstances arise.
 
 	- In order to pass the course, you must receive a grade of <mark><mark>80%</mark></mark> or higher averaged over all the assignments.
 
@@ -40,21 +40,21 @@ theme: league
 
 ## Late and Incomplete Projects
 
-- Projects are assigned every Friday during weeks one thru ten.
+- Projects are assigned every Friday during weeks one through ten.
 
-	- Projects are due on or before <mark>9:30</mark> am the following Monday.
+	- Projects are due on or before <mark>9:30</mark> AM the following Monday.
 	 
-	- Projects are considered late at <mark>9:31</mark> am the following monday.
+	- Projects are considered late at <mark>9:31</mark> AM the following Monday.
 	
-	- <mark>Ten</mark> projects points will be deducted for projects submitted after <mark>9:30</mark> am on the following Monday.
+	- <mark>Ten</mark> projects points will be deducted for projects submitted after <mark>9:30</mark> AM on the following Monday.
 	
-	- <mark>Ten</mark> project points will be deducted every twenty-fours there-after. An example is as follows:
+	- <mark>Ten</mark> project points will be deducted every twenty-four hours there-after. An example is as follows:
 		
-		- Projects submitted on 9:31 am on project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>90%.</mark> 
+		- Projects submitted on 9:31 AM on project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>90%.</mark> 
 		
-		- Projects submitted on 9:31 am on the Tuesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark><mark>80%</mark>.</mark> 
+		- Projects submitted on 9:31 AM on the Tuesday after the project due date will be deducted <mark>ten</mark> additional points. The max grade possible is <mark><mark>80%</mark>.</mark> 
 
-		- Projects submitted on 9:31 am on the Wednesday after the project due date will be deducted <mark>ten</mark> points. The max grade possible is <mark>70%.</mark> 
+		- Projects submitted on 9:31 AM on the Wednesday after the project due date will be deducted <mark>ten</mark> more points. The max grade possible is <mark>70%.</mark> 
 
 	- Once a project is <mark>five</mark> days late, the max grade possible will be 0%.
 	
@@ -68,21 +68,21 @@ theme: league
 
 - To participate in final projects and receive a graduation certificate, a student must maintain, at a minimum, an <mark>80%</mark> average project score.
 
-- In the event a student's average course score does not meet the <mark>80%</mark> average project score minimum,the following actions will be initated by WCCI:
+- In the event a student's average course score does not meet the <mark>80%</mark> average project score minimum, the following actions will be initated by WCCI:
 
-	- WCCI staff will notify the student by email of his or her unsatifactory acedemic situation.
+	- WCCI staff will notify the student by email of his or her academic status.
 
-	- The student will meet with WCCI staff to discuss the students situation.
+	- The student will meet with WCCI staff to discuss the student's situation.
 
 	- WCCI staff will work with the student to identify areas of the curriculum where the student is having issues.
 
-	- WCCI staff will provide the necessary resources and instruction to reenforce course material.
+	- WCCI staff will provide the necessary resources and instruction to reinforce course material.
 
 	- Upon completeion of the meeting, the student will be placed on academic probation for two weeks.
 	 
-	- During the two week academic probation period,the student is expected to complete and pass any portion of the class in which the student has failed. 
+	- During the two week academic probation period, the student is expected to complete and pass any portion of the class in which the student has failed. 
 	
-	- If the student cannot sucessfully complete and pass failed protions of the class within the two week probation perios, he or she may be dismissed from the program.  
+	- If the student cannot sucessfully complete and pass failed portions of the class within the two week probation period, he or she may be dismissed from the program.  
 	
 
 ## Final Projects
