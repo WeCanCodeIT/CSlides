@@ -4,124 +4,227 @@ theme: league
 
 ## What is Looping?
 
-Looping means to repeat something. This another means of controlling flow within a program. `if/else` and `switch/case` statements focus on *decision making*. Looping statements focus on doing something repeatedly. We call doing something repeatedly *iterating*.
+- Looping means to repeat something. 
+
+- Looping another means of controlling flow within a program. 
+
+- `if/else` and `switch/case` statements focus on *decision making*. 
+
+- Looping statements focus on doing something repeatedly. 
+
+- We call doing something repeatedly *iterating*.
+
+- Our efforts will focus predominantly on three types of loop: <mark>while, do while, for</mark>
 
 ## Why Would I Want To Do That?
 
 There are many practical examples of loops:
 
 - Sunrise and sunset
+
 - Your daily routine: drink coffee, walk the dog, ask the neighbors if they've seen the dog, catch the dog, take a shower, go to work, come home, eat dinner, repeat
-- Question time: What are some real life examples of a loop?
+
+<div class="fragment">
+Question time:  Question time: What are some real life examples of a loop?
+</div>
+
 ## While Loops
 
-A `while` loop continues to do what you've told it to do *while* some condition continues to be true.
+- A `while` loop continues to do what you've told it to do *while* some condition continues to be true.
 
-Usually, we won't use them for counting, but it's simple to illustrate them this way. This loop will count from one to ten:
+- Lets go back to our Hello World program, and use loops to make the program more efficient.
+
+- When Spartacus is deciding who will marh to battle, we have to assume there will be more than one soldier.
+
+- Currently, our decision logic only processes one soldier at a time. Lets use a while loop to process many soldiers.
+
+- Before we get started please comment out section twelve of our Hello World program.
+
+!SLIDE
+ 
+- Volnteer time
+
+- Copy and paste the following code from your Hello World program. 
 
 ```C#
-int count = 0;
-while (count < 10) {
-	Console.WriteLine("The count is " + count);
-	count++; // remember, this increases the value of count by 1
+// Part thirteen while loop example
+Console.WriteLine("What is your rank soldier?");
+string rank = Console.ReadLine();
+
+Console.WriteLine("What is your age soldier?");
+int age = int.Parse(Console.ReadLine());
+
+Console.WriteLine("What is your job soldier?");
+string job = Console.ReadLine();
+
+if ((rank == "officer") || (age <= 26))
+{
+    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+}
+else if ((job == "cook") || (age >= 26))
+{
+    Console.WriteLine("My army has to eat. Pack your pots and pans");
+}
+else
+{
+    Console.WriteLine("Sorry you are staying home.");
 }
 ```
-Try it!
+## We should all be here
+
+<div class="img" float="right"><img src="./resources/loop1.png" /></div>
+
+- For a loop to operate succesfully, we need to have an enter/exit statement.
+
+- Meaning there needs to be a process by which the program can enter and exit the loop.
+
+- If we do not provide an enter/exit statement, we will have a situation programmers call <mark>infinite looping</mark>
 
 ## Let's Break That Down
 
-We start with the `while` keyword:
+- Lets construct our while loop around our existing code.
 
-<pre><code class="language-C#" data-noescape>int count = 0;
-<mark>while</mark> (count < 10) {
-	Console.WriteLine("The count is " + count);
-	count++; // remember, this increases the value of count by 1
+- We start with the `while` keyword. This keyword tells the compiler we are processing a loop.
+
+<pre><code class="language-C#" data-noescape>
+<mark>while</mark> () {	
 }</code></pre>
 
 <div class="fragment">
-<p>Followed by a set of parentheses:</p>
+<p>Followed by a set of parentheses. Our enter/exit statement in the form of a conditional statement goes here</p>
+<p>We will use the following conditional as our enter/exit statement: (rank != "exit")</p>
 <pre><code class="language-C#" data-noescape>int count = 0;
-while <mark>(</mark>count < 10<mark>)</mark> {
-	Console.WriteLine("The count is " + count);
-	count++; // remember, this increases the value of count by 1
+while <mark>(</mark>rank != "exit"<mark>)</mark> {
 }</code></pre>
+</div>
+
+<div class="fragment">
+- So in each iteration of the while loop, the conditional <mark>rank != "exit"</mark> will be checked.
+</div>
+
+<div class="fragment">
+- As long as the value returned by the conditional remains true, the loop will execute.
+</div>
+
+<div class="fragment">
+- When the value returned by the conditional changes to false, the loop will not execute.
 </div>
 
 ## Let's Keep Breaking It Down
 
-Within these parentheses, we find a *condition*. This evaluates to true or false (`boolean`), just like our condition for an `if` statement:
+- Within these curly braces goes the code we want to execute. 
 
 <pre><code class="language-java" data-noescape>int count = 0;
-while (<mark>count < 10</mark>) {
-	Console.WriteLine("The count is " + count);
-	count++; // remember, this increases the value of count by 1
-}</code></pre>
-
-In this case, we will continue to *iterate* as long as the value of `count` is less than eleven.
-
-## But What Happens?
-
-Each time our `while` statement finds its condition to be true, it will execute the code inside the (*wait for it…*) **code block** that follows it, denoted by our friends the curly brackets:
-
-<pre><code class="language-C#" data-noescape>int count = 0;
-while (count < 10) <mark>{</mark>
-	System.out.println("The count is " + count);
-	count++; // remember, this increases the value of count by 1
+while (rank != "exit") <mark>{</mark>
+	//Code body
 <mark>}</mark></code></pre>
 
-The way we read this would be: *"While count is less than ten, we will print its value, then increase its value by one."*
+- Any variables, data structures or methods we <mark>declare</mark> in a loop are considered local to the loop, and cannot be accessed by the rest of the program.
 
-## Doing it at least once
+- Any variables, data structures or methods declared outside a loop are considered <mark>global</mark>, and can be accessed inside and outside the loop.
 
-A `while` statement checks its condition before it runs. A `do/while` is similar, but it runs the code at least once before checking the condition. We don't see these as often, since it's always possible to use a `while` loop instead, and they're generally easier to understand.
+- So our enter/exit conditional statement variable must be declared outside the scope of the loop. Lets create that variable.
 
-If I wanted to allow a user to ask for help regarding question options (this may remind you of a recent exercise), I may do something like this:
+- There are many ways to format this variable. We will format as follows: <mark>string action = " "</mark>
 
-```C#
-String porridgeTemperature;
-do {
-  Console.WriteLine("Please specify porridge temperature.");
-  Console.WriteLine("Type \"help\" to list options.");
-  porridgeTemperature = Console.ReadLine();
-  if(porridgeTemperature == "help") {
-    Console.WriteLine("Options: too hot, too cold, just right");
-  }
-} while(porridgeTemperature == "help");
+- Finally, we need a way to assign a new value to our variable <mark>action</mark> so we can exit the loop.
 
-```
-
-Note that since `porridgeTemperature` is accessed *outside* of the curly brackets, we must define it *before* the curly brackets for the `do/while` block.
-Question time: Can you give me a real life example of a *while* and *do while* loop?
-## Let's Do It Together
-
-- If I wanted to ask the user for a message, then display it five times, how would I do this?
-- If I wanted to pick a number, then ask the user to guess it, how might I do this?
-  - What if I wanted my program to pick a random number?
-
-## It Never Stops
-
-Infinite loops aren't fun. You're sure to encounter one at some point. That's when you'll become more familiar with the *Debug perspective* in Visual Studio, so that you can kill an errant loop.
-
-These happen when the circumstances never arise to make the condition for your loop become false:
+## Add the following code to your Hello World Program 
 
 ```C#
-while(true) {
-  Console.WriteLine("I will run forever!");
-  Console.WriteLine("(Or until you figure out how to stop me!)");
+string action = " ";
+while (action != "exit"){
+Console.WriteLine("What is your rank soldier?");
+string rank = Console.ReadLine();
+
+Console.WriteLine("What is your age soldier?");
+int age = int.Parse(Console.ReadLine());
+Console.WriteLine("What is your job soldier?");
+string job = Console.ReadLine();
+
+if ((rank == "officer") || (age <= 26))
+{
+    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+}
+else if ((job == "cook") || (age >= 26))
+{
+    Console.WriteLine("My army has to eat. Pack your pots and pans");
+}
+else
+{
+    Console.WriteLine("Sorry you are staying home.");
+}
+Console.WriteLine("Add another? Type exit to quit");
+action = Console.ReadLine();
 }
 ```
+## We should all be here
 
-Usually it's not that straightforward, but the concept is the same. If your condition is never false when it is checked by the loop, then the loop never ends.
+<div class="img" float="right"><img src="./resources/loop2.png" /></div>
 
-Bad loops just need to be put down. Let's try it out!
+- Lets execute our program. Ensure the loop is operating as designed.
 
-## You Can Do It!
+<div class="fragment">
+Question time:  What happens when you type anything other than exit or just hit the enter key?
+</div>
 
-For the following exercises, you'll need to figure out whether a `while` or a `do/while` loop is most appropriate:
+## Do while
 
-- ATM: Prompt the user for a PIN. Display an error message if the user gets it wrong, and prompt again. If the user gets it right, print a congratulatory message.
-  - Stretch goal: quit after three failed attempts with an apologetic message.
+- The next loop we will discuss is the <mark>do while</mark> loop.
 
-- Sum: Ask the user for an integer. Calculate the sum of the numbers from one to the integer the user entered. Example: If the user enters 6, your program should print 21 (1 + 2 + 3 + 4 + 5 + 6).
-  - Stretch goal: Allow the user to enter a lower integer and a higher integer. Calculate the sum of the numbers from the lower to the higher, inclusive. Example: If the user entered 4, then 6, your program should print 15 (4 + 5 + 6).
-  - Stretchier goal: If user enters a lower number for the second number, display an error message instead of calculating the sum.
+- If we look at the while loop, we notice the loop only executes if the conditional statement is satisifed.
+
+- The <mark>do while</mark> loop on the other hand will always execute at least once.
+
+- The operation of the <mark>do while</mark> loop is essentially the same as the while loop.
+
+<div class="fragment">
+Question time:  Can you give me a real life example of a *do while* loop?
+</div>
+
+<div class="fragment">
+Lets take the code we just wrote in the while format and convert it to a do while loop. Comment out the while loop before we proceed with the exception of our action variable.
+</div>
+
+## Add the following code to your Hello World Program 
+
+```C#
+string action = " ";
+do {
+Console.WriteLine("What is your rank soldier?");
+string rank = Console.ReadLine();
+
+Console.WriteLine("What is your age soldier?");
+int age = int.Parse(Console.ReadLine());
+Console.WriteLine("What is your job soldier?");
+string job = Console.ReadLine();
+
+if ((rank == "officer") || (age <= 26))
+{
+    Console.WriteLine("Get your gear, kiss your family goodbye, put on your marching boots.");
+}
+else if ((job == "cook") || (age >= 26))
+{
+    Console.WriteLine("My army has to eat. Pack your pots and pans");
+}
+else
+{
+    Console.WriteLine("Sorry you are staying home.");
+}
+Console.WriteLine("Add another? Type exit to quit");
+action = Console.ReadLine();
+}while (action != "exit");
+```
+
+## We should all be here
+
+<div class="img" float="right"><img src="./resources/loop3.png" /></div>
+
+- Lets execute our program. Ensure the loop is operating as designed.
+
+<style type="text/css">
+.img:hover  {
+        transform: scale(1.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+</style>
