@@ -222,6 +222,8 @@ action = Console.ReadLine();
 
 - Lets execute our program. Ensure the loop is operating as designed.
 
+- You will notice the execution of the loop is almost the same, but the circumstances for using each loop a varied.
+
 <style type="text/css">
 .img:hover  {
         transform: scale(1.5);
