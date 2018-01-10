@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Arrays - •••</title>
+		<title>Arrays - Data Structures</title>
 
 		<meta name="description" content="- description not found -">
 		<meta name="author"      content="Your Name Here">
@@ -47,7 +47,7 @@
 			<div class="slides">
 				<section>
 					<h1 style="text-align: center">Arrays</h1>
-					<h3 style="text-align: center">•••</h3>
+					<h3 style="text-align: center">Data Structures</h3>
 					<div id="logo">
 						<img src="../../shared/images/wcci-logo.png">
 						<p style="font-size: smaller;">&copy; We Can Code IT, LLC</p>
@@ -58,13 +58,142 @@
         <section>
           
 <!-- _S9SLIDE_ -->
-<h2 id="what-are-they">What Are They?</h2>
+<h2 id="lets-talk-about-data-structures">Lets talk about Data Structures?</h2>
 
-<p>Arrays allow us to store a sequence of values of a given type. This could be items on a menu, lottery numbers, or the birds in your menagerie.</p>
+<ul>
+  <li>
+    <p>In the feild of computing, programmers use <mark>Data Structures</mark> in which to store and manipulate data.</p>
+  </li>
+  <li>
+    <p>Some examples of the more commonly used data structures are as follows: Arrays, Lists, Dictionaries(Hash Tables), Queues, Stacks</p>
+  </li>
+  <li>
+    <p>In this lecture we will focus soley on <mark>Arrays&lt;/marks&gt;, but we will take a few minutes to introduce you to the rest.</mark></p>
+  </li>
+  <li>
+    <p>A <mark>list</mark> is a data strucuture which holds variables in a specific order.</p>
+  </li>
+  <li>
+    <p>Lists are dynamic sized. Meaning you do not have to specify the size of the list, and the list can grow as needed.</p>
+  </li>
+  <li>
+    <p>Lists are created, accessed and manipilated in much the same way we create, access and manipilate array’s.</p>
+  </li>
+  <li>
+    <p>We will go into depth on lists in a future lecture.</p>
+  </li>
+</ul>
 
-<p>Lets liken our Array to a sequence of cups. This is a pretty good analogy.</p>
 
-<p>Each of these “cups” in an array holds a value, which we call an <em>element</em>. We reference a specific element using its <em>zero-based index</em>. Its important to remember the index values of an Array and all other data strutures you will encounter will start with <em>0</em>.</p>
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="dictionaries-no-not-websters">Dictionaries… No not Websters</h2>
+
+<ul>
+  <li>
+    <p>Dictionaries, or as they are conmonly referred Hash Tables, are an extended/advanced array.</p>
+  </li>
+  <li>
+    <p>Like a list, dictionaries are dynamic sized. Meaning you do not have to specify the size of the dictionary, and the dictionary can grow as needed.</p>
+  </li>
+  <li>
+    <p>Unlike arrays or lists in which we only store the data values, in Dictionaries we can also store a key along with a value. This is commonly referred to as a <mark>KeyValuePair</mark>.</p>
+  </li>
+  <li>
+    <p>We can also store to the <mark>KeyValuePairs</mark> as differant data types. Meaning the Key can be an int, while its value can be a string.</p>
+  </li>
+  <li>
+    <p>We will see in a futre lecture how to create, access and manipilate Dictionaries, although they will not be the focus of our data structure teaching efforts</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="queues">Queues</h2>
+
+<ul>
+  <li>
+    <p>You may have heard this term before if you have ever used a computer to print a document.</p>
+  </li>
+  <li>
+    <p>Unlike arrays, lists and dictionaries, the data in a queue cannot be accessed by index. Meaning we cannot choose which piece of data we want to access and write code to directly get to it.</p>
+  </li>
+  <li>
+    <p>Queues are commonly refered as <mark>FIFO</mark> or <mark>First In First Out</mark> data structure.</p>
+  </li>
+  <li>
+    <p>This course will not go into queues any deeper than this mention. I would encourage you to do some more research to broaden your knowledge on queue operation.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+Question time: What are some examples you might be aware of were we might use a Queue?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="stacks">Stacks</h2>
+
+<ul>
+  <li>
+    <p>Stackes and queues are simiualar in many ways with the following exceptions:</p>
+
+    <ul>
+      <li>
+        <p>As we discussed queues are a <mark>FIFO</mark> data structure, while stackes are <mark>LIFO</mark> data structure.</p>
+      </li>
+      <li>
+        <p>Stackes are accessed and manipulated by <mark>popping and pushing</mark> while queues use <mark>Enqueue() and Dequeue().</mark></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>There are many uses for stacks in programming, and I would challenge you to do some further research.</p>
+  </li>
+  <li>
+    <p>This course will not go into stacks any deeper than this mention. I would encourage you to do some more research to broaden your knowledge on stack operation.</p>
+  </li>
+</ul>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="arrays">Arrays</h2>
+
+<ul>
+  <li>
+    <p>Arrays allow us to store a sequence of values of a given type.</p>
+  </li>
+  <li>
+    <p>This could be items on a menu, lottery numbers, or the birds in your menagerie.</p>
+  </li>
+  <li>
+    <p>Lets liken our Array to a sequence of cups. This is a pretty good analogy.</p>
+  </li>
+  <li>
+    <p>Each of these “cups” in an array holds a value, which we call an <em>element</em>.</p>
+  </li>
+  <li>
+    <p>We reference a specific element using its <em>zero-based index</em>.</p>
+  </li>
+  <li>
+    <p>Its important to remember the index values of an Array and all other data strutures you will encounter will <mark>START WITH 0</mark>.</p>
+  </li>
+</ul>
 
 <div class="cups">
 	<div><p class="row-label">Element →</p></div>
@@ -112,6 +241,10 @@ div.cups .cup {
 	background: no-repeat center url(./resources/cup.png);
 	background-size: contain;
 }
+.img:hover  {
+        transform: scale(1.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 </style>
 
 
@@ -122,14 +255,88 @@ div.cups .cup {
           <!-- _S9SLIDE_ -->
 <h1 id="declaring-an-array">Declaring an Array</h1>
 
-<p>We declare an array using the following syntax in C#. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the <code>new</code> operator in a different way.</p>
-
-<p>To create an array destined to hold the values of our cups from the previous example, we would do this:</p>
+<ul>
+  <li>
+    <p>Remember, when we want to create an variable, We declare that variable.</p>
+  </li>
+  <li>
+    <p>We use the same process to create an array.</p>
+  </li>
+  <li>
+    <p>We declare an array by using the following syntax in C#.</p>
+  </li>
+</ul>
 
 <pre><code class="language-C#">int[] cupValues = new int[5];
 </code></pre>
 
-<p>This creates an array of type <code>int</code> whose name is <code>cupValues</code>. It has five elements.</p>
+<ul>
+  <li>
+    <p>We include the number of elements it will hold or its size in the square brackets.</p>
+  </li>
+  <li>
+    <p>Likewise we include the use the <mark>new</mark> operator.</p>
+  </li>
+  <li>
+    <p>The <mark>new</mark> operator tells C# to declare the new array and initialize or set the array elements to their default values.</p>
+  </li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>
+    <p>In our example below we can see the left side of the <mark>=</mark> operator is used to decalre an int <mark>array</mark> named <mark>cupValues</mark>.</p>
+  </li>
+  <li>
+    <p>The right side of the <mark>=</mark> operator will create a space in memory for the <mark>5</mark> elements, and assign those elements the default value of <mark>0</mark>.</p>
+  </li>
+</ul>
+
+<pre><code class="language-C#">int[] cupValues = new int[5];
+</code></pre>
+
+<div class="fragment">
+Question time: What type of array are we declaring?
+</div>
+
+<div class="fragment">
+Question time: What are the index values for our array?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="back-to-hello-world">Back to Hello World</h2>
+
+<ul>
+  <li></li>
+  <li>
+    <p>Open your <mark>Hello World</mark> project from last week.</p>
+  </li>
+  <li>We should all be here.</li>
+</ul>
+
+<div class="img" float="right"><img src="./resources/arr1.png" /></div>
+
+<ul>
+  <li>
+    <p>Lets start by commenting our our previous code.</p>
+  </li>
+  <li>
+    <p>Because the march to battle will be long, we need to create a list of food items which the cooks will need bring</p>
+  </li>
+  <li>
+    <p>We will create an array and assign that array values.</p>
+  </li>
+</ul>
 
 
 
@@ -139,33 +346,84 @@ div.cups .cup {
           <!-- _S9SLIDE_ -->
 <h1 id="assigning-values">Assigning Values</h1>
 
-<p>Remember our cups?</p>
+<ul>
+  <li>
+    <p>Before we can create our array, we need to know what item names we will store as elements. They are as follows:</p>
 
-<div class="cups">
-	<div><p class="row-label">Element →</p></div>
-	<div class="cup"><p>42</p></div>
-	<div class="cup"><p>86</p></div>
-	<div class="cup"><p>23</p></div>
-	<div class="cup"><p>8</p></div>
-	<div class="cup"><p>91</p></div>
+    <ul>
+      <li>Milk, Fruit, Meat, Wine, Bread.</li>
+    </ul>
+  </li>
+  <li>
+    <p>By looking at our items we can tell our array should be a <mark>string</mark> array.</p>
+  </li>
+  <li>
+    <p>Based on the number of items in our list, its safe to assume our array should be <mark>5</mark> elements long.</p>
+  </li>
+  <li>
+    <p>Lets get two volunteers to some cunstruct our array on the white board.</p>
+  </li>
+</ul>
 
-	<div><p class="row-label">Index →</p></div>
-	<div><p>0</p></div>
-	<div><p>1</p></div>
-	<div><p>2</p></div>
-	<div><p>3</p></div>
-	<div><p>4</p></div>
+<div class="fragment">
+This is what our code should look like: <mark>string[] foodList = new string[5];</mark>
 </div>
 
-<p>We use array indices (that’s the plural of index) to assign values to elements. This is how we’d declare our array and assign element values:</p>
+<div class="fragment">
+<p>Add the following code below the end of part eleven.</p>
+<pre><code class="language-C#" data-noescape="">
+        //Part twelve array examples
+        string[] foodList = new string[5];
+</code></pre> 
+</div>
 
-<pre><code>int[] cupValues = new int[5];
-cupValues[0] = 42;
-cupValues[1] = 86;
-cupValues[2] = 23;
-cupValues[3] = 8;
-cupValues[4] = 91;
-</code></pre>
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<ul>
+  <li>
+    <p>Now that we have declared and initialized our string array called foodList, lets assign our values to the array.</p>
+  </li>
+  <li>
+    <p>There is more than one way to assign values to an array. We initialized an empty array, so we will need to write some code to assign our values.</p>
+  </li>
+  <li>
+    <p>When we want to assign values to an array, we must specify the following:</p>
+
+    <ul>
+      <li>
+        <p>The <mark>name</mark> of the array.</p>
+      </li>
+      <li>
+        <p>The <mark>index</mark> we want to access.</p>
+      </li>
+      <li>
+        <p>The <mark>value</mark> we want to place at that <mark>index</mark></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>Lets start at index <mark>0</mark>.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+<p>Add the following highlighted code.</p>
+<pre><code class="language-C#" data-noescape="">
+string[] foodList = new string[5];
+<mark>foodList[0] = "Milk";</mark>
+</code></pre> 
+</div>
+
+<div class="fragment">
+If we print <mark>foodList[0]</mark> to the console we can see what the value is of the element at index 0. What is the command we would use?
+</div>
+<div class="fragment">
+Please add <mark> Console.WriteLine(foodList[0]);</mark> to your code then execute.
+</div>
 
 
 
@@ -173,16 +431,43 @@ cupValues[4] = 91;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="change-can-be-painful">Change can be painful</h2>
+<h2 id="we-should-all-be-here">We should all be here</h2>
 
-<p>Arrays are very efficient, but their size is fixed. If I wanted to change the number of cups, I’d need to create a new array, assign it to my variable, then repopulate all the values:</p>
+<div class="img" float="right"><img src="./resources/arr2.png" /></div>
 
-<pre><code>cupValues = new int[2];
-cupValues[0] = 42;
-cupValues[1] = 86;
+<ul>
+  <li>
+    <p>Its important to understand <mark>foodList[0]</mark> is acting as a variable, whos informationwe are accessing is at index 0.</p>
+  </li>
+  <li>
+    <p>Lets finish assigning values to our array. Lets get two more volunteers to whiteboard our solution.</p>
+  </li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Add the following highlighted code.</p>
+<pre><code class="language-C#" data-noescape="">
+string[] foodList = new string[5];
+<mark>foodList[0] = "Milk";</mark>
+<mark>foodList[1] = "Fruit";</mark>
+<mark>foodList[2] = "Meat";</mark>
+<mark>foodList[3] = "Wine";</mark>
+<mark>foodList[4] = "Bread";</mark>
+<mark>Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);</mark>
 </code></pre>
 
-<p>Notice I didn’t <em>declare</em> <code>cupValues</code> again. I merely reassigned a new array to it. We will look at other data structures such <code>List</code>s and <code>Dictionaries</code>s later, types in C# that are more flexible.</p>
+<div class="fragment">
+Question time: What is the term for the formatting of the Console.WriteLine() method.
+</div>
+
+<div class="fragment">
+Execute your code
+</div>
 
 
 
@@ -190,16 +475,73 @@ cupValues[1] = 86;
         
         <section>
           <!-- _S9SLIDE_ -->
-<h1 id="retrieving-values">Retrieving Values</h1>
+<h2 id="we-should-all-be-here-1">We should all be here</h2>
 
-<p>To retrieve values, we use a syntax like we used to assign values:</p>
+<div class="img" float="right"><img src="./resources/arr3.png" /></div>
 
-<pre><code class="language-java">Console.WriteLine(cupValues[0]); // prints "42"
-Console.WriteLine(cupValues[1]); // prints "86"
-Console.WriteLine(cupValues[2]); // prints "23"
-Console.WriteLine(cupValues[3]); // prints "8"
-Console.WriteLine(cupValues[4]); // prints "91"
+<ul>
+  <li>
+    <p>Now that we have seen how to work with an empty array, lets look at creating a new array with the indexs initalized with preset values.</p>
+  </li>
+  <li>
+    <p>Lets enter into anouther array the amount of each food item: Milk 1000 gallons, Fruit 100 cases, Meat 2000 pounds,Wine 10000 gallons, Bread 1500 loafs</p>
+  </li>
+</ul>
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_  -->
+
+<p>Add the following code and execute.</p>
+<pre><code class="language-C#" data-noescape="">
+int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " + foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
 </code></pre>
+
+<ul>
+  <li>Here is our output</li>
+</ul>
+
+<div class="fragment">
+<div class="img" float="right"><img src="./resources/arr4.png" /></div>
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="lets-ponder-our-journey">Lets ponder our journey</h2>
+
+<ul>
+  <li>
+    <p>We have now learned two ways to create and initialize an array. We will learn one more when we discuss <mark>loops</mark>.</p>
+  </li>
+  <li>
+    <p>One thing to remember, arrays are very efficient, but their size is fixed.</p>
+  </li>
+  <li>
+    <p>If we wanted to change the number of items in our foodList, I’d need to create a new array, assign it to my variable, then repopulate all the values.</p>
+  </li>
+  <li>
+    <p>Like a value type variable or a string, once we declare them all we need to do is assign new values. Lets review how to accomplish array assignment.</p>
+  </li>
+</ul>
+
+<div class="fragment">
+<pre><code class="language-C#" data-noescape="">
+string[] foodList = new string[5];
+<mark>foodList[0] = "Milk";</mark>
+<mark>foodList[0] = "Fire";</mark>
+</code></pre> 
+</div>
+
+<div class="fragment">
+Question time: After we execute the code, whats the value of <mark>foodList[0]</mark>
+</div>
 
 
 
@@ -209,72 +551,27 @@ Console.WriteLine(cupValues[4]); // prints "91"
           <!-- _S9SLIDE_ -->
 <h1 id="how-big-is-it">How Big Is It?</h1>
 
-<p>Often, it’s important to know the size of an array. How many cups do I have?</p>
+<ul>
+  <li>
+    <p>Often, it’s important to know the size of an array. How many items does our foodList have?</p>
+  </li>
+  <li>
+    <p>If you remember back to our strings lecture, we could use the <mark>.Length</mark> method to get the number of <mark>chars</mark> in a string or the length of the string..</p>
+  </li>
+  <li>
+    <p>When we think of arrays, we can also think of the <mark>.Length</mark> method to get the number of <mark>indexs</mark> in a array.</p>
+  </li>
+</ul>
 
-<p>To do this, we use the <code>.length</code> property, like so (notice that dot operator):</p>
+<div class="fragment">
+<pre><code class="language-C#" data-noescape="">
+<mark>Console.WriteLine(foodList.Length);</mark>
+</code></pre> 
+</div>
 
-<pre><code class="language-java">int[] cupValues = new int[5];
-int numberOfCups = cupValues.length;
-Console.WriteLine(numberOfCups); // prints "5"
-
-cupValues = new int[2];
-Console.WriteLine(cupValues.length); // prints "2"
-</code></pre>
-
-<p>What is the value of <code>numberOfCups</code> after we run this code?</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="revenge-of-the-curly-brackets">Revenge of the Curly Brackets</h2>
-
-<p>We can also initialize an array with values. We do this using curly brackets to surround a comma-delimited list of values, like so:</p>
-
-<pre><code class="language-C#">String[] giantWords = { "fee", "fie", "foe", "fum" };
-</code></pre>
-
-<p>Note that we also do not include the <em>size</em> of the array. C# figures this out based on the number of values we provide.</p>
-
-<div class="fragment sidebar"><img src="./resources/wat.jpg" alt="WAT?" /></div>
-
-<p>This creates a String array with these values:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>index</th>
-      <th>value</th>
-      <th>reference</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>“fee”</td>
-      <td><code>giantWords[0]</code></td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>“fie”</td>
-      <td><code>giantWords[1]</code></td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>“foe”</td>
-      <td><code>giantWords[2]</code></td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>“fum”</td>
-      <td><code>giantWords[3]</code></td>
-    </tr>
-  </tbody>
-</table>
-
-<p>… and these curly brackets aren’t defining a code block. By now, you’re probably thinking…</p>
+<div class="fragment">
+Question time: If we execute this code, what value do you think will be returned?&lt;/mark&gt;
+</div>
 
 
 
@@ -282,51 +579,30 @@ Console.WriteLine(cupValues.length); // prints "2"
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="theres-more-than-one-way">There’s more than one way…</h2>
-
-<p>When we do this:</p>
-
-<pre><code class="language-C#">String[] giantWords = { "fee", "fie", "foe", "fum" };
-</code></pre>
-
-<p>It is equivalent to doing this:</p>
-
-<pre><code class="language-C#">String[] giantWords = new String[4];
-giantWords[0] = "fee";
-giantWords[1] = "fie";
-giantWords[2] = "foe";
-giantWords[3] = "fum";
-</code></pre>
-
-<p>We can <em>initialize</em> an array with this syntax, but we can’t use it to later assign it new values. This is because array sizes are fixed (can’t change), and C# wouldn’t be able to check when compiling our code.</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="lets-do-it-together">Let’s Do It Together</h2>
-
-<p>If we needed to create a class roster, would an array be appropriate? How would we go about it?</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="now-you-do-it">Now You Do It!</h2>
+<h2 id="splitting-strings">Splitting Strings</h2>
 
 <ul>
-  <li>For each of the following, create an array, assign its values, then print out those values:
-    <ul>
-      <li>The names of three people you know.</li>
-      <li>The GPAs on a 4.0 scale of five students.</li>
-    </ul>
+  <li>
+    <p>C# has some built-in methods which give us the ablity to convert sentences and words to arrays.</p>
   </li>
-  <li>Create an array of your top four vacation spots, then print the top (first) spot and the bottom (last spot).</li>
-  <li>Create a <code>String</code> that holds your last name. Print out the number of letters in your name.</li>
+  <li>
+    <p>We have learn sentences are comprised of groups of strings, and strings are comprised of groups of chars.</p>
+  </li>
+  <li>
+    <p>Lets look at two methods which will make our coding more efficient and clean.</p>
+  </li>
+  <li>
+    <p>split` is the first of the two methods we will discuss.</p>
+  </li>
+  <li>
+    <p>Split allows us to split a sentence into an array of <code>String</code>s.</p>
+  </li>
+  <li>
+    <p>Split accepts one argument, which is the delimiter it should use to split the <code>String</code>.</p>
+  </li>
+  <li>
+    <p>Examples of delimiters are as follows: . , ;  ? + -</p>
+  </li>
 </ul>
 
 
@@ -335,25 +611,60 @@ giantWords[3] = "fum";
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="and-then-and-then-and-then">And then and then and then…</h2>
+<h2 id="lets-dive-deeper">Lets dive deeper</h2>
 
-<p>There are some useful methods of <code>String</code> which <em>return</em> arrays.</p>
+<ul>
+  <li>
+    <p>The <mark>Split</mark> method splits a collection of words based on a delimiter(s) and inserts each word into an array as an element.</p>
+  </li>
+  <li>
+    <p>We can <mark>Split</mark> on multiple delimiters.</p>
+  </li>
+  <li>
+    <p>Insert the following code into your Hello World program and then execute.</p>
+  </li>
+</ul>
 
-<h3 id="splitting-strings">Splitting Strings</h3>
-
-<p><code>split</code> is one of them. It allows us to split a <code>String</code> into an array of <code>String</code>s. It accepts one argument, which is the delimiter it should use to split the <code>String</code>:</p>
-
-<pre><code class="language-C#">String source = "this, that, the other";
-String[] elements = source.split("&lt;mark&gt;, &lt;/mark&gt;");
-Console.WriteLine(elements[0]); // prints "this"
-Console.WriteLine(elements[1]); // prints "that"
-Console.WriteLine(elements[2]); // prints "the other"
+<pre><code class="language-C#">string[] elements = messageTwo.Split('&lt;mark&gt; &lt;/mark&gt;');
+Console.WriteLine(elements[0]); // prints "I"
+Console.WriteLine(elements[1]); // prints "am"
+Console.WriteLine(elements[2]); // prints "Spartacus"
 </code></pre>
-<p>Describe this delimiter. Understanding this will be useful in predicting where the string will be split.
-What is the value of <code>elements.length</code>?</p>
+<div class="fragment">
+Question time: On what type of delimiter are we splitting our string?&lt;/mark&gt;
+</div>
 
-<p><em>Note: technically, the <code>split</code> method accepts a</em> regular expression, <em>pretty powerful stuff, but you can just think of it as a <code>String</code> for now.</em>
-Question time: Why doesnt our elements array contain four elements?</p>
+<div class="fragment">
+What is the value of `elements.length`?
+</div>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="looking-at-characters">Looking at characters</h2>
+
+<div class="img" float="right"><img src="./resources/arr4.png" /></div>
+
+<ul>
+  <li>
+    <p>We have talked about <code>String</code>s as sequences of characters.</p>
+  </li>
+  <li>
+    <p>Now we have the tools to treat them that way.</p>
+  </li>
+  <li>
+    <p>String has a <code>toCharArray()</code> method that returns an array of <code>char</code>s:</p>
+  </li>
+</ul>
+
+<pre><code class="language-C#">String myName = "Sue";
+char[] letters = myName.toCharArray();
+</code></pre>
+
+<p>Console.WriteLine(“The first letter of my name is “ + letters[0]);</p>
 
 
         </section>
@@ -361,67 +672,26 @@ Question time: Why doesnt our elements array contain four elements?</p>
         <section>
           <!-- _S9SLIDE_  -->
 
-<h3 id="looking-at-characters">Looking at characters</h3>
-
-<p>We have talked about <code>String</code>s as sequences of characters. Now we have the tools to treat them that way. <code>String</code> has a <code>toCharArray()</code> method that returns an array of <code>char</code>s:</p>
+<ul>
+  <li>A related method is <code>indexOf</code>, which returns the first index of a character:</li>
+</ul>
 
 <pre><code class="language-C#">String myName = "Sue";
 char[] letters = myName.toCharArray();
 
-Console.WriteLine("The first letter of my name is " + letters[0]);
-</code></pre>
-
-<p>A related method is <code>indexOf</code>, which returns the first index of a character:</p>
-<pre><code class="language-C#">Console.WriteLine(myName.indexOf('S')); //prints "0"
+Console.WriteLine(myName.indexOf('S')); //prints "0"
 Console.WriteLine("foo".indexOf('o')); //prints "1"
 </code></pre>
+<ul>
+  <li>Another version of the <code>indexOf</code> method (this is called <em>overloading</em>) will accept a <code>String</code>:</li>
+</ul>
 
-<p>Another version of the <code>indexOf</code> method (this is called <em>overloading</em>) will accept a <code>String</code>:</p>
 <pre><code class="language-C#">Console.WriteLine("fee, fie, foe, fum".indexOf("foe")); //prints "10" 
 </code></pre>
-<p>Why is the index value 10?</p>
+<div class="fragment">
+Why is the index value 10?
+</div>
 
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="a-little-wonky">A Little Wonky</h2>
-
-<p>Arrays are objects, but they don’t conform to all the rules of other objects.</p>
-
-<p>Some differences to be aware of:</p>
-
-<ul>
-  <li>We create them using the <code>new</code> operator, but we don’t use a <em>constructor</em> method like we would with other objects.</li>
-  <li>Their values can be initialized with a creative (confusing) use of curly brackets.</li>
-  <li>We can’t call methods on them (at least not directly).</li>
-  <li>We use square brackets to both declare arrays and to access element values, something we won’t see elsewhere.</li>
-</ul>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="work-it">Work It</h2>
-
-<ul>
-  <li>Create an array holding the names of four of your peers sitting next to you. Print the first letter of each of their names.
-    <ul>
-      <li>Change your code (or create more code) that asks you to enter each of their names via the console.</li>
-    </ul>
-  </li>
-  <li>
-    <p>Create a console application that asks you to enter a word and then a letter. Print out either “Yep, it’s got one of those” or “So, sorry”, depending on whether the word contains that letter.</p>
-  </li>
-  <li>Create a <code>String</code> representing a list of things that uses some delimiter (commas, dashes, etc). Split that <code>String</code> into an array of <code>String</code>s, then print one or more of these array elements.
-    <ul>
-      <li>Stretch Task: research <em>regular expressions</em>, and allow the use of either of two delimiters to split the <code>String</code>. (Either a comma <em>or</em> a dash, for example.)</li>
-    </ul>
-  </li>
-</ul>
 
         </section>
         
