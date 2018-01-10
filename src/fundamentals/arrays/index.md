@@ -1,14 +1,76 @@
 title: Arrays
-subtitle: •••
+subtitle: Data Structures
 theme: league
 
-## What Are They?
+## Lets talk about Data Structures?
 
-Arrays allow us to store a sequence of values of a given type. This could be items on a menu, lottery numbers, or the birds in your menagerie.
+- In the feild of computing, programmers use <mark>Data Structures</mark> in which to store and manipulate data.
 
-Lets liken our Array to a sequence of cups. This is a pretty good analogy.
+- Some examples of the more commonly used data structures are as follows: Arrays, Lists, Dictionaries(Hash Tables), Queues, Stacks
 
-Each of these "cups" in an array holds a value, which we call an *element*. We reference a specific element using its *zero-based index*. Its important to remember the index values of an Array and all other data strutures you will encounter will start with *0*.
+- In this lecture we will focus soley on <mark>Arrays</marks>, but we will take a few minutes to introduce you to the rest.
+
+- A <mark>list</mark> is a data strucuture which holds variables in a specific order. 
+
+- Lists are dynamic sized. Meaning you do not have to specify the size of the list, and the list can grow as needed.
+
+- Lists are created, accessed and manipilated in much the same way we create, access and manipilate array's.
+
+- We will go into depth on lists in a future lecture.
+
+## Dictionaries... No not Websters
+
+- Dictionaries, or as they are conmonly referred Hash Tables, are an extended/advanced array. 
+
+- Like a list, dictionaries are dynamic sized. Meaning you do not have to specify the size of the dictionary, and the dictionary can grow as needed.
+
+- Unlike arrays or lists in which we only store the data values, in Dictionaries we can also store a key along with a value. This is commonly referred to as a <mark>KeyValuePair</mark>.
+
+- We can also store to the <mark>KeyValuePairs</mark> as differant data types. Meaning the Key can be an int, while its value can be a string.
+
+- We will see in a futre lecture how to create, access and manipilate Dictionaries, although they will not be the focus of our data structure teaching efforts
+
+## Queues 
+
+- You may have heard this term before if you have ever used a computer to print a document.
+
+- Unlike arrays, lists and dictionaries, the data in a queue cannot be accessed by index. Meaning we cannot choose which piece of data we want to access and write code to directly get to it.
+
+- Queues are commonly refered as <mark>FIFO</mark> or <mark>First In First Out</mark> data structure.
+
+- This course will not go into queues any deeper than this mention. I would encourage you to do some more research to broaden your knowledge on queue operation.
+
+<div class="fragment">
+Question time: What are some examples you might be aware of were we might use a Queue?
+</div>
+
+## Stacks
+
+- Stackes and queues are simiualar in many ways with the following exceptions:
+
+	- As we discussed queues are a <mark>FIFO</mark> data structure, while stackes are <mark>LIFO</mark> data structure.
+
+	- Stackes are accessed and manipulated by <mark>popping and pushing</mark> while queues use <mark>Enqueue() and Dequeue().
+
+- There are many uses for stacks in programming, and I would challenge you to do some further research.
+
+- This course will not go into stacks any deeper than this mention. I would encourage you to do some more research to broaden your knowledge on stack operation.
+
+	 
+
+## Arrays
+
+- Arrays allow us to store a sequence of values of a given type. 
+
+- This could be items on a menu, lottery numbers, or the birds in your menagerie.
+
+- Lets liken our Array to a sequence of cups. This is a pretty good analogy.
+
+- Each of these "cups" in an array holds a value, which we call an *element*. 
+
+- We reference a specific element using its *zero-based index*. 
+
+- Its important to remember the index values of an Array and all other data strutures you will encounter will <mark>START WITH 0</mark>.
 
 <div class="cups">
 	<div><p class="row-label">Element →</p></div>
@@ -56,209 +118,283 @@ div.cups .cup {
 	background: no-repeat center url(./resources/cup.png);
 	background-size: contain;
 }
+.img:hover  {
+        transform: scale(1.5);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
 </style>
 
 # Declaring an Array
 
-We declare an array using the following syntax in C#. We follow the type of elements it will hold with its size (the number of elements it will hold) in square brackets. Also, we use the `new` operator in a different way.
+- Remember, when we want to create an variable, We declare that variable.
 
-To create an array destined to hold the values of our cups from the previous example, we would do this:
+- We use the same process to create an array.
+
+- We declare an array by using the following syntax in C#. 
 
 ```C#
 int[] cupValues = new int[5];
 ```
 
-This creates an array of type `int` whose name is `cupValues`. It has five elements.
+- We include the number of elements it will hold or its size in the square brackets. 
 
-# Assigning Values
+- Likewise we include the use the <mark>new</mark> operator.
 
-Remember our cups?
-
-<div class="cups">
-	<div><p class="row-label">Element →</p></div>
-	<div class="cup"><p>42</p></div>
-	<div class="cup"><p>86</p></div>
-	<div class="cup"><p>23</p></div>
-	<div class="cup"><p>8</p></div>
-	<div class="cup"><p>91</p></div>
-
-	<div><p class="row-label">Index →</p></div>
-	<div><p>0</p></div>
-	<div><p>1</p></div>
-	<div><p>2</p></div>
-	<div><p>3</p></div>
-	<div><p>4</p></div>
-</div>
-
-We use array indices (that's the plural of index) to assign values to elements. This is how we'd declare our array and assign element values:
-
-```
-int[] cupValues = new int[5];
-cupValues[0] = 42;
-cupValues[1] = 86;
-cupValues[2] = 23;
-cupValues[3] = 8;
-cupValues[4] = 91;
-```
-
-## Change can be painful
-
-Arrays are very efficient, but their size is fixed. If I wanted to change the number of cups, I'd need to create a new array, assign it to my variable, then repopulate all the values:
-
-```
-cupValues = new int[2];
-cupValues[0] = 42;
-cupValues[1] = 86;
-```
-
-Notice I didn't *declare* `cupValues` again. I merely reassigned a new array to it. We will look at other data structures such `List`s and `Dictionaries`s later, types in C# that are more flexible.
-
-# Retrieving Values
-
-To retrieve values, we use a syntax like we used to assign values:
-
-```java
-Console.WriteLine(cupValues[0]); // prints "42"
-Console.WriteLine(cupValues[1]); // prints "86"
-Console.WriteLine(cupValues[2]); // prints "23"
-Console.WriteLine(cupValues[3]); // prints "8"
-Console.WriteLine(cupValues[4]); // prints "91"
-```
-
-# How Big Is It?
-
-Often, it's important to know the size of an array. How many cups do I have?
-
-To do this, we use the `.length` property, like so (notice that dot operator):
-
-```java
-int[] cupValues = new int[5];
-int numberOfCups = cupValues.length;
-Console.WriteLine(numberOfCups); // prints "5"
-
-cupValues = new int[2];
-Console.WriteLine(cupValues.length); // prints "2"
-```
-
-What is the value of `numberOfCups` after we run this code?
-
-## Revenge of the Curly Brackets
-
-We can also initialize an array with values. We do this using curly brackets to surround a comma-delimited list of values, like so:
-
-```C#
-String[] giantWords = { "fee", "fie", "foe", "fum" };
-```
-
-Note that we also do not include the *size* of the array. C# figures this out based on the number of values we provide.
-
-<div class="fragment sidebar"><img src="./resources/wat.jpg" alt="WAT?" /></div>
-
-This creates a String array with these values:
-
-|index	|value	|reference
-|-------|-------|---------
-|0		|"fee"	|`giantWords[0]`
-|1		|"fie"	|`giantWords[1]`
-|2		|"foe"	|`giantWords[2]`
-|3		|"fum"	|`giantWords[3]`
-
-… and these curly brackets aren't defining a code block. By now, you're probably thinking…
-
-## There's more than one way…
-
-When we do this:
-
-```C#
-String[] giantWords = { "fee", "fie", "foe", "fum" };
-```
-
-It is equivalent to doing this:
-
-```C#
-String[] giantWords = new String[4];
-giantWords[0] = "fee";
-giantWords[1] = "fie";
-giantWords[2] = "foe";
-giantWords[3] = "fum";
-```
-
-We can *initialize* an array with this syntax, but we can't use it to later assign it new values. This is because array sizes are fixed (can't change), and C# wouldn't be able to check when compiling our code.
-
-## Let's Do It Together
-
-If we needed to create a class roster, would an array be appropriate? How would we go about it?
-
-## Now You Do It!
-
-- For each of the following, create an array, assign its values, then print out those values:
-	- The names of three people you know.
-	- The GPAs on a 4.0 scale of five students.
-- Create an array of your top four vacation spots, then print the top (first) spot and the bottom (last spot).
-- Create a `String` that holds your last name. Print out the number of letters in your name.
-
-## And then and then and then…
-
-There are some useful methods of `String` which *return* arrays.
-
-### Splitting Strings
-
-`split` is one of them. It allows us to split a `String` into an array of `String`s. It accepts one argument, which is the delimiter it should use to split the `String`:
-
-```C#
-String source = "this, that, the other";
-String[] elements = source.split("<mark>, </mark>");
-Console.WriteLine(elements[0]); // prints "this"
-Console.WriteLine(elements[1]); // prints "that"
-Console.WriteLine(elements[2]); // prints "the other"
-```
-Describe this delimiter. Understanding this will be useful in predicting where the string will be split.
-What is the value of `elements.length`?
-
-*Note: technically, the `split` method accepts a* regular expression, *pretty powerful stuff, but you can just think of it as a `String` for now.*
-Question time: Why doesnt our elements array contain four elements?
+- The <mark>new</mark> operator tells C# to declare the new array and initialize or set the array elements to their default values.
 
 !SLIDE
 
-### Looking at characters
+- In our example below we can see the left side of the <mark>=</mark> operator is used to decalre an int <mark>array</mark> named <mark>cupValues</mark>.
 
-We have talked about `String`s as sequences of characters. Now we have the tools to treat them that way. `String` has a `toCharArray()` method that returns an array of `char`s:
+- The right side of the <mark>=</mark> operator will create a space in memory for the <mark>5</mark> elements, and assign those elements the default value of <mark>0</mark>.
+
+```C#
+int[] cupValues = new int[5];
+```
+
+<div class="fragment">
+Question time: What type of array are we declaring?
+</div>
+
+<div class="fragment">
+Question time: What are the index values for our array?
+</div>
+
+## Back to Hello World
+
+- 
+
+- Open your <mark>Hello World</mark> project from last week.
+
+- We should all be here.
+
+<div class="img" float="right"><img src="./resources/arr1.png" /></div>
+
+- Lets start by commenting our our previous code.
+
+- Because the march to battle will be long, we need to create a list of food items which the cooks will need bring
+
+- We will create an array and assign that array values.
+ 
+# Assigning Values
+
+- Before we can create our array, we need to know what item names we will store as elements. They are as follows:
+
+	- Milk, Fruit, Meat, Wine, Bread.
+
+- By looking at our items we can tell our array should be a <mark>string</mark> array.
+
+- Based on the number of items in our list, its safe to assume our array should be <mark>5</mark> elements long.
+
+- Lets get two volunteers to some cunstruct our array on the white board.
+
+<div class="fragment">
+This is what our code should look like: <mark>string[] foodList = new string[5];</mark>
+</div>
+
+<div class="fragment">
+<p>Add the following code below the end of part eleven.</p>
+<pre><code class="language-C#" data-noescape>
+        //Part twelve array examples
+        string[] foodList = new string[5];
+</code></pre> 
+</div>
+
+!SLIDE
+
+- Now that we have declared and initialized our string array called foodList, lets assign our values to the array.
+
+- There is more than one way to assign values to an array. We initialized an empty array, so we will need to write some code to assign our values.
+
+- When we want to assign values to an array, we must specify the following:
+
+	- The <mark>name</mark> of the array.
+
+	- The <mark>index</mark> we want to access.
+
+	- The <mark>value</mark> we want to place at that <mark>index</mark>
+
+- Lets start at index <mark>0</mark>.
+
+<div class="fragment">
+<p>Add the following highlighted code.</p>
+<pre><code class="language-C#" data-noescape>
+string[] foodList = new string[5];
+<mark>foodList[0] = "Milk";</mark>
+</code></pre> 
+</div>
+
+<div class="fragment">
+If we print <mark>foodList[0]</mark> to the console we can see what the value is of the element at index 0. What is the command we would use?
+</div>
+<div class="fragment">
+Please add <mark> Console.WriteLine(foodList[0]);</mark> to your code then execute.
+</div>
+
+## We should all be here
+
+<div class="img" float="right"><img src="./resources/arr2.png" /></div>
+
+- Its important to understand <mark>foodList[0]</mark> is acting as a variable, whos informationwe are accessing is at index 0.
+
+- Lets finish assigning values to our array. Lets get two more volunteers to whiteboard our solution.
+
+!SLIDE
+
+<p>Add the following highlighted code.</p>
+<pre><code class="language-C#" data-noescape>
+string[] foodList = new string[5];
+<mark>foodList[0] = "Milk";</mark>
+<mark>foodList[1] = "Fruit";</mark>
+<mark>foodList[2] = "Meat";</mark>
+<mark>foodList[3] = "Wine";</mark>
+<mark>foodList[4] = "Bread";</mark>
+<mark>Console.WriteLine("{0}, {1}, {2}, {3}, {4}", foodList[0], foodList[1], foodList[2], foodList[3], foodList[4]);</mark>
+</code></pre> 
+
+<div class="fragment">
+Question time: What is the term for the formatting of the Console.WriteLine() method.
+</div>
+
+<div class="fragment">
+Execute your code
+</div>
+
+## We should all be here
+
+<div class="img" float="right"><img src="./resources/arr3.png" /></div>
+
+- Now that we have seen how to work with an empty array, lets look at creating a new array with the indexs initalized with preset values.
+
+- Lets enter into anouther array the amount of each food item: Milk 1000 gallons, Fruit 100 cases, Meat 2000 pounds,Wine 10000 gallons, Bread 1500 loafs
+
+!SLIDE
+
+<p>Add the following code and execute.</p>
+<pre><code class="language-C#" data-noescape>
+int[] foodAmount = new int[] { 1000, 1000, 2000, 10000, 1500 };
+Console.WriteLine(foodAmount[0] + ", " + foodAmount[1] + ", " + foodAmount[2] + ", " + foodAmount[3] + ", " + foodAmount[4]);
+</code></pre> 
+
+- Here is our output
+
+<div class="fragment">
+<div class="img" float="right"><img src="./resources/arr4.png" /></div>
+</div>
+
+
+## Lets ponder our journey
+
+- We have now learned two ways to create and initialize an array. We will learn one more when we discuss <mark>loops</mark>.
+
+- One thing to remember, arrays are very efficient, but their size is fixed. 
+
+- If we wanted to change the number of items in our foodList, I'd need to create a new array, assign it to my variable, then repopulate all the values.
+
+- Like a value type variable or a string, once we declare them all we need to do is assign new values. Lets review how to accomplish array assignment.
+
+<div class="fragment">
+<pre><code class="language-C#" data-noescape>
+string[] foodList = new string[5];
+<mark>foodList[0] = "Milk";</mark>
+<mark>foodList[0] = "Fire";</mark>
+</code></pre> 
+</div>
+
+<div class="fragment">
+Question time: After we execute the code, whats the value of <mark>foodList[0]</mark>
+</div>
+
+# How Big Is It?
+
+- Often, it's important to know the size of an array. How many items does our foodList have?
+
+- If you remember back to our strings lecture, we could use the <mark>.Length</mark> method to get the number of <mark>chars</mark> in a string or the length of the string..
+
+- When we think of arrays, we can also think of the <mark>.Length</mark> method to get the number of <mark>indexs</mark> in a array.
+
+<div class="fragment">
+<pre><code class="language-C#" data-noescape>
+<mark>Console.WriteLine(foodList.Length);</mark>
+</code></pre> 
+</div>
+
+<div class="fragment">
+Question time: If we execute this code, what value do you think will be returned?</mark>
+</div>
+
+## Splitting Strings
+
+- C# has some built-in methods which give us the ablity to convert sentences and words to arrays.
+
+- We have learn sentences are comprised of groups of strings, and strings are comprised of groups of chars.
+
+- Lets look at two methods which will make our coding more efficient and clean.
+
+- split` is the first of the two methods we will discuss.
+
+- Split allows us to split a sentence into an array of `String`s. 
+
+- Split accepts one argument, which is the delimiter it should use to split the `String`.
+
+- Examples of delimiters are as follows: . , ;  ? + -
+
+## Lets dive deeper
+
+- The <mark>Split</mark> method splits a collection of words based on a delimiter(s) and inserts each word into an array as an element.
+
+- We can <mark>Split</mark> on multiple delimiters. 
+
+- Insert the following code into your Hello World program and then execute.
+
+```C# 
+string[] elements = messageTwo.Split('<mark> </mark>');
+Console.WriteLine(elements[0]); // prints "I"
+Console.WriteLine(elements[1]); // prints "am"
+Console.WriteLine(elements[2]); // prints "Spartacus"
+```
+<div class="fragment">
+Question time: On what type of delimiter are we splitting our string?</mark>
+</div>
+
+<div class="fragment">
+What is the value of `elements.length`?
+</div>
+
+## Looking at characters
+
+<div class="img" float="right"><img src="./resources/arr4.png" /></div>
+
+ - We have talked about `String`s as sequences of characters. 
+ 
+ - Now we have the tools to treat them that way. 
+ 
+ - String has a `toCharArray()` method that returns an array of `char`s:
+
+```C#
+String myName = "Sue";
+char[] letters = myName.toCharArray();
+```
+
+Console.WriteLine("The first letter of my name is " + letters[0]);
+!SLIDE
+
+- A related method is `indexOf`, which returns the first index of a character:
 
 ```C#
 String myName = "Sue";
 char[] letters = myName.toCharArray();
 
-Console.WriteLine("The first letter of my name is " + letters[0]);
-```
-
-A related method is `indexOf`, which returns the first index of a character:
-```C#
 Console.WriteLine(myName.indexOf('S')); //prints "0"
 Console.WriteLine("foo".indexOf('o')); //prints "1"
 ```
+- Another version of the `indexOf` method (this is called *overloading*) will accept a `String`:
 
-Another version of the `indexOf` method (this is called *overloading*) will accept a `String`:
 ```C#
 Console.WriteLine("fee, fie, foe, fum".indexOf("foe")); //prints "10" 
 ```
+<div class="fragment">
 Why is the index value 10?
-## A Little Wonky
+</div>
 
-Arrays are objects, but they don't conform to all the rules of other objects.  
 
-Some differences to be aware of:
-
-- We create them using the `new` operator, but we don't use a *constructor* method like we would with other objects.
-- Their values can be initialized with a creative (confusing) use of curly brackets.
-- We can't call methods on them (at least not directly).
-- We use square brackets to both declare arrays and to access element values, something we won't see elsewhere.
-
-## Work It
-
-- Create an array holding the names of four of your peers sitting next to you. Print the first letter of each of their names.
-	- Change your code (or create more code) that asks you to enter each of their names via the console.
-
-- Create a console application that asks you to enter a word and then a letter. Print out either "Yep, it's got one of those" or "So, sorry", depending on whether the word contains that letter.
-
-- Create a `String` representing a list of things that uses some delimiter (commas, dashes, etc). Split that `String` into an array of `String`s, then print one or more of these array elements.
-	- Stretch Task: research *regular expressions*, and allow the use of either of two delimiters to split the `String`. (Either a comma *or* a dash, for example.)
