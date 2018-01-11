@@ -32,17 +32,17 @@ Question time:  Question time: What are some real life examples of a loop?
 
 - A `while` loop continues to do what you've told it to do *while* some condition continues to be true.
 
-- Lets go back to our Hello World program, and use loops to make the program more efficient.
+- Let's go back to our Hello World program, and use loops to make the program more efficient.
 
-- When Spartacus is deciding who will marh to battle, we have to assume there will be more than one soldier.
+- When Spartacus is deciding who will march to battle, we have to assume there will be more than one soldier.
 
-- Currently, our decision logic only processes one soldier at a time. Lets use a while loop to process many soldiers.
+- Currently, our decision logic only processes one soldier at a time. Let's use a while loop to process many soldiers.
 
 - Before we get started please comment out section twelve of our Hello World program.
 
 !SLIDE
  
-- Volnteer time
+- Volunteer time
 
 - Copy and paste the following code from your Hello World program. 
 
@@ -74,7 +74,7 @@ else
 
 <div class="img" float="right"><img src="./resources/loop1.png" /></div>
 
-- For a loop to operate succesfully, we need to have an enter/exit statement.
+- For a loop to operate successfully, we need to have an enter/exit statement.
 
 - Meaning there needs to be a process by which the program can enter and exit the loop.
 
@@ -82,7 +82,7 @@ else
 
 ## Let's Break That Down
 
-- Lets construct our while loop around our existing code.
+- Let's construct our while loop around our existing code.
 
 - We start with the `while` keyword. This keyword tells the compiler we are processing a loop.
 
@@ -114,7 +114,7 @@ while <mark>(</mark>rank != "exit"<mark>)</mark> {
 
 - Within these curly braces goes the code we want to execute. 
 
-<pre><code class="language-java" data-noescape>int count = 0;
+<pre><code class="language-C#" data-noescape>int count = 0;
 while (rank != "exit") <mark>{</mark>
 	//Code body
 <mark>}</mark></code></pre>
@@ -123,7 +123,7 @@ while (rank != "exit") <mark>{</mark>
 
 - Any variables, data structures or methods declared outside a loop are considered <mark>global</mark>, and can be accessed inside and outside the loop.
 
-- So our enter/exit conditional statement variable must be declared outside the scope of the loop. Lets create that variable.
+- So our enter/exit conditional statement variable must be declared outside the scope of the loop. Let's create that variable.
 
 - There are many ways to format this variable. We will format as follows: <mark>string action = " "</mark>
 
@@ -162,7 +162,7 @@ action = Console.ReadLine();
 
 <div class="img" float="right"><img src="./resources/loop2.png" /></div>
 
-- Lets execute our program. Ensure the loop is operating as designed.
+- Let's execute our program. Ensure the loop is operating as designed.
 
 <div class="fragment">
 Question time:  What happens when you type anything other than exit or just hit the enter key?
@@ -172,9 +172,9 @@ Question time:  What happens when you type anything other than exit or just hit 
 
 - The next loop we will discuss is the <mark>do while</mark> loop.
 
-- If we look at the while loop, we notice the loop only executes if the conditional statement is satisifed.
+- If we look at the while loop, we notice the loop only executes if the conditional statement is satisfied.
 
-- The <mark>do while</mark> loop on the other hand will always execute at least once.
+- The <mark>do while</mark> loop, on the other hand, will always execute at least once.
 
 - The operation of the <mark>do while</mark> loop is essentially the same as the while loop.
 
@@ -183,7 +183,7 @@ Question time:  Can you give me a real life example of a *do while* loop?
 </div>
 
 <div class="fragment">
-Lets take the code we just wrote in the while format and convert it to a do while loop. Comment out the while loop before we proceed with the exception of our action variable.
+Let's take the code we just wrote in the while format and convert it to a do while loop. Comment out the while loop before we proceed with the exception of our action variable.
 </div>
 
 ## Add the following code to your Hello World Program 
@@ -220,7 +220,7 @@ action = Console.ReadLine();
 
 <div class="img" float="right"><img src="./resources/loop3.png" /></div>
 
-- Lets execute our program. Ensure the loop is operating as designed.
+- Let's execute our program. Ensure the loop is operating as designed.
 
 - You will notice the execution of the loop is almost the same, but the circumstances for using each loop a varied.
 
