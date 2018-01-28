@@ -23,7 +23,7 @@ Otherwise, show the number (let's show the number as a String)
 - Open Visual Studio and create a new Solution called `FizzBuzz`.
 - Add a Class Library to the solution and name it `FizzBuzz.Tests`.
 - Create a class named `FizzBuzzerTests` inside the `FizzBuzz.Tests` class library project.
-- Add the `NUnit` Nuget package to your `FizzBuzz.Tests` project.  W
+- Add the `NUnit` Nuget package to your `FizzBuzz.Tests` project.
 - Add a reference from the `FizzBuzz.Tests` project to the `FizzBuzz` project.  This allows
 code in the Test project to use code from the FizzBuzz project (we'll need to use it so we can test it!)
 
