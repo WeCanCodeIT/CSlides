@@ -1,3 +1,5 @@
+#! /bin/bash
+
 . ./slideshow_env.sh
 
 bundle install

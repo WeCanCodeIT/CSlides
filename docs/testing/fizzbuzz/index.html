@@ -95,15 +95,12 @@
           <!-- _S9SLIDE_ -->
 <h2 id="project-setup">Project Setup</h2>
 <ul>
-  <li>Open <code>Git Bash</code></li>
-  <li><code>cd</code> into your eclipse workspace</li>
-  <li><code>mkdir fizzbuzz</code></li>
-  <li><code>cd</code> into the fizzbuzz directory</li>
-  <li>copy and paste the following: <code>curl https://raw.githubusercontent.com/WeCanCodeIT/gradle-scripts/master/basic-junit/build.gradle --output build.gradle</code></li>
-  <li><code>gradle eclipse</code></li>
-  <li>Open <code>Eclipse</code> and import existing project into workspace</li>
-  <li>Create a package named <code>FizzBuzz</code></li>
-  <li>Create a class named <code>FizzBuzz</code> and a class named <code>FizzBuzzTest</code></li>
+  <li>Open Visual Studio and create a new Solution called <code>FizzBuzz</code>.</li>
+  <li>Add a Class Library to the solution and name it <code>FizzBuzz.Tests</code>.</li>
+  <li>Create a class named <code>FizzBuzzerTests</code> inside the <code>FizzBuzz.Tests</code> class library project.</li>
+  <li>Add the <code>NUnit</code> Nuget package to your <code>FizzBuzz.Tests</code> project.  W</li>
+  <li>Add a reference from the <code>FizzBuzz.Tests</code> project to the <code>FizzBuzz</code> project.  This allows
+code in the Test project to use code from the FizzBuzz project (we’ll need to use it so we can test it!)</li>
 </ul>
 
 
@@ -113,29 +110,25 @@
         <section>
           <!-- _S9SLIDE_ -->
 <h2 id="writing-the-first-test-scenario">Writing the first test scenario</h2>
-<pre><code class="language-java">public class FizzBuzzTest {
-	
-	
-	@Test
-	public void shouldReturnOneAsNumber() {
-		
-		FizzBuzz.getAnswerFor(1);
-		
-	}
+<pre><code class="language-csharp">[TestFixture]
+public class FizzBuzzerTests
+{
+	[Test]
+	public void Get_Returns_1_for_1()
+	{
+		var fizzBuzzer = new FizzBuzzer();
 
+		var result = fizzBuzzer.Get(1);
+
+		Assert.That(result, Is.EqualTo("1"));
+	}	
 }
 </code></pre>
 
-<pre><code class="language-java">public class FizzBuzz {
-	
-	public static void getAnswerFor(int num) {
-		
-	}
-	
+<p>This code <em>will not compile</em> at this point because the <code>FizzBuzzer</code> class does not exist.</p>
 
-}
-</code></pre>
-<p>ctrl + r to run the test…it will pass</p>
+<p>Why would we write code that doesn’t compile? We’re thinking from the outside in!  This is
+one way that tests <em>drive</em> your design.</p>
 
 
 
@@ -143,32 +136,22 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="make-some-changes">Make some changes</h2>
-<pre><code class="language-java">public class FizzBuzzTest {
-	
-	
-	@Test
-	public void shouldReturnOneAsNumber() {
-		
-		String answer = FizzBuzz.getAnswerFor(1);
-		
-	}
+<h2 id="getting-red">Getting Red</h2>
 
+<p>Let’s write just enough code to get this to compile.</p>
+
+<p>Create the <code>FizzBuzzer</code> class inside the <code>FizzBuzz</code> project.</p>
+
+<pre><code class="language-csharp">public class FizzBuzzer
+{
+	public string Get(int num)
+	{
+		return null;
+	}
 }
 </code></pre>
 
-<pre><code class="language-java">public class FizzBuzz {
-	
-	public static String getAnswerFor(int num) {
-		
-		return "";
-		
-	}
-	
-
-}
-</code></pre>
-<p>remember…we want to return <code>String</code></p>
+<p>ctrl + u + l to run the test.  It will fail.  This is the Red step in the “Red, Green, Refactor” loop.</p>
 
 
 
@@ -176,109 +159,20 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="make-more-changes">Make more changes</h2>
-<pre><code class="language-java">public class FizzBuzzTest {
-	
-	
-	@Test
-	public void shouldReturnOneAsNumber() {
-		
-		String answer = FizzBuzz.getAnswerFor(1);
-		assertEquals(answer,"1");
+<h2 id="getting-to-green">Getting to Green</h2>
+
+<p>Let’s follow the third rule by writing a minimal solution that gets us green again.</p>
+
+<pre><code class="language-csharp">public class FizzBuzzer
+{
+	public string Get(int num)
+	{
+		return "1";
 	}
-
-	
-
-}
-</code></pre>
-<p>ctrl + r and test should now fail…make the test pass!</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h1 id="attempt-to-write-the-second-test-scenario">Attempt to write the second test scenario</h1>
-<ul>
-  <li>Write enough to make it fail</li>
-  <li>Then make it pass</li>
-</ul>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="test-scenario-2">Test scenario 2</h2>
-<p>In <code>FizzBuzzTest</code> add the following</p>
-
-<pre><code class="language-java">@Test
-	public void shouldReturnTwoAsNumber() {
-		
-		String answer = FizzBuzz.getAnswerFor(2);
-		assertEquals(answer,"2");
-	}
-</code></pre>
-
-<pre><code class="language-java">public class FizzBuzz {
-	
-	public static String getAnswerFor(int num) {
-		
-		return "" + num;
-		
-	}
-	
-
-}
-</code></pre>
-<p>Do you see anything that could be refactored?</p>
-
-
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="test-scenario-2-refactored">Test scenario 2 refactored</h2>
-<pre><code class="language-java">public class FizzBuzzTest {
-	
-	// arrange
-	private FizzBuzz underTest = new FizzBuzz();
-	
-	@Test
-	public void shouldReturnOneAsNumber() {
-		
-		//act
-		String answer = underTest.getAnswerFor(1);
-		//assert
-		assertEquals(answer, "1");
-	}
-	
-	
-	@Test
-	public void shouldReturnTwoAsNumber() {
-		
-		String answer = underTest.getAnswerFor(2);
-		assertEquals(answer,"2");
-	}
-
-	
-
 }
 </code></pre>
 
-
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h1 id="complete-test-scenario-3">Complete test scenario 3</h1>
-<ul>
-  <li>Test should fail</li>
-  <li>Edit production code to pass test</li>
-</ul>
+<p>…and we’re green!  Time for the most important step: <em>refactoring</em>!</p>
 
 
 
@@ -286,91 +180,285 @@
         
         <section>
           <!-- _S9SLIDE_ -->
-<h2 id="test-scenario-3">Test scenario 3</h2>
-<p>In <code>FizzBuzzTest</code></p>
-<pre><code class="language-java">@Test
-	public void shouldReturnThreeAsFizz() {
-		String answer = underTest.getAnswerFor(3);
-		assertEquals(answer, "Fizz");
-	}
+<h2 id="red-green-refactor">Red, Green REFACTOR</h2>
+
+<p>When we enter the refactor step, we should review all the code we’ve written to see if we can clean it up.</p>
+
+<p>I don’t see any way we can simplify this code, but it’s a good habit to always pause for a moment and look
+for anything you can do to clean up the code without changing it’s behavior (refactoring).</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="adding-the-next-test">Adding the Next Test</h2>
+
+<p>Our current solution works for exactly 1 scenario: the number 1.  Let’s write a test that will make it work for
+some more inputs.</p>
+
+<pre><code class="language-csharp">[Test]
+public void Get_Returns_2_for_2()
+{
+	var fizzBuzzer = new FizzBuzzer();
+
+	var result = fizzBuzzer.Get(2);
+
+	Assert.That(result, Is.EqualTo("2"));
+}
 </code></pre>
 
-<pre><code class="language-java">public class FizzBuzz {
-	
-	public String getAnswerFor(int num) {
-		
-		if(num == 3) {
+<p>Hit ctrl + U + L to run your tests.  Our old test should pass, but the new one will fail with a message like this:</p>
+<pre><code>  String lengths are both 1. Strings differ at index 0.
+  Expected: "2"
+  But was:  "1"
+</code></pre>
+
+<p>Our test expected to get the string <code>"2"</code>, but we always just return <code>"1"</code>.  Let’s fix it.</p>
+
+<pre><code class="language-csharp">public class FizzBuzzer
+{
+	public string Get(int num)
+	{
+		return num.ToString();
+	}
+}
+</code></pre>
+
+<p>Hit ctrl + U + L to run all the tests again.  Both tests should be passing now</p>
+
+<p>This solution works for every number that isn’t a multiple of 3 or 5!  That’s way better
+than our old solution, which only worked for the number 1.</p>
+
+<p>I don’t see any refactoring we can do, so lets forge ahead.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="the-third-test---introducing-multiples-of-3">The Third Test - Introducing Multiples of 3</h2>
+
+<p>We could write a test for the number 4, but it would just immediately pass.  Let’s pick a test
+that will drive our solution closer to what we want.</p>
+
+<p>If we add a test scenario for the number 3, we’ll push our solution closed to handling multiples of 3.</p>
+
+<p>Let’s do it.</p>
+
+<pre><code class="language-csharp">[Test]
+public void Get_Returns_Fizz_for_3()
+{
+	var fizzBuzzer = new FizzBuzzer();
+
+	var result = fizzBuzzer.Get(3);
+
+	Assert.That(result, Is.EqualTo("Fizz"));
+}
+
+</code></pre>
+<p>Run the test (ctrl + U + L) and watch it fail.  Check your error and make sure it makes sense:</p>
+<pre><code>  Expected: "Fizz"
+  But was:  "3"
+</code></pre>
+<p>Yep, that’s what we expected.  Our code doesn’t handle multiples of three yet.  Let’s fix that.</p>
+
+<pre><code class="language-csharp">public string Get(int num)
+{
+	if (num == 3)
+	{
+		return "Fizz";
+	}
+	return num.ToString();
+}
+</code></pre>
+<p>Run it and see it pass.</p>
+
+<p>This solution works for exactly one multiple of 3.  It’s the simplest way to solve the test that’s currently failing,
+although we’re obviously going to need to change that soon.</p>
+
+<p>Can we refactor anything here?  Probably not.  Let’s write a test that makes our solution work for more than just 3.</p>
+
+
+
+        </section>
+        
+        <section>
+          <!-- _S9SLIDE_ -->
+<h2 id="the-fourth-test---handling-all-multiples-of-3">The Fourth Test - Handling All Multiples of 3.</h2>
+
+<p>Let’s use <code>6</code> to push our solution further along.</p>
+
+<p>Write the test:</p>
+<pre><code class="language-csharp">public string Get(int num)
+{
+	if (num == 3)
+	{
+		return "Fizz";
+	}
+	return num.ToString();
+}
+</code></pre>
+
+<p>Watch it fail:</p>
+<pre><code>  Expected: "Fizz"
+  But was:  "6"
+</code></pre>
+
+<p>Make it pass:</p>
+<pre><code class="language-csharp">public string Get(int num)
+{
+	if (num % 3 == 0)
+	{
+		return "Fizz";
+	}
+	return num.ToString();
+}
+</code></pre>
+
+<p>Refactor?  YES, PLEASE!</p>
+
+<p>We don’t have a lot of code, but it’s important to clean as we go.  If I asked you what our code does right now, you would
+probably say something like:</p>
+
+<tab>"If we pass it a multiple of three it returns `"Fizz"`, 
+<tab>otherwise it returns the input number as a string.".
+
+Notice how our code doesn't really look like that?  Let's make it easier to read by extracting a method:
+
+```csharp
+ public class FizzBuzzer
+{
+	public string Get(int num)
+	{
+		if (IsMultipleOf3(num))
+		{
 			return "Fizz";
 		}
-		
-		return "" + num;
-		
+		return num.ToString();
 	}
-	
 
+	private bool IsMultipleOf3(int numberToCheck)
+	{
+		return numberToCheck % 3 == 0;
+	}
 }
-</code></pre>
+```
 
+Wow, that's actually more code!  Does that mean it's inferior?
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h1 id="what-should-be-your-next-logical-test-scenario">What should be your next logical test scenario?</h1>
-<ul>
-  <li>Now program it</li>
-  <li>Remember write enough code to cause a failing test</li>
-  <li>Write enough code to pass a failing test</li>
-</ul>
+Absolutely not.  By extracting that method we made the `Get` method much easier to understand.  You don't need
+to wrap your head around the modulus operator (`%`) and what `num % 3 == 0` means.  We created a name for `num % 3 == 0` - `IsMultipleOf3`.
 
+This raises the level of abstraction and makes the code easier read and easier to maintain.  This is _clean code_ - it doesn't burden us with 
+details.  Instead, it assigns names to the details and tucks them away in a place where we can drill into the detail if needed, or ignore it
+if we don't care.
 
+## Solving for 5
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h2 id="test-scenario-4">Test scenario 4</h2>
-<p>In <code>FizzBuzzTest</code></p>
-<pre><code class="language-java">@Test
-	public void shouldSayBuzzForFive() {
+How many tests do you think we'll need to write to make our code handle multiples of 5?
 
-		String response = underTest.getAnswerFor(5);
+```csharp
+[Test]
+public void Get_Returns_Buzz_for_5()
+{
+	var fizzBuzzer = new FizzBuzzer();          // Arrange - Get ready.
 
-		assertEquals("Buzz", response);
-	}
-</code></pre>
+	var result = fizzBuzzer.Get(5);             // Act - Do the thing you're testing.
 
-<pre><code class="language-java">public class FizzBuzz {
-	
-	public String getAnswerFor(int num) {
-		
-		if(num == 3) {
-			return "Fizz";
-		}
-		if(num == 5) {
-			return "Buzz";
-		}
-		
-		return "" + num;
-		
-	}
-	
-
+	Assert.That(result, Is.EqualTo("Buzz"));    // Assert - Make sure it worked.
 }
-</code></pre>
+```
 
+Don't forget to run it and see it fail (with the error you expected!)
 
-        </section>
-        
-        <section>
-          <!-- _S9SLIDE_ -->
-<h1 id="conplete-remaining-test-cases">Conplete remaining test cases</h1>
-<ul>
-  <li>for num = 6,10,15,30 ?</li>
-  <li>What happens at num = 15?</li>
-  <li>Refactor <code>FizzBuzz</code> class</li>
-</ul>
+Notice how every test follows a pretty predictable pattern of 3 lines of code?  We call these steps "Arrange, Act, Assert".  
+It's a good practice to use blank lines to separate the three phases of each test. 
 
+Let's make it pass.
+
+```csharp
+public string Get(int num)
+{
+	if (IsMultipleOf3(num))
+	{
+		return "Fizz";
+	}
+	if (num == 5)
+	{
+		return "Buzz";
+	}
+	return num.ToString();
+}
+```
+
+Run it and see it go green.
+
+Why didn't we write the `IsMultipleOf5` method?  And why didn't we use the modulus operator to solve for all multiples of 5?
+
+Remember that when you have a red test, your goal is to write the _simplest thing_ that gets you back to green.
+
+Let's hold off on refactoring until we get another test in there.
+
+## Multiples of 5
+
+Write the test:
+```csharp
+ [Test]
+public void Get_Returns_Buzz_for_10()
+{
+	var fizzBuzzer = new FizzBuzzer();
+
+	var result = fizzBuzzer.Get(10); 
+
+	Assert.That(result, Is.EqualTo("Buzz"));
+}
+```
+
+Watch it fail for the right reason:
+```
+  Expected: "Buzz"
+  But was:  "10"
+```
+
+Make it pass:
+```csharp
+public string Get(int num)
+{
+	if (IsMultipleOf3(num))
+	{
+		return "Fizz";
+	}
+	if (num % 5 == 0)
+	{
+		return "Buzz";
+	}
+	return num.ToString();
+}
+```
+
+Make it clean (Refactor):
+```csharp
+public string Get(int num)
+{
+	if (IsMultipleOf3(num))
+	{
+		return "Fizz";
+	}
+	if (IsMultipleOf5(num))
+	{
+		return "Buzz";
+	}
+	return num.ToString();
+}
+```
+
+## Your turn
+
+What's the next test we should write?  How many more tests do you think we need?
+</tab></tab>
 
         </section>
         
