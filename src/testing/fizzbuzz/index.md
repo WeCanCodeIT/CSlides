@@ -1,4 +1,4 @@
-title: FizzBuzz
+title: FizzBuzz using TDD
 subtitle: 1… 2… Fizz! 4… Buzz!
 theme: league
 
@@ -66,7 +66,7 @@ public class FizzBuzzer
 }
 ```
 
-ctrl + u + l to run the test.  It will fail.  This is the Red step in the "Red, Green, Refactor" loop.
+ctrl + R + A to run the test.  It will fail.  This is the Red step in the "Red, Green, Refactor" loop.
 
 ## Getting to Green
 
@@ -108,7 +108,7 @@ public void Get_Returns_2_for_2()
 
 ## Watch it Fail
 
-Hit ctrl + U + L to run your tests.  Our old test should pass, but the new one will fail with a message like this:
+Hit ctrl + R + A to run your tests.  Our old test should pass, but the new one will fail with a message like this:
 ```
   String lengths are both 1. Strings differ at index 0.
   Expected: "2"
@@ -129,7 +129,7 @@ public class FizzBuzzer
 }
 ```
 
-Hit ctrl + U + L to run all the tests again.  Both tests should be passing now
+Hit ctrl + R + A to run all the tests again.  Both tests should be passing now
 
 ## Simplicity (red, green, REFACTOR)
 
@@ -163,7 +163,7 @@ public void Get_Returns_Fizz_for_3()
 
 ```
 
-Run the test (ctrl + U + L) and watch it fail.  Check your error and make sure it makes sense:
+Run the test (ctrl + R + A) and watch it fail.  Check your error and make sure it makes sense:
 
 ```
   Expected: "Fizz"

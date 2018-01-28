@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>FizzBuzz - 1… 2… Fizz! 4… Buzz!</title>
+		<title>FizzBuzz using TDD - 1… 2… Fizz! 4… Buzz!</title>
 
 		<meta name="description" content="- description not found -">
 		<meta name="author"      content="Your Name Here">
@@ -46,7 +46,7 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1 style="text-align: center">FizzBuzz</h1>
+					<h1 style="text-align: center">FizzBuzz using TDD</h1>
 					<h3 style="text-align: center">1… 2… Fizz! 4… Buzz!</h3>
 					<div id="logo">
 						<img src="../../shared/images/wcci-logo.png">
@@ -100,7 +100,7 @@
   <li>Open Visual Studio and create a new Solution called <code>FizzBuzz</code>.</li>
   <li>Add a Class Library to the solution and name it <code>FizzBuzz.Tests</code>.</li>
   <li>Create a class named <code>FizzBuzzerTests</code> inside the <code>FizzBuzz.Tests</code> class library project.</li>
-  <li>Add the <code>NUnit</code> Nuget package to your <code>FizzBuzz.Tests</code> project.  W</li>
+  <li>Add the <code>NUnit</code> Nuget package to your <code>FizzBuzz.Tests</code> project.</li>
   <li>Add a reference from the <code>FizzBuzz.Tests</code> project to the <code>FizzBuzz</code> project.  This allows
 code in the Test project to use code from the FizzBuzz project (we’ll need to use it so we can test it!)</li>
 </ul>
@@ -154,7 +154,7 @@ one way that tests <em>drive</em> your design.</p>
 }
 </code></pre>
 
-<p>ctrl + u + l to run the test.  It will fail.  This is the Red step in the “Red, Green, Refactor” loop.</p>
+<p>ctrl + R + A to run the test.  It will fail.  This is the Red step in the “Red, Green, Refactor” loop.</p>
 
 
 
@@ -218,7 +218,7 @@ public void Get_Returns_2_for_2()
           <!-- _S9SLIDE_ -->
 <h2 id="watch-it-fail">Watch it Fail</h2>
 
-<p>Hit ctrl + U + L to run your tests.  Our old test should pass, but the new one will fail with a message like this:</p>
+<p>Hit ctrl + R + A to run your tests.  Our old test should pass, but the new one will fail with a message like this:</p>
 <pre><code>  String lengths are both 1. Strings differ at index 0.
   Expected: "2"
   But was:  "1"
@@ -243,7 +243,7 @@ public void Get_Returns_2_for_2()
 }
 </code></pre>
 
-<p>Hit ctrl + U + L to run all the tests again.  Both tests should be passing now</p>
+<p>Hit ctrl + R + A to run all the tests again.  Both tests should be passing now</p>
 
 
 
@@ -294,7 +294,7 @@ public void Get_Returns_Fizz_for_3()
 
 </code></pre>
 
-<p>Run the test (ctrl + U + L) and watch it fail.  Check your error and make sure it makes sense:</p>
+<p>Run the test (ctrl + R + A) and watch it fail.  Check your error and make sure it makes sense:</p>
 
 <pre><code>  Expected: "Fizz"
   But was:  "3"
